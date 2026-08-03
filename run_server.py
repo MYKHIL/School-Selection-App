@@ -1,91 +1,87 @@
 #!/usr/bin/env python3
 """
-run_server.py
+Start the local development server for this app.
 
-Start a local dev server for the project. If `livereload` is installed the server
-will auto-reload when HTML/CSS/JS changes are detected. Otherwise the script
-falls back to a simple static HTTP server.
-
-Usage:
-  python run_server.py
-  python run_server.py --port 8000
+This project uses the Express server in server.js, so this wrapper launches
+that server directly and keeps the behavior specific to this workspace.
 """
 import os
 import argparse
-import importlib
-import webbrowser
+import shutil
+import subprocess
+import sys
 import time
+import webbrowser
+
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+SERVER_FILE = os.path.join(APP_ROOT, "server.js")
+PACKAGE_FILE = os.path.join(APP_ROOT, "package.json")
 
 
-def simple_http_server(port):
-    print(f"livereload not installed. Starting simple HTTP server on http://localhost:{port}")
-    try:
-        # Prefer ThreadingHTTPServer when available for better responsiveness
-        from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
-        os.chdir(os.path.dirname(os.path.abspath(__file__)) or '.')
-
-        max_tries = 10
-        for attempt in range(max_tries):
-            try_port = port + attempt
-            try:
-                server = ThreadingHTTPServer(("0.0.0.0", try_port), SimpleHTTPRequestHandler)
-                url = f"http://localhost:{try_port}/"
-                print(f"Serving HTTP on 0.0.0.0 port {try_port} ({url}) ...")
-                # Open default browser to the served URL shortly after bind
-                try:
-                    # slight delay to ensure the OS has finished binding
-                    time.sleep(0.1)
-                    webbrowser.open(url, new=2)
-                except Exception:
-                    pass
-                server.serve_forever()
-                break
-            except OSError as e:
-                print(f"Port {try_port} unavailable: {e}")
-                if attempt == max_tries - 1:
-                    raise
-                print(f"Trying next port {try_port + 1}...")
-    except KeyboardInterrupt:
-        print("Server stopped by user")
+def ensure_app_files():
+    missing = []
+    if not os.path.exists(SERVER_FILE):
+        missing.append("server.js")
+    if not os.path.exists(PACKAGE_FILE):
+        missing.append("package.json")
+    if missing:
+        raise FileNotFoundError(
+            "This script is configured for the BECE school selector app and expects: "
+            + ", ".join(missing)
+        )
 
 
-def livereload_server(port):
-    try:
-        livereload_module = importlib.import_module('livereload')
-        Server = livereload_module.Server
-    except ImportError as exc:
-        raise RuntimeError('livereload is not installed') from exc
+def run_node_server(port):
+    ensure_app_files()
 
-    os.chdir(os.path.dirname(os.path.abspath(__file__)) or '.')
-    server = Server()
-    server.watch('*.html')
-    server.watch('*.css')
-    server.watch('*.js')
-    server.watch('*.json')
-    server.watch('scripts')
-    server.watch('data')
+    if not shutil.which("node"):
+        raise RuntimeError("Node.js is required to run this app. Install Node.js and try again.")
+
+    print(f"Starting the BECE 2026 School Selection app at http://localhost:{port}")
+    env = os.environ.copy()
+    env["PORT"] = str(port)
+
+    process = subprocess.Popen(
+        ["node", "server.js"],
+        cwd=APP_ROOT,
+        env=env,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+    )
+
+    time.sleep(1.0)
     url = f"http://localhost:{port}/"
-    print(f"Starting livereload server at {url} (live-reload enabled)")
     try:
-        # open browser before handing control to the livereload server
         webbrowser.open(url, new=2)
     except Exception:
         pass
-    server.serve(port=port, host='0.0.0.0', root='.')
+    print(f"Open this URL in your browser: {url}")
+
+    try:
+        for line in process.stdout:
+            if line:
+                print(line, end="")
+    except KeyboardInterrupt:
+        process.terminate()
+        process.wait(timeout=5)
+        print("\nServer stopped by user")
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--port', '-p', type=int, default=5500)
+    parser = argparse.ArgumentParser(description="Run the BECE school selection app locally")
+    parser.add_argument("--port", "-p", type=int, default=3000)
     args = parser.parse_args()
-    port = args.port
 
     try:
-        livereload_server(port)
-    except Exception:
-        print("\nTo enable live-reload install: pip install livereload\n")
-        simple_http_server(port)
+        run_node_server(args.port)
+    except FileNotFoundError as exc:
+        print(str(exc))
+        sys.exit(1)
+    except RuntimeError as exc:
+        print(str(exc))
+        sys.exit(1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
