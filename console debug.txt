@@ -1,0 +1,30 @@
+school-parser.js:27 [2026-07-31 13:08:14.134] [BECEApp] STEP: PDF upload selected {fileName: 'FINAL 2026 SENIOR HIGH SCHOOL REGISTER.pdf', size: 3244506}
+school-parser.js:27 [2026-07-31 13:08:14.169] [BECEApp] STEP: Starting PDF parse {sourceLabel: 'uploaded PDF', bytes: 3244506}
+school-parser.js:27 [2026-07-31 13:08:14.169] [BECEApp] STEP: Opening PDF document {sourceLabel: 'uploaded PDF'}
+school-parser.js:27 [2026-07-31 13:08:14.719] [BECEApp] STEP: PDF loaded {totalPages: 52, sourceLabel: 'uploaded PDF'}
+(index):1555 [BECE Package Debug] Pool built: 313 schools for aggregate 33 and programs AGRICULTURAL SCIENCE, AGRICULTURE
+(index):1555 [BECE Package Debug] Building package target A:2 B:3 C:3 from 313 schools
+(index):1555 [BECE Package Debug] Package result size=8/8 categories=A:0/B:3/C:5 res=Boarding:5/Day:3
+(index):1555 [BECE Package Debug] Building package target A:1 B:3 C:4 from 313 schools
+(index):1555 [BECE Package Debug] Package result size=8/8 categories=A:0/B:3/C:5 res=Boarding:5/Day:3
+(index):1555 [BECE Package Debug] Building package target A:0 B:2 C:6 from 313 schools
+(index):1555 [BECE Package Debug] Package result size=8/8 categories=A:0/B:2/C:6 res=Boarding:5/Day:3
+(index):1555 [BECE Package Debug] Building package target A:0 B:0 C:8 from 313 schools
+(index):1555 [BECE Package Debug] Package result size=8/8 categories=A:0/B:0/C:8 res=Boarding:5/Day:3
+(index):1555 [BECE Package Debug] Package lengths: pkg1=8, pkg2=8, pkg3=8
+school-parser.js:27 [2026-07-31 13:08:30.954] [BECEApp] STEP: Excel upload selected {fileName: '2026 SUPPLEMENTARY SECOND CYCLE SCHOOL REGISTER.xlsx', size: 15689}
+school-parser.js:27 [2026-07-31 13:08:31.014] [BECEApp] STEP: Uploaded Excel workbook opened {sheetCount: 1, sheets: Array(1)}
+school-parser.js:27 [2026-07-31 13:08:31.016] [BECEApp] STEP: Starting workbook sheet scan {totalSheets: 1}
+school-parser.js:27 [2026-07-31 13:08:31.017] [BECEApp] STEP: Sheet 1/1: SUPPLEMENTARY REGISTER scan started {sheetName: 'SUPPLEMENTARY REGISTER', ref: 'A1:T27'}
+school-parser.js:27 [2026-07-31 13:08:31.020] [BECEApp] STEP: Header row found for SUPPLEMENTARY REGISTER {headerIndex: 5, codeCol: 3, nameCol: 3, regionCol: 1, districtCol: 2, …}
+school-parser.js:27 [2026-07-31 13:08:31.024] [BECEApp] STEP: Excel workbook parse completed {parsedCount: 16, sheetsParsed: 1, totalSheets: 1, diagnostics: Array(0)}
+(index):1555 [BECE Package Debug] Pool built: 0 schools for aggregate 33 and programs AGRICULTURE
+(index):1555 [BECE Package Debug] Building package target A:2 B:3 C:3 from 0 schools
+(index):1555 [BECE Package Debug] Package result size=0/8 categories=A:0/B:0/C:0 res=Boarding:0/Day:0
+(index):1555 [BECE Package Debug] Building package target A:1 B:3 C:4 from 0 schools
+(index):1555 [BECE Package Debug] Package result size=0/8 categories=A:0/B:0/C:0 res=Boarding:0/Day:0
+(index):1555 [BECE Package Debug] Building package target A:0 B:2 C:6 from 0 schools
+(index):1555 [BECE Package Debug] Package result size=0/8 categories=A:0/B:0/C:0 res=Boarding:0/Day:0
+(index):1555 [BECE Package Debug] Building package target A:0 B:0 C:8 from 0 schools
+(index):1555 [BECE Package Debug] Package result size=0/8 categories=A:0/B:0/C:0 res=Boarding:0/Day:0
+(index):1555 [BECE Package Debug] Package lengths: pkg1=0, pkg2=0, pkg3=0

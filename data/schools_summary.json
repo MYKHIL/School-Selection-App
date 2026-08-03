@@ -1,0 +1,30 @@
+{
+  "total_schools": 1079,
+  "regions": {
+    "Ahafo": 33,
+    "Ashanti": 192,
+    "Bono": 50,
+    "Bono East": 35,
+    "Central": 107,
+    "Eastern": 137,
+    "Greater Accra": 3,
+    "Gt. Accra": 88,
+    "North": 1,
+    "North East": 22,
+    "Northern": 55,
+    "Oti": 33,
+    "Savannah": 18,
+    "Unknown": 1,
+    "Upper East": 55,
+    "Upper West": 53,
+    "Volta": 114,
+    "Western": 72,
+    "Western North": 10
+  },
+  "school_types": {
+    "SHS": 630,
+    "SHTS": 199,
+    "STEM": 11,
+    "TVET": 239
+  }
+}

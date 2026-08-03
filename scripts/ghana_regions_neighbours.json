@@ -1,0 +1,95 @@
+{
+  "Greater Accra": [
+    "Central",
+    "Eastern",
+    "Volta"
+  ],
+  "Ashanti": [
+    "Ahafo",
+    "Bono",
+    "Bono East",
+    "Eastern",
+    "Central",
+    "Western North"
+  ],
+  "Central": [
+    "Greater Accra",
+    "Eastern",
+    "Ashanti",
+    "Western"
+  ],
+  "Eastern": [
+    "Greater Accra",
+    "Central",
+    "Ashanti",
+    "Bono East",
+    "Volta"
+  ],
+  "Volta": [
+    "Greater Accra",
+    "Eastern",
+    "Oti"
+  ],
+  "Oti": [
+    "Volta",
+    "Eastern",
+    "Bono East",
+    "Savannah",
+    "Northern"
+  ],
+  "Western": [
+    "Central",
+    "Ashanti",
+    "Western North"
+  ],
+  "Western North": [
+    "Western",
+    "Ashanti",
+    "Ahafo"
+  ],
+  "Ahafo": [
+    "Bono",
+    "Bono East",
+    "Ashanti",
+    "Western North"
+  ],
+  "Bono": [
+    "Ahafo",
+    "Bono East",
+    "Savannah"
+  ],
+  "Bono East": [
+    "Bono",
+    "Ahafo",
+    "Ashanti",
+    "Eastern",
+    "Oti",
+    "Savannah"
+  ],
+  "Savannah": [
+    "Bono",
+    "Bono East",
+    "Oti",
+    "Northern",
+    "North East",
+    "Upper West"
+  ],
+  "Northern": [
+    "Savannah",
+    "Oti",
+    "North East"
+  ],
+  "North East": [
+    "Northern",
+    "Savannah",
+    "Upper East"
+  ],
+  "Upper East": [
+    "North East",
+    "Upper West"
+  ],
+  "Upper West": [
+    "Upper East",
+    "Savannah"
+  ]
+}

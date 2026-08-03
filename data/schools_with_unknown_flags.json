@@ -1,0 +1,2454 @@
+[
+  {
+    "code": "9010104",
+    "name": "New Century Technical Institute Dansoman",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9011601",
+    "name": "Ada Tech. Inst.",
+    "region": "Unknown",
+    "district": "East",
+    "location": "East, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010101",
+    "name": "Accra Tech. Trg. Centre Kokomlemle",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010901",
+    "name": "Madina Technical Institute Madin",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010201",
+    "name": "Tema Tech. Inst.",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010206",
+    "name": "Tema Mission Technical Institute",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9011400",
+    "name": "East Legon Applied Technology Institute East Legon",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010121",
+    "name": "Accra Academy Kaneshie",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010112",
+    "name": "Accra",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010110",
+    "name": "Achimota Senior High",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010102",
+    "name": "St. Mary's Senior High, Korle Gonno Korle Gonno",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010105",
+    "name": "St. Thomas Aquinas Senior High, Cantoments Cantonments",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Boys",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010111",
+    "name": "Presby Boys' Senior High, Legon Legon",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010201",
+    "name": "Tema Senior High Tema Comm 5",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0090501",
+    "name": "Navrongo Senior High Janania-Navrongo",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0090505",
+    "name": "Notre Dame Sem/ Senior High, Navrongo Navrongo",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0040706",
+    "name": "Awaso STEM Senior High",
+    "region": "Unknown",
+    "district": "Bekwai",
+    "location": "Bekwai, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "STEM",
+    "progs": [
+      "STEM"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010102",
+    "name": "Sacred Heart Tech. Inst. Jamsetown",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010602",
+    "name": "Afienya Technical Institute",
+    "region": "Unknown",
+    "district": "Prampram",
+    "location": "Prampram, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010108",
+    "name": "Government Technical Institute Kaneshie-Accra",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0051704",
+    "name": "St. Mary's Girl's Senior High, Konongo Konongo",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0051703",
+    "name": "Wesley Senior High, Konongo . Konongo",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0030201",
+    "name": "Edinaman Senior High Elmina",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0031104",
+    "name": "Twifo Hemang Senior High/Tech Twifo Hemang",
+    "region": "Unknown",
+    "district": "Denkyira",
+    "location": "Denkyira, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0031001",
+    "name": "Boa-Amponsem Senior High Dunkwa-On-Offin",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010106",
+    "name": "Accra Senior High Asylum Down",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010142",
+    "name": "St. Margaret Mary Snr.High/Tech Dansoman",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010103",
+    "name": "Wesley Grammar School Dansoman",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010301",
+    "name": "Ada Senior High Ada-Foah",
+    "region": "Unknown",
+    "district": "East",
+    "location": "East, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010501",
+    "name": "St. John's Grammar Senior High Achimota",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010117",
+    "name": "Labone Senior High",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010115",
+    "name": "Forces Senior High/Tech, Burma Camp Burma Camp",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010502",
+    "name": "West Africa Senior High Adenta",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010114",
+    "name": "Nungua Senior High",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010403",
+    "name": "Ningo Senior High Old",
+    "region": "Unknown",
+    "district": "Prampram",
+    "location": "Prampram, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010404",
+    "name": "Prampram Senior High",
+    "region": "Unknown",
+    "district": "Prampram",
+    "location": "Prampram, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010401",
+    "name": "Ghanata Senior High Dodowa",
+    "region": "Unknown",
+    "district": "Shai-Osudoku",
+    "location": "Shai-Osudoku, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010202",
+    "name": "Chemu Senior High/Tech Tema Comm 4",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010213",
+    "name": "Our Lady of Mercy Senior High Tema Comm 4",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0012305",
+    "name": "Accra STEM Academy East Legon",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "STEM",
+    "progs": [
+      "STEM"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9060301",
+    "name": "Kintampo Technical Institute",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9020902",
+    "name": "St. Mary's Voc./Tech. Inst. Adiembra",
+    "region": "Unknown",
+    "district": "North",
+    "location": "North, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9020903",
+    "name": "TSC Technical Institute, Donkorkrom Donkorkrom",
+    "region": "Unknown",
+    "district": "North",
+    "location": "North, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9021603",
+    "name": "Tutu Methodist Technical Institute",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9011001",
+    "name": "Ashiaman Technical Institute Ashaiman",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010123",
+    "name": "Opportunities Industrialization Technical",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010106",
+    "name": "Kanda Technical Institute",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010500",
+    "name": "Bedeku Technical Institute",
+    "region": "Unknown",
+    "district": "East",
+    "location": "East, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9011302",
+    "name": "Ngleshie Amanfro Technical Institute Ngleshie Amanfro",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9011701",
+    "name": "Teshie Tech. Instittute",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010601",
+    "name": "Prampram Technical Institute",
+    "region": "Unknown",
+    "district": "Prampram",
+    "location": "Prampram, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010107",
+    "name": "South Labone",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010702",
+    "name": "Agomeda Technical Institute",
+    "region": "Unknown",
+    "district": "Osudoku",
+    "location": "Osudoku, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010700",
+    "name": "Dodowa Technical Institute",
+    "region": "Unknown",
+    "district": "Osudoku",
+    "location": "Osudoku, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9010906",
+    "name": "Danfa Technical Institute",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9090902",
+    "name": "Navrongo Technical Institute",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9040600",
+    "name": "TSC Technical Institute - Bibiani Bibiani",
+    "region": "Unknown",
+    "district": "Bekwai",
+    "location": "Bekwai, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9040901",
+    "name": "Bonso Nkwanta Technical Institute Bonsu Nkwanta",
+    "region": "Unknown",
+    "district": "Juaboso",
+    "location": "Juaboso, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010101",
+    "name": "Ebenezer Senior High Dansoman",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010148",
+    "name": "Accra Wesley",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Girls",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010107",
+    "name": "Presby Senior High, Osu Osu",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010104",
+    "name": "Holy Trinity Senior High High Street-Accra",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010120",
+    "name": "Kaneshie Senior High/Tech.",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010109",
+    "name": "Kinbu Senior High/Tech Tudu - Accra",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010302",
+    "name": "Ada Senior High/Tech. Sege",
+    "region": "Unknown",
+    "district": "West",
+    "location": "West, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010535",
+    "name": "Frafraha Comm. Senior High",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010203",
+    "name": "Ashiaman Senior High",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010534",
+    "name": "Kwabenya Comm. Senior High",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010119",
+    "name": "Christian Methodist Senior High Aplaku (Weija)",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010503",
+    "name": "Ngleshie Amanfro Senior High Ngleshie Amanfro",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0012901",
+    "name": "Pentecost Senior High/Technical School Weija",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010504",
+    "name": "Amasaman Senior High/Tech",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010186",
+    "name": "Adjen Kotoku Senior High Adjen Kotoku",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010195",
+    "name": "Akramaman Senior High",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010227",
+    "name": "Kpone Comm. Senior High Katamanso",
+    "region": "Unknown",
+    "district": "Kpone-Katamanso",
+    "location": "Kpone-Katamanso, Unknown",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010116",
+    "name": "Presby Senior High, Teshie Teshie",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010108",
+    "name": "O'Reilly Senior High Okpoi Gonno",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010402",
+    "name": "Osudoku Senior High/Tech. Asutsuare",
+    "region": "Unknown",
+    "district": "Osudoku",
+    "location": "Osudoku, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010205",
+    "name": "Tema Meth. Day Senior High Tema Comm II",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010210",
+    "name": "Presby Senior High, Tema Tema Community 11Mixed X X X X X 5 Day SHS",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010545",
+    "name": "Lashibi Comm. Day Sakumono",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010204",
+    "name": "Tema Manhean Senior High/Tech Tema New Town",
+    "region": "Unknown",
+    "district": "Metro",
+    "location": "Metro, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010711",
+    "name": "Bortianor Senior High School",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0041001",
+    "name": "Nana Brentu Senior High/Tech Enchi",
+    "region": "Unknown",
+    "district": "Suaman",
+    "location": "Suaman, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0040807",
+    "name": "Amoaya Senior High School",
+    "region": "Unknown",
+    "district": "Bodi",
+    "location": "Bodi, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0040806",
+    "name": "Adabokrom Comm. SHS",
+    "region": "Unknown",
+    "district": "East",
+    "location": "East, Unknown",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0040804",
+    "name": "Adjoafua Comm. Senior High",
+    "region": "Unknown",
+    "district": "West",
+    "location": "West, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0040705",
+    "name": "Chirano Comm. Day School",
+    "region": "Unknown",
+    "district": "Bekwai",
+    "location": "Bekwai, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "STEM",
+    "progs": [
+      "STEM"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0040701",
+    "name": "Bibiani Senior High/Tech.",
+    "region": "Unknown",
+    "district": "Bekwai",
+    "location": "Bekwai, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0040704",
+    "name": "Queens Girls' Senior High, Sefwi Awhiaso Sefwi Anwhiaso",
+    "region": "Unknown",
+    "district": "Bekwai",
+    "location": "Bekwai, Unknown",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0040607",
+    "name": "Nsawora Edumafa Senior High School Nsawora Edumafa",
+    "region": "Unknown",
+    "district": "Akontombra",
+    "location": "Akontombra, Unknown",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0021507",
+    "name": "Modern Senior High School, Kpong Kpong",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0021506",
+    "name": "King David Comm. College Kpong",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010153",
+    "name": "Mamprobi Senior High Sch",
+    "region": "Unknown",
+    "district": "metro",
+    "location": "metro, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010162",
+    "name": "Ideal College, Legon. East Legon",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010509",
+    "name": "Action Senior High/Tech School Madina Estate",
+    "region": "Unknown",
+    "district": "Unknown District",
+    "location": "Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      },
+      {
+        "field": "district",
+        "reason": "unknown-value",
+        "value": "Unknown District"
+      },
+      {
+        "field": "location",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 3
+  },
+  {
+    "code": "0010125",
+    "name": "City Business Senior High Mateheko",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010163",
+    "name": "Delcam Senior High School Adentan",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010198",
+    "name": "St. Andrews Senior High School Teshie",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010517",
+    "name": "Mercy Islamic Senior High Lakeside Estates, AdentaMixed X X X X 4 Day SHS",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010157",
+    "name": "Tuba Islamic Senior High School Tuba-Kasoa",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010175",
+    "name": "Ghana College Senior High Tech Accra",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010511",
+    "name": "Crystal Heights International School Amasaman",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010145",
+    "name": "Seven Great Princes Academy Shs Accra",
+    "region": "Unknown",
+    "district": "West",
+    "location": "West, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010510",
+    "name": "St. Peters Mission School Adenta",
+    "region": "Unknown",
+    "district": "Adentan",
+    "location": "Adentan, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010206",
+    "name": "Datus Senior High School Tema",
+    "region": "Unknown",
+    "district": "Tema",
+    "location": "Tema, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010549",
+    "name": "Purdue Scholars College Accra",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0010550",
+    "name": "Westfield Bridge College Tetegu Junction",
+    "region": "Unknown",
+    "district": "Gbawe",
+    "location": "Gbawe, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0040608",
+    "name": "St. Benedict Senior High School, Sefwi",
+    "region": "Unknown",
+    "district": "Municipal",
+    "location": "Municipal, Unknown",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "0040703",
+    "name": "Otoo Memorial Senior High School Bibiani",
+    "region": "Unknown",
+    "district": "Bekwai",
+    "location": "Bekwai, Unknown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "progs": [
+      "GEN. SCI"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  },
+  {
+    "code": "9030414",
+    "name": "New Ebu Technical Institute New Ebu",
+    "region": "Unknown",
+    "district": "Kwamankese",
+    "location": "Kwamankese, Unknown",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "progs": [
+      "TECH"
+    ],
+    "unknownFlags": [
+      {
+        "field": "region",
+        "reason": "unknown-value",
+        "value": "Unknown"
+      }
+    ],
+    "unknownFieldCount": 1
+  }
+]

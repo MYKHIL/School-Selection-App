@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BECE 2026 School Selection & Placement System</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- PDF.js library for parsing uploaded PDF registers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="./scripts/school-parser.js"></script>
+    <script src="./scripts/school-pairing-engine.js?v=20260802"></script>
+    <script src="./scripts/water-effect.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        #school-picker-modal .filter-panel,
+        #school-picker-modal .filter-panel-content,
+        #school-picker-modal .filter-panel-content label,
+        #school-picker-modal .filter-panel-toggle {
+            font-size: 0.75rem;
+        }
+        #school-picker-modal .filter-panel-toggle {
+            padding: 0.65rem 0.85rem;
+        }
+        @media print {
+            body * {
+                visibility: hidden !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            #print-view,
+            #print-view * {
+                visibility: visible !important;
+            }
+            #print-view {
+                display: block !important;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: white;
+            }
+            body {
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col text-slate-800 antialiased">
+
+    <!-- Top Navigation Header + Tabs (sticky on desktop only) -->
+    <div id="app-top-sticky" class="static sm:sticky top-0 z-50">
+    <header class="bg-gradient-to-r from-emerald-800 via-teal-800 to-indigo-900 text-white shadow-md no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-inner overflow-hidden">
+                    <img src="images/ges-logo.png" alt="GES logo" class="w-full h-full object-cover rounded-full" style="display:block;" />
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg sm:text-xl tracking-tight leading-tight">BECE 2026 School Selector</h1>
+                    <p class="text-xs text-emerald-200">Ghana Education Service & TVET Placement Engine</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 mt-2 sm:mt-0 text-xs flex-wrap">
+                <button type="button" id="view-all-schools-btn" onclick="app && app.openDatabaseViewerModal()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold px-3.5 py-1.5 rounded-full border border-amber-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-database text-indigo-900"></i> View All Schools
+                </button>
+                <span class="bg-emerald-700/60 text-emerald-100 px-3 py-1.5 rounded-full border border-emerald-500/30 flex items-center gap-1.5">
+                    <i class="fa-solid fa-shield-halved text-amber-300"></i> Strict GES Rules Engine
+                </span>
+                <span id="dataset-status-badge" class="bg-indigo-700/60 text-indigo-100 px-3 py-1.5 rounded-full border border-indigo-500/30 flex items-center gap-2">
+                    <i class="fa-solid fa-database text-teal-300"></i> <span id="badge-count-text">Preloaded Register</span>
+                </span>
+                <label class="text-xs text-slate-200 ml-2 hidden">Data Source</label>
+                <select id="dataset-select" onchange="app && app.setDatasetPreference(this.value)" class="hidden text-xs bg-indigo-800/30 border border-indigo-600/40 text-indigo-100 rounded px-2 py-1">
+                    <option value="PDF">PDF</option>
+                    <option value="EXCEL" selected>Excel</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+        <div class="no-print w-full flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <div>
+                <h2 class="text-sm font-semibold text-slate-900">Step-by-step school selection</h2>
+                <p class="text-xs text-slate-500">Complete each page in order and use the next/previous controls to move through the flow.</p>
+            </div>
+            <div class="flex items-center gap-2">
+                <nav class="inline-flex rounded-full bg-slate-100 p-1" role="tablist" aria-label="Main tabs">
+                    <button id="tab-candidate" role="tab" aria-selected="true" class="text-xs px-4 py-2 rounded-full font-semibold bg-white text-slate-900">Candidate Details & Data</button>
+                    <button id="tab-pairings" role="tab" aria-selected="false" aria-disabled="true" class="text-xs px-4 py-2 rounded-full font-semibold text-slate-700 opacity-50 cursor-not-allowed">School Pairings</button>
+                    <button id="tab-uploads" role="tab" aria-selected="false" class="text-xs px-4 py-2 rounded-full font-semibold text-slate-700 hover:bg-slate-50">Custom Uploads</button>
+                </nav>
+                <div id="tab-warning" class="hidden mt-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-900"></div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+        <section id="page-host" class="space-y-6"></section>
+
+    <script>
+        // Ensure the main page host scroll area starts after the sticky header+tabs
+        function adjustPageHostHeight() {
+            const sticky = document.getElementById('app-top-sticky');
+            const host = document.getElementById('page-host');
+            if (!sticky || !host) return;
+            const stickyHeight = Math.ceil(sticky.getBoundingClientRect().height);
+            host.style.maxHeight = `calc(100vh - ${stickyHeight}px)`;
+            host.style.overflowY = 'auto';
+        }
+
+        window.addEventListener('resize', adjustPageHostHeight);
+        window.addEventListener('load', () => { adjustPageHostHeight(); setTimeout(adjustPageHostHeight, 120); });
+        // If the app loads pages dynamically, adjust after DOM mutations
+        const observer = new MutationObserver(() => adjustPageHostHeight());
+        observer.observe(document.getElementById('page-host'), { childList: true, subtree: true });
+    </script>
+    </main>
+
+    <!-- Modal: Swap/Choose School Dialog -->
+    <div id="school-picker-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden relative">
+            <div class="p-4 bg-slate-900 text-white flex justify-between items-center">
+                <div>
+                    <h3 class="font-bold text-sm" id="modal-title">Select Alternative School</h3>
+                    <p class="text-xs text-slate-400" id="modal-subtitle">Filtering compatible schools from dataset</p>
+                </div>
+                <button onclick="app.closeSchoolModal()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            
+            <!-- Filters inside Modal -->
+            <div class="flex-1 flex flex-col overflow-hidden">
+                <div id="picker-modal-filter-container" class="p-3 bg-slate-50 border-b border-slate-200 text-xs relative">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1 relative">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400"></i>
+                            <input type="text" id="modal-search" placeholder="Search school name/code/district/location..." oninput="app.filterModalList()" class="w-full bg-white border border-slate-300 rounded-lg pl-9 pr-3 py-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        </div>
+                        <button type="button" id="picker-modal-filter-toggle-btn" onclick="app.togglePickerModalFilterSection(event)" class="px-3.5 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 font-semibold rounded-lg flex items-center gap-2 shadow-sm transition cursor-pointer shrink-0">
+                            <i class="fa-solid fa-filter text-emerald-600"></i>
+                            <span class="hidden xs:inline">Filters</span>
+                            <i id="picker-modal-filter-chevron" class="fa-solid fa-chevron-down text-[10px] text-slate-400 transition-transform duration-200"></i>
+                        </button>
+                    </div>
+
+                    <!-- Collapsible Filter Options Pills -->
+                    <div id="picker-modal-filter-body" class="hidden mt-3 pt-3 border-t border-slate-200">
+                        <div class="flex flex-wrap gap-2 text-[11px] items-center">
+                            <button type="button" onclick="app.openModalFilterPanel('modal-cat-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                                Categories <span id="modal-cat-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                            </button>
+                            <button type="button" onclick="app.openModalFilterPanel('modal-res-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                                Residence <span id="modal-res-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                            </button>
+                            <button type="button" onclick="app.openModalFilterPanel('modal-region-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                                Regions <span id="modal-region-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                            </button>
+                            <button type="button" onclick="app.openModalFilterPanel('modal-district-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                                Districts <span id="modal-district-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                            </button>
+                            <button type="button" onclick="app.openModalFilterPanel('modal-programme-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                                Programmes <span id="modal-programme-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                            </button>
+                            <button type="button" onclick="app.openModalFilterPanel('modal-gender-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                                Gender <span id="modal-gender-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                            </button>
+                            <button type="button" onclick="app.openModalFilterPanel('modal-type-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                                Types <span id="modal-type-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 overflow-y-auto text-xs min-h-0 p-4" id="modal-school-list">
+                    <!-- Items populated by JS -->
+                </div>
+            </div>
+
+            <div id="modal-filter-popover" class="hidden absolute inset-0 z-40 bg-slate-900/60 backdrop-blur-sm flex items-start justify-center px-4 py-6" onclick="app.handleFilterPopoverOutsideClick(event)">
+                <div class="relative w-full max-w-xl rounded-3xl bg-white shadow-2xl border border-slate-200 overflow-hidden">
+                    <div class="flex items-center justify-between p-4 border-b border-slate-200">
+                        <div>
+                            <h3 id="modal-filter-popover-title" class="font-semibold text-slate-900 text-sm">Filter</h3>
+                            <p id="modal-filter-popover-subtitle" class="text-xs text-slate-500">Select values to refine the school list.</p>
+                        </div>
+                        <button type="button" onclick="app.closeModalFilterPopover()" class="text-slate-500 hover:text-slate-900 p-2">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="p-4 overflow-y-auto max-h-[60vh] text-xs space-y-4">
+                        <div id="modal-cat-filter-pane" class="modal-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="modal-cat-select-all" type="checkbox" onchange="app.toggleModalFilterSelectAll('modal-cat-filter','modal-cat-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="modal-cat-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                        <div id="modal-res-filter-pane" class="modal-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="modal-res-select-all" type="checkbox" onchange="app.toggleModalFilterSelectAll('modal-res-filter','modal-res-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="modal-res-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                        <div id="modal-region-filter-pane" class="modal-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="modal-region-select-all" type="checkbox" onchange="app.toggleModalFilterSelectAll('modal-region-filter','modal-region-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="modal-region-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                        <div id="modal-district-filter-pane" class="modal-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="modal-district-select-all" type="checkbox" onchange="app.toggleModalFilterSelectAll('modal-district-filter','modal-district-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="modal-district-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                        <div id="modal-programme-filter-pane" class="modal-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="modal-programme-select-all" type="checkbox" onchange="app.toggleModalFilterSelectAll('modal-programme-filter','modal-programme-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="modal-programme-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                        <div id="modal-gender-filter-pane" class="modal-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="modal-gender-select-all" type="checkbox" onchange="app.toggleModalFilterSelectAll('modal-gender-filter','modal-gender-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="modal-gender-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                        <div id="modal-type-filter-pane" class="modal-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="modal-type-select-all" type="checkbox" onchange="app.toggleModalFilterSelectAll('modal-type-filter','modal-type-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="modal-type-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Grades Input -->
+    <div id="grades-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden items-center justify-center p-3 sm:p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-xl max-h-[90vh] overflow-y-auto p-4 sm:p-5 space-y-3 my-4">
+            <div class="flex justify-between items-center border-b pb-2">
+                <h3 class="font-bold text-sm text-slate-900"><i class="fa-solid fa-sliders text-emerald-600 mr-1.5"></i> Set Subject Grades (1 to 9)</h3>
+                <button onclick="app.toggleGradesModal()" class="text-slate-400 hover:text-slate-600">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <p class="text-[11px] leading-relaxed text-slate-500">BECE Aggregate automatically computes using your 4 Core subjects + Best 2 Electives (lowest total score is best), with WAEC-style 1 to 9 grading.</p>
+            
+            <div class="grid grid-cols-1 gap-2 text-xs" id="grades-inputs-container">
+                <div class="col-span-1 font-bold text-slate-700 bg-slate-100 p-1.5 rounded">Core Subjects (Mandatory)</div>
+                <div>
+                    <label class="block mb-1">English Language</label>
+                    <div class="grid grid-cols-5 gap-1">
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="eng" data-value="1" onclick="app.selectGrade(this)">1</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="eng" data-value="2" onclick="app.selectGrade(this)">2</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="eng" data-value="3" onclick="app.selectGrade(this)">3</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="eng" data-value="4" onclick="app.selectGrade(this)">4</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="eng" data-value="5" onclick="app.selectGrade(this)">5</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="eng" data-value="6" onclick="app.selectGrade(this)">6</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="eng" data-value="7" onclick="app.selectGrade(this)">7</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="eng" data-value="8" onclick="app.selectGrade(this)">8</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="eng" data-value="9" onclick="app.selectGrade(this)">9</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="block mb-1">Social Studies</label>
+                    <div class="grid grid-cols-5 gap-1">
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="soc" data-value="1" onclick="app.selectGrade(this)">1</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="soc" data-value="2" onclick="app.selectGrade(this)">2</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="soc" data-value="3" onclick="app.selectGrade(this)">3</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="soc" data-value="4" onclick="app.selectGrade(this)">4</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="soc" data-value="5" onclick="app.selectGrade(this)">5</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="soc" data-value="6" onclick="app.selectGrade(this)">6</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="soc" data-value="7" onclick="app.selectGrade(this)">7</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="soc" data-value="8" onclick="app.selectGrade(this)">8</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="soc" data-value="9" onclick="app.selectGrade(this)">9</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="block mb-1">Mathematics</label>
+                    <div class="grid grid-cols-5 gap-1">
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="math" data-value="1" onclick="app.selectGrade(this)">1</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="math" data-value="2" onclick="app.selectGrade(this)">2</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="math" data-value="3" onclick="app.selectGrade(this)">3</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="math" data-value="4" onclick="app.selectGrade(this)">4</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="math" data-value="5" onclick="app.selectGrade(this)">5</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="math" data-value="6" onclick="app.selectGrade(this)">6</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="math" data-value="7" onclick="app.selectGrade(this)">7</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="math" data-value="8" onclick="app.selectGrade(this)">8</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="math" data-value="9" onclick="app.selectGrade(this)">9</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="block mb-1">Integrated Science</label>
+                    <div class="grid grid-cols-5 gap-1">
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="sci" data-value="1" onclick="app.selectGrade(this)">1</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="sci" data-value="2" onclick="app.selectGrade(this)">2</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="sci" data-value="3" onclick="app.selectGrade(this)">3</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="sci" data-value="4" onclick="app.selectGrade(this)">4</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="sci" data-value="5" onclick="app.selectGrade(this)">5</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="sci" data-value="6" onclick="app.selectGrade(this)">6</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="sci" data-value="7" onclick="app.selectGrade(this)">7</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="sci" data-value="8" onclick="app.selectGrade(this)">8</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="sci" data-value="9" onclick="app.selectGrade(this)">9</button>
+                    </div>
+                </div>
+
+                <div class="col-span-1 font-bold text-slate-700 bg-slate-100 p-1.5 rounded mt-2">Elective Subjects (Best 2 Selected)</div>
+                <div>
+                    <label class="block mb-1">Career Tech / BDT</label>
+                    <div class="grid grid-cols-5 gap-1">
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="bdt" data-value="1" onclick="app.selectGrade(this)">1</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="bdt" data-value="2" onclick="app.selectGrade(this)">2</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="bdt" data-value="3" onclick="app.selectGrade(this)">3</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="bdt" data-value="4" onclick="app.selectGrade(this)">4</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="bdt" data-value="5" onclick="app.selectGrade(this)">5</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="bdt" data-value="6" onclick="app.selectGrade(this)">6</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="bdt" data-value="7" onclick="app.selectGrade(this)">7</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="bdt" data-value="8" onclick="app.selectGrade(this)">8</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="bdt" data-value="9" onclick="app.selectGrade(this)">9</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="block mb-1">Creative Arts & Design</label>
+                    <div class="grid grid-cols-5 gap-1">
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="cad" data-value="1" onclick="app.selectGrade(this)">1</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="cad" data-value="2" onclick="app.selectGrade(this)">2</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="cad" data-value="3" onclick="app.selectGrade(this)">3</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="cad" data-value="4" onclick="app.selectGrade(this)">4</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="cad" data-value="5" onclick="app.selectGrade(this)">5</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="cad" data-value="6" onclick="app.selectGrade(this)">6</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="cad" data-value="7" onclick="app.selectGrade(this)">7</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="cad" data-value="8" onclick="app.selectGrade(this)">8</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="cad" data-value="9" onclick="app.selectGrade(this)">9</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="block mb-1">Computing / ICT</label>
+                    <div class="grid grid-cols-5 gap-1">
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="ict" data-value="1" onclick="app.selectGrade(this)">1</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="ict" data-value="2" onclick="app.selectGrade(this)">2</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="ict" data-value="3" onclick="app.selectGrade(this)">3</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="ict" data-value="4" onclick="app.selectGrade(this)">4</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="ict" data-value="5" onclick="app.selectGrade(this)">5</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="ict" data-value="6" onclick="app.selectGrade(this)">6</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="ict" data-value="7" onclick="app.selectGrade(this)">7</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="ict" data-value="8" onclick="app.selectGrade(this)">8</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="ict" data-value="9" onclick="app.selectGrade(this)">9</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="block mb-1">Ghanaian Language</label>
+                    <div class="grid grid-cols-5 gap-1">
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="gh" data-value="1" onclick="app.selectGrade(this)">1</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="gh" data-value="2" onclick="app.selectGrade(this)">2</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="gh" data-value="3" onclick="app.selectGrade(this)">3</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="gh" data-value="4" onclick="app.selectGrade(this)">4</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="gh" data-value="5" onclick="app.selectGrade(this)">5</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="gh" data-value="6" onclick="app.selectGrade(this)">6</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="gh" data-value="7" onclick="app.selectGrade(this)">7</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="gh" data-value="8" onclick="app.selectGrade(this)">8</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="gh" data-value="9" onclick="app.selectGrade(this)">9</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="block mb-1">Religious and Moral Education (RME)</label>
+                    <div class="grid grid-cols-5 gap-1">
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="rme" data-value="1" onclick="app.selectGrade(this)">1</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="rme" data-value="2" onclick="app.selectGrade(this)">2</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="rme" data-value="3" onclick="app.selectGrade(this)">3</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="rme" data-value="4" onclick="app.selectGrade(this)">4</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="rme" data-value="5" onclick="app.selectGrade(this)">5</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="rme" data-value="6" onclick="app.selectGrade(this)">6</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="rme" data-value="7" onclick="app.selectGrade(this)">7</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="rme" data-value="8" onclick="app.selectGrade(this)">8</button>
+                        <button type="button" class="grade-option rounded-lg border px-2 py-1 font-semibold transition" data-subject="rme" data-value="9" onclick="app.selectGrade(this)">9</button>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="app.toggleGradesModal()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded-xl text-xs">
+                Apply & Save Grades
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal: Database Viewer (All Schools) -->
+    <div id="db-viewer-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-5">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-6xl w-full max-h-[92vh] flex flex-col overflow-hidden relative">
+            <!-- Header -->
+            <div class="p-4 bg-slate-900 text-white flex justify-between items-center border-b border-slate-800">
+                <div class="flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-bold text-base text-white">Full School Database Register</h3>
+                            <span id="db-viewer-count" class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">0 Schools</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Browse, filter, search, and inspect all schools and their properties in the database</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="app.exportDatabaseAsCSV()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-emerald-300 rounded-lg text-xs font-semibold border border-slate-700 transition flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-solid fa-file-csv"></i> Export CSV
+                    </button>
+                    <button type="button" onclick="app.closeDatabaseViewerModal()" class="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-slate-800 transition cursor-pointer">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter & Search Controls Bar -->
+            <div id="db-viewer-filter-container" class="p-3 bg-slate-50 border-b border-slate-200 text-xs relative">
+                <div class="flex items-center gap-2">
+                    <!-- Search Input -->
+                    <div class="flex-1 relative">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400"></i>
+                        <input type="text" id="db-viewer-search" placeholder="Search name, code, district, location..." oninput="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg pl-9 pr-3 py-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+
+                    <!-- Filter Toggle Button -->
+                    <button type="button" id="db-viewer-filter-toggle-btn" onclick="app.toggleDbViewerFilterSection(event)" class="px-3.5 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 font-semibold rounded-lg flex items-center gap-2 shadow-sm transition cursor-pointer shrink-0">
+                        <i class="fa-solid fa-filter text-emerald-600"></i>
+                        <span class="hidden xs:inline">Filters</span>
+                        <span id="db-viewer-active-badge" class="hidden px-1.5 py-0.5 rounded-full text-[10px] bg-emerald-100 text-emerald-800 font-bold">Active</span>
+                        <i id="db-viewer-filter-chevron" class="fa-solid fa-chevron-down text-[10px] text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                </div>
+
+                <!-- Collapsible Filter Body -->
+                <div id="db-viewer-filter-body" class="hidden mt-3 pt-3 border-t border-slate-200 space-y-2.5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
+                        <!-- Region Filter -->
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Region</label>
+                            <select id="db-viewer-region" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                <option value="">All Regions</option>
+                            </select>
+                        </div>
+
+                        <!-- Category Filter -->
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Category</label>
+                            <select id="db-viewer-category" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                <option value="">All Categories</option>
+                                <option value="A">Category A</option>
+                                <option value="B">Category B</option>
+                                <option value="C">Category C</option>
+                            </select>
+                        </div>
+
+                        <!-- Type Filter -->
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Type</label>
+                            <select id="db-viewer-type" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                <option value="">All Types</option>
+                                <option value="SHS">SHS</option>
+                                <option value="SHTS">SHTS</option>
+                                <option value="TVET">TVET</option>
+                                <option value="STEM">STEM</option>
+                            </select>
+                        </div>
+
+                        <!-- Residence Filter -->
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Residence</label>
+                            <select id="db-viewer-residence" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                <option value="">All Residence</option>
+                                <option value="Day">Day Only</option>
+                                <option value="Boarding">Boarding Only</option>
+                                <option value="Day/Boarding">Day / Boarding</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 pt-1 border-t border-slate-200/80">
+                        <!-- Gender Filter -->
+                        <div>
+                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Gender</label>
+                            <select id="db-viewer-gender" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                <option value="">All Genders</option>
+                                <option value="Mixed">Mixed</option>
+                                <option value="Boys">Boys</option>
+                                <option value="Girls">Girls</option>
+                            </select>
+                        </div>
+
+                        <!-- Programme Filter -->
+                        <div class="md:col-span-2">
+                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Programme Offered</label>
+                            <select id="db-viewer-prog" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                                <option value="">All Programmes</option>
+                            </select>
+                        </div>
+
+                        <div class="flex items-end justify-between sm:justify-end gap-3 pt-1 text-xs text-slate-500">
+                            <span id="db-viewer-summary-stats" class="hidden sm:inline text-[11px] self-center">Showing 0 of 0 schools</span>
+                            <button type="button" onclick="app.resetDatabaseViewerFilters()" class="text-emerald-700 hover:text-emerald-900 font-semibold underline cursor-pointer self-center">Reset Filters</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Content Container (Desktop) -->
+            <div class="hidden sm:block flex-1 overflow-y-auto overflow-x-auto min-h-0 bg-white">
+                <table class="w-full text-left border-collapse text-xs">
+                    <thead class="sticky top-0 z-10 bg-slate-100 border-b border-slate-200 text-slate-700 uppercase font-bold text-[11px] tracking-wider">
+                        <tr>
+                            <th class="p-3 w-24 cursor-pointer hover:bg-slate-200 transition" onclick="app.sortDatabaseViewer('code')">
+                                Code <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
+                            </th>
+                            <th class="p-3 cursor-pointer hover:bg-slate-200 transition" onclick="app.sortDatabaseViewer('name')">
+                                School Name <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
+                            </th>
+                            <th class="p-3 cursor-pointer hover:bg-slate-200 transition" onclick="app.sortDatabaseViewer('region')">
+                                Region <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
+                            </th>
+                            <th class="p-3 cursor-pointer hover:bg-slate-200 transition" onclick="app.sortDatabaseViewer('district')">
+                                District / Location <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
+                            </th>
+                            <th class="p-3 text-center w-16 cursor-pointer hover:bg-slate-200 transition" onclick="app.sortDatabaseViewer('category')">
+                                Cat <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
+                            </th>
+                            <th class="p-3 text-center w-20 cursor-pointer hover:bg-slate-200 transition" onclick="app.sortDatabaseViewer('type')">
+                                Type <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
+                            </th>
+                            <th class="p-3 text-center w-20 cursor-pointer hover:bg-slate-200 transition" onclick="app.sortDatabaseViewer('gender')">
+                                Gender <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
+                            </th>
+                            <th class="p-3 cursor-pointer hover:bg-slate-200 transition" onclick="app.sortDatabaseViewer('status')">
+                                Residence <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
+                            </th>
+                            <th class="p-3">Programmes Offered</th>
+                            <th class="p-3 text-center w-36 bg-amber-50 text-amber-900 border-l border-slate-200">Set Choice (1–8)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="db-viewer-tbody" class="divide-y divide-slate-100">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Mobile Badge/Card List Container -->
+            <div id="db-viewer-mobile-container" class="block sm:hidden flex-1 overflow-y-auto min-h-0 bg-slate-100 p-2.5 space-y-2">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- Footer with Pagination -->
+            <div class="p-3 bg-slate-50 border-t border-slate-200 text-xs flex flex-wrap items-center justify-between gap-2">
+                <div id="db-viewer-pagination-info" class="text-slate-600 font-medium">Page 1 of 1</div>
+                <div class="flex items-center space-x-2">
+                    <button id="db-viewer-prev-btn" onclick="app.prevDatabaseViewerPage()" class="px-3 py-1.5 bg-white border border-slate-300 rounded-lg font-semibold hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed">Previous</button>
+                    <button id="db-viewer-next-btn" onclick="app.nextDatabaseViewerPage()" class="px-3 py-1.5 bg-white border border-slate-300 rounded-lg font-semibold hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Student Info for Print -->
+    <div id="student-print-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden relative border border-slate-200">
+            <div class="p-4 bg-slate-900 text-white flex justify-between items-center">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-amber-400 text-slate-950 flex items-center justify-center font-bold text-sm">
+                        <i class="fa-solid fa-print"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm">Official Selection Form Candidate Info</h3>
+                        <p class="text-xs text-slate-300">Enter candidate details before previewing form</p>
+                    </div>
+                </div>
+                <button type="button" onclick="app.closeStudentPrintModal()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <form onsubmit="app.confirmAndPrint(event)" class="p-5 space-y-4 text-xs">
+                <div>
+                    <label class="block font-bold text-slate-800 mb-1">
+                        Student Full Name <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="text" id="modal-student-name" required placeholder="e.g. Kwame Mensah Appiah" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 font-medium text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    <p class="text-[10px] text-slate-500 mt-1">Candidate full name as registered with GES/WAEC</p>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-slate-800 mb-1">
+                        BECE Index Number <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="text" id="modal-student-index" required pattern="[0-9]{10}" maxlength="10" title="10-digit candidate index number" placeholder="e.g. 0102030405" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 font-mono font-medium text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    <p class="text-[10px] text-slate-500 mt-1">10-digit WAEC BECE candidate index number</p>
+                </div>
+
+                <div class="pt-3 flex items-center justify-end gap-2 border-t border-slate-100">
+                    <button type="button" onclick="app.closeStudentPrintModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg transition cursor-pointer">
+                        Cancel
+                    </button>
+                    <button type="submit" class="px-4 py-2 bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold rounded-lg shadow transition flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-solid fa-print"></i> Generate Preview & Print
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/school-selector-app.js?v=20260801"></script>
+    <script>
+        const PAGE_FILES = {
+            profile: './pages/page-profile.html?v=20260801',
+            upload: './pages/page-upload.html?v=20260801',
+            results: './pages/page-results.html?v=20260801'
+        };
+        const PAGE_ORDER = ['profile', 'results'];
+        let currentPageIndex = 0;
+        let currentPageKey = 'profile';
+
+        // In-memory page containers to avoid reloading pages when navigating back-and-forth
+        const PAGE_CONTAINERS = {};
+
+        async function loadPage(pageKey) {
+            const host = document.getElementById('page-host');
+            if (!host) return;
+
+            // If we've already created the page container, just show it
+            if (PAGE_CONTAINERS[pageKey]) {
+                Object.values(PAGE_CONTAINERS).forEach(c => c.style.display = 'none');
+                PAGE_CONTAINERS[pageKey].style.display = '';
+                // optional per-page hook
+                if (window.app && typeof window.app.onShowPage === 'function') {
+                    try { window.app.onShowPage(pageKey); } catch (e) { console.warn('onShowPage failed', e); }
+                }
+                return;
+            }
+
+            const pageFile = PAGE_FILES[pageKey];
+            if (!pageFile) return;
+
+            const placeholder = document.createElement('div');
+            placeholder.className = 'rounded-2xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-500';
+            placeholder.textContent = 'Loading page...';
+            host.appendChild(placeholder);
+
+            try {
+                const response = await fetch(pageFile);
+                if (!response.ok) {
+                    placeholder.className = 'rounded-2xl border border-dashed border-rose-200 bg-rose-50 p-8 text-center text-sm text-rose-700';
+                    placeholder.textContent = 'Unable to load this page.';
+                    return;
+                }
+
+                const html = await response.text();
+                const container = document.createElement('div');
+                container.className = 'page-container';
+                container.innerHTML = html;
+
+                // hide any existing containers and append the new one
+                Object.values(PAGE_CONTAINERS).forEach(c => c.style.display = 'none');
+                host.appendChild(container);
+                PAGE_CONTAINERS[pageKey] = container;
+
+                // Call app init only once globally (pages should preserve their own state)
+                if (window.app && typeof window.app.init === 'function' && !window._bece_app_initialized) {
+                    try {
+                        const initResult = window.app.init();
+                        if (initResult && typeof initResult.then === 'function') {
+                            await initResult;
+                        }
+                        window._bece_app_initialized = true;
+                    } catch (e) {
+                        console.warn('app.init() failed', e);
+                    }
+                }
+
+                // If the app exposes a per-page initializer, call it for first-time load
+                if (window.app && typeof window.app.onFirstLoadPage === 'function') {
+                    try {
+                        const pageInitResult = window.app.onFirstLoadPage(pageKey);
+                        if (pageInitResult && typeof pageInitResult.then === 'function') {
+                            await pageInitResult;
+                        }
+                    } catch (e) {
+                        console.warn('onFirstLoadPage failed', e);
+                    }
+                }
+
+                if (pageKey === 'profile' && typeof setPairingsTabEnabled === 'function') {
+                    setPairingsTabEnabled(isCandidateFormComplete());
+                }
+
+            } finally {
+                if (placeholder && placeholder.parentElement) placeholder.parentElement.removeChild(placeholder);
+            }
+        }
+
+        function isCandidateFormComplete() {
+            const missing = getCandidateFormMissingItems();
+            return missing.length === 0;
+        }
+
+        function setPairingsTabEnabled(enabled) {
+            const pairingsButton = document.getElementById('tab-pairings');
+            if (pairingsButton) {
+                pairingsButton.removeAttribute('disabled');
+                pairingsButton.setAttribute('aria-disabled', enabled ? 'false' : 'true');
+                if (enabled) {
+                    pairingsButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                    pairingsButton.classList.add('hover:bg-slate-50');
+                } else {
+                    pairingsButton.classList.add('opacity-50', 'cursor-not-allowed');
+                    pairingsButton.classList.remove('hover:bg-slate-50');
+                }
+            }
+
+            const proceedBtn = document.getElementById('proceed-to-pairings-btn');
+            const proceedStatusText = document.getElementById('proceed-status-text');
+            if (proceedBtn) {
+                if (enabled) {
+                    proceedBtn.disabled = false;
+                    proceedBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                    if (proceedStatusText) {
+                        proceedStatusText.innerHTML = `<span class="text-emerald-700 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i> Candidate details complete! Ready for school pairings.</span>`;
+                    }
+                } else {
+                    proceedBtn.disabled = true;
+                    proceedBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    if (proceedStatusText) {
+                        const missing = typeof getCandidateFormMissingItems === 'function' ? getCandidateFormMissingItems() : [];
+                        proceedStatusText.innerHTML = `<span class="text-amber-700 font-medium flex items-center gap-1.5"><i class="fa-solid fa-circle-info"></i> Complete ${missing.length ? missing.join(' and ') : 'candidate details'} to enable pairings.</span>`;
+                    }
+                }
+            }
+        }
+
+        function setActiveTab(key) {
+            const tabs = ['candidate','pairings','uploads'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if (!btn) return;
+                if (t === key) {
+                    btn.classList.remove('text-slate-700');
+                    btn.classList.add('bg-white','text-slate-900');
+                    btn.setAttribute('aria-selected','true');
+                } else {
+                    btn.classList.remove('bg-white','text-slate-900');
+                    btn.classList.add('text-slate-700');
+                    btn.setAttribute('aria-selected','false');
+                }
+            });
+        }
+        window.setActiveTab = setActiveTab;
+
+        function getCandidateFormMissingItems() {
+            const missing = [];
+            const genderSelected = Boolean(document.querySelector('#cand-gender-group input[type="radio"]:checked, #cand-gender-group input[type="checkbox"]:checked'));
+            const selectedTracks = Boolean(document.querySelector('#cand-track input[type="checkbox"]:checked'));
+            const selectedPrograms = Boolean(document.querySelector('#cand-program input[type="checkbox"]:checked'));
+            if (!genderSelected) missing.push('a gender');
+            if (!selectedTracks) missing.push('a target track');
+            if (!selectedPrograms) missing.push('a desired programme');
+            return missing;
+        }
+
+        function showTabWarning(message) {
+            const warning = document.getElementById('tab-warning');
+            if (!warning) return;
+            warning.textContent = message;
+            warning.classList.remove('hidden');
+            clearTimeout(window._tabWarningTimeout);
+            window._tabWarningTimeout = setTimeout(() => {
+                warning.classList.add('hidden');
+            }, 5000);
+        }
+
+        function updateNavigationButtons(pageKey) {
+            const prevButton = document.getElementById('prev-page-btn');
+            const nextButton = document.getElementById('next-page-btn');
+            const isUploadPage = pageKey === 'upload';
+            const candidateFormComplete = isCandidateFormComplete();
+
+            if (typeof setPairingsTabEnabled === 'function') {
+                setPairingsTabEnabled(candidateFormComplete);
+            }
+
+            if (prevButton) prevButton.disabled = isUploadPage || currentPageIndex === 0;
+            if (nextButton) {
+                nextButton.disabled = isUploadPage || currentPageIndex >= PAGE_ORDER.length - 1 || (pageKey === 'profile' && !candidateFormComplete);
+                nextButton.textContent = currentPageIndex === PAGE_ORDER.length - 1 ? 'View Results' : 'Next';
+            }
+        }
+
+        function setPage(pageKeyOrIndex) {
+            if (typeof pageKeyOrIndex === 'string') {
+                currentPageKey = pageKeyOrIndex;
+                currentPageIndex = pageKeyOrIndex === 'upload' ? -1 : PAGE_ORDER.indexOf(pageKeyOrIndex);
+            } else {
+                currentPageIndex = Math.max(0, Math.min(PAGE_ORDER.length - 1, pageKeyOrIndex));
+                currentPageKey = PAGE_ORDER[currentPageIndex];
+            }
+
+            const keyMap = { 'profile': 'candidate', 'results': 'pairings', 'upload': 'uploads' };
+            if (typeof setActiveTab === 'function') {
+                setActiveTab(keyMap[currentPageKey] || 'candidate');
+            }
+
+            updateNavigationButtons(currentPageKey);
+            loadPage(currentPageKey).then(() => updateNavigationButtons(currentPageKey));
+        }
+
+        function goToUploadPage() {
+            setPage('upload');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+                // Tab handling: switch pages when tabs are clicked
+                function setActiveTab(key) {
+                    const tabs = ['candidate','pairings','uploads'];
+                    tabs.forEach(t => {
+                        const btn = document.getElementById(`tab-${t}`);
+                        if (!btn) return;
+                        if (t === key) {
+                            btn.classList.remove('text-slate-700');
+                            btn.classList.add('bg-white','text-slate-900');
+                            btn.setAttribute('aria-selected','true');
+                        } else {
+                            btn.classList.remove('bg-white','text-slate-900');
+                            btn.classList.add('text-slate-700');
+                            btn.setAttribute('aria-selected','false');
+                        }
+                    });
+                }
+
+                if (typeof setPairingsTabEnabled === 'function') {
+                    setPairingsTabEnabled(false);
+                }
+
+                document.getElementById('tab-candidate')?.addEventListener('click', () => { setActiveTab('candidate'); setPage('profile'); });
+                document.getElementById('tab-pairings')?.addEventListener('click', (event) => {
+                    const pairingsButton = event.currentTarget;
+                    const disabled = pairingsButton.getAttribute('aria-disabled') === 'true';
+                    if (disabled) {
+                        const missing = getCandidateFormMissingItems();
+                        if (missing.length) {
+                            showTabWarning(`Complete ${missing.join(' and ')} before viewing School Pairings.`);
+                        } else {
+                            showTabWarning('Complete the Candidate Details form before viewing School Pairings.');
+                        }
+                        return;
+                    }
+                    setActiveTab('pairings');
+                    setPage('results');
+                });
+                document.getElementById('tab-uploads')?.addEventListener('click', () => { setActiveTab('uploads'); setPage('upload'); });
+
+                document.addEventListener('change', (event) => {
+                    const target = event.target;
+                    if (!target || typeof target.closest !== 'function') return;
+                    if (target.closest('#cand-gender-group') || target.closest('#cand-track') || target.closest('#cand-program')) {
+                        if (typeof window.updateNavigationButtons === 'function') {
+                            window.updateNavigationButtons('profile');
+                        }
+                    }
+                });
+
+                // instantiate BECEApp when available; retry briefly if script hasn't finished loading
+                (function createAppWithRetry(attemptsLeft = 10) {
+                    if (typeof window.BECEApp === 'function') {
+                        try {
+                            window.app = new window.BECEApp();
+                        } catch (e) {
+                            console.error('Error constructing BECEApp', e);
+                            return;
+                        }
+                        // default to candidate tab
+                        setActiveTab('candidate');
+                        // small delay to let app init attach UI elements reliably
+                        setTimeout(() => setPage('profile'), 50);
+                        setTimeout(() => {
+                            setPairingsTabEnabled(isCandidateFormComplete());
+                        }, 100);
+                        return;
+                    }
+                    if (attemptsLeft <= 0) {
+                        console.error('BECEApp constructor not found after retries');
+                        // fallback: still load the initial page so UI is visible even without app
+                        try { setActiveTab('candidate'); setPage('profile'); } catch (e) { console.error('setPage failed', e); }
+                        return;
+                    }
+                    setTimeout(() => createAppWithRetry(attemptsLeft - 1), 150);
+                })();
+        });
+    </script>
+</body>
+</html>

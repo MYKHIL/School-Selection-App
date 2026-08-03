@@ -1,0 +1,14 @@
+{
+  "name": "bece-2026-school-selector",
+  "version": "1.0.0",
+  "description": "BECE 2026 School Selection & Placement System",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'No build step required for static site'"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

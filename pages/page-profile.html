@@ -1,0 +1,176 @@
+<div class="space-y-6">
+  <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 space-y-4">
+    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+      <h2 class="font-bold text-slate-900 flex items-center gap-2">
+        <i class="fa-solid fa-user-graduate text-emerald-600"></i> Candidate Details & Grades
+      </h2>
+      <span id="computed-aggregate" class="px-3 py-1 bg-amber-100 text-amber-800 rounded-lg text-xs font-bold border border-amber-300">
+        Aggregate: 06 (Grade 1s)
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px] pt-4">
+      <button type="button" onclick="app.toggleGradesModal()" class="w-full text-[11px] font-semibold py-2 px-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg flex items-center justify-between gap-2 transition">
+        <span class="truncate"><i class="fa-solid fa-list-check text-emerald-600 mr-1"></i> Adjust Grades</span>
+        <i class="fa-solid fa-chevron-right text-emerald-700"></i>
+      </button>
+
+      <div class="rounded-lg border border-slate-200 bg-slate-50 p-2">
+        <div class="flex items-center justify-between gap-2">
+          <span class="text-[11px] font-semibold text-slate-700">Manual Aggregate</span>
+          <input id="manual-aggregate-input" type="number" min="6" max="60" step="1" placeholder="Auto" onchange="app.applyAggregateOverride()" oninput="app.applyAggregateOverride()" class="w-24 rounded border border-slate-300 bg-white px-2 py-1 text-[11px] font-semibold text-slate-800 focus:border-emerald-500 focus:outline-none" />
+        </div>
+      </div>
+
+      <div class="rounded-lg border border-slate-200 bg-slate-50 p-2">
+        <div class="text-[11px] font-semibold text-slate-700 mb-2">Cutoffs</div>
+        <div class="grid grid-cols-3 gap-1 text-[10px] text-slate-600">
+          <label class="space-y-1">
+            <span class="block">A</span>
+            <input id="cutoff-cat-a" type="number" min="6" max="60" step="1" value="10" onchange="app.syncCutoffThresholds()" class="w-full rounded border border-slate-300 bg-white px-1 py-1 text-[10px] font-semibold text-slate-800 focus:border-emerald-500 focus:outline-none" />
+          </label>
+          <label class="space-y-1">
+            <span class="block">B</span>
+            <input id="cutoff-cat-b" type="number" min="6" max="60" step="1" value="36" onchange="app.syncCutoffThresholds()" class="w-full rounded border border-slate-300 bg-white px-1 py-1 text-[10px] font-semibold text-slate-800 focus:border-emerald-500 focus:outline-none" />
+          </label>
+          <label class="space-y-1">
+            <span class="block">C</span>
+            <input id="cutoff-cat-c" type="number" min="6" max="60" step="1" value="54" onchange="app.syncCutoffThresholds()" class="w-full rounded border border-slate-300 bg-white px-1 py-1 text-[10px] font-semibold text-slate-800 focus:border-emerald-500 focus:outline-none" />
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+      <div>
+        <label class="block font-medium text-slate-700 mb-1">Student / Candidate Full Name</label>
+        <input id="cand-student-name" type="text" placeholder="e.g. Kwame Mensah Appiah" onchange="app.saveStateToStorage()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
+      </div>
+      <div>
+        <label class="block font-medium text-slate-700 mb-1">BECE Index Number</label>
+        <input id="cand-student-index" type="text" maxlength="10" placeholder="e.g. 0102030405" onchange="app.saveStateToStorage()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 font-mono font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+      <div>
+        <label class="block font-medium text-slate-700 mb-1">Gender</label>
+        <div id="cand-gender-group" class="rounded-lg border border-slate-300 bg-slate-50 p-2 space-y-2">
+          <label class="flex items-center gap-2 text-sm text-slate-700">
+            <input type="radio" name="cand-gender" value="Mixed" checked onchange="app.recalculate()" class="rounded-full border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>Mixed</span>
+          </label>
+          <label class="flex items-center gap-2 text-sm text-slate-700">
+            <input type="radio" name="cand-gender" value="Males" onchange="app.recalculate()" class="rounded-full border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>Males</span>
+          </label>
+          <label class="flex items-center gap-2 text-sm text-slate-700">
+            <input type="radio" name="cand-gender" value="Females" onchange="app.recalculate()" class="rounded-full border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>Females</span>
+          </label>
+        </div>
+      </div>
+      <div>
+        <label class="block font-medium text-slate-700 mb-1">Home Town / Locality</label>
+        <input id="cand-locality" type="text" placeholder="e.g. Tamale, Keta, Kumasi" onchange="app.recalculate()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none" />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+      <div>
+        <label class="block font-medium text-slate-700 mb-1">Home / JHS Region</label>
+        <select id="cand-region" onchange="app.onRegionChange()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+          <option value="">Loading regions...</option>
+        </select>
+      </div>
+      <div>
+        <label class="block font-medium text-slate-700 mb-1">JHS District (Day Catchment)</label>
+        <select id="cand-district" onchange="app.recalculate()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+          <option value="">Loading districts...</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Academic Path & Program Preferences -->
+    <div class="rounded-xl border border-emerald-200 bg-emerald-50/40 p-3.5 space-y-3">
+      <div>
+        <label class="block font-bold text-slate-800 text-xs mb-1.5 flex items-center gap-1.5">
+          <i class="fa-solid fa-crosshairs text-emerald-600"></i> Target Track (Select one or more)
+        </label>
+        <div id="cand-track" class="grid grid-cols-1 sm:grid-cols-3 gap-2 rounded-lg border border-slate-300 bg-white p-2.5 text-xs">
+          <label class="flex items-center gap-1.5 text-xs text-slate-700 font-medium cursor-pointer hover:text-emerald-700">
+            <input data-filter-item type="checkbox" value="SHS_SHTS" onchange="app.handleTrackChange()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>SHS / SHTS</span>
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-slate-700 font-medium cursor-pointer hover:text-emerald-700">
+            <input data-filter-item type="checkbox" value="TVET" onchange="app.handleTrackChange()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>TVET</span>
+          </label>
+          <label class="flex items-center gap-1.5 text-xs text-slate-700 font-medium cursor-pointer hover:text-emerald-700">
+            <input data-filter-item type="checkbox" value="STEM" onchange="app.handleTrackChange()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>STEM</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="text-xs">
+        <div class="flex items-center justify-between gap-2 mb-1.5">
+          <label class="block font-bold text-slate-800 text-xs flex items-center gap-1.5">
+            <i class="fa-solid fa-book-open text-emerald-600"></i> Desired Program(s)
+          </label>
+          <label class="flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700 hover:text-emerald-900 cursor-pointer">
+            <input id="toggle-all-programs" type="checkbox" onchange="app.toggleAllDesiredProgramSelections(this.checked)" class="h-3.5 w-3.5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>Select all programs</span>
+          </label>
+        </div>
+        <div id="cand-program" class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 rounded-lg border border-slate-300 bg-white p-3 text-xs">
+          <label class="flex items-center gap-2 text-xs text-slate-700 rounded-lg p-1.5 hover:bg-emerald-50 cursor-pointer">
+            <input data-filter-item type="checkbox" value="GEN. SCI" checked onchange="app.recalculate()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>General Science (502)</span>
+          </label>
+          <label class="flex items-center gap-2 text-xs text-slate-700 rounded-lg p-1.5 hover:bg-emerald-50 cursor-pointer">
+            <input data-filter-item type="checkbox" value="GEN. ARTS" checked onchange="app.recalculate()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>General Arts (501)</span>
+          </label>
+          <label class="flex items-center gap-2 text-xs text-slate-700 rounded-lg p-1.5 hover:bg-emerald-50 cursor-pointer">
+            <input data-filter-item type="checkbox" value="BUS" onchange="app.recalculate()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>Business (201)</span>
+          </label>
+          <label class="flex items-center gap-2 text-xs text-slate-700 rounded-lg p-1.5 hover:bg-emerald-50 cursor-pointer">
+            <input data-filter-item type="checkbox" value="HOM. ECON." onchange="app.recalculate()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>Home Economics (401)</span>
+          </label>
+          <label class="flex items-center gap-2 text-xs text-slate-700 rounded-lg p-1.5 hover:bg-emerald-50 cursor-pointer">
+            <input data-filter-item type="checkbox" value="VIS. ARTS" onchange="app.recalculate()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>Visual Arts (402)</span>
+          </label>
+          <label class="flex items-center gap-2 text-xs text-slate-700 rounded-lg p-1.5 hover:bg-emerald-50 cursor-pointer">
+            <input data-filter-item type="checkbox" value="AGRIC" onchange="app.recalculate()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>Agricultural Science (101)</span>
+          </label>
+          <label class="flex items-center gap-2 text-xs text-slate-700 rounded-lg p-1.5 hover:bg-emerald-50 cursor-pointer">
+            <input data-filter-item type="checkbox" value="TECH" onchange="app.recalculate()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>Technical / TVET (301)</span>
+          </label>
+          <label class="flex items-center gap-2 text-xs text-slate-700 rounded-lg p-1.5 hover:bg-emerald-50 cursor-pointer">
+            <input data-filter-item type="checkbox" value="STEM" onchange="app.recalculate()" class="h-4 w-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500">
+            <span>STEM Specialization (503)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proceed Action Footer -->
+    <div id="proceed-to-pairings-container" class="pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+      <div id="proceed-status-text" class="text-xs font-medium">
+        <!-- Dynamic status note -->
+      </div>
+      <button id="proceed-to-pairings-btn" type="button" onclick="app && app.goToSchoolPairingsPage()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-extrabold shadow-sm transition flex items-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed">
+        <span>Proceed to School Pairings</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div id="package-debug-output" class="hidden hidden-debug-output rounded-lg border border-slate-200 bg-slate-900/95 p-2 text-[10px] font-mono text-emerald-300"></div>
+  </div>
+</div>
