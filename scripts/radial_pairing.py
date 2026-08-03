@@ -287,76 +287,81 @@ def generate_radial_school_pairings(candidate, school_database, adjacent_distric
         category_counts = {"A": 0, "B": 0, "C": 0}
         capacity_usage = {}
 
-        # 1. Primary Radial Pass across 6 Tiers (Tier 0 to Tier 5)
-        for tier_idx in range(6):
-            if len(selected_schools) >= 8:
-                break
+        # 1. Sequential Category Pass: Search Cat A, then Cat B, then Cat C radially from locality outward (Tier 0 to Tier 5)
+        categories_to_fill = ["A", "B", "C"]
+        for target_cat in categories_to_fill:
+            needed_quota = quotas.get(target_cat, 0)
+            if needed_quota <= 0 and not (allow_only_c and target_cat == "C"):
+                continue
 
-            tier_schools = tiered_schools[tier_idx]
-
-            for entry in tier_schools:
+            for tier_idx in range(6):
+                if category_counts.get(target_cat, 0) >= needed_quota and not (allow_only_c and target_cat == "C" and len(selected_schools) < 8):
+                    break
                 if len(selected_schools) >= 8:
                     break
 
-                sch = entry["school"]
-                code = sch.get("code")
-                category = (sch.get("category") or "C").upper()
+                tier_schools = tiered_schools[tier_idx]
 
-                if code in selected_codes:
-                    continue
+                for entry in tier_schools:
+                    if category_counts.get(target_cat, 0) >= needed_quota and not (allow_only_c and target_cat == "C" and len(selected_schools) < 8):
+                        break
+                    if len(selected_schools) >= 8:
+                        break
 
-                # Rule check for Package 4 (Only Category C allowed)
-                if allow_only_c and category != "C":
-                    continue
+                    sch = entry["school"]
+                    code = sch.get("code")
+                    category = (sch.get("category") or "C").upper()
 
-                # Category quota check
-                max_quota = quotas.get(category, 0)
-                if category_counts.get(category, 0) >= max_quota:
-                    continue
+                    if code in selected_codes:
+                        continue
 
-                status = (sch.get("status") or "").lower()
+                    # Match specific category for this radial sweep
+                    if category != target_cat:
+                        continue
 
-                # Check residence compatibility based on candidate distance position
-                dist = entry["distance"]
-                temp_distances = sorted([s.get("_dist", 0) for s in selected_schools] + [dist])
-                rank_of_this_sch = temp_distances.index(dist)
+                    status = (sch.get("status") or "").lower()
 
-                if rank_of_this_sch < 3 and "day" not in status:
-                    continue
-                if rank_of_this_sch >= 3 and "boarding" not in status:
-                    continue
+                    # Check residence compatibility based on candidate distance position
+                    dist = entry["distance"]
+                    temp_distances = sorted([s.get("_dist", 0) for s in selected_schools] + [dist])
+                    rank_of_this_sch = temp_distances.index(dist)
 
-                # Validation checks
-                if not validate_program_match(sch, cand_prog):
-                    continue
-                if not validate_gender_match(sch, cand_gender):
-                    continue
-                if not validate_cutoff_aggregate(sch, cand_agg):
-                    continue
-                if not validate_capacity(sch, capacity_usage):
-                    continue
+                    if rank_of_this_sch < 3 and "day" not in status:
+                        continue
+                    if rank_of_this_sch >= 3 and "boarding" not in status:
+                        continue
 
-                sch_copy = dict(sch)
-                sch_copy["_dist"] = dist
-                sch_copy["_tier"] = tier_idx
+                    # Validation checks
+                    if not validate_program_match(sch, cand_prog):
+                        continue
+                    if not validate_gender_match(sch, cand_gender):
+                        continue
+                    if not validate_cutoff_aggregate(sch, cand_agg):
+                        continue
+                    if not validate_capacity(sch, capacity_usage):
+                        continue
 
-                # Add passing school
-                selected_schools.append(sch_copy)
-                selected_codes.add(code)
-                category_counts[category] = category_counts.get(category, 0) + 1
-                capacity_usage[code] = capacity_usage.get(code, 0) + 1
+                    sch_copy = dict(sch)
+                    sch_copy["_dist"] = dist
+                    sch_copy["_tier"] = tier_idx
 
-                metadata_log.append({
-                    "school_code": code,
-                    "school_name": sch.get("name"),
-                    "category": category,
-                    "tier": tier_idx,
-                    "tier_name": TIER_NAMES[tier_idx],
-                    "distance_km": round(dist, 2),
-                    "residence": "Boarding", # Placeholder until post-process
-                    "program": cand_prog,
-                    "fallback_used": False
-                })
+                    # Add passing school
+                    selected_schools.append(sch_copy)
+                    selected_codes.add(code)
+                    category_counts[category] = category_counts.get(category, 0) + 1
+                    capacity_usage[code] = capacity_usage.get(code, 0) + 1
+
+                    metadata_log.append({
+                        "school_code": code,
+                        "school_name": sch.get("name"),
+                        "category": category,
+                        "tier": tier_idx,
+                        "tier_name": TIER_NAMES[tier_idx],
+                        "distance_km": round(dist, 2),
+                        "residence": "Boarding", # Placeholder until post-process
+                        "program": cand_prog,
+                        "fallback_used": False
+                    })
 
         # 2. Fallback Rule: If all 6 tiers processed and < 8 schools paired
         if len(selected_schools) < 8:

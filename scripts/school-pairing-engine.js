@@ -138,31 +138,40 @@
                 const quotas = pkgCfg.quotas;
                 const allowOnlyC = pkgCfg.allow_only_c;
 
-                // Pass across 6 tiers
-                for (let tierIdx = 0; tierIdx < 6; tierIdx++) {
-                    if (selectedSchools.length >= 8) break;
-                    const tierList = tieredSchools[tierIdx] || [];
-                    for (const entry of tierList) {
+                // Sequential Category Pass: Search Cat A, then Cat B, then Cat C radially from locality outward (Tier 0 to Tier 5)
+                const categoriesToFill = ["A", "B", "C"];
+                for (const targetCat of categoriesToFill) {
+                    const neededQuota = quotas[targetCat] || 0;
+                    if (neededQuota <= 0 && !(allowOnlyC && targetCat === "C")) continue;
+
+                    for (let tierIdx = 0; tierIdx < 6; tierIdx++) {
+                        if ((categoryCounts[targetCat] || 0) >= neededQuota && !(allowOnlyC && targetCat === "C" && selectedSchools.length < 8)) break;
                         if (selectedSchools.length >= 8) break;
-                        const sch = entry.school;
-                        const code = sch.code;
-                        const cat = (sch.category || 'C').toUpperCase();
 
-                        if (selectedCodes.has(code)) continue;
-                        if (allowOnlyC && cat !== 'C') continue;
-                        if ((categoryCounts[cat] || 0) >= (quotas[cat] || 0)) continue;
+                        const tierList = tieredSchools[tierIdx] || [];
+                        for (const entry of tierList) {
+                            if ((categoryCounts[targetCat] || 0) >= neededQuota && !(allowOnlyC && targetCat === "C" && selectedSchools.length < 8)) break;
+                            if (selectedSchools.length >= 8) break;
 
-                        const status = (sch.status || '').toLowerCase();
-                        const dist = entry.distance;
-                        const tempDistances = selectedSchools.map(s => s._dist || 0).concat(dist).sort((a, b) => a - b);
-                        const rankOfThisSch = tempDistances.indexOf(dist);
+                            const sch = entry.school;
+                            const code = sch.code;
+                            const cat = (sch.category || 'C').toUpperCase();
 
-                        if (rankOfThisSch < 3 && !status.includes('day')) continue;
-                        if (rankOfThisSch >= 3 && !status.includes('boarding')) continue;
+                            if (selectedCodes.has(code)) continue;
+                            if (cat !== targetCat) continue;
 
-                        selectedSchools.push({ ...sch, res: 'Boarding', prog: candProg || 'GEN. SCI', _dist: dist });
-                        selectedCodes.add(code);
-                        categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+                            const status = (sch.status || '').toLowerCase();
+                            const dist = entry.distance;
+                            const tempDistances = selectedSchools.map(s => s._dist || 0).concat(dist).sort((a, b) => a - b);
+                            const rankOfThisSch = tempDistances.indexOf(dist);
+
+                            if (rankOfThisSch < 3 && !status.includes('day')) continue;
+                            if (rankOfThisSch >= 3 && !status.includes('boarding')) continue;
+
+                            selectedSchools.push({ ...sch, res: 'Boarding', prog: candProg || 'GEN. SCI', _dist: dist });
+                            selectedCodes.add(code);
+                            categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+                        }
                     }
                 }
 
