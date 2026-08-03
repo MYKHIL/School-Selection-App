@@ -202,7 +202,7 @@
                     const saved = {
                         studentName: this.studentName || '',
                         studentIndex: this.studentIndex || '',
-                        selectedChoices: (this.selectedChoices || []).map(s => ({ code: s.code, prog: s.prog, res: s.res })),
+                        selectedChoices: (this.selectedChoices || []).map(s => s ? ({ code: s.code, prog: s.prog, res: s.res }) : null),
                         region: document.getElementById('cand-region') ? document.getElementById('cand-region').value : '',
                         district: document.getElementById('cand-district') ? document.getElementById('cand-district').value : '',
                         locality: document.getElementById('cand-locality') ? document.getElementById('cand-locality').value : '',
@@ -1899,23 +1899,23 @@
                             return `<select onchange="app.changeProgramme(${idx}, this.value)" class="ml-2 bg-emerald-50 text-emerald-900 border border-emerald-300 rounded p-1 text-xs font-semibold">${html.join('')}</select>`;
                         })();
                         return `
-                            <div class="bg-white border border-slate-200 rounded p-3 shadow-sm">
-                                <div class="flex items-start justify-between">
-                                    <div class="flex-1">
-                                        <div class="font-bold text-slate-900">${idx + 1}. ${item.name}</div>
+                            <div class="bg-white border border-slate-200 rounded p-3 shadow-sm overflow-hidden max-w-full">
+                                <div class="flex items-start justify-between gap-2 min-w-0">
+                                    <div class="min-w-0 flex-1">
+                                        <div class="font-bold text-slate-900 truncate">${idx + 1}. ${item.name}</div>
                                         ${this.renderSchoolDescriptors(item)}
-                                        <div class="mt-2 flex items-center gap-2">
+                                        <div class="mt-2 flex items-center gap-2 flex-wrap">
                                             ${typeBadge}
                                             ${catBadge}
                                         </div>
                                     </div>
-                                    <div class="flex flex-col items-end space-y-2">
+                                    <div class="shrink-0 flex flex-col items-end space-y-2">
                                         <button onclick="app.openSchoolModal(${idx})" class="p-1.5 text-slate-500 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition" title="Swap School"><i class="fa-solid fa-arrows-rotate"></i></button>
                                     </div>
                                 </div>
-                                <div class="mt-3 flex items-center justify-between gap-2">
-                                    <div class="text-[11px]">Residence:${resSelect}</div>
-                                    <div class="text-[11px]">Programme:${progSelect}</div>
+                                <div class="mt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 min-w-0">
+                                    <div class="text-[11px] truncate flex items-center gap-1"><span>Residence:</span>${resSelect}</div>
+                                    <div class="text-[11px] truncate flex items-center gap-1"><span>Programme:</span>${progSelect}</div>
                                 </div>
                             </div>
                         `;
@@ -1964,7 +1964,7 @@
             }
 
             validateRules(catA, catB, boarding, day) {
-                const uniqueCodes = new Set(this.selectedChoices.map(s => s.code)).size;
+                const uniqueCodes = new Set((this.selectedChoices || []).filter(Boolean).map(s => s.code)).size;
                 const isUnique = uniqueCodes === 8;
                 const catAValid = catA <= 2;
                 const catBValid = catB <= 3;
@@ -3788,10 +3788,11 @@
             filterValidSchoolEntries(schools = []) {
                 return (schools || []).filter(s => {
                     if (!s || !s.code || !String(s.code).trim()) return false;
+                    const codeStr = String(s.code).trim();
+                    if (!/^\d+$/.test(codeStr)) return false;
                     if (!s.region || !String(s.region).trim()) return false;
-                    const codeText = String(s.code).trim().toLowerCase();
                     const regionText = String(s.region).trim().toLowerCase();
-                    if (codeText === 'unknown' || regionText === 'unknown') return false;
+                    if (regionText === 'unknown') return false;
                     return true;
                 }).map(s => ({ ...s }));
             }
@@ -4282,9 +4283,7 @@
                                             <span>•</span>
                                             <span>${s.region || '—'}</span>
                                             <span>•</span>
-                                            <span>${(s.district || '—')}</span>
-                                            <span>•</span>
-                                            <span>${(s.location || '—')}</span>
+                                            <span>${(s.district || '—') + ' / ' + (s.location || '—')}</span>
                                         </div>
                                     </div>
                                     <span class="px-2 py-0.5 rounded text-[10px] font-extrabold border shrink-0 ${catBadgeClass}">Cat ${s.category || '—'}</span>
@@ -4489,18 +4488,18 @@
                     
                     if (badgeContainer) {
                         const badge = document.createElement('div');
-                        badge.className = "bg-white p-4 rounded-lg shadow-sm border border-slate-200 space-y-2";
+                        badge.className = "bg-white p-4 rounded-lg shadow-sm border border-slate-200 space-y-2 overflow-hidden max-w-full";
                         badge.innerHTML = `
-                            <div class="flex justify-between items-center">
-                                <span class="font-extrabold text-lg text-slate-900">${idx + 1}. ${item.name}</span>
-                                <span class="px-2 py-1 rounded text-[10px] font-extrabold bg-slate-200 text-slate-800">Cat ${item.category}</span>
+                            <div class="flex justify-between items-center gap-2 min-w-0">
+                                <span class="font-extrabold text-base text-slate-900 truncate flex-1">${idx + 1}. ${item.name}</span>
+                                <span class="shrink-0 px-2 py-1 rounded text-[10px] font-extrabold bg-slate-200 text-slate-800">Cat ${item.category}</span>
                             </div>
-                            <div class="text-xs text-slate-800 font-mono">Code: ${item.code || 'Unknown'}</div>
-                            <div class="text-xs text-slate-600">Region: ${item.region || 'Unknown'}</div>
-                            <div class="text-xs text-slate-600">District: ${item.district || 'Unknown'}</div>
-                            <div class="text-xs text-slate-600">Location: ${item.location || 'Unknown'}</div>
-                            <div class="pt-2">
-                                <select onchange="app.changeProgramme(${idx}, this.value)" class="w-full bg-emerald-50 text-emerald-900 border border-emerald-300 rounded p-2 text-xs font-semibold">
+                            <div class="text-xs text-slate-800 font-mono truncate">Code: ${item.code || 'Unknown'}</div>
+                            <div class="text-xs text-slate-600 truncate">Region: ${item.region || 'Unknown'}</div>
+                            <div class="text-xs text-slate-600 truncate">District: ${item.district || 'Unknown'}</div>
+                            <div class="text-xs text-slate-600 truncate">Location: ${item.location || 'Unknown'}</div>
+                            <div class="pt-2 min-w-0">
+                                <select onchange="app.changeProgramme(${idx}, this.value)" class="w-full bg-emerald-50 text-emerald-900 border border-emerald-300 rounded p-2 text-xs font-semibold max-w-full truncate">
                                     ${!selectedValue ? '<option value="" selected disabled>Choose programme</option>' : ''}
                                     ${options.map(opt => `<option value="${opt.value}" ${selectedValue === opt.value ? 'selected' : ''}>${opt.label}</option>`).join('')}
                                 </select>

@@ -211,14 +211,12 @@
 
             const dayCount = () => selected.filter(item => item.res === 'Day').length;
             const boardingCount = () => selected.filter(item => item.res === 'Boarding').length;
-            const remainingDaySlots = () => totalDaySlots - dayCount();
-            const remainingBoardingSlots = () => totalBoardingSlots - boardingCount();
 
             const canUseCategory = cat => {
-                if (cat === 'A') return categoryCounts.A < maxA || selected.length < targetCount;
-                if (cat === 'B') return categoryCounts.B < maxB || selected.length < targetCount;
-                if (cat === 'C') return categoryCounts.C < countC || selected.length < targetCount;
-                return true;
+                if (cat === 'A') return categoryCounts.A < maxA;
+                if (cat === 'B') return categoryCounts.B < maxB;
+                if (cat === 'C') return categoryCounts.C < countC;
+                return false;
             };
 
             const sortByScore = schools => [...schools]
@@ -226,162 +224,108 @@
                 .sort((a, b) => this.scoreSchoolForSelection(b, selectedProg, selectedDistrict, selectedRegion, selectedLocality, strategy)
                     - this.scoreSchoolForSelection(a, selectedProg, selectedDistrict, selectedRegion, selectedLocality, strategy));
 
-            const chooseResidence = sch => {
-                const status = (sch.status || '').toLowerCase();
-                const dayAllowed = status.includes('day');
-                const boardingAllowed = status.includes('boarding');
-                const remainingDay = remainingDaySlots();
-                const remainingBoarding = remainingBoardingSlots();
-
-                if (!dayAllowed && !boardingAllowed) return null;
-
-                const isDayOnly = dayAllowed && !boardingAllowed;
-                const isBoardingOnly = boardingAllowed && !dayAllowed;
-                const isMixed = dayAllowed && boardingAllowed;
-
-                if (isDayOnly) return remainingDay > 0 ? 'Day' : null;
-                if (isBoardingOnly) return remainingBoarding > 0 ? 'Boarding' : null;
-
-                if (remainingBoarding === 0 && remainingDay > 0) return 'Day';
-                if (remainingDay === 0 && remainingBoarding > 0) return 'Boarding';
-                if (remainingDay > 0 && remainingBoarding > 0) return remainingBoarding > 0 && (dayCount() < 3 || boardingCount() < 5) ? 'Boarding' : 'Day';
-                if (remainingDay > 0) return 'Day';
-                if (remainingBoarding > 0) return 'Boarding';
-                return null;
-            };
-
-            const reserveSlot8 = () => {
-                const ring1Days = sortByScore(pool.filter(s => this.isRing1DaySchool(s, selectedDistrict, selectedRegion, selectedLocality)));
-                if (ring1Days.length > 0) return ring1Days[0];
-                const regionDays = sortByScore(pool.filter(s => s.status && s.status.toLowerCase().includes('day')
-                    && this.app.normalizeRegion(s.region) === this.app.normalizeRegion(selectedRegion)));
-                return regionDays[0] || null;
-            };
-
-            const pickPriorityDaySchool = () => {
-                const daySchools = sortByScore(pool.filter(s => !usedCodes.has(s.code) && s.status && s.status.toLowerCase().includes('day')));
-                const ring1 = daySchools.filter(s => this.getSchoolSearchRadius(s, selectedDistrict, selectedRegion, selectedLocality) === 1);
-                if (ring1.length > 0) return ring1[0];
-                const ring2 = daySchools.filter(s => this.getSchoolSearchRadius(s, selectedDistrict, selectedRegion, selectedLocality) === 2);
-                if (ring2.length > 0) return ring2[0];
-                const sameRegion = daySchools.filter(s => this.app.normalizeRegion(s.region) === this.app.normalizeRegion(selectedRegion));
-                if (sameRegion.length > 0) return sameRegion[0];
-                return daySchools[0] || null;
-            };
-
-            const forcePriorityDayChoice = () => {
-                if (selected.length >= targetCount || dayCount() >= 3) return false;
-                const priorityDay = pickPriorityDaySchool();
-                if (!priorityDay) return false;
-                const residence = chooseResidence(priorityDay);
-                if (residence !== 'Day') return false;
-                selected.push({ ...priorityDay, res: 'Day', prog: selectedProg });
-                usedCodes.add(priorityDay.code);
-                categoryCounts[priorityDay.category] += 1;
-                return true;
-            };
-
             const addSelectedSchool = (school, residence) => {
                 if (!school || !residence) return false;
+                if (usedCodes.has(school.code)) return false;
+                if (!canUseCategory(school.category)) return false;
                 selected.push({ ...school, res: residence, prog: selectedProg });
                 usedCodes.add(school.code);
                 categoryCounts[school.category] += 1;
                 return true;
             };
 
-            const selectFromCategory = (category, limit) => {
-                let count = 0;
-                for (let radius = 1; radius <= 5 && count < limit; radius++) {
-                    const candidates = sortByScore(pool.filter(s => !usedCodes.has(s.code)
-                        && s.category === category
-                        && this.getSchoolSearchRadius(s, selectedDistrict, selectedRegion, selectedLocality) === radius));
-                    for (const sch of candidates) {
-                        if (selected.length >= targetCount) break;
-                        if (!canUseCategory(sch.category)) continue;
-                        const residence = chooseResidence(sch);
-                        if (!residence) continue;
-                        if (addSelectedSchool(sch, residence)) {
-                            count += 1;
-                        }
-                        if (selected.length >= targetCount) break;
-                    }
-                }
-            };
-
-            const fillRemainingSlots = () => {
-                for (let radius = 1; radius <= 5 && selected.length < targetCount; radius++) {
-                    const candidates = sortByScore(pool.filter(s => !usedCodes.has(s.code)
-                        && this.getSchoolSearchRadius(s, selectedDistrict, selectedRegion, selectedLocality) === radius));
-                    for (const sch of candidates) {
-                        if (selected.length >= targetCount) break;
-                        if (!canUseCategory(sch.category)) continue;
-                        const residence = chooseResidence(sch);
-                        if (!residence) continue;
-                        addSelectedSchool(sch, residence);
-                    }
-                }
-            };
-
-            const reservedChoice = reserveSlot8();
-            if (reservedChoice) usedCodes.add(reservedChoice.code);
-
-            selectFromCategory('A', maxA);
-            selectFromCategory('B', maxB);
-            selectFromCategory('C', countC);
-            if (selected.length < targetCount) fillRemainingSlots();
-            if (dayCount() < 3) forcePriorityDayChoice();
-            if (selected.length < targetCount) fillRemainingSlots();
-
-            if (selected.length < targetCount && reservedChoice) {
-                const residence = chooseResidence(reservedChoice);
-                if (residence) {
-                    addSelectedSchool(reservedChoice, residence);
-                }
-            } else if (selected.length < targetCount) {
-                const fallbackDay = sortByScore(pool.filter(s => !usedCodes.has(s.code)
-                    && s.status && s.status.toLowerCase().includes('day')))[0];
-                if (fallbackDay) {
-                    const residence = chooseResidence(fallbackDay);
-                    if (residence) {
-                        addSelectedSchool(fallbackDay, residence);
-                    }
+            // 1. Select Category A (up to maxA)
+            const candA = sortByScore(pool.filter(s => s.category === 'A'));
+            for (const sch of candA) {
+                if (categoryCounts.A >= maxA || selected.length >= targetCount) break;
+                const status = (sch.status || '').toLowerCase();
+                const res = status.includes('boarding') ? 'Boarding' : (status.includes('day') ? 'Day' : null);
+                if (res && addSelectedSchool(sch, res)) {
+                    // added successfully
                 }
             }
 
-            const fillToEight = () => {
-                for (let radius = 1; radius <= 5 && selected.length < targetCount; radius++) {
-                    const candidates = sortByScore(pool.filter(s => !usedCodes.has(s.code)
-                        && this.getSchoolSearchRadius(s, selectedDistrict, selectedRegion, selectedLocality) === radius));
-                    for (const sch of candidates) {
-                        if (selected.length >= targetCount) break;
-                        if (!canUseCategory(sch.category)) continue;
-                        const residence = chooseResidence(sch);
-                        if (!residence) continue;
-                        addSelectedSchool(sch, residence);
-                    }
+            // 2. Select Category B (up to maxB)
+            const candB = sortByScore(pool.filter(s => s.category === 'B'));
+            for (const sch of candB) {
+                if (categoryCounts.B >= maxB || selected.length >= targetCount) break;
+                const status = (sch.status || '').toLowerCase();
+                const res = status.includes('boarding') ? 'Boarding' : (status.includes('day') ? 'Day' : null);
+                if (res && addSelectedSchool(sch, res)) {
+                    // added successfully
                 }
-            };
+            }
 
-            if (selected.length < targetCount) fillToEight();
+            // 3. Select Category C (up to countC)
+            const candC = sortByScore(pool.filter(s => s.category === 'C'));
+            for (const sch of candC) {
+                if (categoryCounts.C >= countC || selected.length >= targetCount) break;
+                const status = (sch.status || '').toLowerCase();
+                const res = status.includes('day') ? 'Day' : (status.includes('boarding') ? 'Boarding' : null);
+                if (res && addSelectedSchool(sch, res)) {
+                    // added successfully
+                }
+            }
 
+            // 4. Fill remaining slots if any (e.g. if category counts couldn't be fully met because of pool size)
             if (selected.length < targetCount) {
-                const fallbackSchools = sortByScore(pool.filter(s => !usedCodes.has(s.code)));
-                for (const sch of fallbackSchools) {
+                // temporarily relax category limits slightly to reach 8 unique schools while keeping maxA <= 2 and maxB <= 3
+                const fillCand = sortByScore(pool.filter(s => !usedCodes.has(s.code)));
+                for (const sch of fillCand) {
                     if (selected.length >= targetCount) break;
-                    const residence = chooseResidence(sch);
-                    if (!residence) continue;
-                    addSelectedSchool(sch, residence);
+                    if (sch.category === 'A' && categoryCounts.A >= Math.max(maxA, 2)) continue;
+                    if (sch.category === 'B' && categoryCounts.B >= Math.max(maxB, 3)) continue;
+                    const status = (sch.status || '').toLowerCase();
+                    const res = status.includes('day') ? 'Day' : (status.includes('boarding') ? 'Boarding' : null);
+                    if (res) {
+                        selected.push({ ...sch, res, prog: selectedProg });
+                        usedCodes.add(sch.code);
+                        categoryCounts[sch.category] += 1;
+                    }
                 }
             }
 
-            const finalDayCount = selected.filter(item => item.res === 'Day').length;
-            const finalBoardingCount = selected.filter(item => item.res === 'Boarding').length;
-            const finalCategoryCounts = selected.reduce((counts, item) => {
+            // Ensure exactly 8 choices
+            let finalSelected = selected.slice(0, targetCount);
+
+            // Post-process residence to achieve exactly 3 Day and 5 Boarding if mixed status available
+            let dCount = finalSelected.filter(item => item.res === 'Day').length;
+            let bCount = finalSelected.filter(item => item.res === 'Boarding').length;
+
+            if (dCount < 3) {
+                for (const item of finalSelected) {
+                    if (dCount >= 3) break;
+                    if (item.res === 'Boarding') {
+                        const status = (item.status || '').toLowerCase();
+                        if (status.includes('day')) {
+                            item.res = 'Day';
+                            dCount++;
+                            bCount--;
+                        }
+                    }
+                }
+            }
+            if (bCount < 5) {
+                for (const item of finalSelected) {
+                    if (bCount >= 5) break;
+                    if (item.res === 'Day') {
+                        const status = (item.status || '').toLowerCase();
+                        if (status.includes('boarding')) {
+                            item.res = 'Boarding';
+                            bCount++;
+                            dCount--;
+                        }
+                    }
+                }
+            }
+
+            const finalCategoryCounts = finalSelected.reduce((counts, item) => {
                 counts[item.category] = (counts[item.category] || 0) + 1;
                 return counts;
             }, { A: 0, B: 0, C: 0 });
-            this.appendPackageDebug(`Package result size=${selected.length}/${targetCount} categories=A:${finalCategoryCounts.A}/B:${finalCategoryCounts.B}/C:${finalCategoryCounts.C} res=Boarding:${finalBoardingCount}/Day:${finalDayCount}`);
-            return selected.slice(0, targetCount);
+
+            this.appendPackageDebug(`Package result size=${finalSelected.length}/${targetCount} categories=A:${finalCategoryCounts.A}/B:${finalCategoryCounts.B}/C:${finalCategoryCounts.C} res=Boarding:${bCount}/Day:${dCount}`);
+            return finalSelected;
         }
     }
 
