@@ -1,0 +1,26 @@
+window.CANONICAL_PROGRAMMES = {
+  "version": "2026.1",
+  "description": "Canonical programme definitions and header aliases used by Excel and JSON school datasets.",
+  "programmes": [
+    { "code": "101", "canonical": "AGRIC", "display": "AGRICULTURE", "aliases": ["AGRIC", "AGRICULTURE", "AGRICULTURAL"] },
+    { "code": "201", "canonical": "BUS", "display": "BUSINESS", "aliases": ["BUS", "BUSINESS"] },
+    { "code": "301", "canonical": "TECH", "display": "TECHNICAL", "aliases": ["TECH", "TECHNICAL", "TECHNICAL PROGRAMMES", "TVET", "VOCATIONAL"] },
+    { "code": "401", "canonical": "HOM. ECON.", "display": "HOME ECONOMICS", "aliases": ["HOM.", "HOM. ECON.", "HOME ECONOMICS", "HOME ECON"] },
+    { "code": "402", "canonical": "VIS. ARTS", "display": "VISUAL ARTS", "aliases": ["VIS.", "VIS. ARTS", "VISUAL ARTS"] },
+    { "code": "501", "canonical": "GEN. ARTS", "display": "GENERAL ARTS", "aliases": ["GEN.", "GEN. ARTS", "GENERAL ARTS"] },
+    { "code": "502", "canonical": "GEN. SCI", "display": "GENERAL SCIENCE", "aliases": ["GEN. SCI", "GENERAL SCIENCE", "SCIENCE"] },
+    { "code": "503", "canonical": "STEM", "display": "STEM", "aliases": ["STEM", "STEM/SCIENCE"] },
+    { "code": "504", "canonical": "GEN. ARTS", "display": "LANGUAGES", "aliases": ["LANG", "LANGUAGES"] }
+  ],
+  "expandedPrograms": [
+    { "code": "503", "canonical": "STEM", "display": "BIO-MEDICAL SCIENCE", "aliases": ["BIO-MEDICAL", "BIOMEDICAL SCIENCE", "BIO MEDICAL SCIENCE"] },
+    { "code": "503", "canonical": "STEM", "display": "ENGINEERING SCIENCE", "aliases": ["ENGINEERING SCIENCE"] },
+    { "code": "503", "canonical": "STEM", "display": "AVIATION & AEROSPACE ENGINEERING", "aliases": ["AVIATION", "AEROSPACE", "AVIATION & AEROSPACE ENGINEERING"] },
+    { "code": "503", "canonical": "STEM", "display": "COMPUTING", "aliases": ["COMPUTING", "COMPUTER SCIENCE"] },
+    { "code": "503", "canonical": "STEM", "display": "ROBOTICS", "aliases": ["ROBOTICS"] },
+    { "code": "503", "canonical": "STEM", "display": "AGRICULTURAL SCIENCE", "aliases": ["AGRICULTURAL SCIENCE"] },
+    { "code": "503", "canonical": "STEM", "display": "MANUFACTURING ENGINEERING", "aliases": ["MANUFACTURING", "MANUFACTURING ENGINEERING"] }
+  ],
+  "tradeGroups": ["ENGINEERING TRADES", "BUILDING TRADES", "BUSINESS"]
+}
+;

@@ -535,10 +535,17 @@
 
             async loadNeighborMaps() {
                 try {
-                    const [regionData, districtData] = await Promise.all([
-                        this.safeFetchJson('./scripts/ghana_regions_neighbours.json').catch(() => null),
-                        this.safeFetchJson('./scripts/ghana_district_neighbors.json').catch(() => null)
-                    ]);
+                    let regionData = (typeof window !== 'undefined' && window.CANONICAL_REGION_NEIGHBORS) ? window.CANONICAL_REGION_NEIGHBORS : null;
+                    let districtData = (typeof window !== 'undefined' && window.CANONICAL_DISTRICT_NEIGHBORS) ? window.CANONICAL_DISTRICT_NEIGHBORS : null;
+
+                    if (!regionData || !districtData) {
+                        const [rFetched, dFetched] = await Promise.all([
+                            regionData ? Promise.resolve(regionData) : this.safeFetchJson('./scripts/ghana_regions_neighbours.json').catch(() => null),
+                            districtData ? Promise.resolve(districtData) : this.safeFetchJson('./scripts/ghana_district_neighbors.json').catch(() => null)
+                        ]);
+                        regionData = regionData || rFetched;
+                        districtData = districtData || dFetched;
+                    }
 
                     if (regionData) {
                         this.regionNeighborMap = this.buildNeighborLookup(regionData);

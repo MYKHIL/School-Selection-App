@@ -11,10 +11,14 @@
     <!-- PDF.js library for parsing uploaded PDF registers -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script src="./scripts/schools-data.js?v=20260802"></script>
-    <script src="./scripts/school-parser.js"></script>
-    <script src="./scripts/school-pairing-engine.js?v=20260802"></script>
-    <script src="./scripts/water-effect.js"></script>
+    <script src="scripts/schools-data.js?v=20260802"></script>
+    <script src="scripts/regions-districts-data.js?v=20260802"></script>
+    <script src="scripts/programmes-data.js?v=20260802"></script>
+    <script src="scripts/programme-track-map-data.js?v=20260802"></script>
+    <script src="scripts/ghana-neighbors-data.js?v=20260802"></script>
+    <script src="scripts/school-parser.js"></script>
+    <script src="scripts/school-pairing-engine.js?v=20260802"></script>
+    <script src="scripts/water-effect.js"></script>
     <script>
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
     </script>
@@ -627,12 +631,12 @@
         </div>
     </div>
 
-    <script src="./scripts/school-selector-app.js?v=20260801"></script>
+    <script src="scripts/school-selector-app.js?v=20260801"></script>
     <script>
         const PAGE_FILES = {
-            profile: './pages/page-profile.html?v=20260801',
-            upload: './pages/page-upload.html?v=20260801',
-            results: './pages/page-results.html?v=20260801'
+            profile: 'pages/page-profile.html?v=20260801',
+            upload: 'pages/page-upload.html?v=20260801',
+            results: 'pages/page-results.html?v=20260801'
         };
         const PAGE_ORDER = ['profile', 'results'];
         let currentPageIndex = 0;

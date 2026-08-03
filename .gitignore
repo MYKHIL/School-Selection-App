@@ -77,6 +77,7 @@ yarn-error.log*
 # Uploads / large artifacts
 uploads/
 scripts/*.pdf
+~$*
 
 # Jupyter
 .ipynb_checkpoints/

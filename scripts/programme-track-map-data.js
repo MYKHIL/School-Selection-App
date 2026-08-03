@@ -1,0 +1,37 @@
+window.CANONICAL_PROGRAMME_TRACK_MAP = {
+  "generated": true,
+  "mappings": {
+    "VIS. ARTS": [
+      "SHTS",
+      "TVET"
+    ],
+    "STEM": [
+      "SHTS",
+      "TVET"
+    ],
+    "HOM. ECON.": [
+      "SHTS",
+      "TVET"
+    ],
+    "TECH": [
+      "SHTS",
+      "TVET"
+    ],
+    "GEN. ARTS": [
+      "SHTS",
+      "TVET"
+    ],
+    "GEN. SCI": [
+      "SHTS",
+      "TVET"
+    ],
+    "AGRIC": [
+      "SHTS",
+      "TVET"
+    ],
+    "BUS": [
+      "SHTS",
+      "TVET"
+    ]
+  }
+};

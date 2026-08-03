@@ -11,8 +11,11 @@ const PORT = 3000;
 // Serve static files from the root directory
 app.use(express.static(__dirname));
 
-// Serve index.html for all other routes (SPA behavior)
+// Serve index.html for navigation routes (SPA fallback), skip static asset requests
 app.get('*', (req, res) => {
+  if (req.path.includes('.') && !req.path.endsWith('.html')) {
+    return res.status(404).send('Asset not found');
+  }
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
