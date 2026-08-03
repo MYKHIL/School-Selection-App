@@ -178,9 +178,9 @@
                 this.regionData = FALLBACK_REGION_DATA;
                 this.districtNeighborMap = {};
                 this.regionNeighborMap = {};
-                this.defaultRegisterUrlXlsx = './scripts/FINAL%202026%20SENIOR%20HIGH%20SCHOOL%20REGISTER.xlsx';
-                this.defaultRegisterUrlPdf = './scripts/FINAL%202026%20SENIOR%20HIGH%20SCHOOL%20REGISTER.pdf';
-                this.programmesUrl = './data/programmes.json';
+                this.defaultRegisterUrlXlsx = this.resolveAssetUrl('./scripts/FINAL%202026%20SENIOR%20HIGH%20SCHOOL%20REGISTER.xlsx');
+                this.defaultRegisterUrlPdf = this.resolveAssetUrl('./scripts/FINAL%202026%20SENIOR%20HIGH%20SCHOOL%20REGISTER.pdf');
+                this.programmesUrl = this.resolveAssetUrl('./data/programmes.json');
                 this.programmeDefinitions = null;
                 this._restoredProgramSelections = null;
                 this.pairingEngine = new window.SchoolPairingEngine(this);
@@ -188,6 +188,19 @@
                 this.dbViewerSortKey = 'name';
                 this.dbViewerSortDir = 'asc';
                 this.dbViewerFilteredList = [];
+            }
+
+            resolveAssetUrl(assetPath) {
+                if (!assetPath) return assetPath;
+                if (/^(https?:)?\/\//i.test(assetPath) || assetPath.startsWith('data:') || assetPath.startsWith('blob:')) {
+                    return assetPath;
+                }
+                try {
+                    return new URL(assetPath, window.location.href).toString();
+                } catch (err) {
+                    console.warn('Unable to resolve asset URL', assetPath, err);
+                    return assetPath;
+                }
             }
 
             // Persistence: save/load user state (selected choices and form inputs)
@@ -508,8 +521,8 @@
             async loadNeighborMaps() {
                 try {
                     const [regionResponse, districtResponse] = await Promise.all([
-                        fetch('./scripts/ghana_regions_neighbours.json'),
-                        fetch('./scripts/ghana_district_neighbors.json')
+                        fetch(this.resolveAssetUrl('./scripts/ghana_regions_neighbours.json')),
+                        fetch(this.resolveAssetUrl('./scripts/ghana_district_neighbors.json'))
                     ]);
 
                     if (regionResponse.ok) {
@@ -668,7 +681,7 @@
                 districtSelect.innerHTML = '<option value="">Loading districts...</option>';
 
                 try {
-                    const response = await fetch('./scripts/regions-districts.json');
+                    const response = await fetch(this.resolveAssetUrl('./scripts/regions-districts.json'));
                     if (!response.ok) throw new Error(`Unable to load regions file (${response.status})`);
                     const data = await response.json();
                     this.regionData = data && typeof data === 'object' ? data : FALLBACK_REGION_DATA;
@@ -2318,7 +2331,7 @@
                 if (progressBar) progressBar.style.width = '10%';
 
                 try {
-                    const response = await fetch('./data/schools_all.json');
+                    const response = await fetch(this.resolveAssetUrl('./data/schools_all.json'));
                     if (!response.ok) throw new Error(`Unable to load static JSON register (${response.status})`);
                     const payload = await response.json();
                     const list = Array.isArray(payload) ? payload : Array.isArray(payload.schools) ? payload.schools : [];
@@ -2643,12 +2656,12 @@
                 };
 
                 try {
-                    const response = await fetch(this.programmesUrl);
+                    const response = await fetch(this.resolveAssetUrl(this.programmesUrl));
                     if (!response.ok) throw new Error(`Unable to load programme definitions (${response.status})`);
                     this.programmeDefinitions = await response.json();
                     // attempt to load programme -> track mapping generated from Excel appendices
                     try {
-                        const mapResp = await fetch('data/programme_track_map.json');
+                        const mapResp = await fetch(this.resolveAssetUrl('./data/programme_track_map.json'));
                         if (mapResp.ok) {
                             const mapJson = await mapResp.json();
                             this.programmeTrackMap = mapJson && mapJson.mappings ? mapJson.mappings : {};
