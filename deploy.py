@@ -84,11 +84,10 @@ def ensure_origin_remote(cwd, repo_name):
         print("Adding origin remote:", expected_url)
         return bool(run_command(f"git remote add origin {expected_url}", cwd=cwd))
     if current_url != expected_url:
-        print("Existing origin remote does not match the expected GitHub URL.")
-        print(" current:", current_url)
-        print(" expected:", expected_url)
-        print("Using the existing remote instead of changing it.")
-        return True
+        print("Updating origin remote to match expected GitHub URL:")
+        print(" old:", current_url)
+        print(" new:", expected_url)
+        run_command(f"git remote set-url origin {expected_url}", cwd=cwd)
     return True
 
 
@@ -138,20 +137,23 @@ def sanitize_repo_name(name):
 
 
 def gh_repo_exists(repo_name):
+    """Checks if the repository exists on GitHub and is accessible."""
     if not GH_CMD:
         return False
-    repo_ref = f"{USERNAME}/{repo_name}"
-    result = run_command(f'"{GH_CMD}" repo view "{repo_ref}"', check=False, capture_output=True)
-    return bool(result and getattr(result, "returncode", 1) == 0)
+    cmd = f'"{GH_CMD}" repo view "{USERNAME}/{repo_name}"'
+    result = run_command(cmd, cwd=APP_ROOT, check=False, capture_output=True)
+    return result and getattr(result, "returncode", 1) == 0
 
 
 def gh_create_repo(repo_name, description, private):
     visibility = "--private" if private else "--public"
-    print(f"Creating GitHub repository {repo_name} using gh...")
+    print(f"Creating GitHub repository {USERNAME}/{repo_name} using gh...")
     if not GH_CMD:
         return None
     quoted_name = f'"{repo_name}"'
     quoted_description = f'"{description or repo_name}"'
+    
+    # Using 'gh repo create' without --source/--remote since git origin may already be handled by script
     cmd = f'"{GH_CMD}" repo create {quoted_name} {visibility} --description {quoted_description}'
     return run_command(cmd, cwd=APP_ROOT, check=False)
 
@@ -173,21 +175,8 @@ def push_current_branch(cwd, repo_name):
     branch = current_branch(cwd)
     if not ensure_origin_remote(cwd, repo_name):
         return False
-
     result = run_command(f"git push -u origin {branch}", cwd=cwd, check=False)
-    if result and getattr(result, "returncode", 1) == 0:
-        return True
-
-    output = (getattr(result, "stdout", "") or "") + (getattr(result, "stderr", "") or "")
-    if "repository" in output.lower() and "not found" in output.lower():
-        print("GitHub repository was not found. Creating it now...")
-        create_result = gh_create_repo(repo_name, DEFAULT_DESCRIPTION, DEFAULT_PRIVATE)
-        if not create_result or getattr(create_result, "returncode", 1) != 0:
-            return False
-        result = run_command(f"git push -u origin {branch}", cwd=cwd, check=False)
-        return result and getattr(result, "returncode", 1) == 0
-
-    return False
+    return result and getattr(result, "returncode", 1) == 0
 
 
 def main():
@@ -234,16 +223,16 @@ def main():
         print("GitHub authentication failed. Please run 'gh auth login --web' and retry.")
         sys.exit(1)
 
-    if not current_remote_url(cwd):
+    # --- AUTO-FIX LOGIC ---
+    # Check if the repository actually exists on GitHub, regardless of local remote existence
+    if not gh_repo_exists(repo_name):
+        print(f"Repository '{USERNAME}/{repo_name}' was not found on GitHub. Creating it now...")
         result = gh_create_repo(repo_name, description, private)
         if not result or getattr(result, "returncode", 1) != 0:
             print("Failed to create the GitHub repository using gh.")
             sys.exit(1)
     else:
-        if gh_repo_exists(repo_name):
-            print("Remote repository already exists; skipping creation.")
-        else:
-            print("Remote repository does not exist yet. Creating it before pushing.")
+        print(f"Verified GitHub repository '{USERNAME}/{repo_name}' exists.")
 
     if not push_current_branch(cwd, repo_name):
         print("Git push failed. Check remote configuration and try again.")
