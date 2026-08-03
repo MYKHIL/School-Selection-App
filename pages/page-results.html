@@ -16,34 +16,31 @@
   </div>
 
   <div id="selected-schools-card" class="hidden bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden">
-    <div class="p-4 sm:p-5 bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-      <div>
-        <span class="text-[10px] font-bold tracking-wider text-amber-400 uppercase">Official Candidate Form</span>
-        <h2 class="text-base sm:text-lg font-extrabold flex items-center gap-2">
-          <i class="fa-solid fa-list-ol text-emerald-400"></i> Your 8 Selected School Choices
-        </h2>
-      </div>
-      <div class="flex items-center space-x-3 no-print">
-        <div id="compliance-panel" class="relative flex items-center gap-3 bg-slate-800 rounded p-2">
-          <div>
-            <div id="overall-rules-badge" class="px-2 py-0.5 text-[10px] rounded font-extrabold bg-emerald-500 text-slate-950">100% VALID</div>
-            <div id="rules-mini-summary" class="text-[11px] text-slate-200 mt-1" style="max-width:220px">All checks passed</div>
-          </div>
-          <button class="text-slate-200 p-1" onclick="app.toggleRulesDetail()" title="Show rules details"><i class="fa-solid fa-list"></i></button>
-
-          <div id="rules-detail" class="hidden absolute right-0 top-full mt-2 w-80 bg-white text-slate-900 border border-slate-200 rounded-lg p-3 shadow-lg z-50 text-xs">
-            <div id="rules-detail-content">Details loading...</div>
-            <div class="text-right mt-2"><button class="px-2 py-1 text-xs rounded bg-slate-100" onclick="app.toggleRulesDetail()">Close</button></div>
-          </div>
+    <div class="p-3.5 sm:p-4 bg-slate-900 text-white flex flex-col xl:flex-row xl:items-center justify-between gap-3 no-print">
+      <div class="flex items-center gap-3 shrink-0">
+        <div>
+          <span class="text-[10px] font-bold tracking-wider text-amber-400 uppercase">Official Candidate Form</span>
+          <h2 class="text-base font-extrabold flex items-center gap-2">
+            <i class="fa-solid fa-list-ol text-emerald-400"></i> Selected Choices
+          </h2>
         </div>
+      </div>
 
-        <button onclick="app.validateAndPrint()" class="px-3 py-1.5 bg-amber-400 hover:bg-amber-500 text-slate-950 text-xs font-bold rounded-lg shadow transition flex items-center gap-1.5">
-          <i class="fa-solid fa-print"></i> Print Official Form
+      <!-- Minimal Compliance Check Dashboard Bar -->
+      <div class="flex items-center gap-2 overflow-x-auto py-0.5 no-scrollbar max-w-full">
+        <div id="overall-rules-badge" class="px-2.5 py-1 text-[10px] rounded-lg font-extrabold bg-emerald-500 text-slate-950 shadow-xs shrink-0 cursor-pointer" onclick="app.showRuleToast('Overall Policy Compliance', true, 'All 8 Choices Valid', 'All 8 choices strictly satisfy GES / CSSPS policy requirements for Category limits, residence ratios, and uniqueness.')">100% VALID</div>
+        <div id="rules-checklist-inline" class="flex items-center gap-1.5 shrink-0"></div>
+      </div>
+
+      <div class="flex items-center space-x-2 shrink-0">
+        <button onclick="app.openSwapModal()" class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 text-xs font-semibold rounded-lg shadow-xs transition flex items-center gap-1.5 cursor-pointer" title="Swap Choice Positions">
+          <i class="fa-solid fa-right-left text-emerald-400"></i> Swap
+        </button>
+        <button onclick="app.validateAndPrint()" class="px-3 py-1.5 bg-amber-400 hover:bg-amber-500 text-slate-950 text-xs font-bold rounded-lg shadow-xs transition flex items-center gap-1.5 cursor-pointer">
+          <i class="fa-solid fa-print"></i> Print Form
         </button>
       </div>
     </div>
-
-    <div id="rules-checklist-inline" class="p-3 bg-slate-50 border-t border-slate-200 text-xs"></div>
 
     <div>
       <div id="selected-schools-badges" class="block sm:hidden p-3 space-y-3"></div>

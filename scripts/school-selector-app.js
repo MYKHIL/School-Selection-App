@@ -1187,7 +1187,7 @@
 
             schoolMatchesSelectedTrack(school, selectedTracks) {
                 const normalizedTracks = (selectedTracks || []).map(value => this.normalizeTrackSelection(value)).filter(Boolean);
-                if (!normalizedTracks.length) return false;
+                if (!normalizedTracks.length) return true;
                 return normalizedTracks.some(track => {
                     const type = String(school && school.type || '').trim().toUpperCase();
                     if (track === 'TVET') return type === 'TVET';
@@ -1236,7 +1236,7 @@
 
             programmeMatchesSelectedTracks(program, selectedTracks, school = null) {
                 const normalizedTracks = (selectedTracks || []).map(value => this.normalizeTrackSelection(value)).filter(Boolean);
-                if (!normalizedTracks.length) return false;
+                if (!normalizedTracks.length) return true;
                 const tags = this.getProgrammeTrackCompatibility(program, school);
                 return normalizedTracks.some(track => {
                     if (track === 'SHS_SHTS') return tags.has('SHS_SHTS');
@@ -1425,74 +1425,97 @@
                 console.debug('[BECE Package Debug]', message);
             }
 
-            generatePackages() {
+            async generatePackages() {
                 const selectedGenders = this.getSelectedGenderValues();
                 const programElem = document.getElementById('cand-program');
                 const trackElem = document.getElementById('cand-track');
                 const districtElem = document.getElementById('cand-district');
                 const regionElem = document.getElementById('cand-region');
                 const localityElem = document.getElementById('cand-locality');
-                const selectedPrograms = programElem ? Array.from(programElem.querySelectorAll('input[type="checkbox"][data-filter-item]')).filter(input => input.checked).map(input => input.value) : ['GEN. SCI'];
-                const prog = selectedPrograms.length ? this.canonicalizeProgrammeValue(selectedPrograms[0]) : '';
+                const selectedPrograms = programElem ? Array.from(programElem.querySelectorAll('input[type="checkbox"][data-filter-item]')).filter(input => input.checked).map(input => input.value) : [];
+                const finalPrograms = selectedPrograms.length > 0 ? selectedPrograms : ['GEN. SCI', 'GEN. ARTS'];
+                const prog = finalPrograms.length ? this.canonicalizeProgrammeValue(finalPrograms[0]) : 'GEN. SCI';
                 const selectedTracks = trackElem ? Array.from(trackElem.querySelectorAll('input[type="checkbox"][data-filter-item]')).filter(input => input.checked).map(input => this.normalizeTrackSelection(input.value)) : [];
                 const userDistrict = districtElem ? districtElem.value : '';
                 const userRegion = regionElem ? regionElem.value : '';
                 const userLocality = localityElem ? localityElem.value : '';
-                const strategy = this.getAggregateStrategy(this.computedAggregate);
 
                 const effectiveAggregate = this.manualAggregateOverride !== null ? this.manualAggregateOverride : this.computedAggregate;
-                const pool = this.schools.filter(s => {
-                    const genderMatch = this.schoolMatchesSelectedGender(s, selectedGenders);
-                    const trackMatch = this.schoolMatchesSelectedTrack(s, selectedTracks);
-                    const progMatch = this.schoolMatchesSelectedProgram(s, selectedPrograms);
-                    const cutoffMatch = this.isSchoolQualifiedByAggregate(s, effectiveAggregate);
-                    return genderMatch && trackMatch && progMatch && cutoffMatch;
-                });
 
-                this.appendPackageDebug(`Pool built: ${pool.length} schools for aggregate ${effectiveAggregate} and programs ${selectedPrograms.join(', ')}`);
-
-                const balancedStrategy = {
-                    ...strategy,
-                    categoryAWeight: strategy.categoryAWeight + 4,
-                    categoryBWeight: strategy.categoryBWeight + 2,
-                    categoryCWeight: strategy.categoryCWeight - 4
-                };
-                const safePlacementStrategy = {
-                    ...strategy,
-                    categoryAWeight: strategy.categoryAWeight,
-                    categoryBWeight: strategy.categoryBWeight + 2,
-                    categoryCWeight: strategy.categoryCWeight + 4
-                };
-                const highAssuranceStrategy = {
-                    ...strategy,
-                    allowA: false,
-                    categoryAWeight: strategy.categoryAWeight - 14,
-                    categoryBWeight: strategy.categoryBWeight + 2,
-                    categoryCWeight: strategy.categoryCWeight + 10
-                };
-                const categoryCFocusStrategy = {
-                    ...strategy,
-                    allowA: false,
-                    allowB: false,
-                    categoryAWeight: strategy.categoryAWeight - 24,
-                    categoryBWeight: strategy.categoryBWeight - 10,
-                    categoryCWeight: strategy.categoryCWeight + 14
+                const candidatePayload = {
+                    candidate: {
+                        locality: userLocality,
+                        district: userDistrict,
+                        region: userRegion,
+                        program: prog,
+                        gender: selectedGenders.length > 0 ? selectedGenders[0] : 'Mixed',
+                        aggregate: effectiveAggregate,
+                        requested_program: prog
+                    }
                 };
 
-                let pkg1 = this.buildValidCombination(pool, prog, balancedStrategy, userDistrict, userRegion, userLocality, 2, 3, 3);
-                let pkg2 = this.buildValidCombination(pool, prog, safePlacementStrategy, userDistrict, userRegion, userLocality, 1, 3, 4);
-                let pkg3 = this.buildValidCombination(pool, prog, highAssuranceStrategy, userDistrict, userRegion, userLocality, 0, 2, 6);
-                // Category C Focus: prefer Category C schools (up to 8), fall back using same constraints if insufficient
-                let pkg4 = this.buildValidCombination(pool, prog, categoryCFocusStrategy, userDistrict, userRegion, userLocality, 0, 0, 8);
+                this.appendPackageDebug(`Calling radial pairing engine for candidate at ${userLocality || userDistrict || userRegion || 'Ghana'} (Aggregate ${effectiveAggregate}, Program ${prog})`);
 
-                this.appendPackageDebug(`Package lengths: pkg1=${pkg1.length}, pkg2=${pkg2.length}, pkg3=${pkg3.length}`);
+                let pairings = null;
+                try {
+                    const res = await fetch('/api/generate-radial-pairings', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(candidatePayload)
+                    });
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data && data.success && Array.isArray(data.pairings)) {
+                            pairings = data.pairings;
+                        }
+                    }
+                } catch (err) {
+                    console.warn('API call to /api/generate-radial-pairings failed, falling back to JS pairing engine', err);
+                }
 
-                this.renderPackageCards([
-                    { title: "Balanced Optimal Strategy", subtitle: "2 Cat A + 3 Cat B + 3 Cat C", list: pkg1, tag: "Recommended" },
-                    { title: "Safe Placement Focus", subtitle: "1 Cat A + 3 Cat B + 4 Cat C", list: pkg2, tag: "High Security" },
-                    { title: "High-Assurance / Technical", subtitle: "0 Cat A + 2 Cat B + 6 Cat C", list: pkg3, tag: "Guaranteed Fit" },
-                    { title: "Category C Focus", subtitle: "All Category C (where possible) — technical/assurance focus", list: pkg4, tag: "Cat C" }
-                ]);
+                if (pairings && pairings.length === 4) {
+                    const pkg1 = pairings[0].schools || [];
+                    const pkg2 = pairings[1].schools || [];
+                    const pkg3 = pairings[2].schools || [];
+                    const pkg4 = pairings[3].schools || [];
+
+                    this.appendPackageDebug(`Radial package lengths: pkg1=${pkg1.length}, pkg2=${pkg2.length}, pkg3=${pkg3.length}, pkg4=${pkg4.length}`);
+
+                    this.renderPackageCards([
+                        { title: pairings[0].package_name || "Balanced Optimal Strategy", subtitle: "2 Cat A + 3 Cat B + 3 Cat C", list: pkg1, tag: "Recommended" },
+                        { title: pairings[1].package_name || "Safe Placement Focus", subtitle: "1 Cat A + 3 Cat B + 4 Cat C", list: pkg2, tag: "High Security" },
+                        { title: pairings[2].package_name || "High-Assurance / Technical", subtitle: "0 Cat A + 2 Cat B + 6 Cat C", list: pkg3, tag: "Guaranteed Fit" },
+                        { title: pairings[3].package_name || "Category C Focus", subtitle: "All Category C (where possible) — technical/assurance focus", list: pkg4, tag: "Cat C" }
+                    ]);
+                } else {
+                    let pool = (this.schools || []).filter(s => {
+                        const genderMatch = this.schoolMatchesSelectedGender(s, selectedGenders);
+                        const trackMatch = this.schoolMatchesSelectedTrack(s, selectedTracks);
+                        const progMatch = this.schoolMatchesSelectedProgram(s, finalPrograms);
+                        const cutoffMatch = this.isSchoolQualifiedByAggregate(s, effectiveAggregate);
+                        return genderMatch && trackMatch && progMatch && cutoffMatch;
+                    });
+
+                    if (pool.length < 8) {
+                        pool = (this.schools || []).filter(s => {
+                            const genderMatch = this.schoolMatchesSelectedGender(s, selectedGenders);
+                            const progMatch = this.schoolMatchesSelectedProgram(s, finalPrograms);
+                            return genderMatch && progMatch;
+                        });
+                    }
+                    if (pool.length < 8) {
+                        pool = this.schools || [];
+                    }
+
+                    const radialPkgs = this.pairingEngine.generateRadialPackages(candidatePayload.candidate, pool);
+                    this.renderPackageCards([
+                        { title: "Balanced Optimal Strategy", subtitle: "2 Cat A + 3 Cat B + 3 Cat C", list: radialPkgs[0].schools, tag: "Recommended" },
+                        { title: "Safe Placement Focus", subtitle: "1 Cat A + 3 Cat B + 4 Cat C", list: radialPkgs[1].schools, tag: "High Security" },
+                        { title: "High-Assurance / Technical", subtitle: "0 Cat A + 2 Cat B + 6 Cat C", list: radialPkgs[2].schools, tag: "Guaranteed Fit" },
+                        { title: "Category C Focus", subtitle: "All Category C (where possible) — technical/assurance focus", list: radialPkgs[3].schools, tag: "Cat C" }
+                    ]);
+                }
+
                 const pkgContainer = document.getElementById('package-cards-container');
                 if (pkgContainer) pkgContainer.classList.remove('hidden');
 
@@ -1508,6 +1531,7 @@
                 this.renderSelectedTable();
                 this.updatePairingsButtonState();
                 this.saveStateToStorage();
+                this.showDatabaseViewerToast("Successfully calculated radial school pairing strategies!");
             }
 
             renderSchoolDescriptors(sch) {
@@ -1570,6 +1594,117 @@
                 }
 
                 return `<div class="mt-1 flex flex-wrap items-center gap-1.5">${badges.join('')}</div>`;
+            }
+
+            renderTechSubjectsButton(sch) {
+                if (!sch) return '';
+                const progs = sch.progs || [];
+                const techSubjects = sch.techSubjects || [];
+                const isSHTS = sch.type === 'SHTS';
+                const isTVET = sch.type === 'TVET';
+                const offersTech = progs.includes('TECH') || isSHTS || isTVET || techSubjects.length > 0;
+                if (!offersTech) return '';
+
+                const count = techSubjects.length;
+                const label = count > 0 ? `${count} Tech Subjects` : 'Tech Subjects';
+                return `
+                    <button type="button" onclick="event.stopPropagation(); app.openTechSubjectsModal('${sch.code}')" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-xs transition cursor-pointer border border-amber-500/60 my-0.5" title="Click to view specific Appendix 2 technical subjects">
+                        <i class="fa-solid fa-wrench text-[9px] text-slate-950"></i>
+                        <span>${label}</span>
+                    </button>
+                `;
+            }
+
+            openTechSubjectsModal(schoolCode) {
+                const school = (this.schools || []).find(s => String(s.code) === String(schoolCode))
+                    || (this.selectedChoices || []).find(s => s && String(s.code) === String(schoolCode))
+                    || (this._excelParsedSchools || []).find(s => String(s.code) === String(schoolCode));
+                if (!school) return;
+
+                let modal = document.getElementById('tech-subjects-modal');
+                if (!modal) {
+                    modal = document.createElement('div');
+                    modal.id = 'tech-subjects-modal';
+                    modal.className = 'fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4';
+                    document.body.appendChild(modal);
+                }
+
+                const subjects = (school.techSubjects && school.techSubjects.length > 0)
+                    ? school.techSubjects
+                    : (school.programNames && school.programNames.length > 0
+                        ? school.programNames.filter(p => p !== 'TECH' && p !== 'TVET')
+                        : []);
+
+                const subjectsHtml = subjects.length > 0
+                    ? subjects.map(subj => `
+                        <div class="flex items-center gap-2.5 p-3 bg-amber-50/70 border border-amber-200/80 rounded-xl text-slate-800 font-semibold text-xs shadow-xs">
+                            <i class="fa-solid fa-circle-check text-amber-600 text-sm shrink-0"></i>
+                            <span class="truncate">${subj}</span>
+                        </div>
+                    `).join('')
+                    : `<div class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-slate-600 text-xs italic text-center col-span-full">
+                        No specific Appendix 2 trade subjects listed for this institution. Institutional TVET core curriculum applies.
+                       </div>`;
+
+                modal.innerHTML = `
+                    <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[85vh] flex flex-col overflow-hidden relative border border-slate-200">
+                        <div class="p-4 bg-gradient-to-r from-amber-700 via-amber-800 to-amber-900 text-white flex justify-between items-center shrink-0">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-9 h-9 rounded-xl bg-amber-500/30 flex items-center justify-center text-amber-300 font-bold border border-amber-400/40">
+                                    <i class="fa-solid fa-wrench text-base"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-extrabold text-sm tracking-tight">${school.name}</h3>
+                                    <p class="text-[11px] text-amber-200 font-medium">Specific Technical Subjects (Appendix 2)</p>
+                                </div>
+                            </div>
+                            <button type="button" onclick="app.closeTechSubjectsModal()" class="text-amber-200 hover:text-white p-1 rounded-lg transition cursor-pointer">
+                                <i class="fa-solid fa-xmark text-lg"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="p-4 bg-slate-50 border-b border-slate-200 text-xs space-y-2 shrink-0">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="font-mono font-bold px-2 py-0.5 rounded bg-slate-200 text-slate-800 text-[11px]">Code: ${school.code || '—'}</span>
+                                <span class="font-bold px-2 py-0.5 rounded text-[11px] ${school.type === 'TVET' ? 'bg-amber-100 text-amber-800 border border-amber-300' : 'bg-blue-100 text-blue-800 border border-blue-300'}">${school.type || 'SHTS'}</span>
+                                <span class="font-extrabold px-2 py-0.5 rounded text-[11px] bg-slate-200 text-slate-800">Cat ${school.category || '—'}</span>
+                            </div>
+                            <div class="text-slate-600 font-medium text-[11px] flex items-center gap-1.5 flex-wrap">
+                                <span><i class="fa-solid fa-map-pin text-emerald-600 mr-1"></i>${school.region || '—'}</span>
+                                <span>•</span>
+                                <span><i class="fa-solid fa-location-dot text-slate-400 mr-1"></i>${school.district || '—'}</span>
+                                <span>•</span>
+                                <span><i class="fa-solid fa-building text-slate-400 mr-1"></i>${school.location || '—'}</span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 flex-1 overflow-y-auto space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-700 uppercase tracking-wider">Technical Trade Subjects Offered</span>
+                                <span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">${subjects.length} Subjects</span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                ${subjectsHtml}
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-slate-100 border-t border-slate-200 flex justify-end shrink-0">
+                            <button type="button" onclick="app.closeTechSubjectsModal()" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs rounded-xl shadow-xs transition cursor-pointer">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+
+            closeTechSubjectsModal() {
+                const modal = document.getElementById('tech-subjects-modal');
+                if (!modal) return;
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
             }
 
             renderPackageCards(packages) {
@@ -1800,23 +1935,25 @@
 
                 this.selectedChoices.forEach((item, idx) => {
                     if (!item) return;
+                    const allowedOptions = this.getAllowedResidenceOptions(item);
+                    const normalizedRes = this.normalizeResidenceForSchool(item);
+
                     if (item.category === "A") catACount++;
                     if (item.category === "B") catBCount++;
                     if (item.category === "C") catCCount++;
-                    if (item.res === "Boarding") boardingCount++;
-                    if (item.res === "Day") dayCount++;
+                    if (normalizedRes === "Boarding") boardingCount++;
+                    if (normalizedRes === "Day") dayCount++;
 
                     const tr = document.createElement('tr');
                     tr.className = "hover:bg-slate-50/80 transition";
-                    const allowedOptions = this.getAllowedResidenceOptions(item);
-                    const normalizedRes = this.normalizeResidenceForSchool(item);
                     const residenceSummary = `${item.location || `${item.district || 'Unknown'} • ${item.region}` } • District: ${item.district || 'Unknown'} • Region: ${item.region || 'Unknown'} • ${item.res || 'Status unknown'}`;
                     tr.innerHTML = `
                         <td class="p-3 text-center font-bold text-slate-500">${idx + 1}</td>
                         <td class="p-3">
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2 flex-wrap">
                                 <span class="font-bold text-slate-900">${item.name}</span>
                                 <span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.type === 'TVET' ? 'bg-amber-100 text-amber-800' : item.type === 'SHTS' ? 'bg-blue-100 text-blue-800' : item.type === 'STEM' ? 'bg-fuchsia-100 text-fuchsia-800' : 'bg-slate-200 text-slate-800'}">${item.type || 'SHS'}</span>
+                                ${this.renderTechSubjectsButton(item)}
                             </div>
                             ${this.renderSchoolDescriptors(item)}
                         </td>
@@ -1850,9 +1987,23 @@
                             </select>
                         </td>
                         <td class="p-3 text-center no-print">
-                            <button onclick="app.openSchoolModal(${idx})" class="p-1.5 text-slate-500 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition" title="Swap School">
-                                <i class="fa-solid fa-arrows-rotate"></i>
-                            </button>
+                            <div class="flex items-center justify-center gap-1.5">
+                                <div class="flex items-center space-x-0.5">
+                                    <button onclick="app.swapChoicePositions(${idx}, ${idx - 1})" ${idx === 0 ? 'disabled class="p-1 text-slate-300 cursor-not-allowed"' : 'class="p-1 text-slate-600 hover:text-emerald-600 hover:bg-slate-100 rounded transition"'} title="Move Choice Up">
+                                        <i class="fa-solid fa-arrow-up text-xs"></i>
+                                    </button>
+                                    <button onclick="app.swapChoicePositions(${idx}, ${idx + 1})" ${idx === this.selectedChoices.length - 1 ? 'disabled class="p-1 text-slate-300 cursor-not-allowed"' : 'class="p-1 text-slate-600 hover:text-emerald-600 hover:bg-slate-100 rounded transition"'} title="Move Choice Down">
+                                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                                    </button>
+                                </div>
+                                <select onchange="app.swapChoicePositions(${idx}, parseInt(this.value)); this.selectedIndex=0;" class="text-[10px] bg-slate-50 hover:bg-slate-100 border border-slate-300 rounded px-1.5 py-1 text-slate-700 font-semibold cursor-pointer transition shadow-xs" title="Swap Choice #${idx + 1} position with another choice">
+                                    <option value="" disabled selected>Swap #${idx + 1} with...</option>
+                                    ${this.selectedChoices.map((otherItem, targetIdx) => targetIdx !== idx && otherItem ? `<option value="${targetIdx}">Choice #${targetIdx + 1} (${otherItem.name.slice(0, 16)}...)</option>` : '').join('')}
+                                </select>
+                                <button onclick="app.openSchoolModal(${idx})" class="p-1.5 text-slate-500 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition" title="Change school from database">
+                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                </button>
+                            </div>
                         </td>
                     `;
                     tbody.appendChild(tr);
@@ -1907,15 +2058,31 @@
                                         <div class="mt-2 flex items-center gap-2 flex-wrap">
                                             ${typeBadge}
                                             ${catBadge}
+                                            ${this.renderTechSubjectsButton(item)}
                                         </div>
-                                    </div>
-                                    <div class="shrink-0 flex flex-col items-end space-y-2">
-                                        <button onclick="app.openSchoolModal(${idx})" class="p-1.5 text-slate-500 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition" title="Swap School"><i class="fa-solid fa-arrows-rotate"></i></button>
                                     </div>
                                 </div>
                                 <div class="mt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 min-w-0">
-                                    <div class="text-[11px] truncate flex items-center gap-1"><span>Residence:</span>${resSelect}</div>
-                                    <div class="text-[11px] truncate flex items-center gap-1"><span>Programme:</span>${progSelect}</div>
+                                    <div class="text-[11px] flex items-center gap-1.5 flex-wrap">
+                                        <span class="font-semibold text-slate-700">Residence:</span>
+                                        ${resSelect}
+                                        <select onchange="app.swapChoicePositions(${idx}, parseInt(this.value)); this.selectedIndex=0;" class="text-[10px] bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded px-1.5 py-1 text-slate-800 font-semibold cursor-pointer">
+                                            <option value="" disabled selected>Swap with...</option>
+                                            ${this.selectedChoices.map((otherItem, targetIdx) => targetIdx !== idx && otherItem ? `<option value="${targetIdx}">#${targetIdx + 1} ${otherItem.name.slice(0, 14)}...</option>` : '').join('')}
+                                        </select>
+                                        <div class="inline-flex items-center gap-0.5 border-l border-slate-200 pl-1">
+                                            <button onclick="app.swapChoicePositions(${idx}, ${idx - 1})" ${idx === 0 ? 'disabled class="p-1 text-slate-300 cursor-not-allowed"' : 'class="p-1 text-slate-600 hover:text-emerald-600 hover:bg-slate-100 rounded transition"'} title="Move Choice Up">
+                                                <i class="fa-solid fa-arrow-up text-xs"></i>
+                                            </button>
+                                            <button onclick="app.swapChoicePositions(${idx}, ${idx + 1})" ${idx === this.selectedChoices.length - 1 ? 'disabled class="p-1 text-slate-300 cursor-not-allowed"' : 'class="p-1 text-slate-600 hover:text-emerald-600 hover:bg-slate-100 rounded transition"'} title="Move Choice Down">
+                                                <i class="fa-solid fa-arrow-down text-xs"></i>
+                                            </button>
+                                            <button onclick="app.openSchoolModal(${idx})" class="ml-0.5 px-1.5 py-0.5 text-[10px] font-semibold text-slate-600 hover:text-emerald-600 hover:bg-slate-100 border border-slate-300 rounded transition inline-flex items-center gap-1 cursor-pointer" title="Change School">
+                                                <i class="fa-solid fa-arrows-rotate text-[9px]"></i> Change
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="text-[11px] truncate flex items-center gap-1"><span class="font-semibold text-slate-700">Programme:</span>${progSelect}</div>
                                 </div>
                             </div>
                         `;
@@ -1941,6 +2108,61 @@
                 this.updatePairingsButtonState();
             }
 
+            openSwapModal(defaultFrom = 0, defaultTo = 2) {
+                const modal = document.getElementById('swap-choices-modal');
+                if (!modal) return;
+                const select1 = document.getElementById('swap-choice-1-select');
+                const select2 = document.getElementById('swap-choice-2-select');
+                if (!select1 || !select2) return;
+
+                select1.innerHTML = this.selectedChoices.map((item, idx) => item ? `<option value="${idx}">Choice #${idx + 1}: ${item.name} (Cat ${item.category})</option>` : '').join('');
+                select2.innerHTML = this.selectedChoices.map((item, idx) => item ? `<option value="${idx}">Choice #${idx + 1}: ${item.name} (Cat ${item.category})</option>` : '').join('');
+
+                select1.value = String(defaultFrom);
+                select2.value = String(defaultTo < this.selectedChoices.length ? defaultTo : (defaultFrom === 0 ? 1 : 0));
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+
+            closeSwapModal() {
+                const modal = document.getElementById('swap-choices-modal');
+                if (!modal) return;
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+
+            confirmSwapFromModal() {
+                const select1 = document.getElementById('swap-choice-1-select');
+                const select2 = document.getElementById('swap-choice-2-select');
+                if (!select1 || !select2) return;
+                const fromIdx = parseInt(select1.value);
+                const toIdx = parseInt(select2.value);
+                if (fromIdx === toIdx) {
+                    this.showDatabaseViewerToast("Please select two different choices to swap.");
+                    return;
+                }
+                this.swapChoicePositions(fromIdx, toIdx);
+                this.closeSwapModal();
+            }
+
+            swapChoicePositions(fromIdx, toIdx) {
+                if (isNaN(fromIdx) || isNaN(toIdx)) return;
+                if (fromIdx < 0 || fromIdx >= this.selectedChoices.length) return;
+                if (toIdx < 0 || toIdx >= this.selectedChoices.length) return;
+                if (fromIdx === toIdx) return;
+
+                const c1 = this.selectedChoices[fromIdx];
+                const c2 = this.selectedChoices[toIdx];
+
+                this.selectedChoices[fromIdx] = c2;
+                this.selectedChoices[toIdx] = c1;
+
+                this.renderSelectedTable();
+                this.saveStateToStorage();
+                this.showDatabaseViewerToast(`Swapped Choice #${fromIdx + 1} (${c1 ? c1.name : ''}) with Choice #${toIdx + 1} (${c2 ? c2.name : ''})`);
+            }
+
             changeResidence(idx, value) {
                 const school = this.selectedChoices[idx];
                 if (!school) return;
@@ -1964,61 +2186,106 @@
             }
 
             validateRules(catA, catB, boarding, day) {
-                const uniqueCodes = new Set((this.selectedChoices || []).filter(Boolean).map(s => s.code)).size;
-                const isUnique = uniqueCodes === 8;
+                const choices = (this.selectedChoices || []).filter(Boolean);
+                const uniqueCodes = new Set(choices.map(s => s.code)).size;
+                const totalChoices = choices.length;
+                const isUnique = uniqueCodes === totalChoices && totalChoices === 8;
                 const catAValid = catA <= 2;
                 const catBValid = catB <= 3;
                 const resValid = (boarding === 5 && day === 3);
 
-                const checklistHtml = `
-                    <div class="flex items-center justify-between">
-                        <span>1. Maximum 2 Category A Schools:</span>
-                        <span class="${catAValid ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold'}">${catAValid ? '✓ PASS (' + catA + '/2)' : '✗ EXCEEDED (' + catA + '/2)'}</span>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <span>2. Maximum 3 Category B Schools:</span>
-                        <span class="${catBValid ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold'}">${catBValid ? '✓ PASS (' + catB + '/3)' : '✗ EXCEEDED (' + catB + '/3)'}</span>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <span>3. Exactly 5 Boarding & 3 Day Choices:</span>
-                        <span class="${resValid ? 'text-emerald-400 font-bold' : 'text-amber-400 font-bold'}">${resValid ? '✓ PASS (5 B / 3 D)' : '⚠ ' + boarding + ' B / ' + day + ' D'}</span>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <span>4. No Repeated School Codes:</span>
-                        <span class="${isUnique ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold'}">${isUnique ? '✓ 8 UNIQUE SCHOOLS' : '✗ DUPLICATE DETECTED'}</span>
-                    </div>
+                const renderMinimalPill = (title, shortLabel, countInfo, isValid, description) => {
+                    const pillClass = isValid 
+                        ? "bg-slate-800/90 border-slate-700 text-emerald-300 hover:bg-slate-800 hover:border-emerald-500/50" 
+                        : "bg-rose-950/90 border-rose-500 text-rose-200 hover:bg-rose-900 animate-pulse";
+                    const icon = isValid 
+                        ? '<i class="fa-solid fa-circle-check text-emerald-400 text-[10px]"></i>' 
+                        : '<i class="fa-solid fa-triangle-exclamation text-rose-400 text-[10px]"></i>';
+                    const passMark = isValid
+                        ? `<span class="text-[9px] font-extrabold text-emerald-400">✓</span>`
+                        : `<span class="text-[9px] font-extrabold text-rose-400">✗</span>`;
+
+                    const safeTitle = (title || '').replace(/'/g, "\\'");
+                    const safeDesc = (description || '').replace(/'/g, "\\'");
+                    const safeCount = (countInfo || '').replace(/'/g, "\\'");
+
+                    return `
+                        <button type="button"
+                            onclick="app.showRuleToast('${safeTitle}', ${isValid}, '${safeCount}', '${safeDesc}')"
+                            class="px-2 py-1 rounded-md border text-[11px] font-semibold transition flex items-center gap-1.5 shrink-0 cursor-pointer ${pillClass}"
+                            title="Tap for rule policy details">
+                            ${icon}
+                            <span>${shortLabel}: <strong class="font-extrabold text-white">${countInfo}</strong></span>
+                            ${passMark}
+                        </button>
+                    `;
+                };
+
+                const pillsHtml = `
+                    ${renderMinimalPill('Category A School Limit', 'Cat A', `${catA}/2`, catAValid, 'Per CSSPS policy, candidates can select a maximum of 2 Category A schools in total (as Choice #1 and Choice #2).')}
+                    ${renderMinimalPill('Category B School Limit', 'Cat B', `${catB}/3`, catBValid, 'Per CSSPS policy, candidates can select a maximum of 3 Category B schools across their choices.')}
+                    ${renderMinimalPill('Residence Selection Ratio', 'Residence', `${boarding}B / ${day}D`, resValid, 'GES/CSSPS guidelines mandate selecting exactly 5 Boarding choices and 3 Day choices.')}
+                    ${renderMinimalPill('Unique School Selection', 'Unique', `${uniqueCodes}/8`, isUnique, 'All 8 school choices on the form must be distinct and unique schools. Duplicate school choices are not permitted.')}
                 `;
 
-                const detailEl = document.getElementById('rules-detail-content') || document.getElementById('rules-checklist');
-                if (detailEl) detailEl.innerHTML = checklistHtml;
-
                 const inlineEl = document.getElementById('rules-checklist-inline');
-                if (inlineEl) inlineEl.innerHTML = checklistHtml;
+                if (inlineEl) inlineEl.innerHTML = pillsHtml;
 
-                const allOk = catAValid && catBValid && isUnique;
+                const detailEl = document.getElementById('rules-detail-content') || document.getElementById('rules-checklist');
+                if (detailEl) detailEl.innerHTML = pillsHtml;
+
+                const allOk = catAValid && catBValid && resValid && isUnique;
                 const badge = document.getElementById('overall-rules-badge');
-                if (allOk) {
-                    badge.textContent = "100% VALID";
-                    badge.className = "px-2 py-0.5 text-[10px] rounded font-extrabold bg-emerald-500 text-slate-950";
-                } else {
-                    badge.textContent = "RULES VIOLATED";
-                    badge.className = "px-2 py-0.5 text-[10px] rounded font-extrabold bg-rose-500 text-white";
+                if (badge) {
+                    if (allOk) {
+                        badge.textContent = "100% VALID";
+                        badge.className = "px-2.5 py-1 text-[10px] rounded-lg font-extrabold bg-emerald-500 text-slate-950 shadow-xs shrink-0 cursor-pointer";
+                        badge.onclick = () => this.showRuleToast('Overall Policy Compliance', true, 'All 8 Choices Validated', 'All choices strictly satisfy GES / CSSPS policy requirements for Category limits, residence ratios, and uniqueness.');
+                    } else {
+                        badge.textContent = "RULES VIOLATED";
+                        badge.className = "px-2.5 py-1 text-[10px] rounded-lg font-extrabold bg-rose-600 text-white shadow-md animate-blink-unmet shrink-0 cursor-pointer";
+                        badge.onclick = () => this.showRuleToast('Overall Policy Compliance', false, 'Policy Violation Detected', 'One or more CSSPS policy rules have been violated. Tap individual rule badges for details.');
+                    }
                 }
-                // update a compact textual summary for quick glance
-                const mini = document.getElementById('rules-mini-summary');
-                if (mini) {
-                    const parts = [];
-                    parts.push(catAValid ? `A:${catA}/2` : `A:${catA}/2!`);
-                    parts.push(catBValid ? `B:${catB}/3` : `B:${catB}/3!`);
-                    parts.push(`Board:${boarding}`);
-                    parts.push(`Day:${day}`);
-                    mini.textContent = parts.join(' • ');
+            }
+
+            showRuleToast(title, isValid, countText, description) {
+                let toast = document.getElementById('rule-toast');
+                if (!toast) {
+                    toast = document.createElement('div');
+                    toast.id = 'rule-toast';
+                    toast.className = 'fixed bottom-6 right-6 z-50 max-w-sm bg-slate-900 text-white font-medium text-xs p-4 rounded-xl shadow-2xl flex items-start gap-3 border border-slate-700 transition-all duration-300 transform translate-y-0 opacity-100 no-print';
+                    document.body.appendChild(toast);
                 }
-                // ensure detail popup hidden by default
-                const detailPopup = document.getElementById('rules-detail');
-                if (detailPopup && !detailPopup.classList.contains('hidden')) {
-                    // leave as-is if user opened it; otherwise keep hidden
-                }
+                const bgIcon = isValid ? 'fa-circle-check text-emerald-400' : 'fa-triangle-exclamation text-rose-400 animate-bounce';
+                const statusBadge = isValid 
+                    ? '<span class="px-2 py-0.5 text-[9px] font-extrabold rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">COMPLIANT</span>'
+                    : '<span class="px-2 py-0.5 text-[9px] font-extrabold rounded bg-rose-500/20 text-rose-300 border border-rose-500/40">NON-COMPLIANT</span>';
+                
+                toast.innerHTML = `
+                    <i class="fa-solid ${bgIcon} text-lg shrink-0 mt-0.5"></i>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between gap-2 mb-1">
+                            <span class="font-extrabold text-xs text-slate-100">${title}</span>
+                            ${statusBadge}
+                        </div>
+                        <div class="text-[11px] font-bold text-amber-300 mb-1">Current selection: ${countText}</div>
+                        <div class="text-[11px] text-slate-300 leading-snug">${description}</div>
+                    </div>
+                    <button onclick="this.parentElement.style.display='none'" class="text-slate-400 hover:text-white p-0.5 cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+                `;
+                toast.style.display = 'flex';
+                toast.style.opacity = '1';
+                toast.style.transform = 'translateY(0)';
+
+                clearTimeout(this._ruleToastTimeout);
+                this._ruleToastTimeout = setTimeout(() => {
+                    if (toast) {
+                        toast.style.opacity = '0';
+                        toast.style.transform = 'translateY(10px)';
+                        setTimeout(() => { toast.style.display = 'none'; }, 300);
+                    }
+                }, 4500);
             }
 
             // Modal Swap Functions
@@ -2209,7 +2476,7 @@
                         <div class="flex-1 pr-3">
                             <div class="font-bold text-slate-900 text-sm">${sch.name}</div>
                             ${this.renderSchoolDescriptors(sch)}
-                            <div class="mt-2 flex flex-wrap gap-1">${programmeBadges}</div>
+                            <div class="mt-2 flex flex-wrap gap-1 items-center">${programmeBadges} ${this.renderTechSubjectsButton(sch)}</div>
                         </div>
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-end gap-2 shrink-0">
                             <div class="flex items-center gap-1.5">
@@ -4240,7 +4507,7 @@
                                 </td>
                                 <td class="p-3 text-center font-medium text-slate-700">${s.gender || 'Mixed'}</td>
                                 <td class="p-3 text-slate-700 font-medium">${s.status || s.res || 'Day/Boarding'}</td>
-                                <td class="p-3">${progBadges || '<span class="text-slate-400 font-italic">General</span>'}</td>
+                                <td class="p-3">${progBadges || '<span class="text-slate-400 font-italic">General</span>'} ${this.renderTechSubjectsButton(s)}</td>
                                 <td class="p-3 text-center bg-amber-50/40 border-l border-slate-100">
                                     ${(() => {
                                         const selectedIdx = (this.selectedChoices || []).findIndex(c => c && String(c.code) === String(s.code));
@@ -4295,7 +4562,7 @@
                                     <span class="px-2 py-0.5 rounded font-medium bg-slate-100 text-slate-700 border border-slate-200">${s.status || s.res || 'Day/Boarding'}</span>
                                 </div>
 
-                                ${progBadges ? `<div class="pt-1 border-t border-slate-100 flex flex-wrap">${progBadges}</div>` : ''}
+                                ${(progBadges || this.renderTechSubjectsButton(s)) ? `<div class="pt-1 border-t border-slate-100 flex flex-wrap items-center gap-1">${progBadges} ${this.renderTechSubjectsButton(s)}</div>` : ''}
 
                                 <div class="pt-1.5 flex items-center gap-2">
                                     ${(() => {
@@ -4462,7 +4729,7 @@
                         <td class="p-3 font-mono text-xs text-slate-700">${item.code || ''}</td>
                         <td class="p-3">
                             <div class="font-bold text-slate-900">${item.name}</div>
-                            <div class="text-[10px] text-slate-500">${item.type || 'SHS'}</div>
+                            <div class="text-[10px] text-slate-500 flex items-center gap-1.5">${item.type || 'SHS'} ${this.renderTechSubjectsButton(item)}</div>
                         </td>
                         <td class="p-3 text-slate-600">${item.region || 'Unknown'}</td>
                         <td class="p-3 text-slate-600">${item.district || 'Unknown'}</td>
@@ -4492,7 +4759,10 @@
                         badge.innerHTML = `
                             <div class="flex justify-between items-center gap-2 min-w-0">
                                 <span class="font-extrabold text-base text-slate-900 truncate flex-1">${idx + 1}. ${item.name}</span>
-                                <span class="shrink-0 px-2 py-1 rounded text-[10px] font-extrabold bg-slate-200 text-slate-800">Cat ${item.category}</span>
+                                <div class="flex items-center gap-1.5 shrink-0">
+                                    <span class="px-2 py-1 rounded text-[10px] font-extrabold bg-slate-200 text-slate-800">Cat ${item.category}</span>
+                                    ${this.renderTechSubjectsButton(item)}
+                                </div>
                             </div>
                             <div class="text-xs text-slate-800 font-mono truncate">Code: ${item.code || 'Unknown'}</div>
                             <div class="text-xs text-slate-600 truncate">Region: ${item.region || 'Unknown'}</div>

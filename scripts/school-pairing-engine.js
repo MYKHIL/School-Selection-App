@@ -10,322 +10,234 @@
             }
         }
 
-        getSchoolSearchRadius(school, selectedDistrict, selectedRegion, selectedLocality) {
-            const app = this.app;
-            const sameDistrict = app.normalizeDistrict(school.district) === app.normalizeDistrict(selectedDistrict);
-            const localityMatch = app.matchesLocality(school, selectedLocality, selectedRegion);
-            if (sameDistrict || localityMatch) return 1;
-            if (app.isNearbyDistrictMatch(school, selectedDistrict)) return 2;
-            const sameRegion = app.normalizeRegion(school.region) === app.normalizeRegion(selectedRegion);
-            if (sameRegion || app.isRegionNeighbor(selectedRegion, school.region)) return 3;
+        getGeographicTier(school, candidate) {
+            if (!school || !candidate) return 5;
+            const schLoc = (school.location || school.locality || '').toLowerCase().trim();
+            const candLoc = (candidate.locality || '').toLowerCase().trim();
 
-            const regionClusters = {
-                'Gt. Accra': 'coastal',
-                'Central': 'coastal',
-                'Western': 'coastal',
-                'Volta': 'coastal',
-                'Eastern': 'middle',
-                'Ashanti': 'middle',
-                'Ahafo': 'middle',
-                'Bono': 'middle',
-                'Bono East': 'middle',
-                'Western North': 'middle',
-                'Northern': 'north',
-                'North East': 'north',
-                'Savannah': 'north',
-                'Upper East': 'north',
-                'Upper West': 'north',
-                'Oti': 'north'
-            };
+            const schDist = (school.district || '').toLowerCase().trim();
+            const candDist = (candidate.district || '').toLowerCase().trim();
 
-            const schoolCluster = regionClusters[app.normalizeRegion(school.region)] || 'far';
-            const selectedCluster = regionClusters[app.normalizeRegion(selectedRegion)] || 'far';
-            if (schoolCluster && selectedCluster && schoolCluster === selectedCluster) return 4;
+            const schReg = (school.region || '').toLowerCase().trim();
+            const candReg = (candidate.region || '').toLowerCase().trim();
+
+            // Tier 0: Locality match
+            if (candLoc && schLoc && schLoc.includes(candLoc) && (!candDist || schDist === candDist)) {
+                return 0;
+            }
+
+            // Tier 1: Same District
+            if (schDist && candDist && schDist === candDist) {
+                return 1;
+            }
+
+            // Tier 2: Adjacent District
+            const dNeighborsMap = global.CANONICAL_DISTRICT_NEIGHBORS || {};
+            const candDistRaw = candidate.district || '';
+            const adjDists = (dNeighborsMap[candDistRaw] || []).map(d => String(d).toLowerCase().trim());
+            if (schDist && adjDists.includes(schDist)) {
+                return 2;
+            }
+
+            // Tier 3: Same Region
+            if (schReg && candReg && schReg === candReg) {
+                return 3;
+            }
+
+            // Tier 4: Adjacent Region
+            const rNeighborsMap = global.CANONICAL_REGION_NEIGHBORS || {};
+            const candRegRaw = candidate.region || '';
+            const adjRegs = (rNeighborsMap[candRegRaw] || []).map(r => String(r).toLowerCase().trim());
+            if (schReg && adjRegs.includes(schReg)) {
+                return 4;
+            }
+
+            // Tier 5: National
             return 5;
         }
 
-        isRing1DaySchool(school, selectedDistrict, selectedRegion, selectedLocality) {
-            if (!school || !school.status || !school.status.toLowerCase().includes('day')) return false;
-            return this.getSchoolSearchRadius(school, selectedDistrict, selectedRegion, selectedLocality) === 1;
+        haversineDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371.0;
+            const dLat = (lat2 - lat1) * Math.PI / 180.0;
+            const dLon = (lon2 - lon1) * Math.PI / 180.0;
+            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                      Math.cos(lat1 * Math.PI / 180.0) * Math.cos(lat2 * Math.PI / 180.0) *
+                      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c;
         }
 
-        getGeographicProximityScore(school, selectedDistrict, selectedRegion, userLocality) {
-            const app = this.app;
-            const sameDistrict = app.normalizeDistrict(school.district) === app.normalizeDistrict(selectedDistrict);
-            if (sameDistrict) return 100;
-
-            const localityStrength = app.getLocalityMatchStrength(school, userLocality);
-            if (localityStrength >= 2) return 85;
-
-            const nearbyDistrict = app.isNearbyDistrictMatch(school, selectedDistrict);
-            const sameRegion = app.normalizeRegion(school.region) === app.normalizeRegion(selectedRegion);
-            const nearbyRegion = app.isRegionNeighbor(selectedRegion, school.region);
-
-            if (nearbyDistrict) return 72;
-            if (sameRegion) return 55;
-            if (nearbyRegion) return 40;
-            if (localityStrength === 1) return 28;
-
-            const regionClusters = {
-                'Gt. Accra': 'coastal',
-                'Central': 'coastal',
-                'Western': 'coastal',
-                'Volta': 'coastal',
-                'Eastern': 'middle',
-                'Ashanti': 'middle',
-                'Ahafo': 'middle',
-                'Bono': 'middle',
-                'Bono East': 'middle',
-                'Western North': 'middle',
-                'Northern': 'north',
-                'North East': 'north',
-                'Savannah': 'north',
-                'Upper East': 'north',
-                'Upper West': 'north',
-                'Oti': 'north'
+        getEntityCoordinates(entity) {
+            if (!entity) return { lat: 5.6037, lng: -0.1870 };
+            if (entity.lat !== undefined && entity.lng !== undefined) {
+                return { lat: parseFloat(entity.lat), lng: parseFloat(entity.lng) };
+            }
+            if (entity.latitude !== undefined && entity.longitude !== undefined) {
+                return { lat: parseFloat(entity.latitude), lng: parseFloat(entity.longitude) };
+            }
+            const regionCoords = {
+                "Greater Accra": { lat: 5.6037, lng: -0.1870 },
+                "Gt. Accra": { lat: 5.6037, lng: -0.1870 },
+                "Eastern": { lat: 6.1000, lng: -0.2667 },
+                "Central": { lat: 5.3000, lng: -1.0000 },
+                "Western": { lat: 5.5000, lng: -2.0000 },
+                "Western North": { lat: 6.3000, lng: -2.8000 },
+                "Volta": { lat: 6.6000, lng: 0.4700 },
+                "Oti": { lat: 7.9000, lng: 0.3000 },
+                "Ashanti": { lat: 6.6885, lng: -1.6244 },
+                "Bono": { lat: 7.3333, lng: -2.3333 },
+                "Bono East": { lat: 7.7500, lng: -1.0500 },
+                "Ahafo": { lat: 7.0000, lng: -2.3333 },
+                "Northern": { lat: 9.4007, lng: -0.8393 },
+                "Savannah": { lat: 9.0000, lng: -1.8000 },
+                "North East": { lat: 10.5000, lng: -0.3700 },
+                "Upper East": { lat: 10.7856, lng: -0.8514 },
+                "Upper West": { lat: 10.3000, lng: -2.5000 }
             };
-
-            const schoolCluster = regionClusters[app.normalizeRegion(school.region)] || 'far';
-            const selectedCluster = regionClusters[app.normalizeRegion(selectedRegion)] || 'far';
-            if (schoolCluster && selectedCluster && schoolCluster === selectedCluster) return 12;
-            return 6;
-        }
-
-        isCatchmentMatch(school, selectedDistrict, selectedRegion) {
-            const app = this.app;
-            const sameRegion = app.normalizeRegion(school.region) === app.normalizeRegion(selectedRegion);
-            const sameDistrict = app.normalizeDistrict(school.district) === app.normalizeDistrict(selectedDistrict);
-            return sameDistrict || sameRegion;
-        }
-
-        getAggregateStrategy(aggregate) {
-            if (aggregate <= 10) {
-                return { allowA: true, allowB: true, allowC: true, maxA: 2, maxB: 3, categoryAWeight: 18, categoryBWeight: 10, categoryCWeight: -4 };
+            const base = regionCoords[entity.region] || { lat: 5.6037, lng: -0.1870 };
+            const identifier = String(entity.code || entity.name || entity.locality || "");
+            let hashVal = 0;
+            for (let i = 0; i < identifier.length; i++) {
+                hashVal += identifier.charCodeAt(i);
             }
-            if (aggregate <= 18) {
-                return { allowA: true, allowB: true, allowC: true, maxA: 1, maxB: 3, categoryAWeight: 14, categoryBWeight: 8, categoryCWeight: 2 };
-            }
-            if (aggregate <= 24) {
-                return { allowA: false, allowB: true, allowC: true, maxA: 0, maxB: 2, categoryAWeight: -12, categoryBWeight: 8, categoryCWeight: 10 };
-            }
-            return { allowA: false, allowB: false, allowC: true, maxA: 0, maxB: 0, categoryAWeight: -24, categoryBWeight: -8, categoryCWeight: 12 };
+            const latOffset = ((hashVal % 100) - 50) / 1000.0;
+            const lngOffset = (((hashVal * 7) % 100) - 50) / 1000.0;
+            return { lat: base.lat + latOffset, lng: base.lng + lngOffset };
         }
 
-        isSchoolAllowedByAggregate(school, strategy) {
-            if (!strategy) return true;
-            if (school.category === 'A' && !strategy.allowA) return false;
-            if (school.category === 'B' && !strategy.allowB) return false;
-            if (school.category === 'C' && !strategy.allowC) return false;
-            return true;
-        }
+        generateRadialPackages(candidate, schoolPool) {
+            const candCoords = this.getEntityCoordinates(candidate);
+            const candProg = candidate.program || candidate.requested_program;
 
-        scoreSchoolForSelection(school, selectedProg, selectedDistrict, selectedRegion, userLocality, strategy) {
-            const app = this.app;
-            let score = 0;
+            const tieredSchools = { 0: [], 1: [], 2: [], 3: [], 4: [], 5: [] };
 
-            if (selectedProg) {
-                if (app.schoolMatchesSelectedProgram(school, [selectedProg])) {
-                    score += 20;
-                } else if (school.progs.includes('GEN. SCI')) {
-                    score += 8;
-                } else if (school.progs.includes('GEN. ARTS') && selectedProg === 'GEN. ARTS') {
-                    score += 12;
+            (schoolPool || []).forEach(sch => {
+                const schCoords = this.getEntityCoordinates(sch);
+                const dist = this.haversineDistance(candCoords.lat, candCoords.lng, schCoords.lat, schCoords.lng);
+                const tier = this.getGeographicTier(sch, candidate);
+                tieredSchools[tier].push({ school: sch, tier, distance: dist });
+            });
+
+            for (let t = 0; t < 6; t++) {
+                tieredSchools[t].sort((a, b) => a.distance - b.distance);
+            }
+
+            const packageConfigs = [
+                { package_id: 1, package_name: "Balanced Optimal Strategy", quotas: { A: 2, B: 3, C: 3 }, allow_only_c: false },
+                { package_id: 2, package_name: "Safe Placement Focus", quotas: { A: 1, B: 3, C: 4 }, allow_only_c: false },
+                { package_id: 3, package_name: "High Assurance / Technical", quotas: { A: 0, B: 2, C: 6 }, allow_only_c: false },
+                { package_id: 4, package_name: "Category C Focus", quotas: { A: 0, B: 0, C: 8 }, allow_only_c: true }
+            ];
+
+            const results = [];
+
+            packageConfigs.forEach(pkgCfg => {
+                const selectedSchools = [];
+                const selectedCodes = new Set();
+                const categoryCounts = { A: 0, B: 0, C: 0 };
+                const quotas = pkgCfg.quotas;
+                const allowOnlyC = pkgCfg.allow_only_c;
+
+                // Pass across 6 tiers
+                for (let tierIdx = 0; tierIdx < 6; tierIdx++) {
+                    if (selectedSchools.length >= 8) break;
+                    const tierList = tieredSchools[tierIdx] || [];
+                    for (const entry of tierList) {
+                        if (selectedSchools.length >= 8) break;
+                        const sch = entry.school;
+                        const code = sch.code;
+                        const cat = (sch.category || 'C').toUpperCase();
+
+                        if (selectedCodes.has(code)) continue;
+                        if (allowOnlyC && cat !== 'C') continue;
+                        if ((categoryCounts[cat] || 0) >= (quotas[cat] || 0)) continue;
+
+                        const status = (sch.status || '').toLowerCase();
+                        const dist = entry.distance;
+                        const tempDistances = selectedSchools.map(s => s._dist || 0).concat(dist).sort((a, b) => a - b);
+                        const rankOfThisSch = tempDistances.indexOf(dist);
+
+                        if (rankOfThisSch < 3 && !status.includes('day')) continue;
+                        if (rankOfThisSch >= 3 && !status.includes('boarding')) continue;
+
+                        selectedSchools.push({ ...sch, res: 'Boarding', prog: candProg || 'GEN. SCI', _dist: dist });
+                        selectedCodes.add(code);
+                        categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+                    }
                 }
-            }
 
-            const proximityBonus = this.getGeographicProximityScore(school, selectedDistrict, selectedRegion, userLocality);
-            score += proximityBonus;
+                // Fallback pass if < 8
+                if (selectedSchools.length < 8) {
+                    const allFlat = [];
+                    for (let t = 0; t < 6; t++) {
+                        allFlat.push(...(tieredSchools[t] || []));
+                    }
+                    allFlat.sort((a, b) => a.distance - b.distance);
 
-            if (this.isCatchmentMatch(school, selectedDistrict, selectedRegion)) {
-                score += 8;
-            }
+                    for (const entry of allFlat) {
+                        if (selectedSchools.length >= 8) break;
+                        const sch = entry.school;
+                        const code = sch.code;
+                        const cat = (sch.category || 'C').toUpperCase();
 
-            if (school.category === 'A') {
-                score += strategy.categoryAWeight;
-            } else if (school.category === 'B') {
-                score += strategy.categoryBWeight;
-            } else if (school.category === 'C') {
-                score += strategy.categoryCWeight;
-            }
+                        if (selectedCodes.has(code)) continue;
+                        if (allowOnlyC && cat !== 'C') continue;
 
-            if (!this.isSchoolAllowedByAggregate(school, strategy)) {
-                score -= 40;
-            }
+                        const status = (sch.status || '').toLowerCase();
+                        const dist = entry.distance;
+                        const tempDistances = selectedSchools.map(s => s._dist || 0).concat(dist).sort((a, b) => a - b);
+                        const rankOfThisSch = tempDistances.indexOf(dist);
 
-            if (school.category === 'A' && strategy.allowA && strategy.maxA > 0) {
-                score += 4;
-            }
-            if (school.category === 'B' && strategy.allowB && strategy.maxB > 0) {
-                score += 2;
-            }
+                        if (rankOfThisSch < 3 && !status.includes('day')) continue;
+                        if (rankOfThisSch >= 3 && !status.includes('boarding')) continue;
 
-            if (selectedProg === 'TECH' && school.type === 'TVET') {
-                score += 14;
-            } else if (selectedProg === 'STEM' && (school.type === 'SHTS' || school.type === 'STEM')) {
-                score += 12;
-            } else if (selectedProg === 'TECH' && school.progs.includes('TECH')) {
-                score += 10;
-            } else if (selectedProg === 'STEM' && school.progs.includes('STEM')) {
-                score += 10;
-            }
+                        selectedSchools.push({ ...sch, res: 'Boarding', prog: candProg || 'GEN. SCI', _dist: dist });
+                        selectedCodes.add(code);
+                        categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+                    }
+                }
 
-            if (selectedProg && !app.schoolMatchesSelectedProgram(school, [selectedProg]) && selectedProg !== 'GEN. SCI' && selectedProg !== 'GEN. ARTS' && !school.progs.includes('GEN. SCI')) {
-                score -= 2;
-            }
+                // Post-process: sort selected schools by distance and assign "Day" to top 3 closest and "Boarding" to remaining 5
+                if (selectedSchools.length > 0) {
+                    const distSortedIndices = selectedSchools.map((s, idx) => ({ idx, dist: s._dist || 0 }))
+                        .sort((a, b) => a.dist - b.dist);
+                    
+                    distSortedIndices.forEach((item, rankPos) => {
+                        selectedSchools[item.idx].res = rankPos < 3 ? 'Day' : 'Boarding';
+                    });
 
-            if (school.gender === 'Mixed') {
-                score += 3;
-            }
+                    // Sort choices Cat A -> Cat B -> Cat C
+                    const catPriority = { 'A': 1, 'B': 2, 'C': 3 };
+                    selectedSchools.sort((a, b) => {
+                        const pA = catPriority[(a.category || 'C').toUpperCase()] || 3;
+                        const pB = catPriority[(b.category || 'C').toUpperCase()] || 3;
+                        if (pA !== pB) return pA - pB;
+                        return (a._dist || 0) - (b._dist || 0);
+                    });
+                }
 
-            return score;
-        }
+                results.push({
+                    package_id: pkgCfg.package_id,
+                    package_name: pkgCfg.package_name,
+                    schools: selectedSchools
+                });
+            });
 
-        getPreferredResidenceType(school, selectedDistrict, selectedRegion, userLocality, dayCount, boardingCount) {
-            const proximity = this.getGeographicProximityScore(school, selectedDistrict, selectedRegion, userLocality);
-            const daySlotsRemaining = 3 - dayCount;
-            const boardingSlotsRemaining = 5 - boardingCount;
-
-            if (proximity >= 14 && daySlotsRemaining > 0) {
-                return 'Day';
-            }
-
-            if (dayCount >= 3) {
-                return boardingSlotsRemaining > 0 ? 'Boarding' : 'Day';
-            }
-
-            if (boardingCount >= 5) {
-                return daySlotsRemaining > 0 ? 'Day' : 'Boarding';
-            }
-
-            return daySlotsRemaining > 0 ? 'Day' : 'Boarding';
+            return results;
         }
 
         buildValidCombination(pool, selectedProg, strategy, selectedDistrict, selectedRegion, selectedLocality, maxA, maxB, countC) {
-            const selected = [];
-            const usedCodes = new Set();
-            const categoryCounts = { A: 0, B: 0, C: 0 };
-            const targetCount = 8;
-            this.appendPackageDebug(`Building package target A:${maxA} B:${maxB} C:${countC} from ${pool.length} schools`);
-            const totalDaySlots = 3;
-            const totalBoardingSlots = 5;
-
-            const dayCount = () => selected.filter(item => item.res === 'Day').length;
-            const boardingCount = () => selected.filter(item => item.res === 'Boarding').length;
-
-            const canUseCategory = cat => {
-                if (cat === 'A') return categoryCounts.A < maxA;
-                if (cat === 'B') return categoryCounts.B < maxB;
-                if (cat === 'C') return categoryCounts.C < countC;
-                return false;
+            const candidate = {
+                locality: selectedLocality,
+                district: selectedDistrict,
+                region: selectedRegion,
+                program: selectedProg
             };
-
-            const sortByScore = schools => [...schools]
-                .filter(s => s && s.code && !usedCodes.has(s.code))
-                .sort((a, b) => this.scoreSchoolForSelection(b, selectedProg, selectedDistrict, selectedRegion, selectedLocality, strategy)
-                    - this.scoreSchoolForSelection(a, selectedProg, selectedDistrict, selectedRegion, selectedLocality, strategy));
-
-            const addSelectedSchool = (school, residence) => {
-                if (!school || !residence) return false;
-                if (usedCodes.has(school.code)) return false;
-                if (!canUseCategory(school.category)) return false;
-                selected.push({ ...school, res: residence, prog: selectedProg });
-                usedCodes.add(school.code);
-                categoryCounts[school.category] += 1;
-                return true;
-            };
-
-            // 1. Select Category A (up to maxA)
-            const candA = sortByScore(pool.filter(s => s.category === 'A'));
-            for (const sch of candA) {
-                if (categoryCounts.A >= maxA || selected.length >= targetCount) break;
-                const status = (sch.status || '').toLowerCase();
-                const res = status.includes('boarding') ? 'Boarding' : (status.includes('day') ? 'Day' : null);
-                if (res && addSelectedSchool(sch, res)) {
-                    // added successfully
-                }
-            }
-
-            // 2. Select Category B (up to maxB)
-            const candB = sortByScore(pool.filter(s => s.category === 'B'));
-            for (const sch of candB) {
-                if (categoryCounts.B >= maxB || selected.length >= targetCount) break;
-                const status = (sch.status || '').toLowerCase();
-                const res = status.includes('boarding') ? 'Boarding' : (status.includes('day') ? 'Day' : null);
-                if (res && addSelectedSchool(sch, res)) {
-                    // added successfully
-                }
-            }
-
-            // 3. Select Category C (up to countC)
-            const candC = sortByScore(pool.filter(s => s.category === 'C'));
-            for (const sch of candC) {
-                if (categoryCounts.C >= countC || selected.length >= targetCount) break;
-                const status = (sch.status || '').toLowerCase();
-                const res = status.includes('day') ? 'Day' : (status.includes('boarding') ? 'Boarding' : null);
-                if (res && addSelectedSchool(sch, res)) {
-                    // added successfully
-                }
-            }
-
-            // 4. Fill remaining slots if any (e.g. if category counts couldn't be fully met because of pool size)
-            if (selected.length < targetCount) {
-                // temporarily relax category limits slightly to reach 8 unique schools while keeping maxA <= 2 and maxB <= 3
-                const fillCand = sortByScore(pool.filter(s => !usedCodes.has(s.code)));
-                for (const sch of fillCand) {
-                    if (selected.length >= targetCount) break;
-                    if (sch.category === 'A' && categoryCounts.A >= Math.max(maxA, 2)) continue;
-                    if (sch.category === 'B' && categoryCounts.B >= Math.max(maxB, 3)) continue;
-                    const status = (sch.status || '').toLowerCase();
-                    const res = status.includes('day') ? 'Day' : (status.includes('boarding') ? 'Boarding' : null);
-                    if (res) {
-                        selected.push({ ...sch, res, prog: selectedProg });
-                        usedCodes.add(sch.code);
-                        categoryCounts[sch.category] += 1;
-                    }
-                }
-            }
-
-            // Ensure exactly 8 choices
-            let finalSelected = selected.slice(0, targetCount);
-
-            // Post-process residence to achieve exactly 3 Day and 5 Boarding if mixed status available
-            let dCount = finalSelected.filter(item => item.res === 'Day').length;
-            let bCount = finalSelected.filter(item => item.res === 'Boarding').length;
-
-            if (dCount < 3) {
-                for (const item of finalSelected) {
-                    if (dCount >= 3) break;
-                    if (item.res === 'Boarding') {
-                        const status = (item.status || '').toLowerCase();
-                        if (status.includes('day')) {
-                            item.res = 'Day';
-                            dCount++;
-                            bCount--;
-                        }
-                    }
-                }
-            }
-            if (bCount < 5) {
-                for (const item of finalSelected) {
-                    if (bCount >= 5) break;
-                    if (item.res === 'Day') {
-                        const status = (item.status || '').toLowerCase();
-                        if (status.includes('boarding')) {
-                            item.res = 'Boarding';
-                            bCount++;
-                            dCount--;
-                        }
-                    }
-                }
-            }
-
-            const finalCategoryCounts = finalSelected.reduce((counts, item) => {
-                counts[item.category] = (counts[item.category] || 0) + 1;
-                return counts;
-            }, { A: 0, B: 0, C: 0 });
-
-            this.appendPackageDebug(`Package result size=${finalSelected.length}/${targetCount} categories=A:${finalCategoryCounts.A}/B:${finalCategoryCounts.B}/C:${finalCategoryCounts.C} res=Boarding:${bCount}/Day:${dCount}`);
-            return finalSelected;
+            const pkgs = this.generateRadialPackages(candidate, pool);
+            if (maxA === 2 && maxB === 3) return pkgs[0].schools;
+            if (maxA === 1 && maxB === 3) return pkgs[1].schools;
+            if (maxA === 0 && maxB === 2) return pkgs[2].schools;
+            return pkgs[3].schools;
         }
     }
 

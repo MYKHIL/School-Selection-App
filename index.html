@@ -25,6 +25,23 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
+        @keyframes ruleBlink {
+            0%, 100% {
+                background-color: #ffe4e6;
+                border-color: #f43f5e;
+                color: #881337;
+                box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.4);
+            }
+            50% {
+                background-color: #fda4af;
+                border-color: #e11d48;
+                color: #4c0519;
+                box-shadow: 0 0 10px 3px rgba(225, 29, 72, 0.6);
+            }
+        }
+        .animate-blink-unmet {
+            animation: ruleBlink 1s infinite ease-in-out;
+        }
         #school-picker-modal .filter-panel,
         #school-picker-modal .filter-panel-content,
         #school-picker-modal .filter-panel-content label,
@@ -141,7 +158,7 @@
                             <input type="text" id="modal-search" placeholder="Search school name/code/district/location..." oninput="app.filterModalList()" class="w-full bg-white border border-slate-300 rounded-lg pl-9 pr-3 py-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                         </div>
                         <button type="button" id="picker-modal-filter-toggle-btn" onclick="app.togglePickerModalFilterSection(event)" class="px-3.5 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 font-semibold rounded-lg flex items-center gap-2 shadow-sm transition cursor-pointer shrink-0">
-                            <i class="fa-solid fa-filter text-emerald-600"></i>
+                            <i class="fa-solid fa-sliders text-emerald-600"></i>
                             <span class="hidden xs:inline">Filters</span>
                             <i id="picker-modal-filter-chevron" class="fa-solid fa-chevron-down text-[10px] text-slate-400 transition-transform duration-200"></i>
                         </button>
@@ -410,6 +427,37 @@
         </div>
     </div>
 
+    <!-- Modal: Swap Choice Positions -->
+    <div id="swap-choices-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-5">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden flex flex-col">
+            <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-900 text-white">
+                <h3 class="font-bold text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-right-left text-emerald-400"></i> Swap Choice Positions
+                </h3>
+                <button type="button" onclick="app.closeSwapModal()" class="text-slate-400 hover:text-white p-1 cursor-pointer">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="p-5 space-y-4 text-xs text-slate-700 bg-white">
+                <p class="text-slate-600">Select two choices to swap their position ranks (e.g. swap Choice #1 with Choice #3):</p>
+                <div>
+                    <label class="block font-bold text-slate-900 mb-1">First Choice Position:</label>
+                    <select id="swap-choice-1-select" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500">
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-900 mb-1">Second Choice Position to Swap With:</label>
+                    <select id="swap-choice-2-select" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500">
+                    </select>
+                </div>
+                <div class="pt-3 border-t border-slate-100 flex justify-end gap-2">
+                    <button type="button" onclick="app.closeSwapModal()" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg transition cursor-pointer">Cancel</button>
+                    <button type="button" onclick="app.confirmSwapFromModal()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg shadow transition cursor-pointer">Swap Choices Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal: Database Viewer (All Schools) -->
     <div id="db-viewer-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-5">
         <div class="bg-white rounded-2xl shadow-2xl max-w-6xl w-full max-h-[92vh] flex flex-col overflow-hidden relative">
@@ -453,7 +501,7 @@
 
                     <!-- Filter Toggle Button -->
                     <button type="button" id="db-viewer-filter-toggle-btn" onclick="app.toggleDbViewerFilterSection(event)" class="px-3.5 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 font-semibold rounded-lg flex items-center gap-2 shadow-sm transition cursor-pointer shrink-0">
-                        <i class="fa-solid fa-filter text-emerald-600"></i>
+                        <i class="fa-solid fa-sliders text-emerald-600"></i>
                         <span class="hidden xs:inline">Filters</span>
                         <span id="db-viewer-active-badge" class="hidden px-1.5 py-0.5 rounded-full text-[10px] bg-emerald-100 text-emerald-800 font-bold">Active</span>
                         <i id="db-viewer-filter-chevron" class="fa-solid fa-chevron-down text-[10px] text-slate-400 transition-transform duration-200"></i>

@@ -1,0 +1,6 @@
+{
+  "name": "Ghana Senior High School Register & Choice Selector",
+  "description": "Comprehensive 2026 Ghana Education Service school register and placement choice selector",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
