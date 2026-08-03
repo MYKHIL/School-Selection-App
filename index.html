@@ -74,43 +74,28 @@
                     <p class="text-xs text-emerald-200">Ghana Education Service & TVET Placement Engine</p>
                 </div>
             </div>
-            <div class="flex items-center space-x-2 mt-2 sm:mt-0 text-xs flex-wrap">
+            <div class="flex items-center space-x-2 mt-2 sm:mt-0 text-xs flex-wrap gap-2">
                 <button type="button" id="view-all-schools-btn" onclick="app && app.openDatabaseViewerModal()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold px-2 sm:px-3.5 py-1 sm:py-1.5 text-[10px] sm:text-xs rounded-full border border-amber-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
                     <i class="fa-solid fa-database text-indigo-900"></i> View All Schools
                 </button>
+                <nav class="inline-flex rounded-full bg-emerald-950/50 p-0.5" role="tablist" aria-label="Main tabs">
+                    <button id="tab-candidate" role="tab" aria-selected="true" class="text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full font-semibold bg-white text-emerald-900">Candidate</button>
+                    <button id="tab-pairings" role="tab" aria-selected="false" aria-disabled="true" class="text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full font-semibold text-emerald-100 opacity-70">Pairings</button>
+                    <button id="tab-uploads" role="tab" aria-selected="false" class="text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full font-semibold text-emerald-100 hover:bg-emerald-900/50">Uploads</button>
+                </nav>
                 <span class="bg-emerald-700/60 text-emerald-100 px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs rounded-full border border-emerald-500/30 hidden sm:flex items-center gap-1.5 whitespace-nowrap">
-                    <i class="fa-solid fa-shield-halved text-amber-300"></i> Strict GES Rules Engine
+                    <i class="fa-solid fa-shield-halved text-amber-300"></i> Strict GES Rules
                 </span>
                 <span id="dataset-status-badge" class="bg-indigo-700/60 text-indigo-100 px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs rounded-full border border-indigo-500/30 hidden sm:flex items-center gap-2 whitespace-nowrap">
                     <i class="fa-solid fa-database text-teal-300"></i> <span id="badge-count-text">Preloaded Register</span>
                 </span>
-                <label class="text-xs text-slate-200 ml-2 hidden">Data Source</label>
-                <select id="dataset-select" onchange="app && app.setDatasetPreference(this.value)" class="hidden text-xs bg-indigo-800/30 border border-indigo-600/40 text-indigo-100 rounded px-2 py-1">
-                    <option value="PDF">PDF</option>
-                    <option value="EXCEL" selected>Excel</option>
-                </select>
             </div>
         </div>
     </header>
 
     <!-- Main Content Container -->
     <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
-        <div class="no-print w-full flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <div>
-                <h2 class="text-sm font-semibold text-slate-900">Step-by-step school selection</h2>
-                <p class="text-xs text-slate-500">Complete each page in order and use the next/previous controls to move through the flow.</p>
-            </div>
-            <div class="flex items-center gap-2">
-                <nav class="inline-flex rounded-full bg-slate-100 p-1" role="tablist" aria-label="Main tabs">
-                    <button id="tab-candidate" role="tab" aria-selected="true" class="text-xs px-4 py-2 rounded-full font-semibold bg-white text-slate-900">Candidate Details & Data</button>
-                    <button id="tab-pairings" role="tab" aria-selected="false" aria-disabled="true" class="text-xs px-4 py-2 rounded-full font-semibold text-slate-700 opacity-50 pointer-events-auto">School Pairings</button>
-                    <button id="tab-uploads" role="tab" aria-selected="false" class="text-xs px-4 py-2 rounded-full font-semibold text-slate-700 hover:bg-slate-50">Custom Uploads</button>
-                </nav>
-                <!-- Tab warning placeholder removed -->
-            </div>
-        </div>
 
-        </div>
     </div>
 
         <section id="page-host" class="space-y-6"></section>
