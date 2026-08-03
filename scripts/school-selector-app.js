@@ -4162,7 +4162,15 @@
 
                 // Update counts & UI
                 const countBadge = document.getElementById('db-viewer-count');
-                if (countBadge) countBadge.textContent = `${totalItems} Total in Database`;
+                if(totalItems === 0) {
+                    if (countBadge) countBadge.textContent = `No matching schools`;
+                } else {
+                    if (totalItems === 1) {
+                        if (countBadge) countBadge.textContent = `1 school found`;
+                    } else {
+                    if (countBadge) countBadge.textContent = `${totalItems} schools found`;
+                    }
+                }
 
                 const summaryStats = document.getElementById('db-viewer-summary-stats');
                 if (summaryStats) {
