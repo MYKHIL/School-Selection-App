@@ -9,7 +9,6 @@ USERNAME = os.environ.get("DEPLOY_GITHUB_USERNAME", "MYKHIL")
 GIT_EMAIL = os.environ.get("DEPLOY_GIT_EMAIL", "darkmic50@gmail.com")
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 APP_NAME = "BECE 2026 School Selection & Placement System"
-DEFAULT_REPO_NAME = os.environ.get("DEPLOY_REPO_NAME", "bece-2026-school-selector")
 DEFAULT_DESCRIPTION = os.environ.get("DEPLOY_REPO_DESCRIPTION", "BECE 2026 School Selection & Placement System")
 DEFAULT_PRIVATE = True
 DEFAULT_COMMIT_MESSAGE = "Deploy app"
@@ -68,6 +67,16 @@ def current_remote_url(cwd):
     return result.stdout.strip() if result.returncode == 0 else ""
 
 
+def infer_repo_name_from_remote(cwd, fallback_name):
+    remote_url = current_remote_url(cwd)
+    if not remote_url:
+        return fallback_name
+    match = re.search(r"github\.com/[^/]+/([^/.]+)", remote_url)
+    if match:
+        return sanitize_repo_name(match.group(1))
+    return fallback_name
+
+
 def ensure_origin_remote(cwd, repo_name):
     expected_url = f"https://github.com/{USERNAME}/{repo_name}.git"
     current_url = current_remote_url(cwd)
@@ -78,9 +87,8 @@ def ensure_origin_remote(cwd, repo_name):
         print("Existing origin remote does not match the expected GitHub URL.")
         print(" current:", current_url)
         print(" expected:", expected_url)
-        if input("Update origin to the expected URL? (y/N): ").strip().lower() == "y":
-            return bool(run_command(f"git remote set-url origin {expected_url}", cwd=cwd))
-        return False
+        print("Using the existing remote instead of changing it.")
+        return True
     return True
 
 
@@ -169,7 +177,8 @@ def main():
     require_app_files()
 
     cwd = APP_ROOT
-    repo_name = sanitize_repo_name(DEFAULT_REPO_NAME)
+    default_repo_name = sanitize_repo_name(os.path.basename(APP_ROOT))
+    repo_name = default_repo_name
     description = DEFAULT_DESCRIPTION
     private = DEFAULT_PRIVATE
     commit_message = DEFAULT_COMMIT_MESSAGE
@@ -191,6 +200,7 @@ def main():
         commit_message = None
 
     ensure_git_repo(cwd)
+    repo_name = infer_repo_name_from_remote(cwd, repo_name)
     configure_git(cwd)
     if not commit_changes(cwd, default_commit_message=commit_message):
         print("Nothing to deploy. Exiting.")
