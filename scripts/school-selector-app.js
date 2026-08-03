@@ -735,7 +735,9 @@
                     schoolCountTag.textContent = activeCount === loadedCount ? `${loadedCount} Schools` : `${activeCount} Active / ${loadedCount} Loaded`;
                 }
                 if (badgeCountText) {
-                    badgeCountText.textContent = `${loadedCount} Schools Loaded`;
+                    if (loadedCount === 0) badgeCountText.textContent = 'No school found';
+                    else if (loadedCount === 1) badgeCountText.textContent = 'Found 1 school';
+                    else badgeCountText.textContent = `Found ${loadedCount} schools`;
                 }
             }
 
@@ -4162,14 +4164,10 @@
 
                 // Update counts & UI
                 const countBadge = document.getElementById('db-viewer-count');
-                if(totalItems === 0) {
-                    if (countBadge) countBadge.textContent = `No matching schools`;
-                } else {
-                    if (totalItems === 1) {
-                        if (countBadge) countBadge.textContent = `1 school found`;
-                    } else {
-                    if (countBadge) countBadge.textContent = `${totalItems} schools found`;
-                    }
+                if (countBadge) {
+                    if (totalItems === 0) countBadge.textContent = 'No school found';
+                    else if (totalItems === 1) countBadge.textContent = 'Found 1 school';
+                    else countBadge.textContent = `Found ${totalItems} schools`;
                 }
 
                 const summaryStats = document.getElementById('db-viewer-summary-stats');
@@ -4232,7 +4230,7 @@
                                 <td class="p-3 font-mono font-bold text-slate-700 text-[11px]">${s.code || '—'}</td>
                                 <td class="p-3 font-bold text-slate-900">${s.name || '—'}</td>
                                 <td class="p-3 font-medium text-slate-700">${s.region || '—'}</td>
-                                <td class="p-3 text-slate-600">${s.district || s.location || '—'}</td>
+                                <td class="p-3 text-slate-600">${(s.district || '—') + ' / ' + (s.location || '—')}</td>
                                 <td class="p-3 text-center">
                                     <span class="px-2 py-0.5 rounded text-[10px] font-extrabold border ${catBadgeClass}">Cat ${s.category || '—'}</span>
                                 </td>
@@ -4284,7 +4282,9 @@
                                             <span>•</span>
                                             <span>${s.region || '—'}</span>
                                             <span>•</span>
-                                            <span>${s.district || s.location || '—'}</span>
+                                            <span>${(s.district || '—')}</span>
+                                            <span>•</span>
+                                            <span>${(s.location || '—')}</span>
                                         </div>
                                     </div>
                                     <span class="px-2 py-0.5 rounded text-[10px] font-extrabold border shrink-0 ${catBadgeClass}">Cat ${s.category || '—'}</span>
