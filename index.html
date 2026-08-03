@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BECE 2026 School Selection & Placement System</title>
-    <script>
-        (function () {
-            const pathName = window.location.pathname.replace(/\/index\.html$/i, '');
-            const normalizedBase = pathName.endsWith('/') ? pathName : `${pathName}/`;
-            const baseTag = document.createElement('base');
-            baseTag.href = normalizedBase || '/';
-            document.head.appendChild(baseTag);
-        })();
-    </script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome CDN for Icons -->
@@ -20,6 +11,7 @@
     <!-- PDF.js library for parsing uploaded PDF registers -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="./scripts/schools-data.js?v=20260802"></script>
     <script src="./scripts/school-parser.js"></script>
     <script src="./scripts/school-pairing-engine.js?v=20260802"></script>
     <script src="./scripts/water-effect.js"></script>
@@ -673,8 +665,25 @@
             host.appendChild(placeholder);
 
             try {
-                const response = await fetch(pageFile);
-                if (!response.ok) {
+                let response;
+                const cleanPageFile = pageFile.replace(/^\.\//, '');
+                const candidates = [pageFile, cleanPageFile, `pages/page-${pageKey}.html`];
+                for (const candidate of candidates) {
+                    try {
+                        const res = await fetch(candidate);
+                        if (res.ok) {
+                            const contentType = res.headers.get('content-type') || '';
+                            if (!contentType.includes('text/plain') && !contentType.includes('text/html') && contentType.length > 0) {
+                                // proceed
+                            }
+                            response = res;
+                            break;
+                        }
+                    } catch (e) {
+                        /* continue candidate loop */
+                    }
+                }
+                if (!response || !response.ok) {
                     placeholder.className = 'rounded-2xl border border-dashed border-rose-200 bg-rose-50 p-8 text-center text-sm text-rose-700';
                     placeholder.textContent = 'Unable to load this page.';
                     return;

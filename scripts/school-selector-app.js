@@ -178,9 +178,9 @@
                 this.regionData = FALLBACK_REGION_DATA;
                 this.districtNeighborMap = {};
                 this.regionNeighborMap = {};
-                this.defaultRegisterUrlXlsx = this.resolveAssetUrl('./scripts/FINAL%202026%20SENIOR%20HIGH%20SCHOOL%20REGISTER.xlsx');
-                this.defaultRegisterUrlPdf = this.resolveAssetUrl('./scripts/FINAL%202026%20SENIOR%20HIGH%20SCHOOL%20REGISTER.pdf');
-                this.programmesUrl = this.resolveAssetUrl('./data/programmes.json');
+                this.defaultRegisterUrlXlsx = './scripts/FINAL%202026%20SENIOR%20HIGH%20SCHOOL%20REGISTER.xlsx';
+                this.defaultRegisterUrlPdf = './scripts/FINAL%202026%20SENIOR%20HIGH%20SCHOOL%20REGISTER.pdf';
+                this.programmesUrl = './data/programmes.json';
                 this.programmeDefinitions = null;
                 this._restoredProgramSelections = null;
                 this.pairingEngine = new window.SchoolPairingEngine(this);
@@ -188,21 +188,6 @@
                 this.dbViewerSortKey = 'name';
                 this.dbViewerSortDir = 'asc';
                 this.dbViewerFilteredList = [];
-            }
-
-            resolveAssetUrl(assetPath) {
-                if (!assetPath) return assetPath;
-                if (/^(https?:)?\/\//i.test(assetPath) || assetPath.startsWith('data:') || assetPath.startsWith('blob:')) {
-                    return assetPath;
-                }
-                try {
-                    const baseUri = document.baseURI || window.location.href;
-                    const normalizedBase = baseUri.endsWith('/') ? baseUri : `${baseUri}/`;
-                    return new URL(assetPath, normalizedBase).toString();
-                } catch (err) {
-                    console.warn('Unable to resolve asset URL', assetPath, err);
-                    return assetPath;
-                }
             }
 
             // Persistence: save/load user state (selected choices and form inputs)
@@ -520,20 +505,46 @@
                 return normalized;
             }
 
+            async safeFetchJson(relativeUrl) {
+                const cleanPath = relativeUrl.replace(/^(\.\/|\/)+/, '');
+                const basePath = window.location.pathname.endsWith('/') 
+                    ? window.location.pathname 
+                    : window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+                const candidates = [
+                    relativeUrl,
+                    `./${cleanPath}`,
+                    cleanPath,
+                    basePath + cleanPath
+                ];
+                const uniqueCandidates = [...new Set(candidates)];
+
+                for (const path of uniqueCandidates) {
+                    try {
+                        const response = await fetch(path);
+                        if (!response.ok) continue;
+                        const contentType = response.headers.get('content-type') || '';
+                        if (contentType.includes('text/html')) continue;
+                        const data = await response.json();
+                        if (data) return data;
+                    } catch (e) {
+                        /* try next candidate */
+                    }
+                }
+                throw new Error(`Failed to fetch JSON from ${relativeUrl}`);
+            }
+
             async loadNeighborMaps() {
                 try {
-                    const [regionResponse, districtResponse] = await Promise.all([
-                        fetch(this.resolveAssetUrl('./scripts/ghana_regions_neighbours.json')),
-                        fetch(this.resolveAssetUrl('./scripts/ghana_district_neighbors.json'))
+                    const [regionData, districtData] = await Promise.all([
+                        this.safeFetchJson('./scripts/ghana_regions_neighbours.json').catch(() => null),
+                        this.safeFetchJson('./scripts/ghana_district_neighbors.json').catch(() => null)
                     ]);
 
-                    if (regionResponse.ok) {
-                        const regionData = await regionResponse.json();
+                    if (regionData) {
                         this.regionNeighborMap = this.buildNeighborLookup(regionData);
                     }
 
-                    if (districtResponse.ok) {
-                        const districtData = await districtResponse.json();
+                    if (districtData) {
                         this.districtNeighborMap = this.buildNeighborLookup(districtData);
                     }
                 } catch (err) {
@@ -683,9 +694,7 @@
                 districtSelect.innerHTML = '<option value="">Loading districts...</option>';
 
                 try {
-                    const response = await fetch(this.resolveAssetUrl('./scripts/regions-districts.json'));
-                    if (!response.ok) throw new Error(`Unable to load regions file (${response.status})`);
-                    const data = await response.json();
+                    const data = await this.safeFetchJson('./scripts/regions-districts.json');
                     this.regionData = data && typeof data === 'object' ? data : FALLBACK_REGION_DATA;
                 } catch (error) {
                     console.warn('Using fallback regions data:', error);
@@ -2333,9 +2342,14 @@
                 if (progressBar) progressBar.style.width = '10%';
 
                 try {
-                    const response = await fetch(this.resolveAssetUrl('./data/schools_all.json'));
-                    if (!response.ok) throw new Error(`Unable to load static JSON register (${response.status})`);
-                    const payload = await response.json();
+                    let payload = (typeof window !== 'undefined' && Array.isArray(window.CANONICAL_SCHOOLS_DATA) && window.CANONICAL_SCHOOLS_DATA.length)
+                        ? window.CANONICAL_SCHOOLS_DATA
+                        : null;
+                    
+                    if (!payload) {
+                        payload = await this.safeFetchJson('./data/schools_all.json');
+                    }
+
                     const list = Array.isArray(payload) ? payload : Array.isArray(payload.schools) ? payload.schools : [];
                     const normalized = (list || []).filter(Boolean).map(s => {
                         const code = String(s.code || '').trim();
@@ -2658,18 +2672,10 @@
                 };
 
                 try {
-                    const response = await fetch(this.resolveAssetUrl(this.programmesUrl));
-                    if (!response.ok) throw new Error(`Unable to load programme definitions (${response.status})`);
-                    this.programmeDefinitions = await response.json();
-                    // attempt to load programme -> track mapping generated from Excel appendices
+                    this.programmeDefinitions = await this.safeFetchJson(this.programmesUrl);
                     try {
-                        const mapResp = await fetch(this.resolveAssetUrl('./data/programme_track_map.json'));
-                        if (mapResp.ok) {
-                            const mapJson = await mapResp.json();
-                            this.programmeTrackMap = mapJson && mapJson.mappings ? mapJson.mappings : {};
-                        } else {
-                            this.programmeTrackMap = {};
-                        }
+                        const mapJson = await this.safeFetchJson('data/programme_track_map.json');
+                        this.programmeTrackMap = mapJson && mapJson.mappings ? mapJson.mappings : {};
                     } catch (e) {
                         this.programmeTrackMap = {};
                     }

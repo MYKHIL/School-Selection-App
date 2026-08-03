@@ -1,0 +1,26948 @@
+window.CANONICAL_SCHOOLS_DATA = [
+  {
+    "code": "0010101",
+    "name": "Ebenezer Senior High",
+    "region": "Gt. Accra",
+    "district": "Accra Metro",
+    "location": "Dansoman",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010102",
+    "name": "St. Mary's Senior High, Korle Gonno",
+    "region": "Gt. Accra",
+    "district": "Accra Metro",
+    "location": "Korle Gonno",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010103",
+    "name": "Wesley Grammar School",
+    "region": "Gt. Accra",
+    "district": "Ablekuma North Municipal",
+    "location": "Dansoman",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010104",
+    "name": "Holy Trinity Senior High",
+    "region": "Gt. Accra",
+    "district": "Accra Metro",
+    "location": "High Street-Accra",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010105",
+    "name": "St. Thomas Aquinas Senior High, Cantoments",
+    "region": "Gt. Accra",
+    "district": "La Dade-Kotopon Municipal",
+    "location": "Cantonments",
+    "category": "A",
+    "status": "Day",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010106",
+    "name": "Accra Senior High",
+    "region": "Gt. Accra",
+    "district": "Accra Metro",
+    "location": "Asylum Down",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "ENGINEERING SCIENCE",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0010107",
+    "name": "Presby Senior High, Osu",
+    "region": "Gt. Accra",
+    "district": "Korle Klottey Municipal",
+    "location": "Osu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010108",
+    "name": "O'Reilly Senior High",
+    "region": "Gt. Accra",
+    "district": "Ledzokuku Municipal",
+    "location": "Okpoi Gonno",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010109",
+    "name": "Kinbu Senior High/Tech",
+    "region": "Gt. Accra",
+    "district": "Korle Klottey Municipal",
+    "location": "Tudu-Accra",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010110",
+    "name": "Achimota Senior High",
+    "region": "Gt. Accra",
+    "district": "Okaikwei North Municipal",
+    "location": "Achimota",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0010111",
+    "name": "Presby Boys' Senior High, Legon",
+    "region": "Gt. Accra",
+    "district": "La Nkwantanang Madina",
+    "location": "Legon",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010112",
+    "name": "Accra Girls Senior High .",
+    "region": "Gt. Accra",
+    "district": "Ayawaso North Municipal",
+    "location": "Mamobi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010114",
+    "name": "Nungua Senior High",
+    "region": "Gt. Accra",
+    "district": "Krowor Municipal",
+    "location": "Nungua",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010115",
+    "name": "Forces Senior High/Tech, Burma Camp",
+    "region": "Gt. Accra",
+    "district": "La Dade-Kotopon Municipal",
+    "location": "Burma Camp",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010116",
+    "name": "Presby Senior High, Teshie",
+    "region": "Gt. Accra",
+    "district": "Ledzokuku Municipal",
+    "location": "Teshie",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010117",
+    "name": "Labone Senior High",
+    "region": "Gt. Accra",
+    "district": "La Dade-Kotopon Municipal",
+    "location": "Labone",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010118",
+    "name": "Odorgonno Senior High",
+    "region": "Gt. Accra",
+    "district": "Ga Central Municipal",
+    "location": "Awoshie",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010119",
+    "name": "Christian Methodist Senior High",
+    "region": "Gt. Accra",
+    "district": "Ga South Municipal",
+    "location": "Aplaku (Weija)",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010120",
+    "name": "Kaneshie Senior High/Tech.",
+    "region": "Gt. Accra",
+    "district": "Accra Metro",
+    "location": "Kaneshie",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010121",
+    "name": "Accra Academy",
+    "region": "Gt. Accra",
+    "district": "Accra Metro",
+    "location": "Kaneshie",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "TECHNICAL"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "TECH"
+    ]
+  },
+  {
+    "code": "0010125",
+    "name": "City Business Senior High",
+    "region": "Gt. Accra",
+    "district": "Okaikwei South Municipal",
+    "location": "Mateheko",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010128",
+    "name": "La Presby Senior High",
+    "region": "Gt. Accra",
+    "district": "La Dade-Kotopon Municip",
+    "location": "La Emmaus",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010142",
+    "name": "St. Margaret Mary Snr.High/Tech",
+    "region": "Gt. Accra",
+    "district": "Accra Metro",
+    "location": "Dansoman",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010145",
+    "name": "Seven Great Princes Academy Shs",
+    "region": "Gt. Accra",
+    "district": "Ablekuma West",
+    "location": "Accra",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010148",
+    "name": "Accra Wesley Girls High",
+    "region": "Gt. Accra",
+    "district": "Accra Metro",
+    "location": "Kaneshie",
+    "category": "C",
+    "status": "Day",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010153",
+    "name": "Mamprobi Senior High Sch",
+    "region": "Gt. Accra",
+    "district": "Accra metro",
+    "location": "Mamprobi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010157",
+    "name": "Tuba Islamic Senior High School",
+    "region": "Gt. Accra",
+    "district": "Ga South Municipal",
+    "location": "Tuba-Kasoa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010162",
+    "name": "Ideal College, Legon.",
+    "region": "Gt. Accra",
+    "district": "Ayawaso West Municipal",
+    "location": "East Legon",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010163",
+    "name": "Delcam Senior High School",
+    "region": "Gt. Accra",
+    "district": "Adentan Municipal",
+    "location": "Adentan",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010175",
+    "name": "Ghana College Senior High Tech",
+    "region": "Gt. Accra",
+    "district": "Ga South Municipal",
+    "location": "Accra",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0010186",
+    "name": "Adjen Kotoku Senior High",
+    "region": "Gt. Accra",
+    "district": "Ga West Municipal",
+    "location": "Adjen Kotoku",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0010189",
+    "name": "Al Basar Senior High School",
+    "region": "Gt. Accra",
+    "district": "Ga Central",
+    "location": "Awoshie",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010195",
+    "name": "Akramaman Senior High",
+    "region": "Gt. Accra",
+    "district": "Ga West Municipal",
+    "location": "Akramaman",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010197",
+    "name": "Lapaz Community Senior High Sch",
+    "region": "Gt. Accra",
+    "district": "Ayawaso Central Muni",
+    "location": "Pig Farm",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010198",
+    "name": "St. Andrews Senior High School",
+    "region": "Gt. Accra",
+    "district": "Ledzokuku Municipal",
+    "location": "Teshie",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010201",
+    "name": "Tema Senior High",
+    "region": "Gt. Accra",
+    "district": "Tema West Municipal",
+    "location": "Tema Comm 5",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010202",
+    "name": "Chemu Senior High/Tech",
+    "region": "Gt. Accra",
+    "district": "Tema Metro",
+    "location": "Tema Comm 4",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010203",
+    "name": "Ashiaman Senior High",
+    "region": "Gt. Accra",
+    "district": "Ashiaman Municipal",
+    "location": "Ashiaman",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010204",
+    "name": "Tema Manhean Senior High/Tech",
+    "region": "Gt. Accra",
+    "district": "Tema Metro",
+    "location": "Tema New Town",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010205",
+    "name": "Tema Meth. Day Senior High",
+    "region": "Gt. Accra",
+    "district": "Tema Metro",
+    "location": "Tema Comm II",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010206",
+    "name": "Datus Senior High School",
+    "region": "Gt. Accra",
+    "district": "Tema",
+    "location": "Tema",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010210",
+    "name": "Presby Senior High, Tema",
+    "region": "Gt. Accra",
+    "district": "Tema Metro",
+    "location": "Tema Community",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010213",
+    "name": "Our Lady of Mercy Senior High",
+    "region": "Gt. Accra",
+    "district": "Tema Metro",
+    "location": "Tema Comm 4",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010227",
+    "name": "Kpone Comm. Senior High",
+    "region": "Gt. Accra",
+    "district": "Kpone-Katamanso",
+    "location": "Katamanso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010301",
+    "name": "Ada Senior High",
+    "region": "Gt. Accra",
+    "district": "Ada East",
+    "location": "Ada-Foah",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010302",
+    "name": "Ada Senior High/Tech.",
+    "region": "Gt. Accra",
+    "district": "Ada West",
+    "location": "Sege",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010401",
+    "name": "Ghanata Senior High",
+    "region": "Gt. Accra",
+    "district": "Shai-Osudoku",
+    "location": "Dodowa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010402",
+    "name": "Osudoku Senior High/Tech.",
+    "region": "Gt. Accra",
+    "district": "Shai Osudoku",
+    "location": "Asutsuare",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010403",
+    "name": "Ningo Senior High",
+    "region": "Gt. Accra",
+    "district": "Ningo Prampram",
+    "location": "Old Ningo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "TECHNICAL"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "TECH"
+    ]
+  },
+  {
+    "code": "0010404",
+    "name": "Prampram Senior High",
+    "region": "Gt. Accra",
+    "district": "Ningo Prampram",
+    "location": "Prampram",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010501",
+    "name": "St. John's Grammar Senior High",
+    "region": "Gt. Accra",
+    "district": "Ga North Municipal",
+    "location": "Achimota",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010502",
+    "name": "West Africa Senior High",
+    "region": "Gt. Accra",
+    "district": "La Nkwantanang Madina",
+    "location": "Adenta",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010503",
+    "name": "Ngleshie Amanfro Senior High",
+    "region": "Gt. Accra",
+    "district": "Ga South Municipal",
+    "location": "Ngleshie Amanfro",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010504",
+    "name": "Amasaman Senior High/Tech",
+    "region": "Gt. Accra",
+    "district": "Ga West Municipal",
+    "location": "Amasaman",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010509",
+    "name": "Action Senior High/Tech School",
+    "region": "Gt. Accra",
+    "district": "La Nkwantanang/Madina",
+    "location": "Madina Estate",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010510",
+    "name": "St. Peters Mission School",
+    "region": "Gt. Accra",
+    "district": "Adentan",
+    "location": "Adenta",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010511",
+    "name": "Crystal Heights International School",
+    "region": "Gt. Accra",
+    "district": "Ga West Municipal",
+    "location": "Amasaman",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010517",
+    "name": "Mercy Islamic Senior High",
+    "region": "Gt. Accra",
+    "district": "Adentan Municipal",
+    "location": "Lakeside Estate",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010534",
+    "name": "Kwabenya Comm. Senior High",
+    "region": "Gt. Accra",
+    "district": "Ga East Municipal",
+    "location": "Kwabenya",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010535",
+    "name": "Frafraha Comm. Senior High",
+    "region": "Gt. Accra",
+    "district": "Adentan Municipal",
+    "location": "Frafraha",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010545",
+    "name": "Lashibi Comm. Day",
+    "region": "Gt. Accra",
+    "district": "Tema West Municipal",
+    "location": "Sakumono",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010549",
+    "name": "Purdue Scholars College",
+    "region": "Gt. Accra",
+    "district": "Ga South Municipal",
+    "location": "Accra",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010550",
+    "name": "Westfield Bridge College",
+    "region": "Gt. Accra",
+    "district": "Weija Gbawe",
+    "location": "Tetegu Junction",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0010711",
+    "name": "Bortianor Senior High School",
+    "region": "Gt. Accra",
+    "district": "Ga South Municipal",
+    "location": "Bortianor",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0012305",
+    "name": "Accra STEM Academy",
+    "region": "Gt. Accra",
+    "district": "Ayawaso West Municipal",
+    "location": "East Legon",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "STEM",
+    "programNames": [
+      "GENERAL SCIENCE",
+      "STEM",
+      "BIO-MEDICAL SCIENCE",
+      "ENGINEERING SCIENCE",
+      "AVIATION & AEROSPACE ENGINEERING",
+      "COMPUTING"
+    ],
+    "progs": [
+      "STEM",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0012901",
+    "name": "Pentecost Senior High/Technical School",
+    "region": "Gt. Accra",
+    "district": "Weija-Gbawe Municipal",
+    "location": "Weija",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020101",
+    "name": "Koforidua Senior High/Tech",
+    "region": "Eastern",
+    "district": "New Juaben North Municipal",
+    "location": "Koforidua",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "HOME ECONOMICS",
+      "X"
+    ],
+    "progs": [
+      "TECH",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "HOM. ECON."
+    ]
+  },
+  {
+    "code": "0020102",
+    "name": "Pope John Snr. High & Min. Sem., Koforidua",
+    "region": "Eastern",
+    "district": "New Juaben North Municipal",
+    "location": "Koforidua",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020103",
+    "name": "New Juaben Senior High/Com",
+    "region": "Eastern",
+    "district": "New Juaben South Municipal",
+    "location": "Koforidua",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020104",
+    "name": "Ghana Senior High, Koforidua",
+    "region": "Eastern",
+    "district": "New Juaben North Municipal",
+    "location": "Koforidua",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020105",
+    "name": "Oti Boateng Senior High",
+    "region": "Eastern",
+    "district": "New Juaben North Municipal",
+    "location": "Koforidua",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020106",
+    "name": "Oyoko Methodist Senior High",
+    "region": "Eastern",
+    "district": "New Juaben North Municipal",
+    "location": "Oyoko",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020108",
+    "name": "Pentecost Senior High,Koforidua",
+    "region": "Eastern",
+    "district": "New Juaben North Municipal",
+    "location": "Koforidua",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020109",
+    "name": "S.D.A Senior High, Koforidua",
+    "region": "Eastern",
+    "district": "New Juaben North Municipal",
+    "location": "Asokore-Koforidua",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020201",
+    "name": "Suhum Senior High/Tech",
+    "region": "Eastern",
+    "district": "Suhum Municipal",
+    "location": "Suhum",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "HOME ECONOMICS",
+      "X"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "HOM. ECON."
+    ]
+  },
+  {
+    "code": "0020202",
+    "name": "Presby Senior High, Suhum",
+    "region": "Eastern",
+    "district": "Suhum Municipal",
+    "location": "Suhum",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020203",
+    "name": "Kraboa-Coaltar Presby Snr. High/Tech.",
+    "region": "Eastern",
+    "district": "Ayensuano",
+    "location": "Kraboa-Coaltar",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020204",
+    "name": "Islamic Girls Senior High,Suhum",
+    "region": "Eastern",
+    "district": "Suhum Municipal",
+    "location": "Korase-Suhum",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020301",
+    "name": "Aburi Girls' Senior High",
+    "region": "Eastern",
+    "district": "Akwapim South",
+    "location": "Aburi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020302",
+    "name": "Adonten Senior High",
+    "region": "Eastern",
+    "district": "Akwapim South",
+    "location": "Aburi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020303",
+    "name": "St. Martin's Senior High, Nsawam",
+    "region": "Eastern",
+    "district": "Nsawam Adoagyiri Municipal",
+    "location": "Nsawam",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020304",
+    "name": "Nsawam Senior High",
+    "region": "Eastern",
+    "district": "Nsawam Adoagyiri Munici",
+    "location": "Nsawam",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020305",
+    "name": "Presby Senior High/Tech, Aburi",
+    "region": "Eastern",
+    "district": "Akwapim South",
+    "location": "Aburi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020306",
+    "name": "Prince Boateng Memorial Senior High",
+    "region": "Eastern",
+    "district": "Nsawam Adoagyiri",
+    "location": "Nsawam Adoagyiri, Eastern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020307",
+    "name": "Diaspora Girls' Senior High",
+    "region": "Eastern",
+    "district": "Akwapim South",
+    "location": "Obodan-Nsawam",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020401",
+    "name": "Nifa Senior High",
+    "region": "Eastern",
+    "district": "Okere",
+    "location": "Adukrom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020402",
+    "name": "Okuapeman Senior High",
+    "region": "Eastern",
+    "district": "Akwapim North Municipal",
+    "location": "Akropong",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020403",
+    "name": "Benkum Senior High",
+    "region": "Eastern",
+    "district": "Akwapim North Municipal",
+    "location": "Larteh-Akwapim",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020405",
+    "name": "Presby Senior High/Tech, Larteh",
+    "region": "Eastern",
+    "district": "Akwapim North Municipal",
+    "location": "Larteh-Kubease",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020406",
+    "name": "H'Mount Sinai Senior High School",
+    "region": "Eastern",
+    "district": "Akwapim North Municipal",
+    "location": "Akropong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020407",
+    "name": "Presby Senior High/Tech, Adukrom",
+    "region": "Eastern",
+    "district": "Okere",
+    "location": "Adukrom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020408",
+    "name": "Presby Senior High, Mampong Akwapim",
+    "region": "Eastern",
+    "district": "Akwapim North Municipal",
+    "location": "Mampong-Akwapi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020409",
+    "name": "Mangoase Senior High",
+    "region": "Eastern",
+    "district": "Akwapim North Municipal",
+    "location": "Mangoase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020410",
+    "name": "Methodist Girls Senior High, Mamfe",
+    "region": "Eastern",
+    "district": "Akwapim North Municipal",
+    "location": "Mamfe",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "ENGINEERING SCIENCE",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0020501",
+    "name": "Asamankese Senior High",
+    "region": "Eastern",
+    "district": "West Akim Municipal",
+    "location": "Asamankese",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020502",
+    "name": "St. Thomas Senior High/Tech",
+    "region": "Eastern",
+    "district": "West Akim Municipal",
+    "location": "Asamankese",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "Elective Maths",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020503",
+    "name": "Adeiso Presby Senior High",
+    "region": "Eastern",
+    "district": "Upper West Akim Municip",
+    "location": "Adeiso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020507",
+    "name": "Kwaobaah Nyanoa Comm. Senior High",
+    "region": "Eastern",
+    "district": "Upper West Akim Municip",
+    "location": "Nyanoa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020601",
+    "name": "Oda Senior High",
+    "region": "Eastern",
+    "district": "Birim Central Municipal",
+    "location": "Akim Oda",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020602",
+    "name": "Akim Swedru Senior High",
+    "region": "Eastern",
+    "district": "Birim South",
+    "location": "Akim Swedru",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020603",
+    "name": "St. Francis Senior High/Tech",
+    "region": "Eastern",
+    "district": "Birim Central Municipal",
+    "location": "Akim Oda",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020604",
+    "name": "Achiase Senior High",
+    "region": "Eastern",
+    "district": "Achiase",
+    "location": "Achiase",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020606",
+    "name": "Attafuah Senior High/Tech",
+    "region": "Eastern",
+    "district": "Birim Central Municipal",
+    "location": "Akim Oda",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "Elective Maths",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020607",
+    "name": "Akroso Senior High/Tech",
+    "region": "Eastern",
+    "district": "Asene/Manso/Akroso",
+    "location": "Akroso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020608",
+    "name": "Atweaman Senior High",
+    "region": "Eastern",
+    "district": "Asene/Manso/Akroso",
+    "location": "Akim Manso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0020609",
+    "name": "Akim State Senior High",
+    "region": "Eastern",
+    "district": "Birim Central",
+    "location": "Akim Oda",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0020611",
+    "name": "Aperade Senior High/Tech.",
+    "region": "Eastern",
+    "district": "Achiase",
+    "location": "Akim Aperade",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0020701",
+    "name": "Akokoaso Senior High/Tech",
+    "region": "Eastern",
+    "district": "Akyemansa",
+    "location": "Akim Akokoaso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0020702",
+    "name": "New Abirem/Afosu Senior High",
+    "region": "Eastern",
+    "district": "Birim North",
+    "location": "New Abirem",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020703",
+    "name": "Ayirebi Senior High",
+    "region": "Eastern",
+    "district": "Akyemansa",
+    "location": "Ayirebi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0020704",
+    "name": "St. Michael's Senior High, Akoase",
+    "region": "Eastern",
+    "district": "Birim North",
+    "location": "Akoase, Nkawkaw",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020705",
+    "name": "Amuana Praso Senior High",
+    "region": "Eastern",
+    "district": "Birim North",
+    "location": "Amuana Praso",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0020801",
+    "name": "Anum Presby Senior High",
+    "region": "Eastern",
+    "district": "Asuogyaman",
+    "location": "Anum",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020802",
+    "name": "Adjena Senior High/Tech.",
+    "region": "Eastern",
+    "district": "Asuogyaman",
+    "location": "Adjena",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Elective Maths",
+      "Elective Physics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0020803",
+    "name": "Akwamuman Senior High",
+    "region": "Eastern",
+    "district": "Asuogyaman",
+    "location": "Atimpoku-Akosombo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020804",
+    "name": "Boso Senior High Technical",
+    "region": "Eastern",
+    "district": "Asuogyaman",
+    "location": "Boso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "X"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020805",
+    "name": "Apeguso Senior High",
+    "region": "Eastern",
+    "district": "Asuogyaman",
+    "location": "Apeguso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020808",
+    "name": "Anum Apapam Comm. Day",
+    "region": "Eastern",
+    "district": "Ayensuano",
+    "location": "Anum Apapam",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020901",
+    "name": "Donkorkrom Agric Senior High",
+    "region": "Eastern",
+    "district": "Kwahu Afram Plains North",
+    "location": "Donkorkrom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020902",
+    "name": "St. Fidelis Senior High/Tech",
+    "region": "Eastern",
+    "district": "Kwahu Afram Plains South",
+    "location": "Tease",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0020903",
+    "name": "Mem-Chemfre Comm. Senior High",
+    "region": "Eastern",
+    "district": "Kwahu Afram Plains North",
+    "location": "Mem-Chemfre",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0020904",
+    "name": "Maame Krobo Comm. Senior High",
+    "region": "Eastern",
+    "district": "Kwahu Afram Plains South",
+    "location": "Maame Krobo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021001",
+    "name": "Abetifi Presby Senior High",
+    "region": "Eastern",
+    "district": "Kwahu East",
+    "location": "Abetifi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021002",
+    "name": "Mpraeso Senior High",
+    "region": "Eastern",
+    "district": "Kwahu South",
+    "location": "Mpraeso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021003",
+    "name": "St. Peter's Senior High, Nkwatia",
+    "region": "Eastern",
+    "district": "Kwahu East",
+    "location": "Nkwatia",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021004",
+    "name": "Nkawkaw Senior High",
+    "region": "Eastern",
+    "district": "Kwahu West Municipal",
+    "location": "Nkawkaw",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021005",
+    "name": "Kwahu Ridge Senior High",
+    "region": "Eastern",
+    "district": "Kwahu South",
+    "location": "Obo-Kwahu",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021006",
+    "name": "Nkwatia Presby Senior High/Com",
+    "region": "Eastern",
+    "district": "Kwahu East",
+    "location": "Nkwatia",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021007",
+    "name": "St. Paul's Senior High, Asakraka Kwahu",
+    "region": "Eastern",
+    "district": "Kwahu South",
+    "location": "Asakraka-Kwahu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0021008",
+    "name": "St. Dominic's Senior High/Tech, Pepease",
+    "region": "Eastern",
+    "district": "Kwahu East",
+    "location": "Pepease",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "Elective ICT",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021009",
+    "name": "Bepong Senior High School",
+    "region": "Eastern",
+    "district": "Kwahu South",
+    "location": "Bepong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0021010",
+    "name": "Kwahu Tafo Senior High",
+    "region": "Eastern",
+    "district": "Kwahu East",
+    "location": "Kwahu Tafo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021012",
+    "name": "St. Anthony Senior High School",
+    "region": "Eastern",
+    "district": "Kwahu West Municipal",
+    "location": "Nkawkaw",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021018",
+    "name": "Fodoa Comm. Senior High",
+    "region": "Eastern",
+    "district": "Kwahu West Municipal",
+    "location": "Fodoa Nkawkaw",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021101",
+    "name": "Asuom Senior High",
+    "region": "Eastern",
+    "district": "Kwaebibirem Municipal",
+    "location": "Asuom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021102",
+    "name": "Kade Senior High/Tech.",
+    "region": "Eastern",
+    "district": "Kwaebibirem Municipal",
+    "location": "Kade",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021103",
+    "name": "St. Rose's Senior High, Akwatia",
+    "region": "Eastern",
+    "district": "Denkyembour",
+    "location": "Akwatia",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021104",
+    "name": "Salvation Army Senior High, Akim Wenchi",
+    "region": "Eastern",
+    "district": "Denkyembour",
+    "location": "Akim Wenchi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021105",
+    "name": "Takrowase Comm. Senior High",
+    "region": "Eastern",
+    "district": "Denkyembour",
+    "location": "Tarkrowase",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0021106",
+    "name": "Presby Boys Model Senior High",
+    "region": "Eastern",
+    "district": "Denkyembour",
+    "location": "Boadua",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "COMPUTING"
+    ],
+    "progs": [
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0021201",
+    "name": "Presby Senior High, Begoro",
+    "region": "Eastern",
+    "district": "Fanteakwa North",
+    "location": "Begoro",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021202",
+    "name": "Osino Presby Senior High/Tech.",
+    "region": "Eastern",
+    "district": "Fanteakwa South Municip",
+    "location": "Osino",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021203",
+    "name": "New Nsutam Senior High/Tech",
+    "region": "Eastern",
+    "district": "Fanteakwa South Municip",
+    "location": "Akyem Nsutam",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Auto Electric",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0021301",
+    "name": "W.B.M. Zion Senior High, Old Tafo",
+    "region": "Eastern",
+    "district": "Abuakwa North Municipal",
+    "location": "Old Tafo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021302",
+    "name": "Ofori Panin Senior High",
+    "region": "Eastern",
+    "district": "Abuakwa North Municipal",
+    "location": "Kukurantumi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021303",
+    "name": "Abuakwa State College",
+    "region": "Eastern",
+    "district": "Abuakwa South Municipal",
+    "location": "Kibi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021304",
+    "name": "St. Stephen's Presby Snr. High/Tech",
+    "region": "Eastern",
+    "district": "Abuakwa South Municipal",
+    "location": "Asiakwa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0021305",
+    "name": "Kibi Senior High/Tech",
+    "region": "Eastern",
+    "district": "Abuakwa South Municipal",
+    "location": "Kibi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "Elective ICT",
+      "X"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021306",
+    "name": "Akim Asafo Senior High",
+    "region": "Eastern",
+    "district": "Abuakwa South Municipal",
+    "location": "Akim Asafo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021307",
+    "name": "Kwabeng Anglican Senior High/Tech",
+    "region": "Eastern",
+    "district": "Atiwa West",
+    "location": "Kwabeng",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021308",
+    "name": "Akyem Adonten Senior High",
+    "region": "Eastern",
+    "district": "Abuakwa North",
+    "location": "Akyem-Kukura",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021309",
+    "name": "West African College of Commerce",
+    "region": "Eastern",
+    "district": "Abuakwa North",
+    "location": "Kukurantumi",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021311",
+    "name": "Bright Senior High",
+    "region": "Eastern",
+    "district": "Abuakwa North",
+    "location": "Kukurantumi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021313",
+    "name": "Saviour Senior High, Osiem",
+    "region": "Eastern",
+    "district": "Abuakwa North Municipal",
+    "location": "Osiem",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021314",
+    "name": "Apedwa Presby Senior High",
+    "region": "Eastern",
+    "district": "Abuakwa South Municipal",
+    "location": "Apedwa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0021315",
+    "name": "Abomosu STEM Senior High",
+    "region": "Eastern",
+    "district": "Atiwa West",
+    "location": "Abomosu",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "STEM",
+    "programNames": [
+      "GENERAL SCIENCE",
+      "STEM",
+      "BIO-MEDICAL SCIENCE",
+      "ENGINEERING SCIENCE",
+      "AVIATION & AEROSPACE ENGINEERING",
+      "COMPUTING",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "STEM",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021401",
+    "name": "Yilo Krobo Senior High/Com",
+    "region": "Eastern",
+    "district": "Yilo Krobo",
+    "location": "Somanya",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021402",
+    "name": "Klo-Agogo Senior High/Tech",
+    "region": "Eastern",
+    "district": "Yilo Krobo",
+    "location": "Klo-Agogo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021403",
+    "name": "Somanya Senior High/Tech School",
+    "region": "Eastern",
+    "district": "Yilo Krobo Municipal",
+    "location": "Somanya",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0021404",
+    "name": "Apesua Comm. Senior High",
+    "region": "Eastern",
+    "district": "Yilo Krobo",
+    "location": "Apesua",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021501",
+    "name": "Krobo Girls' Presby Senior High",
+    "region": "Eastern",
+    "district": "Lower Manya Krobo",
+    "location": "Odumase",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021502",
+    "name": "Manya Krobo Senior High",
+    "region": "Eastern",
+    "district": "Lower Manya Krobo",
+    "location": "Nuaso New Town",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021503",
+    "name": "Asesewa Senior High/Tech",
+    "region": "Eastern",
+    "district": "Upper Manya Krobo",
+    "location": "Asesewa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021504",
+    "name": "Akuse Methodist Senior High/Tech",
+    "region": "Eastern",
+    "district": "Lower Manya Krobo",
+    "location": "Akuse",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021505",
+    "name": "Akro Senior High/Tech",
+    "region": "Eastern",
+    "district": "Lower Manya Krobo",
+    "location": "Odumase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Electric",
+      "Auto Mechanics",
+      "X"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021506",
+    "name": "King David Comm. College",
+    "region": "Eastern",
+    "district": "Lower Manya Krobo",
+    "location": "Kpong",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021507",
+    "name": "Modern Senior High School, Kpong",
+    "region": "Eastern",
+    "district": "Lower Manya Krobo",
+    "location": "Kpong",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0021601",
+    "name": "S.D.A. Senior High. Akim Sekyere",
+    "region": "Eastern",
+    "district": "Atiwa East",
+    "location": "Akim Sekyere",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030101",
+    "name": "St. Augustine's College, Cape Coast",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030102",
+    "name": "Adisadel College",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030103",
+    "name": "Holy Child School, Cape Coast",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030104",
+    "name": "Mfantsipim School",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "TECH",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030105",
+    "name": "University Practice Senior High",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030106",
+    "name": "Ghana National College",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030107",
+    "name": "Wesley Girls' High School, Cape Coast",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030108",
+    "name": "Oguaa Senior High/Tech",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Elective Maths",
+      "Elective Physics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030109",
+    "name": "Academy of Christ the King",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030110",
+    "name": "Effutu Senior High/Tech",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030201",
+    "name": "Edinaman Senior High",
+    "region": "Central",
+    "district": "Komenda/Edina/Eguafo/",
+    "location": "Elmina",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030202",
+    "name": "Eguafo-Abrem Senior High",
+    "region": "Central",
+    "district": "Komenda/Edina/Eguafo/A",
+    "location": "Eguafo Abirem",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030203",
+    "name": "Komenda Senior High/Tech.",
+    "region": "Central",
+    "district": "Komenda/Edina/Eguafo/A",
+    "location": "Komenda",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030301",
+    "name": "Mfantsiman Girls' Senior High",
+    "region": "Central",
+    "district": "Mfantseman Municipal",
+    "location": "Mfantseman",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030302",
+    "name": "Ekumfi T. I. Ahmadiiyya SHTS",
+    "region": "Central",
+    "district": "Ekumfi",
+    "location": "Esakyir",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Elective Maths",
+      "Elective Physics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030303",
+    "name": "Mankessim Senior High/Tech",
+    "region": "Central",
+    "district": "Mfantseman Municipal",
+    "location": "Mankesim",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030304",
+    "name": "Methodist High School,Saltpond",
+    "region": "Central",
+    "district": "Mfantseman Municipal",
+    "location": "Saltpond",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030305",
+    "name": "Kwegyir Aggrey Senior High",
+    "region": "Central",
+    "district": "Mfantseman Municipal",
+    "location": "Anomabo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Elective Maths",
+      "Elective Physics",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030306",
+    "name": "St. Luke Senior High",
+    "region": "Central",
+    "district": "Mfantseman Municipal",
+    "location": "Mankessim",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030307",
+    "name": "Obama College",
+    "region": "Central",
+    "district": "Ekumfi",
+    "location": "Ekumfi Swedru",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030308",
+    "name": "Abeadze State College",
+    "region": "Central",
+    "district": "Mfantseman Municipal",
+    "location": "Abeadze Dominas",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0030309",
+    "name": "J.E.A. Mills Senior High",
+    "region": "Central",
+    "district": "Ekumfi",
+    "location": "Otuam",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030312",
+    "name": "Akyin Senior High School",
+    "region": "Central",
+    "district": "Ekumfi",
+    "location": "Arkra-Mbroboto",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0030313",
+    "name": "Kobina Ansah SHS",
+    "region": "Central",
+    "district": "Mfantseman",
+    "location": "Kobina Ansah",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0030401",
+    "name": "Aggrey Mem. A.M.E.Zion Snr. High",
+    "region": "Central",
+    "district": "Abura/Asebu/Kwamankese",
+    "location": "Cape Coast",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030402",
+    "name": "Aburaman Senior High",
+    "region": "Central",
+    "district": "Abura/Asebu/Kwamankes",
+    "location": "Abura Dunkwa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030403",
+    "name": "Abakrampa Senior High/Tech",
+    "region": "Central",
+    "district": "Abura/Asebu/Kwamankes",
+    "location": "Abakrampa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Elective Maths",
+      "Elective Physics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030404",
+    "name": "Sammo Shs (New Site)",
+    "region": "Central",
+    "district": "Mfantseman Municipal",
+    "location": "Mankessim",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030406",
+    "name": "Moree Comm. Senior High",
+    "region": "Central",
+    "district": "Abura/Asebu/Kwamankes",
+    "location": "Moree",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030501",
+    "name": "Apam Senior High",
+    "region": "Central",
+    "district": "Gomoa West",
+    "location": "Apam",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030502",
+    "name": "Potsin T.I. Ahm. Senior High",
+    "region": "Central",
+    "district": "Gomoa East",
+    "location": "Potsin",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Elective ICT",
+      "Elective Maths",
+      "Elective Physics",
+      "Hosp & Cat. Mgt",
+      "Metal Work"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030503",
+    "name": "Gomoa Senior High/Tech",
+    "region": "Central",
+    "district": "Gomoa West",
+    "location": "Dawurampong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030504",
+    "name": "Mozano Senior High",
+    "region": "Central",
+    "district": "Gomoa West",
+    "location": "Mozano",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030507",
+    "name": "College of Music Senior High",
+    "region": "Central",
+    "district": "Gomoa West",
+    "location": "Mozano",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0030508",
+    "name": "Gomoa Gyaman Senior High",
+    "region": "Central",
+    "district": "Gomoa Central",
+    "location": "Gomoa Gyaman",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030509",
+    "name": "Ogyeedom Comm.Snr High/Tech",
+    "region": "Central",
+    "district": "Gomoa Central",
+    "location": "Gomoa afransi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0030601",
+    "name": "Winneba Senior High",
+    "region": "Central",
+    "district": "Effutu Municipal",
+    "location": "Winneba",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030602",
+    "name": "Senya Senior High School",
+    "region": "Central",
+    "district": "Awutu Senya",
+    "location": "Senya Beraku",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030603",
+    "name": "Obrachire Senior High/Tech",
+    "region": "Central",
+    "district": "Awutu Senya",
+    "location": "Obrakyire",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030606",
+    "name": "Winneba Zion Girls Senior High School",
+    "region": "Central",
+    "district": "Effutu Municipal",
+    "location": "Winneba",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030607",
+    "name": "Royal Majesty Senior High School",
+    "region": "Central",
+    "district": "Awutu Senya East Muni",
+    "location": "Awutu Breku",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030613",
+    "name": "Awutu Winton Senior High",
+    "region": "Central",
+    "district": "Awutu Senya West",
+    "location": "Awutu",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030615",
+    "name": "Fettehman Senior High",
+    "region": "Central",
+    "district": "Gomoa East",
+    "location": "Gomoa Fetteh",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030624",
+    "name": "St. Gregory Catholic Senior High School",
+    "region": "Central",
+    "district": "Gomoa East",
+    "location": "Buduburam",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0030628",
+    "name": "Awutu Bawjiase Comm. Senior High School",
+    "region": "Central",
+    "district": "Awutu Senya East Municip",
+    "location": "Awutu Bawjiase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030629",
+    "name": "Odupong Comm. Day School",
+    "region": "Central",
+    "district": "Awutu Senya East Municip",
+    "location": "Kasoa Ofaakor",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030632",
+    "name": "Ideal College, Kasoa",
+    "region": "Central",
+    "district": "Awutu Senya East Muni",
+    "location": "Kasoa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030633",
+    "name": "Bontrase Senior High Tech. Sch",
+    "region": "Central",
+    "district": "Awutu Senya",
+    "location": "Awutu Bontrase",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Electronics",
+      "Woodwork"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0030636",
+    "name": "Nyanyanoman Senior High/Technical Schoo",
+    "region": "Central",
+    "district": "Gomoa East",
+    "location": "Nyanyano",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030701",
+    "name": "Mando Senior High/Tech.",
+    "region": "Central",
+    "district": "Ajumako/Enyan/Esiam",
+    "location": "Mando",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030702",
+    "name": "Bisease Senior High School",
+    "region": "Central",
+    "district": "Ajumako/Enyan/Esiam",
+    "location": "Bisease",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030703",
+    "name": "Enyan Denkyira Senior High/Tech",
+    "region": "Central",
+    "district": "Ajumako/Enyan/Esiam",
+    "location": "Denkyira",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030706",
+    "name": "Enyan Maim Comm. Day School",
+    "region": "Central",
+    "district": "Ajumako/Enyan/Esiam",
+    "location": "Enyan Maim",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030777",
+    "name": "Holy City Senior High/Tech",
+    "region": "Central",
+    "district": "Assin South",
+    "location": "Assin Nkran",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030801",
+    "name": "Breman Asikuma Senior High",
+    "region": "Central",
+    "district": "Asikuma/Odoben/Brakwa",
+    "location": "Breman Asikuma",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030802",
+    "name": "Odoben Senior High",
+    "region": "Central",
+    "district": "Asikuma/Odoben/Brakwa",
+    "location": "Odoben",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030803",
+    "name": "Brakwa Senior High/Tech",
+    "region": "Central",
+    "district": "Asikuma/Odoben/Brakwa",
+    "location": "Brakwa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Elective Maths",
+      "Elective Physics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0030901",
+    "name": "Nyakrom Senior High Tech",
+    "region": "Central",
+    "district": "Agona West Municipal",
+    "location": "Nyakrom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Elective Maths",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030902",
+    "name": "Swedru Sch. Of Business",
+    "region": "Central",
+    "district": "Agona West Municipal",
+    "location": "Swedru",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030903",
+    "name": "Nsaba Presby Senior High",
+    "region": "Central",
+    "district": "Agona East",
+    "location": "Nsaba",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030904",
+    "name": "Kwanyarko Senior High",
+    "region": "Central",
+    "district": "Agona East",
+    "location": "Kwanyako",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030905",
+    "name": "Swedru Senior High",
+    "region": "Central",
+    "district": "Agona East",
+    "location": "Swedru",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030906",
+    "name": "Siddiq Senior High Sch.",
+    "region": "Central",
+    "district": "Agona West Municipal",
+    "location": "Agona Nyakrom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030907",
+    "name": "S.D.A Senior High School, Gomoa Jukwa",
+    "region": "Central",
+    "district": "Gomoa Central",
+    "location": "Gomoa Jukwa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030909",
+    "name": "Agona Namonwora Comm.Senior High",
+    "region": "Central",
+    "district": "Agona East",
+    "location": "Agona Namonwora",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0030915",
+    "name": "Agona Fankobaa Senior High",
+    "region": "Central",
+    "district": "Agona West Municipal",
+    "location": "Agona Abodom",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031001",
+    "name": "Boa-Amponsem Senior High",
+    "region": "Central",
+    "district": "Upper Denkyira East",
+    "location": "Dunkwa-On-Offin",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031002",
+    "name": "Dunkwa Senior High/Tech",
+    "region": "Central",
+    "district": "Upper Denkyira East Muni",
+    "location": "Dunkwa-on-Offin",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Elective ICT",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031003",
+    "name": "Diaso Senior High",
+    "region": "Central",
+    "district": "Upper Denkyira West",
+    "location": "Diaso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031004",
+    "name": "Samtet Oxford Senior High School",
+    "region": "Central",
+    "district": "Upper Denkyira East",
+    "location": "Atechem",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031005",
+    "name": "Mount Hebron College",
+    "region": "Central",
+    "district": "Upper Denkyira East",
+    "location": "Dunkwa-On",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031006",
+    "name": "Ayanfuri Senior High",
+    "region": "Central",
+    "district": "Upper Denkyira West",
+    "location": "Ayanfuri",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031007",
+    "name": "Kyekyewere Comm. Senior High School",
+    "region": "Central",
+    "district": "Upper Denkyira East Muni",
+    "location": "Denkyira-Kyekyew",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0031101",
+    "name": "Twifo Praso Senior High",
+    "region": "Central",
+    "district": "Twifo Ati-Morkwa",
+    "location": "Twifo Praso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031102",
+    "name": "Jukwa Senior High/Tech",
+    "region": "Central",
+    "district": "Twifo Hemang Lower Denk",
+    "location": "Jukwa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031104",
+    "name": "Twifo Hemang Senior High/Tech",
+    "region": "Central",
+    "district": "Twifo Hemang Lower",
+    "location": "Twifo Hemang",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031107",
+    "name": "Mokwaa Senior High School",
+    "region": "Central",
+    "district": "Twifu Atti-Mokwaa",
+    "location": "Mokwaa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0031201",
+    "name": "Assin Manso Senior High",
+    "region": "Central",
+    "district": "Assin South",
+    "location": "Assin Manso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031202",
+    "name": "Obiri Yeboah Senior High/Technical",
+    "region": "Central",
+    "district": "Assin Central Municipal",
+    "location": "Assin Fosu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031203",
+    "name": "Nyankumasi Ahenkro Snr. High",
+    "region": "Central",
+    "district": "Assin South",
+    "location": "Nyankumasi Ahen",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0031204",
+    "name": "Assin North Senior High/Tech",
+    "region": "Central",
+    "district": "Assin North",
+    "location": "Assin Asempaneye",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Elective Maths",
+      "Elective Physics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031205",
+    "name": "Adankwaman Senior High",
+    "region": "Central",
+    "district": "Assin South",
+    "location": "Assin Darmang",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0031206",
+    "name": "Assin Nsuta Senior High School",
+    "region": "Central",
+    "district": "Assin South",
+    "location": "Assin Nsuta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0031207",
+    "name": "Assin State College",
+    "region": "Central",
+    "district": "Assin North",
+    "location": "Assin Bereku",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031208",
+    "name": "Gyaase Community Senior High",
+    "region": "Central",
+    "district": "Assin North",
+    "location": "Assin-Akonfudi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031209",
+    "name": "St. Richards Senior High",
+    "region": "Central",
+    "district": "Assin Central Municipal",
+    "location": "Assin Foso",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0031210",
+    "name": "Eltra Senior High School",
+    "region": "Central",
+    "district": "Assin South District",
+    "location": "Assin Akrofuom",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040101",
+    "name": "Takoradi Senior High",
+    "region": "Western",
+    "district": "Effia Kwesimintsim Munici",
+    "location": "Tanokrom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040102",
+    "name": "Sekondi College",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Sekondi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040103",
+    "name": "Archbishop Porter Girls Snr.High .",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Sekondi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040104",
+    "name": "Ghana Senior High/Tech",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Takoradi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "AVIATION & AEROSPACE ENGINEERING",
+      "MANUFACTURING ENGINEERING",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "TECH",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0040105",
+    "name": "Fijai Senior High",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Sekondi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "ENGINEERING SCIENCE",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0040106",
+    "name": "Ahantaman Girls' Senior High",
+    "region": "Western",
+    "district": "Shama Ahanta East",
+    "location": "Sekondi-Ketan",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040107",
+    "name": "St. John's Senior High, Sekondi",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Sekondi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040108",
+    "name": "Bompeh Senior High./Tech",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Takoradi",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040109",
+    "name": "Diabene Senior High/Tech",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Diabene",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040110",
+    "name": "Adiembra Senior High",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Adiembra",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040111",
+    "name": "Shama Senior High",
+    "region": "Western",
+    "district": "Shama",
+    "location": "Shama",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040112",
+    "name": "Methodist Senior High, Sekondi",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Sekondi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040114",
+    "name": "Golden Gate Senior High Sch",
+    "region": "Western",
+    "district": "Shama",
+    "location": "Shama",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040119",
+    "name": "Ideal College, Takoradi",
+    "region": "Western",
+    "district": "Effia-Kwesimintsim Muni",
+    "location": "Takoradi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040141",
+    "name": "Takoradi Islamic Senior High School",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Takoradi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040201",
+    "name": "St. Mary's Boys' Senior High, Apowa",
+    "region": "Western",
+    "district": "Ahanta West",
+    "location": "Apowa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040202",
+    "name": "Baidoo Bonso Senior High/Tech",
+    "region": "Western",
+    "district": "Ahanta West",
+    "location": "Agona Nkwanta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Elective ICT",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040203",
+    "name": "Sankor Senior High School",
+    "region": "Western",
+    "district": "Ahanta West",
+    "location": "Sankor",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040301",
+    "name": "Kwame Nkrumah Senior High",
+    "region": "Western",
+    "district": "Nzema East Municipal",
+    "location": "Nsein Axim",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040302",
+    "name": "Nkroful Agric. Senior High/Tech",
+    "region": "Western",
+    "district": "Ellembele",
+    "location": "Nkroful",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040303",
+    "name": "Esiama Senior High/Tech",
+    "region": "Western",
+    "district": "Ellembele",
+    "location": "Esiama",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040304",
+    "name": "Bonzo-Kaku Senior High",
+    "region": "Western",
+    "district": "Ellembele",
+    "location": "Awiebo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040305",
+    "name": "Axim Girls Senior High",
+    "region": "Western",
+    "district": "Nzema East Municipal",
+    "location": "Axim",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040306",
+    "name": "Uthman Bin Affan Islamic SHS",
+    "region": "Western",
+    "district": "Ellembele",
+    "location": "Kamgbunli",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040308",
+    "name": "Gwiraman Comm.Senior High",
+    "region": "Western",
+    "district": "Nzema East Municipal",
+    "location": "Bamianko",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040401",
+    "name": "Half Assini Senior High",
+    "region": "Western",
+    "district": "Jomoro",
+    "location": "Half Assini",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040402",
+    "name": "Annor Adjaye Senior High",
+    "region": "Western",
+    "district": "Jomoro",
+    "location": "Ezilibo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040501",
+    "name": "Asankrangwa Senior High",
+    "region": "Western",
+    "district": "Wassa Amenfi West",
+    "location": "Asankragwa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "TECHNICAL",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "TECH"
+    ]
+  },
+  {
+    "code": "0040502",
+    "name": "Amenfiman Senior High",
+    "region": "Western",
+    "district": "Wassa Amenfi East",
+    "location": "Wasa Akropong",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040503",
+    "name": "Asankrangwa Senior High/Tech",
+    "region": "Western",
+    "district": "Wassa Amenfi West",
+    "location": "Asankragwa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040504",
+    "name": "Manso-Amenfi Comm. Day School",
+    "region": "Western",
+    "district": "Wassa Amenfi Central",
+    "location": "Manso-Amenfi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040601",
+    "name": "Sefwi-Wiawso Senior High",
+    "region": "Western North",
+    "district": "Sefwi Wiawso",
+    "location": "Sefwi-Wiawso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040602",
+    "name": "Sefwi-Wiawso Senior High/Tech",
+    "region": "Western North",
+    "district": "Sefwi Wiawso",
+    "location": "Sefwi-Wiawso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040603",
+    "name": "Asawinso Senior High",
+    "region": "Western North",
+    "district": "Sefwi Wiawso",
+    "location": "Asawinso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040604",
+    "name": "Akontombra Senior High",
+    "region": "Western North",
+    "district": "Sefwi Akontombra",
+    "location": "Akontombra",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040605",
+    "name": "St. Joseph Senior High, Sefwi Wiawso",
+    "region": "Western North",
+    "district": "Sefwi Wiawso",
+    "location": "Sefwi Wiawso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040607",
+    "name": "Nsawora Edumafa Senior High School",
+    "region": "Western",
+    "district": "Sefwi Akontombra",
+    "location": "Nsawora Edumafa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040608",
+    "name": "St. Benedict Senior High School, Sefwi",
+    "region": "Western",
+    "district": "Sefwi Wiawso Municipal",
+    "location": "Asawinso",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040701",
+    "name": "Bibiani Senior High/Tech.",
+    "region": "Western",
+    "district": "Bibiani/Anhwiaso/ Bekwai",
+    "location": "Bibiani",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040702",
+    "name": "Sefwi Bekwai Senior High",
+    "region": "Western North",
+    "district": "Bibiani/Anhwiaso/ Bekwai",
+    "location": "Sefwi Bekwai",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040703",
+    "name": "Otoo Memorial Senior High School",
+    "region": "Western",
+    "district": "Bibiani Anhwinso Bekwai",
+    "location": "Bibiani",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040704",
+    "name": "Queens Girls' Senior High, Sefwi Awhiaso",
+    "region": "Western",
+    "district": "Bibiani/Anhwiaso/ Bekwai",
+    "location": "Sefwi Anwhiaso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040705",
+    "name": "Chirano Comm. Day School",
+    "region": "Western",
+    "district": "Bibiani/Anhwiaso/ Bekwai",
+    "location": "Chirano",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "STEM",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "STEM",
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040706",
+    "name": "Awaso STEM Senior High",
+    "region": "Western",
+    "district": "Bibiani/Anhwiaso/ Bekwai",
+    "location": "Awaso",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "STEM",
+    "programNames": [
+      "GENERAL SCIENCE",
+      "STEM",
+      "BIO-MEDICAL SCIENCE",
+      "ENGINEERING SCIENCE",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "STEM",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040801",
+    "name": "Juaboso Senior High",
+    "region": "Western North",
+    "district": "Juaboso",
+    "location": "Juaboso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040802",
+    "name": "Bia Senior High/Tech",
+    "region": "Western North",
+    "district": "Bia West",
+    "location": "Debiso Essiam",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040803",
+    "name": "Bodi Senior High",
+    "region": "Western North",
+    "district": "Bodi",
+    "location": "Bodi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040804",
+    "name": "Adjoafua Comm. Senior High",
+    "region": "Western",
+    "district": "Bia West",
+    "location": "Adjoafua",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040806",
+    "name": "Western",
+    "region": "Western",
+    "district": "Bodi",
+    "location": "Bodi, Western",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS"
+    ]
+  },
+  {
+    "code": "0040807",
+    "name": "Amoaya Senior High School",
+    "region": "Western",
+    "district": "Bodi",
+    "location": "Amoaya",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040901",
+    "name": "Huni Valley Senior High",
+    "region": "Western",
+    "district": "Prestea Huni Valley",
+    "location": "Huni Vallley",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040902",
+    "name": "St. Augustine's Senior High, Bogoso",
+    "region": "Western",
+    "district": "Prestea Huni Valley",
+    "location": "Bogoso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040903",
+    "name": "Fiaseman Senior High",
+    "region": "Western",
+    "district": "Tarkwa-Nsuaem Municipa",
+    "location": "Bankyim Tarkwa*",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040904",
+    "name": "Tarkwa Senior High",
+    "region": "Western",
+    "district": "Tarkwa-Nsuaem Municipal",
+    "location": "Tarkwa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040905",
+    "name": "Prestea Senior High/Tech",
+    "region": "Western",
+    "district": "Prestea Huni Valley",
+    "location": "Prestea",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Auto Mechanics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0040906",
+    "name": "Benso Senior High/Tech",
+    "region": "Western",
+    "district": "Tarkwa-Nsuaem Municipa",
+    "location": "Benso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0041001",
+    "name": "Nana Brentu Senior High/Tech",
+    "region": "Western",
+    "district": "Aowin Suaman",
+    "location": "Enchi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0041002",
+    "name": "Dadieso Senior High",
+    "region": "Western North",
+    "district": "Suaman",
+    "location": "Dadieso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0041101",
+    "name": "Daboase Senior High/Tech",
+    "region": "Western",
+    "district": "Mpohor Wassa East",
+    "location": "Daboase",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0041102",
+    "name": "Mpohor Senior High",
+    "region": "Western",
+    "district": "Mpohor",
+    "location": "Mpohor",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050101",
+    "name": "Asanteman Senior High",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Bantama",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050102",
+    "name": "St. Louis Senior High, Kumasi",
+    "region": "Ashanti",
+    "district": "Oforikrom Municipal",
+    "location": "Oduom-Kumasi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050103",
+    "name": "Kumasi Girls Senior High",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Abrepo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050104",
+    "name": "T. I. Ahmadiyya Senior High , Kumasi",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Kumasi-Stadium",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050105",
+    "name": "Kumasi Academy",
+    "region": "Ashanti",
+    "district": "Asokore Mampong Muni",
+    "location": "Asokore Mampong",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "ENGINEERING SCIENCE",
+      "COMPUTING",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0050106",
+    "name": "Osei Kyeretwie Senior High",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Old Tafo-Kumasi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050107",
+    "name": "Anglican Senior High, Kumasi",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Asem-Kumasi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050108",
+    "name": "Prempeh College",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Sofoline-Kumasi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "ENGINEERING SCIENCE",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0050109",
+    "name": "KNUST Senior High",
+    "region": "Ashanti",
+    "district": "Oforikrom Municipal",
+    "location": "KNUST/Boadi Junction",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "BIO-MEDICAL SCIENCE",
+      "Electronics",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0050110",
+    "name": "Opoku Ware School",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Santasi-Kumasi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "ENGINEERING SCIENCE",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0050111",
+    "name": "Kumasi High School",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Gyinyase-Kumasi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050112",
+    "name": "Kumasi Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Patasi-Kumasi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050113",
+    "name": "Armed Forces Senior High/Tech, Kumasi",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Bantama-Kumasi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050114",
+    "name": "Kumasi Wesley Girls High Sch",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Old Tafo-Kumasi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050115",
+    "name": "Adventist Senior High, Kumasi",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Bantama-Kumasi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050116",
+    "name": "Islamic Senior High,Kumasi",
+    "region": "Ashanti",
+    "district": "Kumasi Metro.",
+    "location": "Ampabame",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050117",
+    "name": "Prince Of Peace Girls",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "South Suntreso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050119",
+    "name": "St. Hubert Sem/Senior High, Kumasi",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Santasi-Kumasi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050139",
+    "name": "Serwaah Nyarko Girls' Snr. High",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Dichemso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050140",
+    "name": "Tawheed Senior High.",
+    "region": "Ashanti",
+    "district": "Asokore Mampong Municipal",
+    "location": "Kumasi-Akwatia Line",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050150",
+    "name": "Sakafia Islamic Senior High",
+    "region": "Ashanti",
+    "district": "Asokore Mampong Muni",
+    "location": "Sawaba",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050154",
+    "name": "Pentecost Senior High, Kumasi",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Breman West, Kumasi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050156",
+    "name": "Al-Azariya Islamic Snr. High, Kumasi",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Old Tafo, Kumasi",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050158",
+    "name": "Uthmaniya Senior High, Tafo",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Tafo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050159",
+    "name": "Mancell Girls' Senior High/Tech.",
+    "region": "Ashanti",
+    "district": "Oforikrom Municipal",
+    "location": "Oduom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "BIO-MEDICAL SCIENCE",
+      "ENGINEERING SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0050172",
+    "name": "Ofoase Kokoben Senior High",
+    "region": "Ashanti",
+    "district": "Bekwai Municipal",
+    "location": "Ofoase Kokobin",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050175",
+    "name": "Nuru-Ameen Islamic Senior High, Asewase",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Asewase",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050193",
+    "name": "Agric Nzema Senior High, Kumasi",
+    "region": "Ashanti",
+    "district": "Kwadaso Municipal",
+    "location": "Kumasi, Agric Nzema",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050194",
+    "name": "Parkoso Comm. Senior High",
+    "region": "Ashanti",
+    "district": "Asokore Mampong Mun.",
+    "location": "Parkoso",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050196",
+    "name": "Presby Girls Senior High School",
+    "region": "Ashanti",
+    "district": "Asokwa Municipal",
+    "location": "Chirapatre",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050201",
+    "name": "Yaa Asantewaa Girls Senior High .",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Tanoso-Kumasi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050202",
+    "name": "Toase Senior High",
+    "region": "Ashanti",
+    "district": "Atwima Nwabiagya",
+    "location": "Toase",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050203",
+    "name": "Osei Tutu Senior High, Akropong",
+    "region": "Ashanti",
+    "district": "Atwima Nwabiagya",
+    "location": "Akropong",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050204",
+    "name": "Nkawie Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Atwima Nwabiagya",
+    "location": "Nkawie",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050205",
+    "name": "Mpasatia Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Atwima Mponua",
+    "location": "Mpasatia",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050206",
+    "name": "Barekese Senior High School",
+    "region": "Ashanti",
+    "district": "Atwima Nwabiagya North",
+    "location": "Barekese",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050207",
+    "name": "Nyinahin Cath. Senior High",
+    "region": "Ashanti",
+    "district": "Atwima Mponua",
+    "location": "Nyinahin",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050208",
+    "name": "Atwima Kwanwoma Snr High/Tech",
+    "region": "Ashanti",
+    "district": "Atwima Kwanwoma",
+    "location": "Trede",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050211",
+    "name": "Adobewora Comm. Senior High",
+    "region": "Ashanti",
+    "district": "Atwima Mponua",
+    "location": "Adobewora",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050212",
+    "name": "J. A. Kufuor Senior High",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Sokoban",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050213",
+    "name": "Anum Asamoah Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Atwima Kwanwoma",
+    "location": "Adum Kwanwoma",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050214",
+    "name": "Spiritan Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Atwima Nwabiagya North",
+    "location": "Adankwame",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050301",
+    "name": "S.D.A. Senior High, Bekwai",
+    "region": "Ashanti",
+    "district": "Bekwai Municipal",
+    "location": "Bekwai",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050302",
+    "name": "Oppong Mem. Senior High",
+    "region": "Ashanti",
+    "district": "Bekwai Municipal",
+    "location": "Kokofu",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050303",
+    "name": "Jacobu Senior High/Tech.",
+    "region": "Ashanti",
+    "district": "Amansie Central",
+    "location": "Jacobu",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050304",
+    "name": "St. Joseph Senior High/Tech, Ahwiren",
+    "region": "Ashanti",
+    "district": "Bekwai Municipal",
+    "location": "Ahwiren",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050305",
+    "name": "Bosome Senior High/Tech.",
+    "region": "Ashanti",
+    "district": "Bosome Freho",
+    "location": "Asiwa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050307",
+    "name": "Wesley High School, Bekwai",
+    "region": "Ashanti",
+    "district": "Bekwai Municipal",
+    "location": "Bekwai",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050309",
+    "name": "Denyaseman Cath.Senior High",
+    "region": "Ashanti",
+    "district": "Bekwai Municipal",
+    "location": "Poano",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050312",
+    "name": "Tweapease Senior High School",
+    "region": "Ashanti",
+    "district": "Amansie Central",
+    "location": "Tweapease",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050401",
+    "name": "Mansoman Senior High",
+    "region": "Ashanti",
+    "district": "Amansie West",
+    "location": "Manso Atwere",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050402",
+    "name": "Esaase Bontefufuo Snr. High/Tech.",
+    "region": "Ashanti",
+    "district": "Amansie West",
+    "location": "Esaase Bontefufuo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050403",
+    "name": "Manso-Adubia Senior High",
+    "region": "Ashanti",
+    "district": "Amansie South",
+    "location": "Manso Adubia",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050501",
+    "name": "Nsutaman Cath. Senior High",
+    "region": "Ashanti",
+    "district": "Sekyere Central",
+    "location": "Nsuta",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050502",
+    "name": "St. Monica's Senior High, Mampong",
+    "region": "Ashanti",
+    "district": "Mampong Municipal",
+    "location": "Mampong",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050503",
+    "name": "Amaniampong Senior High",
+    "region": "Ashanti",
+    "district": "Mampong Municipal",
+    "location": "Mampong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050504",
+    "name": "St. Joseph Sem/Senior High, Mampong",
+    "region": "Ashanti",
+    "district": "Mampong Municipal",
+    "location": "Mampong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050505",
+    "name": "Presby Senior High/Tech, Kwamang",
+    "region": "Ashanti",
+    "district": "Sekyere Central",
+    "location": "Kwamang",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050508",
+    "name": "Ghana Muslim Mission Senior High",
+    "region": "Ashanti",
+    "district": "Sekyere Central",
+    "location": "Beposo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050601",
+    "name": "Okomfo Anokye Senior High",
+    "region": "Ashanti",
+    "district": "Sekyere South",
+    "location": "Wiamoase",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050602",
+    "name": "S.D.A. Senior High, Agona",
+    "region": "Ashanti",
+    "district": "Sekyere South",
+    "location": "Agona",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050603",
+    "name": "Konadu Yiadom Catholic Senior High",
+    "region": "Ashanti",
+    "district": "Sekyere South",
+    "location": "Asamang",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050604",
+    "name": "Otumfuo Osei Tutu II College",
+    "region": "Ashanti",
+    "district": "Afigya-Kwabre",
+    "location": "Tetrem",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050605",
+    "name": "Adu Gyamfi Senior High",
+    "region": "Ashanti",
+    "district": "Sekyere South",
+    "location": "Jamasi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050606",
+    "name": "Agona Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Sekyere South",
+    "location": "Agona",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050607",
+    "name": "Kofiase Adventist Senior High/Tech.",
+    "region": "Ashanti",
+    "district": "Mampong Municipal",
+    "location": "Kofiase",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "STEM",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0050608",
+    "name": "Opoku Agyeman Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Mampong Municipal",
+    "location": "Apaah",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Elective ICT",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050609",
+    "name": "Afigyaman Senior High School",
+    "region": "Ashanti",
+    "district": "Afigya Kwabre South",
+    "location": "Kyekyewere",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050612",
+    "name": "Boanim Senior High/ Tech Sch",
+    "region": "Ashanti",
+    "district": "Sekyere South",
+    "location": "Boanim",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050701",
+    "name": "Antoa Senior High",
+    "region": "Ashanti",
+    "district": "Kwabre East",
+    "location": "Antoa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050702",
+    "name": "Simms Senior High/Com.",
+    "region": "Ashanti",
+    "district": "Kwabre East",
+    "location": "Fawoade",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050703",
+    "name": "Adanwomase Senior High",
+    "region": "Ashanti",
+    "district": "Kwabre East",
+    "location": "Adanwomase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050704",
+    "name": "Aduman Senior High",
+    "region": "Ashanti",
+    "district": "Afigya-Kwabre",
+    "location": "Aduman",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050705",
+    "name": "Kofi Adjei Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Kwabre East",
+    "location": "Bampenase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050706",
+    "name": "Gyaama Pensan Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Kwabre East",
+    "location": "Aboaso-Ashanti",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Electronics"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050707",
+    "name": "Adventist Girls Senior High, Ntonso",
+    "region": "Ashanti",
+    "district": "Kwabre East",
+    "location": "Ntonso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050708",
+    "name": "St. Michael's Senior High, Ahenkro",
+    "region": "Ashanti",
+    "district": "Afigya-Kwabre",
+    "location": "Ahenkro",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050716",
+    "name": "Afigya Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Afigya-Kwabre North",
+    "location": "Boamang",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050744",
+    "name": "Leading-Edge Islamic Girls' Senior High",
+    "region": "Ashanti",
+    "district": "Kwabre East",
+    "location": "Antoa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050801",
+    "name": "Dwamena Akenten Senior High",
+    "region": "Ashanti",
+    "district": "Offinso Municipal",
+    "location": "Offinso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050802",
+    "name": "Akumadan Senior High",
+    "region": "Ashanti",
+    "district": "Offinso North",
+    "location": "Akumadan",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050803",
+    "name": "Namong Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Offinso Municipal",
+    "location": "Namong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050804",
+    "name": "St. Jerome Senior High, Abofour",
+    "region": "Ashanti",
+    "district": "Offinso Municipal",
+    "location": "Abofour",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050805",
+    "name": "Nkenkansu Community Senior High",
+    "region": "Ashanti",
+    "district": "Offinso North",
+    "location": "Nkenkansu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050806",
+    "name": "Asuoso Comm. Senior High",
+    "region": "Ashanti",
+    "district": "Offinso North",
+    "location": "Asuoso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050808",
+    "name": "Wiafe Akenten Presby Senior High",
+    "region": "Ashanti",
+    "district": "Offinso North",
+    "location": "Afrancho",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0050811",
+    "name": "J.A. Kufour Stem Technical School",
+    "region": "Ashanti",
+    "district": "Atwima Nwabiagya North",
+    "location": "Dabaa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "STEM",
+    "programNames": [
+      "STEM",
+      "ENGINEERING SCIENCE",
+      "AVIATION & AEROSPACE ENGINEERING",
+      "COMPUTING",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "STEM",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050901",
+    "name": "Ejuraman Anglican Senior High",
+    "region": "Ashanti",
+    "district": "Ejura/Sekyedumase",
+    "location": "Ejura",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050902",
+    "name": "Sekyedumase Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Ejura/Sekyedumase",
+    "location": "Sekyedumase",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050903",
+    "name": "Bankoman Senior High",
+    "region": "Ashanti",
+    "district": "Sekyere Kumawu",
+    "location": "Banko",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0050907",
+    "name": "Akwesi Awobaa Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Ejura/Sekyedumase",
+    "location": "Anyinasu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051001",
+    "name": "Agogo State College",
+    "region": "Ashanti",
+    "district": "Asante Akim North",
+    "location": "Agogo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051002",
+    "name": "Konongo Odumase Senior High .",
+    "region": "Ashanti",
+    "district": "Asante Akim Central Muni",
+    "location": "Odumase",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051003",
+    "name": "Collins Senior High/Commercial, Agogo",
+    "region": "Ashanti",
+    "district": "Asante Akim North",
+    "location": "Agogo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051004",
+    "name": "Owerriman Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Asante Akim North",
+    "location": "Domeabra",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051007",
+    "name": "Jubilee Senior High",
+    "region": "Ashanti",
+    "district": "Asante Akim South",
+    "location": "Dampong",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051008",
+    "name": "Kurofa Methodist Senior High Tech",
+    "region": "Ashanti",
+    "district": "Asante Akim South",
+    "location": "Kurofa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051009",
+    "name": "Morso Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Asante Akim South",
+    "location": "Morso",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051101",
+    "name": "Juaso Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Asante Akim South",
+    "location": "Juaso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051102",
+    "name": "Presby Senior High, Bompata",
+    "region": "Ashanti",
+    "district": "Asante Akim South",
+    "location": "Bompata",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051103",
+    "name": "Ofoase Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Asante Akim South",
+    "location": "Ofoase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051104",
+    "name": "Banka Comm. Senior High",
+    "region": "Ashanti",
+    "district": "Asante Akim South",
+    "location": "Banka",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051201",
+    "name": "Dompoase Senior High",
+    "region": "Ashanti",
+    "district": "Adansi North",
+    "location": "Dompoase",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051202",
+    "name": "Obuasi Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Obuasi Municipal",
+    "location": "Obuasi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051203",
+    "name": "Fomena T.I. Ahmadiyya Senior High",
+    "region": "Ashanti",
+    "district": "Adansi North",
+    "location": "Fomena",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051204",
+    "name": "Christ the King Cath., Obuasi",
+    "region": "Ashanti",
+    "district": "Obuasi Municipal",
+    "location": "Obuasi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Elective ICT",
+      "Elective Physics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051205",
+    "name": "Akrofuom Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Akrofuom",
+    "location": "Akrofuom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051206",
+    "name": "Asare Bediako Senior High .",
+    "region": "Ashanti",
+    "district": "Adansi North",
+    "location": "Akrokerri",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051301",
+    "name": "New Edubiase Senior High",
+    "region": "Ashanti",
+    "district": "Adansi South",
+    "location": "New Edubiase",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051302",
+    "name": "Bodwesango Senior High",
+    "region": "Ashanti",
+    "district": "Adansi North",
+    "location": "Bodwesango",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051305",
+    "name": "Apagya Senior High",
+    "region": "Ashanti",
+    "district": "Adansi South",
+    "location": "Adansi Apagya",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051401",
+    "name": "Tepa Senior High",
+    "region": "Ashanti",
+    "district": "Ahafo Ano North",
+    "location": "Tepa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051402",
+    "name": "Mabang Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Ahafo Ano North",
+    "location": "Mabang",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051501",
+    "name": "Mankranso Senior High",
+    "region": "Ashanti",
+    "district": "Ahafo-Ano South West",
+    "location": "Mankranso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051502",
+    "name": "Adugyama Comm. Senior High",
+    "region": "Ashanti",
+    "district": "Ahafo Ano South",
+    "location": "Adugyama",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051503",
+    "name": "Sabronum Methodist Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Ahafo Ano South",
+    "location": "Sabronum/Habitat",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051504",
+    "name": "WIOSO SHS",
+    "region": "Ashanti",
+    "district": "Ahafo-Ano South West",
+    "location": "Kunso-Wioso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051511",
+    "name": "Bepoase Shts",
+    "region": "Ashanti",
+    "district": "Sekyere South",
+    "location": "Bepoase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051601",
+    "name": "Ejisuman Senior High",
+    "region": "Ashanti",
+    "district": "Ejisu Municipal",
+    "location": "Ejisu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051602",
+    "name": "Jachie Pramso Senior High",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Jachie Pramso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051603",
+    "name": "Juaben Senior High",
+    "region": "Ashanti",
+    "district": "Juaben Municipal",
+    "location": "Juaben",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051604",
+    "name": "Ejisu Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Ejisu Municipal",
+    "location": "Ejisu",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051605",
+    "name": "Bonwire Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Juaben Municipal",
+    "location": "Bonwire",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051606",
+    "name": "Achinakrom Senior High",
+    "region": "Ashanti",
+    "district": "Ejisu Municipal",
+    "location": "Achinakrom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051607",
+    "name": "Church Of Christ Senior High",
+    "region": "Ashanti",
+    "district": "Ejisu Municipal",
+    "location": "Adadientem",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051608",
+    "name": "St. George's Senior High Tech.",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Kuntanase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Electronics",
+      "Metal Work"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051610",
+    "name": "Ibadur Rahman Academy",
+    "region": "Ashanti",
+    "district": "Asokore Mampong Mun.",
+    "location": "Buobai",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051612",
+    "name": "St Sebastian Cath. Senior High",
+    "region": "Ashanti",
+    "district": "Juaben Municipal",
+    "location": "Adumasa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051613",
+    "name": "Bosomtwe Oyoko Comm. Senior High",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Bosomtwe Oyoko",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051614",
+    "name": "Osei Adutwum Senior High",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Jachie",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051615",
+    "name": "Onwe Senior High School",
+    "region": "Ashanti",
+    "district": "Ejisu Municipal",
+    "location": "Onwe-Ashanti",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051616",
+    "name": "Bosomtwe Girls STEM Senior High",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Deduako",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "STEM",
+    "programNames": [
+      "GENERAL SCIENCE",
+      "STEM",
+      "BIO-MEDICAL SCIENCE",
+      "ENGINEERING SCIENCE",
+      "AVIATION & AEROSPACE ENGINEERING",
+      "COMPUTING",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "STEM",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051617",
+    "name": "Bosomtwe STEM Academy",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Jachie",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "STEM",
+    "programNames": [
+      "GENERAL SCIENCE",
+      "STEM",
+      "BIO-MEDICAL SCIENCE",
+      "ENGINEERING SCIENCE",
+      "COMPUTING",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "STEM",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051618",
+    "name": "Bosomtwe Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Bosome-Freho",
+    "location": "Ankaase Lakeside",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051619",
+    "name": "Feyiase Senior High School",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Feyiase",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051620",
+    "name": "Ghana Stem Technical School",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Sewua",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "STEM",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "BIO-MEDICAL SCIENCE",
+      "ENGINEERING SCIENCE",
+      "COMPUTING",
+      "ROBOTICS",
+      "Auto Mechanics",
+      "Plumbing"
+    ],
+    "progs": [
+      "STEM",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051701",
+    "name": "Afua Kobi Ampem Girls' Senior High",
+    "region": "Ashanti",
+    "district": "Atwima Kwanwoma",
+    "location": "Trabuom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "AVIATION & AEROSPACE ENGINEERING",
+      "COMPUTING",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0051702",
+    "name": "Beposo Senior High",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Beposo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051703",
+    "name": "Wesley Senior High, Konongo .",
+    "region": "Ashanti",
+    "district": "Asante Akim Central",
+    "location": "Konongo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051704",
+    "name": "St. Mary's Girl's Senior High, Konongo",
+    "region": "Ashanti",
+    "district": "Asante Akim Central",
+    "location": "Konongo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051801",
+    "name": "Effiduase Senior High/Com",
+    "region": "Ashanti",
+    "district": "Sekyere East",
+    "location": "Effiduase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051802",
+    "name": "Tweneboa Kodua Senior High",
+    "region": "Ashanti",
+    "district": "Sekyere Kumawu",
+    "location": "Kumawu",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051803",
+    "name": "T. I. Ahmadiyya Girl's Senior High",
+    "region": "Ashanti",
+    "district": "Sekyere East",
+    "location": "Asokore",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051804",
+    "name": "Dadease Agric Senior High",
+    "region": "Ashanti",
+    "district": "Sekyere Kumawu",
+    "location": "Dadease",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051805",
+    "name": "Tijjaniya Senior High",
+    "region": "Ashanti",
+    "district": "Sekyere East",
+    "location": "Asokore",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051806",
+    "name": "Effiduase Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Sekyere East",
+    "location": "Effiduase",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Elective Maths",
+      "Elective Physics"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0051808",
+    "name": "Bodomase Senior High/Tech",
+    "region": "Ashanti",
+    "district": "Sekyere Kumawu",
+    "location": "Bodomase",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "GENERAL ARTS",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0051812",
+    "name": "Sekyere Kusi Senior High School",
+    "region": "Ashanti",
+    "district": "Sekyere Kumawu",
+    "location": "Sekyere",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0053013",
+    "name": "Drobonso Senior High School",
+    "region": "Ashanti",
+    "district": "Sekyere Afram Plains",
+    "location": "Drobonso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060101",
+    "name": "Twene Amanfo Senior High/Tech.",
+    "region": "Bono",
+    "district": "Sunyani Municipal",
+    "location": "Sunyani",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060102",
+    "name": "Chiraa Senior High",
+    "region": "Bono",
+    "district": "Sunyani West",
+    "location": "Chiraa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060103",
+    "name": "Odomaseman Senior High",
+    "region": "Bono",
+    "district": "Sunyani West",
+    "location": "Odomase",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060104",
+    "name": "Sunyani Senior High",
+    "region": "Bono",
+    "district": "Sunyani Municipal",
+    "location": "Sunyani",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "ENGINEERING SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0060105",
+    "name": "Sacred Heart Senior High, Nsoatre",
+    "region": "Bono",
+    "district": "Sunyani West",
+    "location": "Nsoatre",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060106",
+    "name": "St. James Sem & Senior High, Abesim",
+    "region": "Bono",
+    "district": "Sunyani Municipal",
+    "location": "Abesim",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060107",
+    "name": "Notre Dame Girls Senior High School, Sunyani",
+    "region": "Bono",
+    "district": "Sunyani West Municipal",
+    "location": "Fiiapre-Sunyani",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060111",
+    "name": "S.D.A Senior High, Sunyani",
+    "region": "Bono",
+    "district": "Sunyani Municipal",
+    "location": "Sunyani",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060125",
+    "name": "Kyem Amponsah Senior High School",
+    "region": "Bono",
+    "district": "Sunyani West",
+    "location": "Fiapre",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060201",
+    "name": "Bechem Presby Senior High",
+    "region": "Ahafo",
+    "district": "Tano South",
+    "location": "Bechem",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060202",
+    "name": "Samuel Otu Presby Senior High.",
+    "region": "Ahafo",
+    "district": "Tano South",
+    "location": "Techimantia",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060203",
+    "name": "Serwaa Kesse Girls Senior High",
+    "region": "Ahafo",
+    "district": "Tano North",
+    "location": "Duayaw Nkwanta",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060205",
+    "name": "Bomaa Comm. Senior High",
+    "region": "Ahafo",
+    "district": "Tano North",
+    "location": "Bomaa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060206",
+    "name": "Boakye Tromo Senior High/Tech",
+    "region": "Ahafo",
+    "district": "Tano North",
+    "location": "Duayaw Nkwanta",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060207",
+    "name": "Derma Comm. Day School",
+    "region": "Ahafo",
+    "district": "Tano South",
+    "location": "Derma",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060208",
+    "name": "Yamfo Anglican Senior High School",
+    "region": "Ahafo",
+    "district": "Tano North",
+    "location": "Yamfo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060209",
+    "name": "Terchire Senior High",
+    "region": "Ahafo",
+    "district": "Tano North",
+    "location": "Terchire",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060301",
+    "name": "Berekum Senior High",
+    "region": "Bono",
+    "district": "Berekum Municipal",
+    "location": "Berekum",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060302",
+    "name": "Jinijini Senior High",
+    "region": "Bono",
+    "district": "Berekum Municipal",
+    "location": "Jinijini",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060303",
+    "name": "Berekum Presby Senior High",
+    "region": "Bono",
+    "district": "Berekum Municipal",
+    "location": "Berekum",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060304",
+    "name": "Methodist Senior High/Tech.,Biadan",
+    "region": "Bono",
+    "district": "Berekum Municipal",
+    "location": "Biadan",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060308",
+    "name": "St. Augustine Senior High School",
+    "region": "Bono",
+    "district": "Berekum West",
+    "location": "Nsapor-Berekum",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060401",
+    "name": "Yeji Senior High/Tech",
+    "region": "Bono East",
+    "district": "Pru East",
+    "location": "Yeji",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060402",
+    "name": "Atebubu Senior High",
+    "region": "Bono East",
+    "district": "Atebubu-Amantin",
+    "location": "Atebubu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060403",
+    "name": "Prang Senior High",
+    "region": "Bono East",
+    "district": "Pru West",
+    "location": "Prang",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060404",
+    "name": "Amanten Senior High",
+    "region": "Bono East",
+    "district": "Atebubu-Amantin",
+    "location": "Amanten",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0060406",
+    "name": "Abeaseman Comm. Day Senior High",
+    "region": "Bono East",
+    "district": "Pru West",
+    "location": "Abease",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060409",
+    "name": "New Kokrompe Comm. Senior High",
+    "region": "Bono East",
+    "district": "Atebubu-Amantin",
+    "location": "New Kokrompe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060501",
+    "name": "Drobo Senior High",
+    "region": "Bono",
+    "district": "Jaman South",
+    "location": "Drobo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060502",
+    "name": "Nafana Senior High",
+    "region": "Bono",
+    "district": "Jaman North",
+    "location": "Sampa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060503",
+    "name": "Sumaman Senior High",
+    "region": "Bono",
+    "district": "Jaman North",
+    "location": "Suma-Ahenkro",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060504",
+    "name": "Goka Senior High/Tech.",
+    "region": "Bono",
+    "district": "Jaman North",
+    "location": "Goka",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060505",
+    "name": "Our Lady of Providence Senior High",
+    "region": "Bono",
+    "district": "Jaman South",
+    "location": "Kwasi Buokrom",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060507",
+    "name": "Diamono Senior High Sch.",
+    "region": "Bono",
+    "district": "Jaman North",
+    "location": "Duadaso No.2",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060509",
+    "name": "Hidaayah Islamic Senior High School",
+    "region": "Bono",
+    "district": "Jaman South",
+    "location": "Japekrom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0060512",
+    "name": "Duadaso No. 1 Senior High/Tech.",
+    "region": "Bono",
+    "district": "Jaman North",
+    "location": "Duadaso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0060513",
+    "name": "St. Ann's Girls Senior High, Sampa",
+    "region": "Bono",
+    "district": "Jaman North",
+    "location": "Sampa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060601",
+    "name": "Wenchi Meth. Senior High",
+    "region": "Bono",
+    "district": "Wenchi Municipal",
+    "location": "Wenchi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060602",
+    "name": "Badu Senior High/Tech.",
+    "region": "Bono",
+    "district": "Tain",
+    "location": "Badu/Wenchi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060603",
+    "name": "Koase Senior High/Tech",
+    "region": "Bono",
+    "district": "Wenchi Municipal",
+    "location": "Koase/Wenchi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM",
+      "ENGINEERING SCIENCE",
+      "ROBOTICS",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0060604",
+    "name": "Nkoranman Senior High",
+    "region": "Bono",
+    "district": "Tain",
+    "location": "Seikwa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060605",
+    "name": "Menji Senior High",
+    "region": "Bono",
+    "district": "Tain",
+    "location": "Menji",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060607",
+    "name": "Istiquaama Snr. High",
+    "region": "Bono",
+    "district": "Wenchi Municipal",
+    "location": "Wenchi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060608",
+    "name": "Nsawkaw State Senior High",
+    "region": "Bono",
+    "district": "Tain",
+    "location": "Nsawkaw",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060610",
+    "name": "Bandaman Senior High",
+    "region": "Bono",
+    "district": "Banda",
+    "location": "Banda Ahenkro",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060611",
+    "name": "Nkyeraa Senior High Sch.",
+    "region": "Bono",
+    "district": "Wenchi Municipal",
+    "location": "Nchiraa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060612",
+    "name": "Siraaj Deen Senior High School",
+    "region": "Bono",
+    "district": "Wenchi",
+    "location": "Wenchi Boadan",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "AGRICULTURAL SCIENCE",
+      "VISUAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "AGRIC",
+      "VIS. ARTS"
+    ]
+  },
+  {
+    "code": "0060701",
+    "name": "Techiman Senior High",
+    "region": "Bono East",
+    "district": "Techiman Metro",
+    "location": "Techiman",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060702",
+    "name": "Akumfi Ameyaw Senior High/Tech.",
+    "region": "Bono East",
+    "district": "Techiman North",
+    "location": "Aworowa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060703",
+    "name": "Tuobodom Senior High/Tech",
+    "region": "Bono East",
+    "district": "Techiman North",
+    "location": "Tuobodom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060704",
+    "name": "St. Francis Seminary Senior High, Buoyem",
+    "region": "Bono East",
+    "district": "Techiman North",
+    "location": "Buoyem",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060705",
+    "name": "Guakro Effah Senior High",
+    "region": "Bono East",
+    "district": "Techiman North",
+    "location": "Offuman",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060707",
+    "name": "Our Lady of Mount Carmel Girls Senior High",
+    "region": "Bono East",
+    "district": "Techiman Metro",
+    "location": "Techiman",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060709",
+    "name": "Yeboah Asuamah Senior High",
+    "region": "Bono East",
+    "district": "Techiman Metro",
+    "location": "Nsuta",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0060711",
+    "name": "Aswaj Islamic Senior High School",
+    "region": "Bono East",
+    "district": "Techiman Metro",
+    "location": "Techiman-Sansa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060712",
+    "name": "Kesse Basahyia Senior High School",
+    "region": "Bono East",
+    "district": "Techiman Metro",
+    "location": "Techiman Oforikro",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060713",
+    "name": "Gyarko Comm. Day Senior High",
+    "region": "Bono East",
+    "district": "Techiman Metro",
+    "location": "Techiman",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060714",
+    "name": "Kwarteng Ankomah Senior High",
+    "region": "Bono East",
+    "district": "Techiman Metro",
+    "location": "Tanoso-Techmian",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0060715",
+    "name": "Abrafi Senior High",
+    "region": "Bono East",
+    "district": "Techiman North",
+    "location": "Techiman",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0060801",
+    "name": "Kintampo Senior High",
+    "region": "Bono East",
+    "district": "Kintampo North Mun.",
+    "location": "Kintampo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060802",
+    "name": "Jema Senior High",
+    "region": "Bono East",
+    "district": "Kintampo South",
+    "location": "Jema",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060806",
+    "name": "Krobo Comm.Senior High",
+    "region": "Bono East",
+    "district": "Techiman North",
+    "location": "Krobo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060901",
+    "name": "Nkoranza Senior High/Tech",
+    "region": "Bono East",
+    "district": "Nkoranza South Municipal",
+    "location": "Nkoranza",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060902",
+    "name": "Busunya Senior High",
+    "region": "Bono East",
+    "district": "Nkoranza North",
+    "location": "Busunya",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060903",
+    "name": "Osei Bonsu Senior High",
+    "region": "Bono East",
+    "district": "Nkoranza North",
+    "location": "Yefri",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060904",
+    "name": "Kwabre Senior High",
+    "region": "Bono East",
+    "district": "Nkoranza South Municipal",
+    "location": "Akuma",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060905",
+    "name": "Donkro- Nkwanta Senior High School",
+    "region": "Bono East",
+    "district": "Nkoranza South Municipal",
+    "location": "Donkro- Nkwanta",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0060922",
+    "name": "Krankaman Senior High",
+    "region": "Bono East",
+    "district": "Nkoranza North",
+    "location": "Kranka",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0061001",
+    "name": "Dormaa Senior High",
+    "region": "Bono",
+    "district": "Dormaa Central Municipal",
+    "location": "Dormaa Ahenkro",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061002",
+    "name": "Wamanafo Senior High/Tech",
+    "region": "Bono",
+    "district": "Dormaa East",
+    "location": "Wamanafo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0061003",
+    "name": "Mansen Senior High",
+    "region": "Bono",
+    "district": "Dormaa East",
+    "location": "Wamfie",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061004",
+    "name": "Nkrankwanta Senior High/Tech",
+    "region": "Bono",
+    "district": "Dormaa West",
+    "location": "Nkrankwanta",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061005",
+    "name": "Salvation Army Senior High",
+    "region": "Bono",
+    "district": "Dormaa Central Municipal",
+    "location": "Aboabo-Dormaa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061007",
+    "name": "Adehyeman Senior High School",
+    "region": "Bono",
+    "district": "Dormaa Central",
+    "location": "Dormaa Amasu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061101",
+    "name": "Kwame Danso Senior High/Tech",
+    "region": "Bono East",
+    "district": "Sene West",
+    "location": "Kwame Danso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Electronics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061102",
+    "name": "Kajaji Senior High",
+    "region": "Bono East",
+    "district": "Sene East",
+    "location": "Kajaji",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061103",
+    "name": "Bassa Community Senior High",
+    "region": "Bono East",
+    "district": "Sene East",
+    "location": "Bassa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061201",
+    "name": "OLA Girls Senior High, Kenyasi",
+    "region": "Ahafo",
+    "district": "Asutifi North",
+    "location": "Kenyasi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061202",
+    "name": "Acherensua Senior High",
+    "region": "Ahafo",
+    "district": "Asutifi South",
+    "location": "Acherensua",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061203",
+    "name": "Hwidiem Senior High",
+    "region": "Ahafo",
+    "district": "Asutifi South",
+    "location": "Hwidiem",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061204",
+    "name": "Gyamfi Kumanini Senior High/Tech",
+    "region": "Ahafo",
+    "district": "Asutifi North",
+    "location": "Wamahinso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061205",
+    "name": "Danso Agyei Senior high technical",
+    "region": "Ahafo",
+    "district": "Asutifi South",
+    "location": "Nkaseim",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0061206",
+    "name": "Twereku Ampem Senior High School",
+    "region": "Ahafo",
+    "district": "Asutifi North",
+    "location": "Ntotroso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061301",
+    "name": "Ahafo",
+    "region": "Ahafo",
+    "district": "Asunafo North Municipal",
+    "location": "Mim",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0061302",
+    "name": "Ahafo",
+    "region": "Ahafo",
+    "district": "Asunafo North Municipal",
+    "location": "Goaso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061303",
+    "name": "Ahafo",
+    "region": "Ahafo",
+    "district": "Asunafo South",
+    "location": "Kukuom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0061304",
+    "name": "Ahafo",
+    "region": "Ahafo",
+    "district": "Asunafo South",
+    "location": "Sankore",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070101",
+    "name": "OLA Girls Senior High, Ho",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Ho",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070102",
+    "name": "Mawuli School, Ho",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Ho",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070103",
+    "name": "Avatime Senior High",
+    "region": "Volta",
+    "district": "Ho West",
+    "location": "Vane",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070104",
+    "name": "Awudome Senior High .",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Tsito",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070105",
+    "name": "Kpedze Senior High",
+    "region": "Volta",
+    "district": "Ho West",
+    "location": "Kpedze",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070106",
+    "name": "E.P.C. Mawuko Girls Senior High",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Ho",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070107",
+    "name": "Taviefe Senior High",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Taviefe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070108",
+    "name": "Adaklu Senior High",
+    "region": "Volta",
+    "district": "Adaklu",
+    "location": "Adaklu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070109",
+    "name": "Dzolo Senior High",
+    "region": "Volta",
+    "district": "Ho West",
+    "location": "Dzolo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070110",
+    "name": "Tsito Senior High/Tech",
+    "region": "Volta",
+    "district": "Ho West",
+    "location": "Tsito",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070111",
+    "name": "Akome Senior High/Tech.",
+    "region": "Volta",
+    "district": "Ho West",
+    "location": "Akome",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070112",
+    "name": "Tanyigbe Senior High",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Tanyigbe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070113",
+    "name": "Agotime Senior High",
+    "region": "Volta",
+    "district": "Agortime Ziope",
+    "location": "Kpetoe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070114",
+    "name": "Abutia Senior High/Tchnical",
+    "region": "Volta",
+    "district": "Ho West",
+    "location": "Abutia",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070116",
+    "name": "St. Prospers College",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Ho",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0070119",
+    "name": "Sokode Senior High/Tech",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Sokode",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070122",
+    "name": "Shia Senior HighTechnical",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Shia",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070125",
+    "name": "Ziope Senior High Sch.",
+    "region": "Volta",
+    "district": "Agortime Ziope",
+    "location": "Ziope",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070127",
+    "name": "Wallahs Academy Senior High Sch",
+    "region": "Volta",
+    "district": "Ho",
+    "location": "Ho",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "STEM"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "STEM"
+    ]
+  },
+  {
+    "code": "0070130",
+    "name": "Ziavi Senior High/Tech",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Ziavi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070131",
+    "name": "Gbekor Senior High School",
+    "region": "Volta",
+    "district": "Adaklu",
+    "location": "Adaklu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070201",
+    "name": "Krachi Senior High",
+    "region": "Oti",
+    "district": "Krachi West",
+    "location": "Kete-Krachi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070202",
+    "name": "Kete Krachi Senior High/Tech.",
+    "region": "Oti",
+    "district": "Krachi West",
+    "location": "Kete-Krachi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070203",
+    "name": "Oti Senior High/Tech Sch",
+    "region": "Oti",
+    "district": "Krachi East",
+    "location": "Dambai",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070204",
+    "name": "Asukawkaw Senior High",
+    "region": "Oti",
+    "district": "Krachi East",
+    "location": "Asukawkaw",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070206",
+    "name": "Mist Senior High School",
+    "region": "Oti",
+    "district": "Krachi East Municipal",
+    "location": "Dambai",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070208",
+    "name": "Nchumuruman Comm. Day Senior High",
+    "region": "Oti",
+    "district": "Krachi Nchumuru",
+    "location": "Chinderi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070211",
+    "name": "Yabram Comm. Day School",
+    "region": "Oti",
+    "district": "Krachi East",
+    "location": "Dambai",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070301",
+    "name": "Nkwanta Senior High",
+    "region": "Oti",
+    "district": "Nkwanta South",
+    "location": "Nkwanta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070302",
+    "name": "Ntruboman Senior High",
+    "region": "Oti",
+    "district": "Nkwanta South",
+    "location": "Brewaniase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070303",
+    "name": "Kpassa Senior High/Tech",
+    "region": "Oti",
+    "district": "Nkwanta North",
+    "location": "Kpassa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070304",
+    "name": "Nkwanta Comm.Senior High/Tech",
+    "region": "Oti",
+    "district": "Nkwanta South",
+    "location": "Nkwanta",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070305",
+    "name": "Kyabobo Girls' School",
+    "region": "Oti",
+    "district": "Nkwanta South",
+    "location": "Nkwanta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070401",
+    "name": "Akatsi Senior High/Tech",
+    "region": "Volta",
+    "district": "Akatsi South Municipal",
+    "location": "Akatsi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070402",
+    "name": "Ave Senior High",
+    "region": "Volta",
+    "district": "Akatsi North",
+    "location": "Ave-Dakpa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070403",
+    "name": "Avenor Senior High",
+    "region": "Volta",
+    "district": "Akatsi South",
+    "location": "Avenorpeme",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070501",
+    "name": "Anlo Senior High",
+    "region": "Volta",
+    "district": "Keta Municipal",
+    "location": "Anloga",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070502",
+    "name": "Keta Senior High/Tech .",
+    "region": "Volta",
+    "district": "Keta Municipal",
+    "location": "Keta",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Electronics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070503",
+    "name": "Abor Senior High",
+    "region": "Volta",
+    "district": "Anlo Keta Municipal",
+    "location": "Abor",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070504",
+    "name": "Keta Business College",
+    "region": "Volta",
+    "district": "Keta Municipal",
+    "location": "Keta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070505",
+    "name": "Zion Senior High",
+    "region": "Volta",
+    "district": "Anlo Keta Municipal",
+    "location": "Anloga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070506",
+    "name": "Atiavi Senior High/Tech",
+    "region": "Volta",
+    "district": "Anlo Keta Municipal",
+    "location": "Atiavi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070507",
+    "name": "Anlo Afiadenyigba Senior High",
+    "region": "Volta",
+    "district": "Keta Municipal",
+    "location": "Anlo Afiadenyigba",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070508",
+    "name": "Anlo Awomefia Senior High",
+    "region": "Volta",
+    "district": "Anlo Keta Municipal",
+    "location": "Anyako",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070509",
+    "name": "Tsiame Senior High",
+    "region": "Volta",
+    "district": "Anlo Keta Municipal",
+    "location": "Tsiame",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Elective ICT"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070510",
+    "name": "St. Catherine Girls Senior High School",
+    "region": "Volta",
+    "district": "South Tongu",
+    "location": "Agbakope",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070511",
+    "name": "Volta Senior High School",
+    "region": "Volta",
+    "district": "Anlo Keta Municipal",
+    "location": "Dzita-Agbledomi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070601",
+    "name": "Bishop Herman College",
+    "region": "Volta",
+    "district": "Kpando Municipal",
+    "location": "Kpando",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070602",
+    "name": "Kpando Senior High .",
+    "region": "Volta",
+    "district": "Kpando Municipal",
+    "location": "Kpando",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070603",
+    "name": "Peki Senior High",
+    "region": "Volta",
+    "district": "South Dayi",
+    "location": "Peki",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070604",
+    "name": "Anfoega Senior High",
+    "region": "Volta",
+    "district": "North Dayi",
+    "location": "Anfoega",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070605",
+    "name": "Vakpo Senior High",
+    "region": "Volta",
+    "district": "North Dayi",
+    "location": "Vakpo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070606",
+    "name": "Vakpo Senior High/Tech",
+    "region": "Volta",
+    "district": "North Dayi",
+    "location": "Vakpo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070607",
+    "name": "Peki Senior High/Technical",
+    "region": "Volta",
+    "district": "South Dayi",
+    "location": "Peki",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070608",
+    "name": "Kpeve Senior High Tech",
+    "region": "Volta",
+    "district": "South Dayi",
+    "location": "Kpeve",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070609",
+    "name": "Tongor Senior High Tech.",
+    "region": "Volta",
+    "district": "South Dayi",
+    "location": "Tsannkpe Tongor",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070701",
+    "name": "St. Paul's Senior High, Denu",
+    "region": "Volta",
+    "district": "Ketu South",
+    "location": "Hatsukope/ Denu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070702",
+    "name": "Some Senior High",
+    "region": "Volta",
+    "district": "Ketu South",
+    "location": "Agbozume",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070703",
+    "name": "Dzodze Penyi Senior High",
+    "region": "Volta",
+    "district": "Ketu North",
+    "location": "Dzodze",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070704",
+    "name": "Three Town Senior High",
+    "region": "Volta",
+    "district": "Ketu South",
+    "location": "Denu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070705",
+    "name": "Klikor Senior High/Tech.",
+    "region": "Volta",
+    "district": "Ketu South",
+    "location": "Klikor",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Electronics",
+      "Woodwork"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070706",
+    "name": "Wovenu Senior High Technical",
+    "region": "Volta",
+    "district": "Ketu North",
+    "location": "Tadzewu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070708",
+    "name": "Weta Senior High/Tech.",
+    "region": "Volta",
+    "district": "Ketu North",
+    "location": "Weta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070709",
+    "name": "Afife Senior High Tech.",
+    "region": "Volta",
+    "district": "Ketu North",
+    "location": "Afife",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0070711",
+    "name": "Aflao Community SHTS",
+    "region": "Volta",
+    "district": "Ketu South",
+    "location": "Aflao",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Elective ICT",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070801",
+    "name": "Adidome Senior High",
+    "region": "Volta",
+    "district": "Central Tongu",
+    "location": "Adidome",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070802",
+    "name": "Mafi-Kumasi Senior High/Tech",
+    "region": "Volta",
+    "district": "Central Tongu",
+    "location": "Mafi-Kumasi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070803",
+    "name": "Aveyime Battor Senior High/Tech.",
+    "region": "Volta",
+    "district": "North Tongu",
+    "location": "Aveyime-Battor",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070804",
+    "name": "Mepe St. Kizito Senior High/Tech.",
+    "region": "Volta",
+    "district": "North Tongu",
+    "location": "Mepe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070805",
+    "name": "Dofor Senior High",
+    "region": "Volta",
+    "district": "North Tongu",
+    "location": "Juapong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070806",
+    "name": "Battor Senior High",
+    "region": "Volta",
+    "district": "North Tongu",
+    "location": "Battor",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070808",
+    "name": "Volo Comm. Senior High",
+    "region": "Volta",
+    "district": "North Tongu",
+    "location": "Volo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070901",
+    "name": "Sogakofe Senior High",
+    "region": "Volta",
+    "district": "South Tongu Municipal",
+    "location": "Sogakofe",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0070902",
+    "name": "Dabala Senior High/Tech.",
+    "region": "Volta",
+    "district": "South Tongu",
+    "location": "Dabala",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071001",
+    "name": "Likpe Senior High",
+    "region": "Oti",
+    "district": "Guan",
+    "location": "Likpe-Mate",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071002",
+    "name": "Akpafu Senior High/Tech.",
+    "region": "Oti",
+    "district": "Guan",
+    "location": "Akpafu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071003",
+    "name": "Agate Comm. Senior High",
+    "region": "Volta",
+    "district": "Afadzato South",
+    "location": "Agate",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0071004",
+    "name": "Leklebi Senior High",
+    "region": "Volta",
+    "district": "Afadzato South",
+    "location": "Leklebi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071005",
+    "name": "St. Mary's Sem.& Senior High School",
+    "region": "Oti",
+    "district": "Guan",
+    "location": "Lolobi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071006",
+    "name": "E. P. Senior High",
+    "region": "Volta",
+    "district": "Hohoe Municipal",
+    "location": "Hohoe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071007",
+    "name": "Afadjato Senior High/Tech.",
+    "region": "Volta",
+    "district": "Hohoe Municipal",
+    "location": "Gbledi-Gbogame",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0071008",
+    "name": "Alavanyo Senior High/Tech.",
+    "region": "Volta",
+    "district": "Hohoe Municipal",
+    "location": "Alavanyo-Kpeme",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071009",
+    "name": "Ve Comm. Senior High",
+    "region": "Volta",
+    "district": "Afadzato South",
+    "location": "Ve-Koloenu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071010",
+    "name": "Jim Bourton Mem Agric. Senior High",
+    "region": "Volta",
+    "district": "Afadzato South",
+    "location": "Logba Adzokoe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0071012",
+    "name": "Santa Esther Girls' Senior High",
+    "region": "Volta",
+    "district": "Hohoe Municipal",
+    "location": "Wli",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0071101",
+    "name": "Bueman Senior High .",
+    "region": "Oti",
+    "district": "Jasikan",
+    "location": "Jasikan",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071102",
+    "name": "Worawora Senior High",
+    "region": "Oti",
+    "district": "Biakoye",
+    "location": "Worawora",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071103",
+    "name": "Nkonya Senior High School",
+    "region": "Oti",
+    "district": "Biakoye",
+    "location": "Nkonya-Ahenkro",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071104",
+    "name": "Okadjakrom Senior High/Tech.",
+    "region": "Oti",
+    "district": "Jasikan",
+    "location": "Okadjakrom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071105",
+    "name": "Baglo Ridge Senior High/Tech.",
+    "region": "Oti",
+    "district": "Jasikan",
+    "location": "Baglo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0071106",
+    "name": "Tapaman Senior High/Tech",
+    "region": "Oti",
+    "district": "Biakoye",
+    "location": "Tapa-Amanfrom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071107",
+    "name": "Bodada Presby Senior High School",
+    "region": "Oti",
+    "district": "Jasikan Municipal",
+    "location": "Jasikan",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0071108",
+    "name": "Bowiri Comm. Day Senior High/Tech.",
+    "region": "Oti",
+    "district": "Biakoye",
+    "location": "Kwamekrom",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071109",
+    "name": "Biakoye Comm. School",
+    "region": "Oti",
+    "district": "Biakoye",
+    "location": "Nkonya-wurupong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071201",
+    "name": "Kadjebi-Asato Senior High",
+    "region": "Oti",
+    "district": "Kadjebi",
+    "location": "Kadjeto-Asato",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0071202",
+    "name": "Dodi-Papase Senior High/Tech",
+    "region": "Oti",
+    "district": "Kadjebi",
+    "location": "Dodi Papase",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0071203",
+    "name": "Ahamansu Islamic Senior High School",
+    "region": "Oti",
+    "district": "Kadjebi",
+    "location": "Ahamansu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080101",
+    "name": "Tamale Senior High .",
+    "region": "Northern",
+    "district": "Sagnerigu Municipal",
+    "location": "Tamale",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080102",
+    "name": "Ghana Senior High School, Tamale",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080103",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Sagnerigu",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080104",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080105",
+    "name": "Kalpohin Senior High",
+    "region": "Northern",
+    "district": "Sagnerigu Municipal",
+    "location": "Tamale",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080106",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080107",
+    "name": "St. Charles Senior High, Tamale",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080108",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Sagnerigu",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080109",
+    "name": "Tamale Girls Senior High",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080111",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080112",
+    "name": "Senior High School",
+    "region": "Northern",
+    "district": "Sagnerigu",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080115",
+    "name": "Business College International",
+    "region": "Northern",
+    "district": "Sagnarigu Municipal",
+    "location": "Sagnrigu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080117",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080121",
+    "name": "Alsalam Excellent Academy Senior High",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080132",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "GUKPEGU-TUA",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080201",
+    "name": "Damongo Senior High",
+    "region": "Savannah",
+    "district": "West Gonja",
+    "location": "Damongo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080202",
+    "name": "Ndewura Jakpa Senior High/Tech.",
+    "region": "Savannah",
+    "district": "West Gonja",
+    "location": "Damongo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "Electronics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080205",
+    "name": "Sawla Senior High Sch.",
+    "region": "Savannah",
+    "district": "Sawla-Tuna-Kalba",
+    "location": "Sawla",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080207",
+    "name": "Larabanga Senior High",
+    "region": "Savannah",
+    "district": "West Gonja",
+    "location": "Larabanga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080301",
+    "name": "Salaga Senior High",
+    "region": "Savannah",
+    "district": "East Gonja",
+    "location": "Salaga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080302",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Kpandi",
+    "location": "Kpandai",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080303",
+    "name": "Salaga T.I. Ahmad Senior High",
+    "region": "Savannah",
+    "district": "East Gonja",
+    "location": "Salaga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080401",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Nanumba North",
+    "location": "Bimbilla",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080402",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Nanumba South",
+    "location": "Wulensi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080412",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Nanumba South",
+    "location": "Nakpayili",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS"
+    ]
+  },
+  {
+    "code": "0080501",
+    "name": "North East",
+    "region": "North East",
+    "district": "East Mamprusi",
+    "location": "Nalerigu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080502",
+    "name": "Bunkpurugu Senior High/Tech",
+    "region": "North East",
+    "district": "Bunkrupgu-Nakpanduri",
+    "location": "Bunkupurugu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080503",
+    "name": "Nakpanduri Senior High",
+    "region": "North East",
+    "district": "Bunkrupgu-Yunguo",
+    "location": "Nakpanduri",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080504",
+    "name": "North East",
+    "region": "North East",
+    "district": "East Mamprusi",
+    "location": "Gambaga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080505",
+    "name": "North East",
+    "region": "North East",
+    "district": "Bunkpurugu-Nankpanduri",
+    "location": "Nakpanduri",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080506",
+    "name": "North East",
+    "region": "North East",
+    "district": "East Mamprusi",
+    "location": "Sakogu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080507",
+    "name": "North East",
+    "region": "North East",
+    "district": "East Mamprusi",
+    "location": "Langbinsi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080508",
+    "name": "North East",
+    "region": "North East",
+    "district": "Yunyoo-Nasuan",
+    "location": "Yunyoo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080509",
+    "name": "North East",
+    "region": "North East",
+    "district": "Yunyoo-Nasuan",
+    "location": "Nasuan",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080511",
+    "name": "North East",
+    "region": "North East",
+    "district": "East Mamprusi",
+    "location": "Gbintiri",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080601",
+    "name": "North East",
+    "region": "North East",
+    "district": "West Mamprusi",
+    "location": "Walewele",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080602",
+    "name": "North East",
+    "region": "North East",
+    "district": "West Mamprusi",
+    "location": "Wulugu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080604",
+    "name": "North East",
+    "region": "North East",
+    "district": "Mamprugu Moaduri",
+    "location": "Yagaba",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080606",
+    "name": "Excellence College International",
+    "region": "North East",
+    "district": "Walewale",
+    "location": "Walewale",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080608",
+    "name": "North East",
+    "region": "North East",
+    "district": "West Mamprusi",
+    "location": "Janga",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080609",
+    "name": "Kpasenpke STEM Senior High",
+    "region": "North East",
+    "district": "West Mamprusi",
+    "location": "Kpasenkpe",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "STEM",
+    "programNames": [
+      "STEM",
+      "AGRICULTURAL SCIENCE",
+      "ENGINEERING SCIENCE",
+      "COMPUTING",
+      "ROBOTICS"
+    ],
+    "progs": [
+      "STEM",
+      "AGRIC",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080619",
+    "name": "North East",
+    "region": "North East",
+    "district": "Mamprugu Moaduri",
+    "location": "Yizesi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080701",
+    "name": "Bole Senior High",
+    "region": "Savannah",
+    "district": "Bole",
+    "location": "Bole",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080702",
+    "name": "Tuna Senior High/Tech.",
+    "region": "Savannah",
+    "district": "Sawla-Tuna-Kalba",
+    "location": "Tuna",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Elective Maths",
+      "Elective Physics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080703",
+    "name": "St. Anthony of Padua Senior High/Tech",
+    "region": "Savannah",
+    "district": "Bole",
+    "location": "Bamboi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Woodwork"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0080704",
+    "name": "Bamboi Comm. Senior High",
+    "region": "Savannah",
+    "district": "Bole",
+    "location": "Bamboi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080801",
+    "name": "Yendi Senior High",
+    "region": "Northern",
+    "district": "Yendi Municipal",
+    "location": "Yendi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080802",
+    "name": "Dagbon State Senior High/Tech",
+    "region": "Northern",
+    "district": "Yendi Municipal",
+    "location": "Yendi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080805",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Mion",
+    "location": "Sang",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080901",
+    "name": "North East",
+    "region": "North East",
+    "district": "Chereponi",
+    "location": "Chereponi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080902",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Saboba",
+    "location": "Saboba",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0080903",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Saboba",
+    "location": "Wapuli",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081001",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Gushegu",
+    "location": "Gushegu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081101",
+    "name": "Zabzugu Senior High",
+    "region": "Northern",
+    "district": "Zabzugu",
+    "location": "Zabzugu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081102",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Tatale Sanguli",
+    "location": "Tatale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081201",
+    "name": "Tolon Senior High",
+    "region": "Northern",
+    "district": "Tolon",
+    "location": "Tolon",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081202",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Kumbungu",
+    "location": "Kumbungu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081203",
+    "name": "Kasuliyili Senior High",
+    "region": "Northern",
+    "district": "Tolon",
+    "location": "Kasuliyili",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0081301",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Savelugu",
+    "location": "Savelugu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081302",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Savelugu",
+    "location": "Pong-Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081303",
+    "name": "Icodehs Senior High",
+    "region": "Northern",
+    "district": "Sagnarigu",
+    "location": "Signarigu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0081401",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Karaga",
+    "location": "Karaga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081402",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Karaga",
+    "location": "Karaga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081412",
+    "name": "North East",
+    "region": "North East",
+    "district": "Bunkpurugu-Nankpanduri",
+    "location": "Bimbagu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0081503",
+    "name": "Buipe Senior High",
+    "region": "Savannah",
+    "district": "Central Gonja",
+    "location": "Buipe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0081504",
+    "name": "Mpaha Comm. Senior High School",
+    "region": "Savannah",
+    "district": "Central Gonja",
+    "location": "Mpaha",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0081514",
+    "name": "Nanton Senior High/Tech",
+    "region": "Northern",
+    "district": "Nanton",
+    "location": "Nanton",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0082201",
+    "name": "Daboya Comm. Day School",
+    "region": "Savannah",
+    "district": "North Gonja",
+    "location": "Daboya",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090101",
+    "name": "Bawku Senior High",
+    "region": "Upper East",
+    "district": "Bawku East Municipal",
+    "location": "Bawku",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "TECHNICAL",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "TECH"
+    ]
+  },
+  {
+    "code": "0090102",
+    "name": "Bawku Senior High/Tech.",
+    "region": "Upper East",
+    "district": "Bawku Municipal",
+    "location": "Bawku",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090103",
+    "name": "Tempane Senior High",
+    "region": "Upper East",
+    "district": "Tempane",
+    "location": "Tempane",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090106",
+    "name": "Garu Comm. Day Senior High",
+    "region": "Upper East",
+    "district": "Garu Tempane",
+    "location": "Garu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090107",
+    "name": "Pusiga Comm. Day Senior High Sch.",
+    "region": "Upper East",
+    "district": "Pusiga",
+    "location": "Pusiga",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090201",
+    "name": "Zebilla Senior High/Tech",
+    "region": "Upper East",
+    "district": "Bawku West",
+    "location": "Zebilla",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090202",
+    "name": "Kusanaba Senior High School",
+    "region": "Upper East",
+    "district": "Bawku West",
+    "location": "Kusanaba",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090301",
+    "name": "Naab Azantilow Senior High/Tech.",
+    "region": "Upper East",
+    "district": "Builsa North",
+    "location": "Bilinsa/Sandema",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090302",
+    "name": "Fumbisi Senior High",
+    "region": "Upper East",
+    "district": "Builsa South",
+    "location": "Fumbisi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090303",
+    "name": "Sandema Senior High",
+    "region": "Upper East",
+    "district": "Builsa North",
+    "location": "Sandema",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "TECHNICAL",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "TECH"
+    ]
+  },
+  {
+    "code": "0090304",
+    "name": "Wiaga Comm. Senior High",
+    "region": "Upper East",
+    "district": "Builsa North",
+    "location": "Wiaga",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090305",
+    "name": "Kanjarga Comm. Senior High",
+    "region": "Upper East",
+    "district": "Builsa South",
+    "location": "Kanjarga",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090314",
+    "name": "Achula Comm. Day Senior High/Technical",
+    "region": "Upper East",
+    "district": "Builsa North",
+    "location": "Chuchuliga",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON."
+    ]
+  },
+  {
+    "code": "0090401",
+    "name": "Bolga Girls Senior High",
+    "region": "Upper East",
+    "district": "Bolgatanga Municipal",
+    "location": "Zaare-Bolgatanga",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090402",
+    "name": "Zamse Senior High/Tech",
+    "region": "Upper East",
+    "district": "Bolgatanga Municipal",
+    "location": "Bolgatanga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090403",
+    "name": "Bolgatanga Senior High",
+    "region": "Upper East",
+    "district": "Talensi",
+    "location": "Winkogo-Tongo",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090404",
+    "name": "Kongo Senior High",
+    "region": "Upper East",
+    "district": "Nabdam",
+    "location": "Kongo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090405",
+    "name": "Zuarungu Senior High",
+    "region": "Upper East",
+    "district": "Bolgatanga East",
+    "location": "Zuarungu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090406",
+    "name": "Golden Step Senior High School",
+    "region": "Upper East",
+    "district": "Talensi",
+    "location": "Balungu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090407",
+    "name": "Rock Foundation Senior High School",
+    "region": "Upper East",
+    "district": "Bolgatanga Municipal",
+    "location": "Bolgatanga",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090410",
+    "name": "Azoka Senior High School",
+    "region": "Upper East",
+    "district": "Bawku Municipal",
+    "location": "Bawku",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090411",
+    "name": "Beo Comm. Senior High/Tech",
+    "region": "Upper East",
+    "district": "Bongo",
+    "location": "Bongo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090412",
+    "name": "Tongo Senior High/Tech",
+    "region": "Upper East",
+    "district": "Talensi",
+    "location": "Tongo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Applied Electricity",
+      "Elective Maths",
+      "Elective Physics",
+      "Woodwork"
+    ],
+    "progs": [
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090413",
+    "name": "Bolga Sherigu Comm. Senior High",
+    "region": "Upper East",
+    "district": "Bolgatanga Municipal",
+    "location": "Bolga",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090414",
+    "name": "Gambigo Comm. Day Senior High",
+    "region": "Upper East",
+    "district": "Bolga East",
+    "location": "Gambigo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090501",
+    "name": "Navrongo Senior High",
+    "region": "Upper East",
+    "district": "Kasena-Nankani East",
+    "location": "Janania-Navrongo",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090502",
+    "name": "O.L.L. Girls Senior High",
+    "region": "Upper East",
+    "district": "Kasena-Nankani",
+    "location": "Navrongo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090503",
+    "name": "Chiana Senior High",
+    "region": "Upper East",
+    "district": "Kasena-Nankani West",
+    "location": "Chiana",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090504",
+    "name": "Awe Senior High/Tech.",
+    "region": "Upper East",
+    "district": "Kasena-Nankani Municipa",
+    "location": "Navrongo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090505",
+    "name": "Notre Dame Sem/ Senior High, Navrongo",
+    "region": "Upper East",
+    "district": "Kasena-Nankani East",
+    "location": "Navrongo",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090506",
+    "name": "Sirigu Senior High",
+    "region": "Upper East",
+    "district": "Kasena-Nankani West",
+    "location": "Sirigu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090507",
+    "name": "St. John's Integrated Snr. High/Tech",
+    "region": "Upper East",
+    "district": "Kasena-Nankani Municipa",
+    "location": "Tono",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Elective ICT",
+      "Elective Maths",
+      "Elective Physics",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090509",
+    "name": "Paga Senior High",
+    "region": "Upper East",
+    "district": "Kasena-Nankani West",
+    "location": "Paga",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090510",
+    "name": "Mirigu Community Day Senior High",
+    "region": "Upper East",
+    "district": "Kasena-Nankani West",
+    "location": "Mirigu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090511",
+    "name": "Nabango Senior High Tech",
+    "region": "Upper East",
+    "district": "Kasena-Nankani West",
+    "location": "Nabango",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "Applied Electricity"
+    ],
+    "progs": [
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090601",
+    "name": "Bongo Senior High",
+    "region": "Upper East",
+    "district": "Bongo",
+    "location": "Bongo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090602",
+    "name": "Gowrie Senior High/Tech.",
+    "region": "Upper East",
+    "district": "Bongo",
+    "location": "Gowrie",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Applied Electricity",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090603",
+    "name": "Zorkor Senior High",
+    "region": "Upper East",
+    "district": "Bongo",
+    "location": "Zorkor",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090604",
+    "name": "Azeem-Namoa Senior High/Tech",
+    "region": "Upper East",
+    "district": "Bongo",
+    "location": "Namoo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0090606",
+    "name": "Regentropfen Senior High School",
+    "region": "Upper East",
+    "district": "Bongo",
+    "location": "Bongo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0090701",
+    "name": "Binduri Comm. Day Senior High",
+    "region": "Upper East",
+    "district": "Binduri",
+    "location": "Binduri",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100101",
+    "name": "Wa Senior High/Tech.",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Wa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100102",
+    "name": "Wa Senior High .",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Wa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "TECHNICAL",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI",
+      "TECH"
+    ]
+  },
+  {
+    "code": "0100104",
+    "name": "Lassie-Tuolu Senior High",
+    "region": "Upper West",
+    "district": "Wa West",
+    "location": "Lassie",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100105",
+    "name": "Islamic Senior High, Wa",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Wa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100106",
+    "name": "T. I. Ahmadiyya Senior High, Wa",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Wa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100107",
+    "name": "Tupaso Senior High School",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Wa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "VISUAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "VIS. ARTS"
+    ]
+  },
+  {
+    "code": "0100108",
+    "name": "Funsi Senior High School",
+    "region": "Upper West",
+    "district": "Wa East",
+    "location": "Funsi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100109",
+    "name": "Northern Star Senior High",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Mangu, Wa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100110",
+    "name": "Jamiat Al-Hidaya Islamic Girls",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Wa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100111",
+    "name": "Loggu Senior HIgh School",
+    "region": "Upper West",
+    "district": "Wa East",
+    "location": "Loggu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100155",
+    "name": "Ideal College, Wa",
+    "region": "Upper West",
+    "district": "Wa",
+    "location": "Wa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100201",
+    "name": "Nandom Senior High",
+    "region": "Upper West",
+    "district": "Nandom",
+    "location": "Nandom",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Boys",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100202",
+    "name": "Lawra Senior High",
+    "region": "Upper West",
+    "district": "Lawra",
+    "location": "Lawra",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100203",
+    "name": "Eremon Senior High/Tech.",
+    "region": "Upper West",
+    "district": "Lawra",
+    "location": "Eremon",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "Applied Electricity",
+      "Auto Mechanics",
+      "Electronics",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON."
+    ]
+  },
+  {
+    "code": "0100204",
+    "name": "Ko Senior High",
+    "region": "Upper West",
+    "district": "Nandom",
+    "location": "Ko-Nandom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100205",
+    "name": "Holy Family Senior High",
+    "region": "Upper West",
+    "district": "Lambusie-Karni",
+    "location": "Hamile",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100206",
+    "name": "Birifoh Senior High Sch.",
+    "region": "Upper West",
+    "district": "Lawra",
+    "location": "Lawra",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100301",
+    "name": "Ullo Senior High",
+    "region": "Upper West",
+    "district": "Jirapa",
+    "location": "Ullo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100302",
+    "name": "St. Francis Girls Senior High, Jirapa",
+    "region": "Upper West",
+    "district": "Jirapa",
+    "location": "Jirapa",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100303",
+    "name": "Piina Senior High",
+    "region": "Upper West",
+    "district": "Lambussie-Karni",
+    "location": "Piina",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100304",
+    "name": "Jirapa Senior High",
+    "region": "Upper West",
+    "district": "Jirapa",
+    "location": "Jirapa-Town",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100305",
+    "name": "Han Senior High",
+    "region": "Upper West",
+    "district": "Jirapa",
+    "location": "Jirapa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100401",
+    "name": "Kanton Senior High",
+    "region": "Upper West",
+    "district": "Sisala East",
+    "location": "Tumu",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100402",
+    "name": "Tumu Senior High/Tech.",
+    "region": "Upper West",
+    "district": "Sisala East",
+    "location": "Tumu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100403",
+    "name": "Dr. Hilla Limann Senior High School",
+    "region": "Upper West",
+    "district": "Sisala West",
+    "location": "Gwollu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100404",
+    "name": "Holy Child Senior High School",
+    "region": "Upper West",
+    "district": "Sisala East",
+    "location": "Walembelle",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100501",
+    "name": "Kaleo Senior High/Tech",
+    "region": "Upper West",
+    "district": "Nadowli",
+    "location": "Kaleo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "TECHNICAL",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE",
+      "Metal Work",
+      "Woodwork"
+    ],
+    "progs": [
+      "AGRIC",
+      "TECH",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100502",
+    "name": "Daffiamah Senior High",
+    "region": "Upper West",
+    "district": "Bussie-Issa",
+    "location": "Daffiamah",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100503",
+    "name": "Queen of Peace Senior High, Nadowli",
+    "region": "Upper West",
+    "district": "Nadowli",
+    "location": "Nadowli",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "0100504",
+    "name": "Takpo Senior High Sch.",
+    "region": "Upper West",
+    "district": "Nadowli",
+    "location": "Takpo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100505",
+    "name": "St. Augustine Senior High/Tech, Saan",
+    "region": "Upper West",
+    "district": "Nadowli",
+    "location": "Saan, Charikpong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "HOM. ECON.",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100506",
+    "name": "Sombo Senior High",
+    "region": "Upper West",
+    "district": "Nadowli/Kaleo",
+    "location": "Sombo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "GENERAL ARTS"
+    ],
+    "progs": [
+      "BUS",
+      "GEN. ARTS"
+    ]
+  },
+  {
+    "code": "0100601",
+    "name": "Lambussie Senior High School",
+    "region": "Upper West",
+    "district": "Lambussie-Karni",
+    "location": "Lambussie",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "9000401",
+    "name": "Afoako Technical Institute",
+    "region": "Ashanti",
+    "district": "Amansie Central",
+    "location": "Afoako",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9000901",
+    "name": "Tetrefu Technical Institute",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Tetrefu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010101",
+    "name": "Accra Tech. Trg. Centre",
+    "region": "Gt. Accra",
+    "district": "Ayawaso South Municipal",
+    "location": "Kokomlemle",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOBODY REPAIRS",
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "INDUSTRIAL MECHANICS",
+      "MECHANICAL ENG TECH.",
+      "SMALL ENGINES TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010102",
+    "name": "Gt. Accra",
+    "region": "Gt. Accra",
+    "district": "Accra Metro",
+    "location": "Jamsetown",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "COMPUTER HARDWARE & SOFTWARE",
+      "WOOD TECHNOLOGY",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010104",
+    "name": "New Century Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Ablekuma West Municipal",
+    "location": "Dansoman",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "LEATHER WORKS TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010105",
+    "name": "Pilot Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Ayawaso Central Municipal",
+    "location": "Kokomlemle",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "DATABASE MANAGEMENT (CBT OPTION, FOR GIRLS ONLY)",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010106",
+    "name": "Kanda Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Ayawaso East Municipal",
+    "location": "Kanda",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010107",
+    "name": "South Labone Girls Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Korle Klottey Municipal",
+    "location": "Labone",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "TVET",
+    "programNames": [
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010108",
+    "name": "Gt. Accra",
+    "region": "Gt. Accra",
+    "district": "Okaikwei South Municipal",
+    "location": "Kaneshie-Accra",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOBODY REPAIRS",
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010123",
+    "name": "Opportunities Industrialization Technical",
+    "region": "Gt. Accra",
+    "district": "Ayawaso West Municipal",
+    "location": "East Legon",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010201",
+    "name": "Tema Tech. Inst.",
+    "region": "Gt. Accra",
+    "district": "Tema Metro",
+    "location": "Tema",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "INDUSTRIAL MECHANICS",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "PRINTING",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "BUILDING CONS. TECH. (CBT OPTION)",
+      "BIODIGESTER",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010206",
+    "name": "Tema Mission Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Tema Metro",
+    "location": "Tema",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010500",
+    "name": "Bedeku Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Ada East",
+    "location": "Bedeku",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010601",
+    "name": "Prampram Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Ningo Prampram",
+    "location": "Prampram",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010602",
+    "name": "Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Ningo Prampram",
+    "location": "Afienya",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010700",
+    "name": "Dodowa Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Shai Osudoku",
+    "location": "Dodowa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010702",
+    "name": "Agomeda Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Shai Osudoku",
+    "location": "Agomeda",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010901",
+    "name": "Madina Technical Institute",
+    "region": "Gt. Accra",
+    "district": "La Nkwantanang-Madina",
+    "location": "Madin",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9010906",
+    "name": "Danfa Technical Institute",
+    "region": "Gt. Accra",
+    "district": "La Nkwantanang",
+    "location": "Danfa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9011001",
+    "name": "Ashiaman Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Ashiaman Municipal",
+    "location": "Ashaiman",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9011201",
+    "name": "TSC Technical Institute, Bekwai",
+    "region": "Ashanti",
+    "district": "Bekwai Municipal",
+    "location": "Bekwai",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9011302",
+    "name": "Ngleshie Amanfro Technical Institute",
+    "region": "Gt. Accra",
+    "district": "Ga South Municipal",
+    "location": "Ngleshie Amanfro",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOBODY REPAIRS",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9011400",
+    "name": "East Legon Applied Technology Institute",
+    "region": "Gt. Accra",
+    "district": "Ayawaso West Municipal",
+    "location": "East Legon",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "HEAVY DUTY MECHANICS",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9011601",
+    "name": "Ada Tech. Inst.",
+    "region": "Gt. Accra",
+    "district": "Ada East",
+    "location": "Ada",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "INFORMATION TECH.",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9011701",
+    "name": "Teshie Tech. Instittute",
+    "region": "Gt. Accra",
+    "district": "Ledzokuku Municipal",
+    "location": "Teshie",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020101",
+    "name": "Koforidua Tech. Inst.",
+    "region": "Eastern",
+    "district": "New Juaben",
+    "location": "Koforidua",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "BUILDING CONS. TECH. (CBT OPTION)",
+      "BIODIGESTER",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020102",
+    "name": "Effiduase Technical Institute",
+    "region": "Eastern",
+    "district": "New Juaben Municipal",
+    "location": "Effiduase",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020104",
+    "name": "Koforidua GRATIS Technical Institute",
+    "region": "Eastern",
+    "district": "New Juaben Municipal",
+    "location": "Koforidua",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020301",
+    "name": "Akuapem Technical Institute",
+    "region": "Eastern",
+    "district": "Akwapem South",
+    "location": "Kitase-Aburi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020500",
+    "name": "St. Mary's Technical Institute, Asamankese",
+    "region": "Eastern",
+    "district": "West Akim",
+    "location": "Asamankese",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "INFORMATION TECH.",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020501",
+    "name": "TSC Technical Institute, Asamankese",
+    "region": "Eastern",
+    "district": "West Akim",
+    "location": "Asamankese",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "INFORMATION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020701",
+    "name": "Eastern",
+    "region": "Eastern",
+    "district": "Suhum Municipal",
+    "location": "Suhum",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BEAUTY THERAPY",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020800",
+    "name": "Eastern",
+    "region": "Eastern",
+    "district": "Asuogyaman",
+    "location": "Anum",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BEAUTY THERAPY",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020901",
+    "name": "Eastern",
+    "region": "Eastern",
+    "district": "Kwahu Afram Plains North",
+    "location": "Amankwakrom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "CREATIVE ART TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020902",
+    "name": "St. Mary's Voc./Tech. Inst.",
+    "region": "Eastern",
+    "district": "Kwahu Afram Plains",
+    "location": "Adiembra",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9020903",
+    "name": "TSC Technical Institute, Donkorkrom",
+    "region": "Eastern",
+    "district": "Kwahu Afram Plains",
+    "location": "Donkorkrom",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "INFORMATION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021001",
+    "name": "Eastern",
+    "region": "Eastern",
+    "district": "Kwahu East",
+    "location": "Abetifi",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRICAL MACHINE/MOTOR REWINDING",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021002",
+    "name": "Abetifi Kyemase Technical",
+    "region": "Eastern",
+    "district": "Kwahu East",
+    "location": "Abetifi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021101",
+    "name": "Akwatia Tech. Inst.",
+    "region": "Eastern",
+    "district": "Mfantsiman Mun",
+    "location": "Akwatia",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021105",
+    "name": "Denkyembour Technical Institute",
+    "region": "Eastern",
+    "district": "Denkyembour",
+    "location": "Boadua",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021301",
+    "name": "St. Paul's Tech. Inst.",
+    "region": "Eastern",
+    "district": "Eask Akim Municipal",
+    "location": "Kukurantumi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "WATER TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021302",
+    "name": "Kibi Technical Institute",
+    "region": "Eastern",
+    "district": "Eask Akim Municipal",
+    "location": "Kibi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021401",
+    "name": "Somanya Technical Institute",
+    "region": "Eastern",
+    "district": "Yilo Krobo",
+    "location": "Somanya",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021502",
+    "name": "Kpong Technical Institute",
+    "region": "Eastern",
+    "district": "Lower Manya Krobo",
+    "location": "Kpong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021601",
+    "name": "J.G. Knol Technical Instititute",
+    "region": "Eastern",
+    "district": "Okere",
+    "location": "Adukrom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021602",
+    "name": "Abiriw Presbyterian Technical Institute",
+    "region": "Eastern",
+    "district": "Okere",
+    "location": "Abiriw",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9021603",
+    "name": "Tutu Methodist Technical Institute",
+    "region": "Eastern",
+    "district": "Akuampem North",
+    "location": "Tutu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9022001",
+    "name": "Eastern",
+    "region": "Eastern",
+    "district": "Kwahu East",
+    "location": "Kwahu Tafo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9022200",
+    "name": "Akrofufu Technical Institute",
+    "region": "Eastern",
+    "district": "Atiwa West",
+    "location": "Akrofufu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9022201",
+    "name": "Applied Technology Institute-Anyinam",
+    "region": "Eastern",
+    "district": "Atiwa East",
+    "location": "Anyinam",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9022301",
+    "name": "Asakraka Technical Institute",
+    "region": "Eastern",
+    "district": "Kwahu South",
+    "location": "Asakraka",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9022302",
+    "name": "Nana Ampontua Technical Institute",
+    "region": "Ashanti",
+    "district": "Bekwai Municipal",
+    "location": "Bekwai",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9022600",
+    "name": "Takrowase Technical Institute",
+    "region": "Eastern",
+    "district": "Kwaebibrim",
+    "location": "Takrowasi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030101",
+    "name": "Cape Coast Tech. Inst.",
+    "region": "Central",
+    "district": "Cape Coast Metro",
+    "location": "Cape Coast",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "ELECTRONICS ENG. TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "FURNITURE TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030102",
+    "name": "GRATIS Technical Institute, Cape Coast",
+    "region": "Central",
+    "district": "Cape Coast Municipal",
+    "location": "Cape Coast",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030103",
+    "name": "Social Welfare Girls' Technical Institute",
+    "region": "Central",
+    "district": "Cape Coast Municipal",
+    "location": "Pedu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "TVET",
+    "programNames": [
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030300",
+    "name": "Mankessim Technical Institute",
+    "region": "Central",
+    "district": "Mfantsiman",
+    "location": "Mankessim",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030301",
+    "name": "Biriwa Technical Institute",
+    "region": "Central",
+    "district": "Mfantsiman Mun",
+    "location": "Biriwa",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "LEATHER WORKS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030321",
+    "name": "Asafora Technical Institute",
+    "region": "Central",
+    "district": "Mfantseman",
+    "location": "Asafora",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030401",
+    "name": "Asuansi Tech. Inst.",
+    "region": "Central",
+    "district": "Abura/Asebu/Kwamankese",
+    "location": "Asuansi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "FURNITURE TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030414",
+    "name": "New Ebu Technical Institute",
+    "region": "Central",
+    "district": "Abura/Asebu/Kwamankes",
+    "location": "New Ebu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030500",
+    "name": "Central",
+    "region": "Central",
+    "district": "Gomoa West",
+    "location": "Gomoa Adaa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030501",
+    "name": "Twedie Technical Institute",
+    "region": "Ashanti",
+    "district": "Atwima Kwawoma",
+    "location": "Twedie",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "BUILDING CONSTRUCTION",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030601",
+    "name": "Panfokrom Technical Institute",
+    "region": "Central",
+    "district": "Gomoa East",
+    "location": "Panfokrom",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "INFORMATION TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "GRAPHICS DESIGN TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030700",
+    "name": "TSC Technical Institute, Assin Edubiase",
+    "region": "Central",
+    "district": "Assin Central Municipal",
+    "location": "Assin Edubiase",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030701",
+    "name": "Assin Foso Technical Institute",
+    "region": "Central",
+    "district": "Assin North",
+    "location": "Assin Fosu",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030707",
+    "name": "Assin Jakai Applied Technology Institute",
+    "region": "Central",
+    "district": "Assin Jakai",
+    "location": "Assin South",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030801",
+    "name": "Central",
+    "region": "Central",
+    "district": "Ajumako/ Enyan /Essiam",
+    "location": "Enyan Abaasa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030802",
+    "name": "Ajumako-Afranse Technical Institute",
+    "region": "Central",
+    "district": "Ajumako/Enyan/Esiam",
+    "location": "Ajumako",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9030900",
+    "name": "Winneba Technical Institute",
+    "region": "Central",
+    "district": "Effutu Municipal",
+    "location": "Winneba",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "INFORMATION TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9031101",
+    "name": "Central",
+    "region": "Central",
+    "district": "Agona West Municipal",
+    "location": "Agona Swedru",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9031200",
+    "name": "TSC Technical Institute, Awutu Breku",
+    "region": "Central",
+    "district": "Awutu Senya West",
+    "location": "Awutu Senya",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9031300",
+    "name": "Breman Asikuma Technical Institute",
+    "region": "Central",
+    "district": "Asikuma Odoben Brakwa",
+    "location": "Breman-Asikuma",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040101",
+    "name": "Takoradi Tech. Inst.",
+    "region": "Western",
+    "district": "Effia Kwesimitsim",
+    "location": "Takoradi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "SMALL ENGINES TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "INFORMATION TECH.",
+      "SOFTWARE DEVELOPMENT (CBT OPTION, FOR GIRLS ONLY)",
+      "DIGITAL DESIGNING TECHNOLOGY",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "RECYCLING TECHNOLOGY (CBT OPTION)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "BUILDING CONS. TECH. (CBT OPTION)",
+      "BIODIGESTER",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040102",
+    "name": "Western",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Takoradi",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "INFORMATION TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040105",
+    "name": "Opportunities Industralisation Technical I",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Takoradi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040106",
+    "name": "Essipun Technical Institute",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Essipun Sekondi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040107",
+    "name": "Takoradi Community Technical Institute",
+    "region": "Western",
+    "district": "Effia Kwesimitsim",
+    "location": "Anaji",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040108",
+    "name": "Sekondi Technical Institute",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Sekondi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "INFORMATION TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040201",
+    "name": "Western",
+    "region": "Western",
+    "district": "Wassa West",
+    "location": "Tarkwa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040301",
+    "name": "Western",
+    "region": "Western",
+    "district": "Nzema East",
+    "location": "Axim",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040401",
+    "name": "Kikam Tech. Inst.",
+    "region": "Western",
+    "district": "Ellembelle",
+    "location": "Kikam",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040402",
+    "name": "Western",
+    "region": "Western",
+    "district": "Ellembele",
+    "location": "Sanzule",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040405",
+    "name": "Jachie Technical",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Jachie",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "INFORMATION TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040406",
+    "name": "St. Luke Inclusive Catholic Technical Insti",
+    "region": "Western",
+    "district": "Ellembelle",
+    "location": "Eikwe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "GARMENT / FASHION TECH.",
+      "HAIRDRESSING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040415",
+    "name": "Asasetre Technical Institute",
+    "region": "Western",
+    "district": "Ellembelle",
+    "location": "Asasetre",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040600",
+    "name": "TSC Technical Institute-Bibiani",
+    "region": "Western",
+    "district": "Bibiani Anhwiaso Bekwai",
+    "location": "Bibiani",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040605",
+    "name": "Kokoben Technical Institute",
+    "region": "Ashanti",
+    "district": "Bosome Freho",
+    "location": "Asiwa-Kokoben",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040700",
+    "name": "TSC Technical Institute-Half Assini",
+    "region": "Western",
+    "district": "Jomoro",
+    "location": "Half Assini",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040703",
+    "name": "TSC Technical Institute, Sekyere Kumawu",
+    "region": "Ashanti",
+    "district": "Sekyere Kumawu",
+    "location": "Sekyere Kumawu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040705",
+    "name": "Libermann Technical Institute",
+    "region": "Western",
+    "district": "Jomoro",
+    "location": "Sowodadzem",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040800",
+    "name": "Abura Technical Institute",
+    "region": "Western",
+    "district": "Ahanta West",
+    "location": "Abura",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9040901",
+    "name": "Western",
+    "region": "Western",
+    "district": "Juaboso",
+    "location": "Juaboso, Western",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "9041100",
+    "name": "Shama Technical Institute",
+    "region": "Western",
+    "district": "Shama",
+    "location": "Shama",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9041200",
+    "name": "Manso-Amenfi Technical Institute",
+    "region": "Western",
+    "district": "Wassa Amenfi Central",
+    "location": "Manso Amenfi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9041201",
+    "name": "St. Ann's Technical Institute",
+    "region": "Western",
+    "district": "Sekondi Takoradi Metro",
+    "location": "Sekondi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Girls",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "INFORMATION TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "GRAPHICS DESIGN TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9041300",
+    "name": "TSC Technical Institute-Asankragwa",
+    "region": "Western",
+    "district": "Amenfi West",
+    "location": "Asankragwa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9041412",
+    "name": "Mesu Akompi Technical Institute",
+    "region": "Western",
+    "district": "Wassa Amenfi East",
+    "location": "Wassa Saa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9050101",
+    "name": "Kumasi Tech. Inst.",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Kumasi",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOBODY REPAIRS",
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "HEAVY DUTY MECHANICS",
+      "INDUSTRIAL MECHANICS",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRICAL MACHINE/MOTOR REWINDING",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "RECYCLING TECHNOLOGY (CBT OPTION)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "FURNITURE TECHNOLOGY",
+      "UPHOLSTERY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "BUILDING CONS. TECH. (CBT OPTION)",
+      "BIODIGESTER",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9050102",
+    "name": "Ashanti",
+    "region": "Ashanti",
+    "district": "Kwadaso",
+    "location": "Kwadaso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "INFORMATION TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9050103",
+    "name": "Suame Technical Institute",
+    "region": "Ashanti",
+    "district": "Suame Municipal",
+    "location": "Suame",
+    "category": "A",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOBODY REPAIRS",
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "HEAVY DUTY MECHANICS",
+      "MECHANICAL ENG TECH.",
+      "PRINTING",
+      "COMPUTER NETWORKING (CBT OPTION, FOR GIRLS ONLY)",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9050105",
+    "name": "Catholic Technical Institute",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "Kumasi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9050112",
+    "name": "Ramseyer Technical Institute",
+    "region": "Ashanti",
+    "district": "Asokwa",
+    "location": "Asokwa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9050301",
+    "name": "Otumfuo Osei Tutu II Technical Institute",
+    "region": "Ashanti",
+    "district": "Ejisu Municipal",
+    "location": "Kwamo",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9050302",
+    "name": "Baworo Technical Institute",
+    "region": "Ashanti",
+    "district": "Ejisu",
+    "location": "Baworo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9050303",
+    "name": "Juaben Technical Institute",
+    "region": "Ashanti",
+    "district": "Ejisu-Juaben",
+    "location": "Juaben",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9051300",
+    "name": "Ashanti",
+    "region": "Ashanti",
+    "district": "Asante Akim South",
+    "location": "Asankare",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9051301",
+    "name": "Dwease-Praaso Technical Institute",
+    "region": "Ashanti",
+    "district": "Asante Akyem Central",
+    "location": "Dwease-Praaso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9051305",
+    "name": "Hemang Buoho Technical Institute",
+    "region": "Ashanti",
+    "district": "Afigya Kwabre South",
+    "location": "Hemang Buoho",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9051801",
+    "name": "Ashanti",
+    "region": "Ashanti",
+    "district": "Sekyere East",
+    "location": "Asokore",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9052701",
+    "name": "Ashanti",
+    "region": "Ashanti",
+    "district": "Sekyere South",
+    "location": "Agona Ashanti",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9052800",
+    "name": "Ashanti",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Pramso",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9054022",
+    "name": "Pakyi Applied Technology Institute",
+    "region": "Ashanti",
+    "district": "Amansie West",
+    "location": "Pakyi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRONICS ENG. TECH.",
+      "INFORMATION TECH.",
+      "MECHATRONICS ENGINEERING TECHNOLOGY",
+      "JEWELLERY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9054025",
+    "name": "TSC Technical Institute, Konongo",
+    "region": "Ashanti",
+    "district": "Asante Akim Central",
+    "location": "Konongo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060101",
+    "name": "Sunyani Methodist Technical Inst.",
+    "region": "Bono",
+    "district": "Sunyani Municipal",
+    "location": "Sunyani",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060106",
+    "name": "Sunyani Technical Institute",
+    "region": "Bono",
+    "district": "Sunyani Municipal",
+    "location": "Sunyani",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "COMPUTER NETWORKING (CBT OPTION, FOR GIRLS ONLY)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060107",
+    "name": "Social Welfare Technical Institute, Sunyani",
+    "region": "Bono",
+    "district": "Sunyani Municipal",
+    "location": "Sunyani",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060139",
+    "name": "Akrodie Technical Institute",
+    "region": "Ahafo",
+    "district": "Asunafo North",
+    "location": "Akrodie",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060200",
+    "name": "Yamfo Technical Institute",
+    "region": "Ahafo",
+    "district": "Tano North",
+    "location": "Yamfo",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "1",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060201",
+    "name": "Adrobaa Technical Institute",
+    "region": "Ahafo",
+    "district": "Tano North",
+    "location": "Adrobaa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060205",
+    "name": "Islamic Mission Technical Institute",
+    "region": "Ahafo",
+    "district": "Tano North",
+    "location": "Duayaw Nkwanta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONS. TECH. (CBT OPTION)",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060301",
+    "name": "Kintampo Technical Institute",
+    "region": "Bono East",
+    "district": "Kintampo South",
+    "location": "Kintampo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060305",
+    "name": "Business Secretarial and Technical",
+    "region": "Ashanti",
+    "district": "Kwadaso Municipal",
+    "location": "Asuoyeboah",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060400",
+    "name": "TSC Technical Institute, Goaso",
+    "region": "Ahafo",
+    "district": "Asunafo North",
+    "location": "Goaso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "1",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060500",
+    "name": "TSC Technical Institute, Drobo",
+    "region": "Bono",
+    "district": "Jaman South",
+    "location": "Drobo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060800",
+    "name": "TSC Technical Institute, Bechem",
+    "region": "Ahafo",
+    "district": "Tano South",
+    "location": "Bechem",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060802",
+    "name": "Ahafo",
+    "region": "Ahafo",
+    "district": "Tano South",
+    "location": "Bechem",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "1",
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "SOFTWARE DEVELOPMENT (CBT OPTION, FOR GIRLS ONLY)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060901",
+    "name": "Nkoranza Tech Inst.",
+    "region": "Bono East",
+    "district": "Nkoranza South",
+    "location": "Nkoranza",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "INFORMATION TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9060905",
+    "name": "Nkwabeng Technical Institute",
+    "region": "Bono East",
+    "district": "Nkoranza South",
+    "location": "Nkwabeng",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9061000",
+    "name": "TSC Technical Institute, Dormaa Ahenkro",
+    "region": "Bono",
+    "district": "Dormaa Central Municipal",
+    "location": "Dormaa Ahenkro",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9061001",
+    "name": "Dormaa Technical Institute",
+    "region": "Bono",
+    "district": "Dormaa Central Municipal",
+    "location": "Dormaa Ahenkro",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9061003",
+    "name": "Nerebehi Technical Institute",
+    "region": "Ashanti",
+    "district": "Atwim Nwabiagya",
+    "location": "Nerebehi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9061100",
+    "name": "Bono",
+    "region": "Bono",
+    "district": "Jaman North",
+    "location": "Sampa",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9061200",
+    "name": "Techiman Technical Institute",
+    "region": "Bono East",
+    "district": "Techiman Metro",
+    "location": "Techiman",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9061400",
+    "name": "Fawohoyeden Technical Institute",
+    "region": "Ahafo",
+    "district": "Asunafo North",
+    "location": "Fawohoyeden",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9061422",
+    "name": "Asante Tano Methodist Technical Institute",
+    "region": "Ahafo",
+    "district": "Asutifi South",
+    "location": "Hwidiem",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9062400",
+    "name": "Gyedu Technical Institute",
+    "region": "Ahafo",
+    "district": "Asutifi North",
+    "location": "Gyedu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9062601",
+    "name": "Bono",
+    "region": "Bono",
+    "district": "Sunyani West",
+    "location": "Odumase",
+    "category": "B",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "CREATIVE ART TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9062602",
+    "name": "Bono",
+    "region": "Bono",
+    "district": "Sunyani West",
+    "location": "Nsoatre",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9063011",
+    "name": "Kwapong Technical Institute",
+    "region": "Ahafo",
+    "district": "Asunafo South",
+    "location": "Kwapong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9067793",
+    "name": "Kajaji Technical Institute",
+    "region": "Bono East",
+    "district": "Sene East",
+    "location": "Kajaji",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070101",
+    "name": "Amedzofe Technical Institute",
+    "region": "Volta",
+    "district": "Ho West",
+    "location": "Amedzofe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070113",
+    "name": "Tsibu Technical Institute",
+    "region": "Volta",
+    "district": "Ho West",
+    "location": "Tsibu Awodume",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070150",
+    "name": "Avenui-Awudome Technical Institute",
+    "region": "Volta",
+    "district": "Ho West",
+    "location": "Avenui-Awudome",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070155",
+    "name": "Anfoeta Technical Institute",
+    "region": "Volta",
+    "district": "Ho West",
+    "location": "Anfoeta Gborgam",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "INFORMATION TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070156",
+    "name": "Achiase Technical Institute",
+    "region": "Ashanti",
+    "district": "Juaben Municipal",
+    "location": "Achiase",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070401",
+    "name": "Fr. Dogli Memorial Technical Institute",
+    "region": "Oti",
+    "district": "Jasikan",
+    "location": "New Ayoma",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070500",
+    "name": "Atorkor Technical Institute",
+    "region": "Volta",
+    "district": "Keta Municipal",
+    "location": "Atorkor",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "INFORMATION TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070501",
+    "name": "Anlo Tech. Inst.",
+    "region": "Volta",
+    "district": "Anloga Municipal",
+    "location": "Anloga",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070503",
+    "name": "Caring Sisters Technical Institute",
+    "region": "Volta",
+    "district": "Anloga Municipal",
+    "location": "Tegbi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070514",
+    "name": "Kedzi Technical Institute",
+    "region": "Volta",
+    "district": "Keta Municipal",
+    "location": "Kedzi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "GRAPHICS DESIGN TECH.",
+      "FINE ARTS-PAINTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070515",
+    "name": "Woe Technical Institute",
+    "region": "Volta",
+    "district": "Keta Mun",
+    "location": "Woe",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070601",
+    "name": "Kpando Tech. Inst.",
+    "region": "Volta",
+    "district": "Kpando Municipal",
+    "location": "Kpando",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "INFORMATION TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "FURNITURE TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "BUILDING CONS. TECH. (CBT OPTION)",
+      "BIODIGESTER",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070602",
+    "name": "C.Y.O. Tech/Voc. Inst.",
+    "region": "Volta",
+    "district": "Kpando Municpal",
+    "location": "Sovie",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "COMPUTER NETWORKING (CBT OPTION, FOR GIRLS ONLY)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "FURNITURE TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070702",
+    "name": "Volta Tech Inst",
+    "region": "Volta",
+    "district": "Ho",
+    "location": "Matse",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070703",
+    "name": "Ho Technical Institute",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Ho",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070704",
+    "name": "Ho -Lokoe Technical Institute",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Ho",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070705",
+    "name": "Klefe Technical Institute",
+    "region": "Volta",
+    "district": "Ho Municipal",
+    "location": "Klefe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070710",
+    "name": "Dzodze Technical Institute",
+    "region": "Volta",
+    "district": "Ketu North",
+    "location": "Dzodze",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070800",
+    "name": "St Theresa's Technical Institute",
+    "region": "Oti",
+    "district": "Krachi Nchumuru",
+    "location": "Chinderi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9070901",
+    "name": "Volta",
+    "region": "Volta",
+    "district": "South Tongu",
+    "location": "Sogakope",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "PRINTING",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9071002",
+    "name": "E.P. Tech/Voc Inst",
+    "region": "Volta",
+    "district": "Hohoe",
+    "location": "Alavanyo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9071007",
+    "name": "Kumawu Technical Institute",
+    "region": "Ashanti",
+    "district": "Sekyere Kumawu",
+    "location": "Kumawu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9071014",
+    "name": "Ve- Golokwati Technical Institute",
+    "region": "Volta",
+    "district": "Afadzato South",
+    "location": "Kwati",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9071200",
+    "name": "Toh-Kpalime Technical Institute",
+    "region": "Volta",
+    "district": "South Dayi",
+    "location": "Toh-Kpalime",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9071201",
+    "name": "Botoku Technical Insitute",
+    "region": "Volta",
+    "district": "Dayi",
+    "location": "Botoku",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9071802",
+    "name": "Suntreso Technical Institute",
+    "region": "Ashanti",
+    "district": "Kumasi Metro",
+    "location": "North Suntreso",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "PROG",
+      "AGRICULTURAL MECHANIZATION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9071822",
+    "name": "Akumadan Applied",
+    "region": "Ashanti",
+    "district": "Offinso North",
+    "location": "Akumadan",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9071904",
+    "name": "Sogakope Technial Institute",
+    "region": "Volta",
+    "district": "South Tongu",
+    "location": "Sogakope",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9072001",
+    "name": "Kaakyi Technical Institute",
+    "region": "Oti",
+    "district": "Kete Krachi",
+    "location": "Kete Krachi",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9072041",
+    "name": "Offinso Technical Institute",
+    "region": "Ashanti",
+    "district": "Ofinso",
+    "location": "Offinso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "BUILDING CONSTRUCTION",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9072100",
+    "name": "Volta",
+    "region": "Volta",
+    "district": "Afadzto South",
+    "location": "Have",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9072101",
+    "name": "Volta",
+    "region": "Volta",
+    "district": "Afadzto South",
+    "location": "Liati",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9072112",
+    "name": "Lolobi Technical Institute",
+    "region": "Oti",
+    "district": "Guan",
+    "location": "Lolobi Ashiambi",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONS. TECH. (CBT OPTION)",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9072121",
+    "name": "TSC Technical Institute, Mampong",
+    "region": "Ashanti",
+    "district": "Mampong",
+    "location": "Mampong",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9072400",
+    "name": "Avenorpeme Technical Institute",
+    "region": "Volta",
+    "district": "Akatsi South",
+    "location": "Avenorpeme",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9072401",
+    "name": "Ave Technical Institute",
+    "region": "Volta",
+    "district": "Akatsi North",
+    "location": "Ave",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9073012",
+    "name": "Dambai Technical Institute",
+    "region": "Oti",
+    "district": "Krachi East",
+    "location": "Dambai",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080101",
+    "name": "Dabokpa Voc/Tech. Inst.",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "SMALL ENGINES TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "REFRIGERATION & AIR-CONDITION",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "SOFTWARE DEVELOPMENT (CBT OPTION, FOR GIRLS ONLY)",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "RECYCLING TECHNOLOGY (CBT OPTION)",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "BUILDING CONS. TECH. (CBT OPTION)",
+      "BIODIGESTER",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080102",
+    "name": "St. Mary's Technical Institute,Tamale",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "TVET",
+    "programNames": [
+      "SMALL ENGINES TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080103",
+    "name": "Lamashegu Technical Institute",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080104",
+    "name": "GRATIS Technical Institute, Tamale",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080105",
+    "name": "Nyohini Community Technical Institute",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080110",
+    "name": "Gbewaa Technical Institute",
+    "region": "Northern",
+    "district": "Tamale Metro",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "GARMENT / FASHION TECH.",
+      "TEXTILE TECHNOLOGY",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080301",
+    "name": "Nyong Technical Institute",
+    "region": "Northern",
+    "district": "Karaga",
+    "location": "Nyong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080601",
+    "name": "Walewale Technical Institute",
+    "region": "North East",
+    "district": "West Mampusi",
+    "location": "Walawale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "SOFTWARE DEVELOPMENT (CBT OPTION, FOR GIRLS ONLY)",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080655",
+    "name": "Sawla Girls Vocational Institute",
+    "region": "Savannah",
+    "district": "Sawla Tuna Kalba",
+    "location": "Sawla",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "TVET",
+    "programNames": [
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080700",
+    "name": "Bole Technical Institute",
+    "region": "Savannah",
+    "district": "Bole",
+    "location": "Bole",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080701",
+    "name": "Loagri Technical Institute",
+    "region": "North East",
+    "district": "Mampurugu Moagduri",
+    "location": "Loagri",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "INFORMATION TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9080901",
+    "name": "Northern",
+    "region": "Northern",
+    "district": "Saboba",
+    "location": "Saboba",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9081000",
+    "name": "Nalerigu Technical Institute",
+    "region": "North East",
+    "district": "East Mamprusi",
+    "location": "Nalerigu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9081401",
+    "name": "Yaa Pokua Technical Institute",
+    "region": "Ashanti",
+    "district": "Offinso North",
+    "location": "Nkekaasu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9081500",
+    "name": "Salaga Technical Institute",
+    "region": "Savannah",
+    "district": "East Gonja",
+    "location": "Salaga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9081501",
+    "name": "Buipe Technical Institute",
+    "region": "Savannah",
+    "district": "Central Gonja",
+    "location": "Buipe",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9081600",
+    "name": "Zugu Dabogni Technical Institute",
+    "region": "Northern",
+    "district": "Kumbungu",
+    "location": "Zugu Dabogni",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9081601",
+    "name": "Kofi Annan Technical Institute",
+    "region": "Northern",
+    "district": "Kumbungu",
+    "location": "Nwodua",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "INFORMATION TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9081606",
+    "name": "Zabzugu Technical Institute",
+    "region": "Northern",
+    "district": "Zabzugu",
+    "location": "Zabzugu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9081901",
+    "name": "Tamale Technical Institute",
+    "region": "Northern",
+    "district": "Sagnerigu",
+    "location": "Tamale",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9081903",
+    "name": "Savelugu Technical Institute",
+    "region": "Northern",
+    "district": "Savelugu Municipal",
+    "location": "Savelugu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9082045",
+    "name": "Tatale Technical Institute",
+    "region": "Northern",
+    "district": "Tatale",
+    "location": "Tatale",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "INFORMATION TECH.",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9082100",
+    "name": "Damongo Technical Institute",
+    "region": "Savannah",
+    "district": "West Gonja",
+    "location": "Damongo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9087782",
+    "name": "Kumbungu Vocational Techncal Institute",
+    "region": "Northern",
+    "district": "Kumbungu",
+    "location": "Kumbungu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WOOD TECHNOLOGY",
+      "GARMENT / FASHION TECH.",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090101",
+    "name": "Bawku Tech. Inst.",
+    "region": "Upper East",
+    "district": "Bawku East",
+    "location": "Bawku",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090102",
+    "name": "Kpalwega Technical Institute",
+    "region": "Upper East",
+    "district": "Bawku East",
+    "location": "Bawku",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "PLUMBING & GAS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090401",
+    "name": "Bolga Tech. Inst.",
+    "region": "Upper East",
+    "district": "Bolgatanga",
+    "location": "Bolgatanga",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "ARCHITECTURAL DRAUGHTMANSHIP",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090402",
+    "name": "GRATIS Technical Institute, Bolga",
+    "region": "Upper East",
+    "district": "Bolgatanga Municipal",
+    "location": "Bolgatanga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090403",
+    "name": "Bolgatanga Central Technical Institute",
+    "region": "Upper East",
+    "district": "Bolgatanga Municipal",
+    "location": "Bolgatanga",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "HAIRDRESSING",
+      "BUSINESS SECRETARIAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090600",
+    "name": "Upper East",
+    "region": "Upper East",
+    "district": "Bawku West Municipal",
+    "location": "Binaba",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090701",
+    "name": "Bongo Technical Institute",
+    "region": "Upper East",
+    "district": "Bongo",
+    "location": "Bongo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090800",
+    "name": "TSC Technical Institute-Garu",
+    "region": "Upper East",
+    "district": "Garu",
+    "location": "Garu",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090901",
+    "name": "St. Bernadettes Tech/Voc. Institute",
+    "region": "Upper East",
+    "district": "Kassena Nanakana East",
+    "location": "Navrongo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS SECRETARIAL",
+      "BUSINESS ACCOUNTING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090902",
+    "name": "Navrongo Technical Institute",
+    "region": "Upper East",
+    "district": "Kassena Nankana",
+    "location": "Navrongo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "LEATHER WORKS TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090903",
+    "name": "TSC Technical Institute -Kassena Nankana",
+    "region": "Upper East",
+    "district": "Kassena Nankana East",
+    "location": "Kassena Nankana East, Upper East",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "INFORMATION TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090905",
+    "name": "Amoafo Technical Institute",
+    "region": "Ashanti",
+    "district": "Bekwai Municipal",
+    "location": "Bekwai",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090907",
+    "name": "Abosamso Technical Institute",
+    "region": "Ashanti",
+    "district": "Bosome-Freho",
+    "location": "Abosamso",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9090910",
+    "name": "Konkoma Technical Institute",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Konkomba",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9091000",
+    "name": "Sandema Technical Institute",
+    "region": "Upper East",
+    "district": "Builsa North",
+    "location": "Sandema",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9091200",
+    "name": "Namalteng Technical Institute",
+    "region": "Upper East",
+    "district": "Talensi",
+    "location": "Gbeogo Namalten",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9095606",
+    "name": "Nabango Technical Institute",
+    "region": "Upper East",
+    "district": "Kassena Nankana East",
+    "location": "Nabango",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100101",
+    "name": "Wa Tech. Inst.",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Wa",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "ELECTRONICS ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "CREATIVE ART TECHNOLOGY",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "BUSINESS ACCOUNTING",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100102",
+    "name": "Nakori Chansa Technical Institute",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Wa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WOOD TECHNOLOGY",
+      "GARMENT / FASHION TECH.",
+      "TEXTILE TECHNOLOGY",
+      "HAIRDRESSING",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100103",
+    "name": "GRATIS Technical Institute, Wa",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Wa",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100104",
+    "name": "Naa-Momori Technical Institute",
+    "region": "Upper West",
+    "district": "Wa Municipal",
+    "location": "Wa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "INFORMATION TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "HAIRDRESSING"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100108",
+    "name": "Ejuraman Technical Institute",
+    "region": "Ashanti",
+    "district": "Ejura Sekyedumase",
+    "location": "Ejura",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100114",
+    "name": "Wechiau Community Day Technical",
+    "region": "Upper West",
+    "district": "Wa West",
+    "location": "Wechiau",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "GARMENT / FASHION TECH.",
+      "BUSINESS INFO. TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100400",
+    "name": "St. Clare's Technical Institute",
+    "region": "Upper West",
+    "district": "Sisala East",
+    "location": "Tumu",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100415",
+    "name": "Tibani Technical Institute",
+    "region": "Upper West",
+    "district": "Kaleo Nadowu",
+    "location": "Tibani",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100416",
+    "name": "St Augustine Technical Institute",
+    "region": "Upper West",
+    "district": "Nadowli Kaleo",
+    "location": "Charikpong",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100741",
+    "name": "Birifo Technical Institute",
+    "region": "Upper West",
+    "district": "Lawra",
+    "location": "Birifo",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "INFORMATION TECH.",
+      "WOOD TECHNOLOGY",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100742",
+    "name": "Deboziir Technical Institute",
+    "region": "Upper West",
+    "district": "Lawra",
+    "location": "Deboziir",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100743",
+    "name": "Baptist Technical Institute",
+    "region": "Upper West",
+    "district": "Lawra",
+    "location": "Lawra",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100800",
+    "name": "Issa Technical Institute",
+    "region": "Upper West",
+    "district": "Dafiama Busie Issa",
+    "location": "Issa",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "ELECTRICAL ENG. TECH.",
+      "AGRICULTURAL MECHANIZATION TECH.",
+      "COMPUTER HARDWARE & SOFTWARE",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100801",
+    "name": "Otaakrom Technical Institute",
+    "region": "Ashanti",
+    "district": "Atwima Mponua",
+    "location": "Otaakrom",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100802",
+    "name": "Bussie Technical Institute",
+    "region": "Upper West",
+    "district": "Daffiama-Bussie-Issa",
+    "location": "Bussie",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100901",
+    "name": "Upper West",
+    "region": "Upper West",
+    "district": "Nandom",
+    "location": "Nandom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "AUTOMOTIVE ENG. TECH.",
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "PLUMBING & GAS TECHNOLOGY",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9100902",
+    "name": "Upper West",
+    "region": "Upper West",
+    "district": "Nandom",
+    "location": "Nandom",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Girls",
+    "type": "TVET",
+    "programNames": [
+      "INFORMATION TECH.",
+      "GARMENT / FASHION TECH.",
+      "CATERING & HOSPITALITY MGT",
+      "TEXTILE TECHNOLOGY",
+      "BEAUTY THERAPY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9101001",
+    "name": "Upper West",
+    "region": "Upper West",
+    "district": "Nadowli Kaleo",
+    "location": "Kaleo",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "ELECTRICAL ENG. TECH.",
+      "SOLAR PV TECHNOLOGY (CBT OPTION)",
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9101002",
+    "name": "TSC Technical Institute, Nadowli-Kaleo",
+    "region": "Upper West",
+    "district": "Nadowli Kaleo",
+    "location": "Nadowli",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WELDING & FABRICATION TECH.",
+      "MECHANICAL ENG TECH."
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "9101103",
+    "name": "Guo Technical Insititute",
+    "region": "Upper West",
+    "district": "Nandom District",
+    "location": "Guo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "WOOD TECHNOLOGY",
+      "BUILDING CONSTRUCTION",
+      "GARMENT / FASHION TECH.",
+      "TEXTILE TECHNOLOGY"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "ACADEMY",
+    "name": "Academy",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Bosomtwe, Ashanti",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "AHAFO",
+    "name": "Tano South",
+    "region": "Volta",
+    "district": "Ahafo District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "TECHNICAL",
+      "STEM"
+    ],
+    "progs": [
+      "TECH",
+      "STEM"
+    ]
+  },
+  {
+    "code": "ASHANTI",
+    "name": "Kwabre East",
+    "region": "Volta",
+    "district": "Central District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM",
+      "BUSINESS",
+      "BUILDING TRADES",
+      "VISUAL ARTS"
+    ],
+    "progs": [
+      "STEM",
+      "BUS",
+      "TECH",
+      "VIS. ARTS"
+    ]
+  },
+  {
+    "code": "ASIAKWA",
+    "name": "Asiakwa",
+    "region": "Eastern",
+    "district": "Abuakwa South Municipal",
+    "location": "Abuakwa South Municipal, Eastern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "BONO",
+    "name": "Atebubu-Amantin Muni",
+    "region": "Volta",
+    "district": "Central District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS",
+      "STEM"
+    ],
+    "progs": [
+      "BUS",
+      "STEM"
+    ]
+  },
+  {
+    "code": "BONOEAST",
+    "name": "Pru East",
+    "region": "Volta",
+    "district": "Ashanti District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM",
+      "BUSINESS"
+    ],
+    "progs": [
+      "STEM",
+      "BUS"
+    ]
+  },
+  {
+    "code": "CANDIDATES",
+    "name": "may",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "CENTRAL",
+    "name": "Ekumfi",
+    "region": "Volta",
+    "district": "Central District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM",
+      "BUILDING TRADES",
+      "BUSINESS"
+    ],
+    "progs": [
+      "STEM",
+      "TECH",
+      "BUS"
+    ]
+  },
+  {
+    "code": "CHARIKPONG",
+    "name": "Charikpong",
+    "region": "Upper West",
+    "district": "Nadowli",
+    "location": "Nadowli, Upper West",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "DMAYSELECTPILOTPRIVATESENIORHIGHSCHOOLSASCATEGORYBCATEGORYCASDAY",
+    "name": "d) May select Pilot Private Senior High Schools as Category B/ Category C as Day",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "EASTERN",
+    "name": "Okere",
+    "region": "Bono",
+    "district": "Central District",
+    "location": "Bono District, Bono",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM",
+      "BUSINESS"
+    ],
+    "progs": [
+      "STEM",
+      "BUS"
+    ]
+  },
+  {
+    "code": "ECANDIDATESMAYSELECTPILOTPRIVATESENIORHIGHSCHOOLSASCATEGORYBCATEGORYCASDAY",
+    "name": "e) Candidates may select Pilot Private Senior High Schools as Category B/ Category C as Day",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "ECON",
+    "name": "ARTS",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "ELECTIVETECHNICALSUBJECTS",
+    "name": "OF SECONDARY/TECHNICAL SCHOOLS (SHTS)",
+    "region": "Ahafo",
+    "district": "Volta District",
+    "location": "Ahafo District, Ahafo",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "FCANDIDATESWHOWISHTOOFFERPROGRAMMECHOICESABOUTFUTUREJOBPROSPECTSSUCHASENGINEERSPHYSICIANSASTRONAUTSETCMUSTSELECTSTEMSCIENCEINALL",
+    "name": "f) Candidates who wish to offer programme choices about future job prospects, such as Engineers, Physicians, Astronauts, etc., must select STEM/Science in all",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "STEM",
+    "programNames": [
+      "STEM"
+    ],
+    "progs": [
+      "STEM"
+    ]
+  },
+  {
+    "code": "FIAPRE",
+    "name": "Fiapre",
+    "region": "Bono",
+    "district": "Sunyani West",
+    "location": "Sunyani West, Bono",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "GACCRA",
+    "name": "Ablekuma West",
+    "region": "Eastern",
+    "district": "Eastern District",
+    "location": "Eastern District, Eastern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS"
+    ],
+    "progs": [
+      "BUS"
+    ]
+  },
+  {
+    "code": "GHANATVETSERVICE",
+    "name": "ENGINEERING TRADES",
+    "region": "Ahafo",
+    "district": "Volta District",
+    "location": "Ahafo District, Ahafo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "GTACCRA",
+    "name": "Accra Senior High",
+    "region": "Greater Accra",
+    "district": "Greater Accra District",
+    "location": "Greater Accra District, Greater Accra",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "Applied Electricity",
+      "TECHNICAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "HIGH",
+    "name": "High",
+    "region": "Eastern",
+    "district": "Atiwa West",
+    "location": "Atiwa West, Eastern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "HIGHMAMFE",
+    "name": "High, Mamfe",
+    "region": "Eastern",
+    "district": "Akwapim North Municipal",
+    "location": "Akwapim North Municipal, Eastern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "HIGHTECH",
+    "name": "High/Tech",
+    "region": "Ashanti",
+    "district": "Oforikrom Municipal",
+    "location": "Oforikrom Municipal, Ashanti",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "INSTITUTE",
+    "name": "Institute",
+    "region": "Ashanti",
+    "district": "Kwadaso Municipal",
+    "location": "Kwadaso Municipal, Ashanti",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "INSTITUTEACCRA",
+    "name": "Institute, Accra",
+    "region": "Greater Accra",
+    "district": "Ayawaso West Municipal",
+    "location": "Ayawaso West Municipal, Greater Accra",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "Applied Electricity",
+      "TECHNICAL"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "KUMAWU",
+    "name": "Kumawu",
+    "region": "Ahafo",
+    "district": "Ahafo District",
+    "location": "Ahafo District, Ahafo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "MUNICIPAL",
+    "name": "s Only)",
+    "region": "Greater Accra",
+    "district": "Municipal",
+    "location": "Municipal, Greater Accra",
+    "category": "B",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "NKAWKAW",
+    "name": "(Nkawkaw)",
+    "region": "Eastern",
+    "district": "Birim North",
+    "location": "Birim North, Eastern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "NORTH",
+    "name": "Refer to Appendix 1",
+    "region": "North",
+    "district": "Bibiani Anhwiaso Bekwai",
+    "location": "Bibiani Anhwiaso Bekwai, North",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "TVET",
+    "programNames": [
+      "HOME ECONOMICS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  },
+  {
+    "code": "NORTHEAST",
+    "name": "East Mamprusi",
+    "region": "Eastern",
+    "district": "Greater Accra District",
+    "location": "Eastern District, Eastern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM",
+      "BUSINESS"
+    ],
+    "progs": [
+      "STEM",
+      "BUS"
+    ]
+  },
+  {
+    "code": "NORTHERN",
+    "name": "Kumbungu",
+    "region": "Eastern",
+    "district": "Central District",
+    "location": "Eastern District, Eastern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM",
+      "BUSINESS"
+    ],
+    "progs": [
+      "STEM",
+      "BUS"
+    ]
+  },
+  {
+    "code": "NOTECANDIDATESMUSTNOTREPEAT",
+    "name": "Note: Candidates MUST NOT repeat",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "OTI",
+    "name": "Jasikan",
+    "region": "Northern",
+    "district": "Northern District",
+    "location": "Northern District, Northern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM",
+      "BUSINESS"
+    ],
+    "progs": [
+      "STEM",
+      "BUS"
+    ]
+  },
+  {
+    "code": "PARENTGUARDIANMUSTKEEPACOPYOFTHESCHOOLSELECTIONFORMAFTERTHESELECTIONISDONETHEDESIGNATEDOFFICERUPLOADTHEDATAINTOTHE",
+    "name": "PARENT/GUARDIAN MUST KEEP A COPY OF THE SCHOOL SELECTION FORM. After the selection is done, the Designated Officer upload the data into the",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "PEDU",
+    "name": "Pedu",
+    "region": "Central",
+    "district": "Cape Coast Municipal",
+    "location": "Cape Coast Municipal, Central",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "PLEASENOTETHATCANDIDATES",
+    "name": "PLEASE NOTE THAT CANDIDATES",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "PUBLICTECHNICALINSTITUTESANDTHEIRCOURSES",
+    "name": "NO. OF PRORAMMES",
+    "region": "Ahafo",
+    "district": "Volta District",
+    "location": "Ahafo District, Ahafo",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "REGION",
+    "name": "AGRIC",
+    "region": "Volta",
+    "district": "Central District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "SAVANNAH",
+    "name": "Bole",
+    "region": "Northern",
+    "district": "Northern District",
+    "location": "Northern District, Northern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM",
+      "BUSINESS"
+    ],
+    "progs": [
+      "STEM",
+      "BUS"
+    ]
+  },
+  {
+    "code": "SCHOOL",
+    "name": "Nsawam",
+    "region": "Eastern",
+    "district": "Nsawam Adoagyiri",
+    "location": "Nsawam",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "AGRICULTURAL SCIENCE",
+      "BUSINESS",
+      "HOME ECONOMICS",
+      "VISUAL ARTS",
+      "GENERAL ARTS",
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "AGRIC",
+      "BUS",
+      "HOM. ECON.",
+      "VIS. ARTS",
+      "GEN. ARTS",
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "SCIENCE",
+    "name": "SCIENCE",
+    "region": "Oti",
+    "district": "Oti District",
+    "location": "Oti District, Oti",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "SELECT",
+    "name": "two(2)",
+    "region": "Unknown",
+    "district": "may",
+    "location": "category",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "STEM",
+    "programNames": [
+      "STEM"
+    ],
+    "progs": [
+      "STEM"
+    ]
+  },
+  {
+    "code": "SELECTIONGUIDELINES",
+    "name": "SELECTION GUIDELINES",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "SENIORHIGH",
+    "name": "Senior High",
+    "region": "Ashanti",
+    "district": "Bosomtwe",
+    "location": "Bosomtwe, Ashanti",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "TECHNICALSCHOOL",
+    "name": "Technical School",
+    "region": "Ashanti",
+    "district": "Atwima Nwabiagya North",
+    "location": "Atwima Nwabiagya North, Ashanti",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "THESCHOOLSELECTIONFORMMUSTBESIGNEDOFFBYAPARENTGUARDIANANDSUBMITTEDTOTHEHEADTEACHEROFTHEJHSATTENDED",
+    "name": "The school selection form must be signed off by a parent/guardian and submitted to the head teacher of the JHS attended.",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "GENERAL SCIENCE"
+    ],
+    "progs": [
+      "GEN. SCI"
+    ]
+  },
+  {
+    "code": "UPPEREAST",
+    "name": "Bawku East",
+    "region": "Northern",
+    "district": "Central District",
+    "location": "Northern District, Northern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM",
+      "BUSINESS"
+    ],
+    "progs": [
+      "STEM",
+      "BUS"
+    ]
+  },
+  {
+    "code": "UPPERWEST",
+    "name": "Dafiama Busie Issa",
+    "region": "Northern",
+    "district": "Central District",
+    "location": "Northern District, Northern",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM"
+    ],
+    "progs": [
+      "STEM"
+    ]
+  },
+  {
+    "code": "VOLTA",
+    "name": "Afadzto South",
+    "region": "Upper West",
+    "district": "Central District",
+    "location": "Upper West District, Upper West",
+    "category": "C",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "STEM",
+      "BUSINESS",
+      "BUILDING TRADES"
+    ],
+    "progs": [
+      "STEM",
+      "BUS",
+      "TECH"
+    ]
+  },
+  {
+    "code": "WESTERN",
+    "name": "Amenfi West",
+    "region": "Volta",
+    "district": "Central District",
+    "location": "Volta District, Volta",
+    "category": "C",
+    "status": "Day",
+    "gender": "Mixed",
+    "type": "SHS",
+    "programNames": [
+      "BUSINESS"
+    ],
+    "progs": [
+      "BUS"
+    ]
+  },
+  {
+    "code": "WESTERNNORTH",
+    "name": "Bia Senior High/Tech",
+    "region": "Volta",
+    "district": "Volta District",
+    "location": "Volta District, Volta",
+    "category": "A",
+    "status": "Day/Boarding",
+    "gender": "Mixed",
+    "type": "SHTS",
+    "programNames": [
+      "TECHNICAL",
+      "Woodwork"
+    ],
+    "progs": [
+      "TECH"
+    ]
+  }
+];
