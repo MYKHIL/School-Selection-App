@@ -152,20 +152,34 @@ def validate_program_match(school, candidate_program):
 
     cand_p = candidate_program.strip().upper()
     progs = school.get("progs") or school.get("programNames") or school.get("programs") or []
+    if not progs:
+        return True
     progs_upper = [str(p).strip().upper() for p in progs]
 
     if cand_p in progs_upper:
         return True
 
+    program_aliases = {
+        "GENERAL SCIENCE": ["GEN. SCI", "GEN SCI", "SCIENCE", "GENERAL SCIENCE"],
+        "GEN. SCI": ["GEN. SCI", "GEN SCI", "SCIENCE", "GENERAL SCIENCE"],
+        "GENERAL ARTS": ["GEN. ARTS", "GEN ARTS", "ARTS", "GENERAL ARTS"],
+        "GEN. ARTS": ["GEN. ARTS", "GEN ARTS", "ARTS", "GENERAL ARTS"],
+        "BUSINESS": ["BUSINESS", "BUS"],
+        "AGRICULTURE": ["AGRIC. SCIENCE", "AGRIC SCIENCE", "AGRIC", "AGRICULTURE"],
+        "HOME ECONOMICS": ["HOME ECON", "HOME ECON.", "HOME ECONOMICS"],
+        "VISUAL ARTS": ["VISUAL ARTS", "VISUAL ART"]
+    }
+
+    aliases = program_aliases.get(cand_p, [cand_p])
+    for alias in aliases:
+        if alias in progs_upper:
+            return True
+
     # Generic or TVET / STEM fallbacks
     school_type = (school.get("type") or "").upper()
-    if cand_p == "TECH" and (school_type == "TVET" or "TECH" in progs_upper):
+    if cand_p in ["TECH", "TECHNICAL"] and (school_type == "TVET" or any("TECH" in p for p in progs_upper)):
         return True
-    if cand_p == "STEM" and (school_type == "STEM" or school_type == "SHTS" or "STEM" in progs_upper):
-        return True
-    
-    # Standard general programmes fallback
-    if cand_p in ["GEN. SCI", "GEN. ARTS"] and "GEN. SCI" in progs_upper:
+    if cand_p == "STEM" and (school_type == "STEM" or school_type == "SHTS" or any("STEM" in p for p in progs_upper)):
         return True
 
     return False
@@ -191,18 +205,33 @@ def validate_gender_match(school, candidate_gender):
     return False
 
 
-def validate_cutoff_aggregate(school, candidate_aggregate):
+def validate_cutoff_aggregate(school, candidate_aggregate, cutoff_thresholds=None):
     """
-    Check cut-off aggregate condition: candidate.aggregate <= school.cut_off_aggregate.
-    Default cut-off aggregate is 54 if not specified.
+    Check cut-off aggregate condition: candidate.aggregate <= school_cutoff.
+    Validates against both category cutoff thresholds (A, B, C) and individual school cut_off_aggregate.
     """
     if candidate_aggregate is None:
         return True
 
     try:
         cand_agg = float(candidate_aggregate)
-        cutoff = float(school.get("cut_off_aggregate", 54))
-        return cand_agg <= cutoff
+        category = (school.get("category") or "C").upper()
+
+        if cutoff_thresholds is None or not isinstance(cutoff_thresholds, dict):
+            cutoff_thresholds = {"A": 18, "B": 28, "C": 40}
+
+        # Category cutoff threshold (e.g., Cat A: 10, Cat B: 28, Cat C: 40)
+        cat_cutoff = float(cutoff_thresholds.get(category, cutoff_thresholds.get("C", 40)))
+
+        # Specific school cutoff override if present
+        if school.get("cut_off_aggregate") is not None:
+            try:
+                sch_cutoff = float(school.get("cut_off_aggregate"))
+                cat_cutoff = min(cat_cutoff, sch_cutoff)
+            except (ValueError, TypeError):
+                pass
+
+        return cand_agg <= cat_cutoff
     except (ValueError, TypeError):
         return True
 
@@ -253,6 +282,7 @@ def generate_radial_school_pairings(candidate, school_database, adjacent_distric
     cand_prog = candidate.get("program") or candidate.get("requested_program")
     cand_gender = candidate.get("gender")
     cand_agg = candidate.get("aggregate")
+    cutoff_thresholds = candidate.get("cutoffThresholds") or candidate.get("cutoff_thresholds") or {"A": 18, "B": 28, "C": 40}
 
     # Group schools into 6 Tiers & calculate Haversine distance
     tiered_schools = {0: [], 1: [], 2: [], 3: [], 4: [], 5: []}
@@ -336,7 +366,7 @@ def generate_radial_school_pairings(candidate, school_database, adjacent_distric
                         continue
                     if not validate_gender_match(sch, cand_gender):
                         continue
-                    if not validate_cutoff_aggregate(sch, cand_agg):
+                    if not validate_cutoff_aggregate(sch, cand_agg, cutoff_thresholds):
                         continue
                     if not validate_capacity(sch, capacity_usage):
                         continue
@@ -399,7 +429,7 @@ def generate_radial_school_pairings(candidate, school_database, adjacent_distric
                     continue
                 if not validate_gender_match(sch, cand_gender):
                     continue
-                if not validate_cutoff_aggregate(sch, cand_agg):
+                if not validate_cutoff_aggregate(sch, cand_agg, cutoff_thresholds):
                     continue
                 if not validate_capacity(sch, capacity_usage):
                     continue

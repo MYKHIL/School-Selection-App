@@ -108,10 +108,24 @@
         generateRadialPackages(candidate, schoolPool) {
             const candCoords = this.getEntityCoordinates(candidate);
             const candProg = candidate.program || candidate.requested_program;
+            const candAgg = candidate.aggregate;
+            const cutoffThresholds = candidate.cutoffThresholds || candidate.cutoff_thresholds || { A: 18, B: 28, C: 40 };
+
+            const isQualifiedByCutoff = (sch) => {
+                if (!sch || typeof candAgg !== 'number' || isNaN(candAgg) || candAgg <= 0) return true;
+                const cat = (sch.category || 'C').toUpperCase();
+                let catCutoff = cutoffThresholds[cat] !== undefined ? parseFloat(cutoffThresholds[cat]) : (cutoffThresholds.C || 40);
+                if (sch.cut_off_aggregate !== undefined && sch.cut_off_aggregate !== null) {
+                    const schCut = parseFloat(sch.cut_off_aggregate);
+                    if (!isNaN(schCut)) catCutoff = Math.min(catCutoff, schCut);
+                }
+                return candAgg <= catCutoff;
+            };
 
             const tieredSchools = { 0: [], 1: [], 2: [], 3: [], 4: [], 5: [] };
 
             (schoolPool || []).forEach(sch => {
+                if (!isQualifiedByCutoff(sch)) return;
                 const schCoords = this.getEntityCoordinates(sch);
                 const dist = this.haversineDistance(candCoords.lat, candCoords.lng, schCoords.lat, schCoords.lng);
                 const tier = this.getGeographicTier(sch, candidate);

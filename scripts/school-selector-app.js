@@ -995,7 +995,9 @@
                     COMPUTING: '503',
                     ROBOTICS: '503',
                     'AGRICULTURAL SCIENCE': '503',
-                    'MANUFACTURING ENGINEERING': '503'
+                    'MANUFACTURING ENGINEERING': '503',
+                    'AUTOMOTIVE ENG. TECH.': '301',
+                    'AUTOMOTIVE ENGINEERING TECHNOLOGY': '301'
                 };
                 return aliases[normalized] || '';
             }
@@ -1063,8 +1065,10 @@
             formatProgrammeSelectionLabel(value) {
                 const entry = this.resolveProgrammeEntry(value);
                 const display = String(entry.display || String(value || '').trim()).trim();
-                if (!entry.code) return display;
-                return `${display} (${entry.code})`;
+                let code = entry.code;
+                if (!code) code = this.getDefaultProgrammeCode(display);
+                if (!code) return display;
+                return `${display} (${code})`;
             }
 
             getProgrammeOptions(item) {
@@ -1450,7 +1454,8 @@
                         program: prog,
                         gender: selectedGenders.length > 0 ? selectedGenders[0] : 'Mixed',
                         aggregate: effectiveAggregate,
-                        requested_program: prog
+                        requested_program: prog,
+                        cutoffThresholds: this.cutoffThresholds
                     }
                 };
 
@@ -1500,11 +1505,12 @@
                         pool = (this.schools || []).filter(s => {
                             const genderMatch = this.schoolMatchesSelectedGender(s, selectedGenders);
                             const progMatch = this.schoolMatchesSelectedProgram(s, finalPrograms);
-                            return genderMatch && progMatch;
+                            const cutoffMatch = this.isSchoolQualifiedByAggregate(s, effectiveAggregate);
+                            return genderMatch && progMatch && cutoffMatch;
                         });
                     }
                     if (pool.length < 8) {
-                        pool = this.schools || [];
+                        pool = (this.schools || []).filter(s => this.isSchoolQualifiedByAggregate(s, effectiveAggregate));
                     }
 
                     const radialPkgs = this.pairingEngine.generateRadialPackages(candidatePayload.candidate, pool);
@@ -1534,7 +1540,7 @@
                 this.showDatabaseViewerToast("Successfully calculated radial school pairing strategies!");
             }
 
-            renderSchoolDescriptors(sch) {
+            renderSchoolDescriptors(sch, includeStatus = true) {
                 if (!sch) return '';
                 const code = sch.code || '—';
                 const region = sch.region || '';
@@ -1585,7 +1591,7 @@
                     `);
                 }
 
-                if (status && status !== 'Unknown') {
+                if (includeStatus && status && status !== 'Unknown') {
                     badges.push(`
                         <span class="inline-flex items-center gap-1 text-[10px] font-semibold bg-sky-50 text-sky-800 px-2 py-0.5 rounded-md border border-sky-200/80 shrink-0">
                             <i class="fa-solid fa-bed text-[9px] text-sky-600"></i>${status}
@@ -1947,27 +1953,33 @@
                     const tr = document.createElement('tr');
                     tr.className = "hover:bg-slate-50/80 transition";
                     const residenceSummary = `${item.location || `${item.district || 'Unknown'} • ${item.region}` } • District: ${item.district || 'Unknown'} • Region: ${item.region || 'Unknown'} • ${item.res || 'Status unknown'}`;
+                    const typeBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.type === 'TVET' ? 'bg-amber-100 text-amber-800' : item.type === 'SHTS' ? 'bg-blue-100 text-blue-800' : item.type === 'STEM' ? 'bg-fuchsia-100 text-fuchsia-800' : 'bg-slate-200 text-slate-800'}">${item.type || 'SHS'}</span>`;
+                    const catBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-extrabold ${item.category === 'A' ? 'bg-purple-100 text-purple-800' : item.category === 'B' ? 'bg-blue-100 text-blue-800' : 'bg-slate-200 text-slate-800'}">Cat ${item.category}</span>`;
+                    const resBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-sky-100 text-sky-800 border border-sky-200/80"><i class="fa-solid fa-bed text-[9px] text-sky-600 mr-1"></i>${normalizedRes}</span>`;
+
                     tr.innerHTML = `
-                        <td class="p-3 text-center font-bold text-slate-500">${idx + 1}</td>
-                        <td class="p-3">
-                            <div class="flex items-center gap-2 flex-wrap">
-                                <span class="font-bold text-slate-900">${item.name}</span>
-                                <span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.type === 'TVET' ? 'bg-amber-100 text-amber-800' : item.type === 'SHTS' ? 'bg-blue-100 text-blue-800' : item.type === 'STEM' ? 'bg-fuchsia-100 text-fuchsia-800' : 'bg-slate-200 text-slate-800'}">${item.type || 'SHS'}</span>
-                                ${this.renderTechSubjectsButton(item)}
+                        <td class="p-3 text-center font-bold text-slate-500 align-top">${idx + 1}</td>
+                        <td class="p-3 align-top">
+                            <div class="font-bold text-slate-900">${item.name}</div>
+                            <div class="mt-1 mb-1">
+                                ${catBadge}
                             </div>
-                            ${this.renderSchoolDescriptors(item)}
+                            ${this.renderSchoolDescriptors(item, false)}
+                            <div class="mt-2 flex items-center gap-1.5 flex-wrap">
+                                ${this.renderTechSubjectsButton(item)}
+                                ${typeBadge}
+                                ${resBadge}
+                            </div>
                         </td>
-                        <td class="p-3">
-                            <span class="px-2 py-0.5 rounded text-[10px] font-extrabold ${item.category === 'A' ? 'bg-purple-100 text-purple-800' : item.category === 'B' ? 'bg-blue-100 text-blue-800' : 'bg-slate-200 text-slate-800'}">
-                                Cat ${item.category}
-                            </span>
+                        <td class="p-3 align-top">
+                            ${catBadge}
                         </td>
-                        <td class="p-3">
+                        <td class="p-3 align-top">
                             <select onchange="app.changeResidence(${idx}, this.value)" class="bg-white border border-slate-300 rounded p-1 text-xs font-medium">
                                 ${allowedOptions.map(option => `<option value="${option.value}" ${normalizedRes === option.value ? 'selected' : ''}>${option.label}</option>`).join('')}
                             </select>
                         </td>
-                        <td class="p-3">
+                        <td class="p-3 align-top">
                             <select onchange="app.changeProgramme(${idx}, this.value)" class="bg-emerald-50 text-emerald-900 border border-emerald-300 rounded p-1 text-xs font-semibold focus:ring-2 focus:ring-emerald-500">
                                 ${(() => {
                                     const programElem = document.getElementById('cand-program');
@@ -1986,7 +1998,7 @@
                                 })()}
                             </select>
                         </td>
-                        <td class="p-3 text-center no-print">
+                        <td class="p-3 text-center no-print align-top">
                             <div class="flex items-center justify-center gap-1.5">
                                 <div class="flex items-center space-x-0.5">
                                     <button onclick="app.swapChoicePositions(${idx}, ${idx - 1})" ${idx === 0 ? 'disabled class="p-1 text-slate-300 cursor-not-allowed"' : 'class="p-1 text-slate-600 hover:text-emerald-600 hover:bg-slate-100 rounded transition"'} title="Move Choice Up">
@@ -2031,6 +2043,7 @@
                         const normalizedRes = this.normalizeResidenceForSchool(item);
                         const typeBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.type === 'TVET' ? 'bg-amber-100 text-amber-800' : item.type === 'SHTS' ? 'bg-blue-100 text-blue-800' : item.type === 'STEM' ? 'bg-fuchsia-100 text-fuchsia-800' : 'bg-slate-200 text-slate-800'}">${item.type || 'SHS'}</span>`;
                         const catBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-extrabold ${item.category === 'A' ? 'bg-purple-100 text-purple-800' : item.category === 'B' ? 'bg-blue-100 text-blue-800' : 'bg-slate-200 text-slate-800'}">Cat ${item.category}</span>`;
+                        const resBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-sky-100 text-sky-800 border border-sky-200/80"><i class="fa-solid fa-bed text-[9px] text-sky-600 mr-1"></i>${normalizedRes}</span>`;
                         const resSelect = `<select onchange="app.changeResidence(${idx}, this.value)" class="ml-2 bg-white border border-slate-300 rounded p-1 text-xs font-medium">${allowedOptions.map(option => `<option value=\"${option.value}\" ${normalizedRes === option.value ? 'selected' : ''}>${option.label}</option>`).join('')}</select>`;
                         const progSelect = (() => {
                             const options = this.getProgrammeOptions(item);
@@ -2054,11 +2067,14 @@
                                 <div class="flex items-start justify-between gap-2 min-w-0">
                                     <div class="min-w-0 flex-1">
                                         <div class="font-bold text-slate-900 truncate">${idx + 1}. ${item.name}</div>
-                                        ${this.renderSchoolDescriptors(item)}
-                                        <div class="mt-2 flex items-center gap-2 flex-wrap">
-                                            ${typeBadge}
+                                        <div class="mt-1 mb-1">
                                             ${catBadge}
+                                        </div>
+                                        ${this.renderSchoolDescriptors(item, false)}
+                                        <div class="mt-2 flex items-center gap-1.5 flex-wrap">
                                             ${this.renderTechSubjectsButton(item)}
+                                            ${typeBadge}
+                                            ${resBadge}
                                         </div>
                                     </div>
                                 </div>
@@ -2077,6 +2093,10 @@
                                             <button onclick="app.swapChoicePositions(${idx}, ${idx + 1})" ${idx === this.selectedChoices.length - 1 ? 'disabled class="p-1 text-slate-300 cursor-not-allowed"' : 'class="p-1 text-slate-600 hover:text-emerald-600 hover:bg-slate-100 rounded transition"'} title="Move Choice Down">
                                                 <i class="fa-solid fa-arrow-down text-xs"></i>
                                             </button>
+                                            <select onchange="app.swapChoicePositions(${idx}, parseInt(this.value)); this.selectedIndex=0;" class="text-[10px] bg-slate-50 hover:bg-slate-100 border border-slate-300 rounded px-1.5 py-1 text-slate-700 font-semibold cursor-pointer transition shadow-xs" title="Swap Choice #${idx + 1} position with another choice">
+                                                <option value="" disabled selected>Swap...</option>
+                                                ${this.selectedChoices.map((otherItem, targetIdx) => targetIdx !== idx && otherItem ? `<option value="${targetIdx}">#${targetIdx + 1} (${otherItem.name.slice(0, 10)}...)</option>` : '').join('')}
+                                            </select>
                                             <button onclick="app.openSchoolModal(${idx})" class="ml-0.5 px-1.5 py-0.5 text-[10px] font-semibold text-slate-600 hover:text-emerald-600 hover:bg-slate-100 border border-slate-300 rounded transition inline-flex items-center gap-1 cursor-pointer" title="Change School">
                                                 <i class="fa-solid fa-arrows-rotate text-[9px]"></i> Change
                                             </button>
@@ -4723,23 +4743,35 @@
                     const desiredPrograms = programElem ? Array.from(programElem.querySelectorAll('input[type="checkbox"][data-filter-item]')).filter(input => input.checked).map(input => input.value) : [];
                     const options = this.getProgrammeOptions(item);
                     const selectedValue = this.getSelectedProgrammeValue(item, options, desiredPrograms);
-                    
+                    const normalizedRes = this.normalizeResidenceForSchool(item);
+                    const allowedOptions = this.getAllowedResidenceOptions(item);
+
+                    const typeBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold ${item.type === 'TVET' ? 'bg-amber-100 text-amber-800' : item.type === 'SHTS' ? 'bg-blue-100 text-blue-800' : item.type === 'STEM' ? 'bg-fuchsia-100 text-fuchsia-800' : 'bg-slate-200 text-slate-800'}">${item.type || 'SHS'}</span>`;
+                    const catBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-extrabold ${item.category === 'A' ? 'bg-purple-100 text-purple-800' : item.category === 'B' ? 'bg-blue-100 text-blue-800' : 'bg-slate-200 text-slate-800'}">Cat ${item.category}</span>`;
+                    const resBadge = `<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-sky-100 text-sky-800 border border-sky-200/80"><i class="fa-solid fa-bed text-[9px] text-sky-600 mr-1"></i>${normalizedRes}</span>`;
+
                     const rowHtml = `
-                        <td class="p-3 text-center font-bold text-slate-500">${idx + 1}</td>
-                        <td class="p-3 font-mono text-xs text-slate-700">${item.code || ''}</td>
-                        <td class="p-3">
+                        <td class="p-3 text-center font-bold text-slate-500 align-top">${idx + 1}</td>
+                        <td class="p-3 font-mono text-xs text-slate-700 align-top">${item.code || ''}</td>
+                        <td class="p-3 align-top">
                             <div class="font-bold text-slate-900">${item.name}</div>
-                            <div class="text-[10px] text-slate-500 flex items-center gap-1.5">${item.type || 'SHS'} ${this.renderTechSubjectsButton(item)}</div>
+                            <div class="mt-1 mb-1">
+                                ${catBadge}
+                            </div>
+                            ${this.renderSchoolDescriptors(item, false)}
+                            <div class="mt-2 flex items-center gap-1.5 flex-wrap">
+                                ${this.renderTechSubjectsButton(item)}
+                                ${typeBadge}
+                                ${resBadge}
+                            </div>
                         </td>
-                        <td class="p-3 text-slate-600">${item.region || 'Unknown'}</td>
-                        <td class="p-3 text-slate-600">${item.district || 'Unknown'}</td>
-                        <td class="p-3 text-slate-600">${item.location || 'Unknown'}</td>
-                        <td class="p-3">
-                            <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-slate-200 text-slate-800">
-                                Cat ${item.category}
-                            </span>
+                        <td class="p-3 text-slate-600 align-top">${item.region || 'Unknown'}</td>
+                        <td class="p-3 text-slate-600 align-top">${item.district || 'Unknown'}</td>
+                        <td class="p-3 text-slate-600 align-top">${item.location || 'Unknown'}</td>
+                        <td class="p-3 align-top">
+                            ${catBadge}
                         </td>
-                        <td class="p-3">
+                        <td class="p-3 align-top">
                             <select onchange="app.changeProgramme(${idx}, this.value)" class="bg-emerald-50 text-emerald-900 border border-emerald-300 rounded p-1 text-xs font-semibold focus:ring-2 focus:ring-emerald-500">
                                 ${!selectedValue ? '<option value="" selected disabled>Choose programme</option>' : ''}
                                 ${options.map(opt => `<option value="${opt.value}" ${selectedValue === opt.value ? 'selected' : ''}>${opt.label}</option>`).join('')}
@@ -4757,22 +4789,30 @@
                         const badge = document.createElement('div');
                         badge.className = "bg-white p-4 rounded-lg shadow-sm border border-slate-200 space-y-2 overflow-hidden max-w-full";
                         badge.innerHTML = `
-                            <div class="flex justify-between items-center gap-2 min-w-0">
-                                <span class="font-extrabold text-base text-slate-900 truncate flex-1">${idx + 1}. ${item.name}</span>
-                                <div class="flex items-center gap-1.5 shrink-0">
-                                    <span class="px-2 py-1 rounded text-[10px] font-extrabold bg-slate-200 text-slate-800">Cat ${item.category}</span>
-                                    ${this.renderTechSubjectsButton(item)}
-                                </div>
+                            <div class="font-extrabold text-base text-slate-900">${idx + 1}. ${item.name}</div>
+                            <div class="mt-1">
+                                ${catBadge}
                             </div>
-                            <div class="text-xs text-slate-800 font-mono truncate">Code: ${item.code || 'Unknown'}</div>
-                            <div class="text-xs text-slate-600 truncate">Region: ${item.region || 'Unknown'}</div>
-                            <div class="text-xs text-slate-600 truncate">District: ${item.district || 'Unknown'}</div>
-                            <div class="text-xs text-slate-600 truncate">Location: ${item.location || 'Unknown'}</div>
-                            <div class="pt-2 min-w-0">
-                                <select onchange="app.changeProgramme(${idx}, this.value)" class="w-full bg-emerald-50 text-emerald-900 border border-emerald-300 rounded p-2 text-xs font-semibold max-w-full truncate">
-                                    ${!selectedValue ? '<option value="" selected disabled>Choose programme</option>' : ''}
-                                    ${options.map(opt => `<option value="${opt.value}" ${selectedValue === opt.value ? 'selected' : ''}>${opt.label}</option>`).join('')}
-                                </select>
+                            ${this.renderSchoolDescriptors(item, false)}
+                            <div class="mt-2 flex items-center gap-1.5 flex-wrap">
+                                ${this.renderTechSubjectsButton(item)}
+                                ${typeBadge}
+                                ${resBadge}
+                            </div>
+                            <div class="pt-3 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-2 min-w-0">
+                                <div>
+                                    <label class="text-[10px] font-bold text-slate-500 uppercase block mb-0.5">Residence</label>
+                                    <select onchange="app.changeResidence(${idx}, this.value)" class="w-full bg-white border border-slate-300 rounded p-1.5 text-xs font-medium">
+                                        ${allowedOptions.map(option => `<option value="${option.value}" ${normalizedRes === option.value ? 'selected' : ''}>${option.label}</option>`).join('')}
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="text-[10px] font-bold text-slate-500 uppercase block mb-0.5">Programme</label>
+                                    <select onchange="app.changeProgramme(${idx}, this.value)" class="w-full bg-emerald-50 text-emerald-900 border border-emerald-300 rounded p-1.5 text-xs font-semibold max-w-full truncate">
+                                        ${!selectedValue ? '<option value="" selected disabled>Choose programme</option>' : ''}
+                                        ${options.map(opt => `<option value="${opt.value}" ${selectedValue === opt.value ? 'selected' : ''}>${opt.label}</option>`).join('')}
+                                    </select>
+                                </div>
                             </div>
                         `;
                         badgeContainer.appendChild(badge);
