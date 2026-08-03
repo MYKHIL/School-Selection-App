@@ -137,6 +137,14 @@ def sanitize_repo_name(name):
     return clean or "repo"
 
 
+def gh_repo_exists(repo_name):
+    if not GH_CMD:
+        return False
+    repo_ref = f"{USERNAME}/{repo_name}"
+    result = run_command(f'"{GH_CMD}" repo view "{repo_ref}"', check=False, capture_output=True)
+    return bool(result and getattr(result, "returncode", 1) == 0)
+
+
 def gh_create_repo(repo_name, description, private):
     visibility = "--private" if private else "--public"
     print(f"Creating GitHub repository {repo_name} using gh...")
@@ -144,7 +152,7 @@ def gh_create_repo(repo_name, description, private):
         return None
     quoted_name = f'"{repo_name}"'
     quoted_description = f'"{description or repo_name}"'
-    cmd = f'"{GH_CMD}" repo create {quoted_name} {visibility} --description {quoted_description} --source . --remote origin --push'
+    cmd = f'"{GH_CMD}" repo create {quoted_name} {visibility} --description {quoted_description}'
     return run_command(cmd, cwd=APP_ROOT, check=False)
 
 
@@ -165,8 +173,21 @@ def push_current_branch(cwd, repo_name):
     branch = current_branch(cwd)
     if not ensure_origin_remote(cwd, repo_name):
         return False
+
     result = run_command(f"git push -u origin {branch}", cwd=cwd, check=False)
-    return result and getattr(result, "returncode", 1) == 0
+    if result and getattr(result, "returncode", 1) == 0:
+        return True
+
+    output = (getattr(result, "stdout", "") or "") + (getattr(result, "stderr", "") or "")
+    if "repository" in output.lower() and "not found" in output.lower():
+        print("GitHub repository was not found. Creating it now...")
+        create_result = gh_create_repo(repo_name, DEFAULT_DESCRIPTION, DEFAULT_PRIVATE)
+        if not create_result or getattr(create_result, "returncode", 1) != 0:
+            return False
+        result = run_command(f"git push -u origin {branch}", cwd=cwd, check=False)
+        return result and getattr(result, "returncode", 1) == 0
+
+    return False
 
 
 def main():
@@ -219,7 +240,10 @@ def main():
             print("Failed to create the GitHub repository using gh.")
             sys.exit(1)
     else:
-        print("Remote already exists; skipping repository creation.")
+        if gh_repo_exists(repo_name):
+            print("Remote repository already exists; skipping creation.")
+        else:
+            print("Remote repository does not exist yet. Creating it before pushing.")
 
     if not push_current_branch(cwd, repo_name):
         print("Git push failed. Check remote configuration and try again.")
