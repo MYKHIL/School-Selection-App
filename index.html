@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BECE 2026 School Selection & Placement System</title>
+    <script>
+        (function () {
+            const pathName = window.location.pathname.replace(/\/index\.html$/i, '');
+            const normalizedBase = pathName.endsWith('/') ? pathName : `${pathName}/`;
+            const baseTag = document.createElement('base');
+            baseTag.href = normalizedBase || '/';
+            document.head.appendChild(baseTag);
+        })();
+    </script>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome CDN for Icons -->

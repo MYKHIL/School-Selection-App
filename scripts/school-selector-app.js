@@ -196,7 +196,9 @@
                     return assetPath;
                 }
                 try {
-                    return new URL(assetPath, window.location.href).toString();
+                    const baseUri = document.baseURI || window.location.href;
+                    const normalizedBase = baseUri.endsWith('/') ? baseUri : `${baseUri}/`;
+                    return new URL(assetPath, normalizedBase).toString();
                 } catch (err) {
                     console.warn('Unable to resolve asset URL', assetPath, err);
                     return assetPath;
