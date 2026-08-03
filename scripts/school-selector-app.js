@@ -1785,6 +1785,10 @@
             renderSelectedTable() {
                 const tbody = document.getElementById('selected-schools-tbody');
                 const printTbody = document.getElementById('print-schools-tbody');
+                const showSelectionsBtn = document.getElementById('show-selections-btn');
+                if (showSelectionsBtn) {
+                    showSelectionsBtn.classList.toggle('hidden', !this.selectedChoices.some(s => s));
+                }
                 if (!tbody || !printTbody) return;
                 tbody.innerHTML = '';
                 printTbody.innerHTML = '';
@@ -2036,7 +2040,16 @@
             }
 
             closeSchoolModal() {
-                document.getElementById('school-picker-modal').classList.add('hidden');
+                setTimeout(() => {
+                    if (confirm("Would you like to preview the selected school list?")) {
+                        document.getElementById('school-picker-modal').classList.add('hidden');
+                        if (window.setPairingsTabEnabled) window.setPairingsTabEnabled(true);
+                        if (window.setActiveTab) window.setActiveTab('pairings');
+                        if (window.setPage) window.setPage('results');
+                    } else {
+                        document.getElementById('school-picker-modal').classList.add('hidden');
+                    }
+                }, 100);
             }
 
             getSelectedFilterValues(selectId) {
@@ -2138,7 +2151,7 @@
                 const typeFilters = this.getSelectedFilterValues('modal-type-filter');
 
                 const filtered = this.schools.filter(s => {
-                    if (!s || !s.code || !String(s.code).trim() || !s.region || !String(s.region).trim()) return false;
+                    if (!s || !s.code || !/^\d+$/.test(String(s.code)) || !s.region || !String(s.region).trim()) return false;
                     const lowerCode = String(s.code).trim().toLowerCase();
                     const lowerRegion = String(s.region).trim().toLowerCase();
                     if (lowerCode === 'unknown' || lowerRegion === 'unknown') return false;
@@ -2169,7 +2182,13 @@
                         const programContainer = document.getElementById('cand-program');
                         const currentProg = programContainer ? this.canonicalizeProgrammeValue(Array.from(programContainer.querySelectorAll('input[type="checkbox"][data-filter-item]')).filter(input => input.checked).map(input => input.value)[0] || 'GEN. SCI') : 'GEN. SCI';
                         const currentRes = this.selectedChoices[this.activeModalRankIndex]?.res || "Boarding";
-                        this.selectedChoices[this.activeModalRankIndex] = { ...sch, prog: currentProg, res: currentRes };
+                        this.selectedChoices[this.activeModalRankIndex] = { 
+                            ...sch, 
+                            prog: currentProg, 
+                            res: currentRes,
+                            choice: this.activeModalRankIndex + 1,
+                            number: this.activeModalRankIndex + 1
+                        };
                         this.closeSchoolModal();
                         this.renderSelectedTable();
                     };
@@ -4071,6 +4090,13 @@
                 this.filterDatabaseViewer();
             }
 
+            clearSchoolChoice(schoolCode) {
+                this.selectedChoices = this.selectedChoices.map(s => (s && String(s.code) === String(schoolCode)) ? null : s);
+                this.renderSelectedTable();
+                this.filterModalList();
+                this.filterDatabaseViewer();
+            }
+
             filterDatabaseViewer() {
                 const search = (document.getElementById('db-viewer-search')?.value || '').toLowerCase().trim();
                 const region = document.getElementById('db-viewer-region')?.value || '';
@@ -4088,6 +4114,7 @@
                 }
 
                 let list = (this.schools || []).filter(s => {
+                    if (s.code && !/^\d+$/.test(String(s.code))) return false;
                     if (category && (s.category || '').toUpperCase() !== category) return false;
                     if (region && (s.region || '').toLowerCase() !== region.toLowerCase()) return false;
                     if (type && (s.type || 'SHS').toUpperCase() !== type.toUpperCase()) return false;
@@ -4135,7 +4162,7 @@
 
                 // Update counts & UI
                 const countBadge = document.getElementById('db-viewer-count');
-                if (countBadge) countBadge.textContent = `${this.schools ? this.schools.length : 0} Total in Database`;
+                if (countBadge) countBadge.textContent = `${totalItems} Total in Database`;
 
                 const summaryStats = document.getElementById('db-viewer-summary-stats');
                 if (summaryStats) {
@@ -4208,10 +4235,17 @@
                                 <td class="p-3 text-slate-700 font-medium">${s.status || s.res || 'Day/Boarding'}</td>
                                 <td class="p-3">${progBadges || '<span class="text-slate-400 font-italic">General</span>'}</td>
                                 <td class="p-3 text-center bg-amber-50/40 border-l border-slate-100">
-                                    <select onchange="app.assignSchoolToChoice('${s.code}', parseInt(this.value)); this.value='';" class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-lg px-2.5 py-1 text-[11px] shadow-sm transition focus:ring-2 focus:ring-emerald-500 cursor-pointer">
-                                        <option value="" selected disabled>+ Set Choice ▾</option>
-                                        ${choiceSelectOptions}
-                                    </select>
+                                    ${(() => {
+                                        const selectedIdx = (this.selectedChoices || []).findIndex(c => c && String(c.code) === String(s.code));
+                                        const selected = (this.selectedChoices || [])[selectedIdx];
+                                        const ordinals = ["", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"];
+                                        return selected 
+                                            ? `<button onclick="app.clearSchoolChoice('${s.code}')" class="bg-rose-600 hover:bg-rose-700 text-white font-extrabold rounded-lg px-2.5 py-1 text-[11px] shadow-sm transition cursor-pointer">Remove ${ordinals[selectedIdx + 1]} Choice</button>`
+                                            : `<select onchange="app.assignSchoolToChoice('${s.code}', parseInt(this.value)); this.value='';" class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-lg px-2.5 py-1 text-[11px] shadow-sm transition focus:ring-2 focus:ring-emerald-500 cursor-pointer">
+                                                <option value="" selected disabled>+ Set Choice ▾</option>
+                                                ${choiceSelectOptions}
+                                            </select>`;
+                                    })()}
                                 </td>
                             </tr>
                         `;
@@ -4257,10 +4291,17 @@
                                 ${progBadges ? `<div class="pt-1 border-t border-slate-100 flex flex-wrap">${progBadges}</div>` : ''}
 
                                 <div class="pt-1.5 flex items-center gap-2">
-                                    <select onchange="app.assignSchoolToChoice('${s.code}', parseInt(this.value)); this.value='';" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-lg px-3 py-1.5 text-xs shadow-sm transition focus:ring-2 focus:ring-emerald-500 cursor-pointer">
-                                        <option value="" selected disabled>+ Set as Choice (1–8) ▾</option>
-                                        ${choiceSelectOptions}
-                                    </select>
+                                    ${(() => {
+                                        const selectedIdx = (this.selectedChoices || []).findIndex(c => c && String(c.code) === String(s.code));
+                                        const selected = (this.selectedChoices || [])[selectedIdx];
+                                        const ordinals = ["", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th"];
+                                        return selected 
+                                            ? `<button onclick="app.clearSchoolChoice('${s.code}')" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-extrabold rounded-lg px-3 py-1.5 text-xs shadow-sm transition cursor-pointer">Remove ${ordinals[selectedIdx + 1]} Choice</button>`
+                                            : `<select onchange="app.assignSchoolToChoice('${s.code}', parseInt(this.value)); this.value='';" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-lg px-3 py-1.5 text-xs shadow-sm transition focus:ring-2 focus:ring-emerald-500 cursor-pointer">
+                                                <option value="" selected disabled>+ Set as Choice (1–8) ▾</option>
+                                                ${choiceSelectOptions}
+                                            </select>`;
+                                    })()}
                                 </div>
                             </div>
                         `;
@@ -4310,6 +4351,158 @@
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
+            }
+
+            closeSelectionsModal() {
+                document.getElementById('selections-modal').classList.add('hidden');
+            }
+
+            showSelections() {
+                const contentArea = document.getElementById('selections-content-area');
+                if (!contentArea) return;
+                
+                // Close database modal first
+                const dbModal = document.getElementById('db-viewer-modal');
+                if (dbModal) dbModal.classList.add('hidden');
+                
+                // Ensure table is up-to-date
+                this.renderSelectedTable();
+
+                // Compute counts for checklist
+                let catA = 0, catB = 0, boarding = 0, day = 0;
+                let uniqueCodes = new Set();
+                this.selectedChoices.forEach(item => {
+                    if (!item) return;
+                    if (item.category === "A") catA++;
+                    if (item.category === "B") catB++;
+                    if (item.res === "Boarding") boarding++;
+                    if (item.res === "Day") day++;
+                    uniqueCodes.add(String(item.code));
+                });
+                const catAValid = catA <= 2;
+                const catBValid = catB <= 3;
+                const resValid = boarding === 5 && day === 3;
+                const isUnique = uniqueCodes.size === this.selectedChoices.filter(s => s).length;
+                
+                const checklistHtml = `
+                    <div class="bg-slate-800 text-white p-4 rounded-lg text-xs space-y-2 mb-4">
+                        <div class="flex items-center justify-between">
+                            <span>1. Maximum 2 Category A Schools:</span>
+                            <span class="${catAValid ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold'}">${catAValid ? '✓ PASS (' + catA + '/2)' : '✗ EXCEEDED (' + catA + '/2)'}</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>2. Maximum 3 Category B Schools:</span>
+                            <span class="${catBValid ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold'}">${catBValid ? '✓ PASS (' + catB + '/3)' : '✗ EXCEEDED (' + catB + '/3)'}</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>3. Exactly 5 Boarding & 3 Day Choices:</span>
+                            <span class="${resValid ? 'text-emerald-400 font-bold' : 'text-amber-400 font-bold'}">${resValid ? '✓ PASS (5 B / 3 D)' : '⚠ ' + boarding + ' B / ' + day + ' D'}</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>4. No Repeated School Codes:</span>
+                            <span class="${isUnique ? 'text-emerald-400 font-bold' : 'text-rose-400 font-bold'}">${isUnique ? '✓ 8 UNIQUE SCHOOLS' : '✗ DUPLICATE DETECTED'}</span>
+                        </div>
+                    </div>
+                `;
+
+                contentArea.innerHTML = `
+                    ${checklistHtml}
+                    <div class="flex justify-end mb-4">
+                        <button onclick="app.validateAndPrint()" class="px-4 py-2 bg-amber-400 hover:bg-amber-500 text-slate-950 font-bold rounded-lg text-xs flex items-center gap-2">
+                            <i class="fa-solid fa-print"></i> Print Official Form
+                        </button>
+                    </div>
+                    
+                    <!-- Desktop Table -->
+                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hidden md:block">
+                        <div class="max-h-[50vh] overflow-y-auto">
+                            <table class="w-full text-left text-xs">
+                                <thead class="sticky top-0 z-10 bg-slate-100 border-b border-slate-200 text-slate-700 uppercase font-bold tracking-wider">
+                                    <tr>
+                                        <th class="p-3 text-center">Rank</th>
+                                        <th class="p-3">Code</th>
+                                        <th class="p-3">School Name</th>
+                                        <th class="p-3">Region</th>
+                                        <th class="p-3">District</th>
+                                        <th class="p-3">Location</th>
+                                        <th class="p-3">Cat</th>
+                                        <th class="p-3">Programme</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="modal-selected-schools-tbody" class="divide-y divide-slate-100"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Badges -->
+                    <div id="modal-selected-schools-badges" class="md:hidden space-y-3"></div>
+                `;
+
+                // Populate views
+                const tbody = document.getElementById('modal-selected-schools-tbody');
+                const badgeContainer = document.getElementById('modal-selected-schools-badges');
+                
+                this.selectedChoices.forEach((item, idx) => {
+                    if (!item) return;
+                    
+                    const programElem = document.getElementById('cand-program');
+                    const desiredPrograms = programElem ? Array.from(programElem.querySelectorAll('input[type="checkbox"][data-filter-item]')).filter(input => input.checked).map(input => input.value) : [];
+                    const options = this.getProgrammeOptions(item);
+                    const selectedValue = this.getSelectedProgrammeValue(item, options, desiredPrograms);
+                    
+                    const rowHtml = `
+                        <td class="p-3 text-center font-bold text-slate-500">${idx + 1}</td>
+                        <td class="p-3 font-mono text-xs text-slate-700">${item.code || ''}</td>
+                        <td class="p-3">
+                            <div class="font-bold text-slate-900">${item.name}</div>
+                            <div class="text-[10px] text-slate-500">${item.type || 'SHS'}</div>
+                        </td>
+                        <td class="p-3 text-slate-600">${item.region || 'Unknown'}</td>
+                        <td class="p-3 text-slate-600">${item.district || 'Unknown'}</td>
+                        <td class="p-3 text-slate-600">${item.location || 'Unknown'}</td>
+                        <td class="p-3">
+                            <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-slate-200 text-slate-800">
+                                Cat ${item.category}
+                            </span>
+                        </td>
+                        <td class="p-3">
+                            <select onchange="app.changeProgramme(${idx}, this.value)" class="bg-emerald-50 text-emerald-900 border border-emerald-300 rounded p-1 text-xs font-semibold focus:ring-2 focus:ring-emerald-500">
+                                ${!selectedValue ? '<option value="" selected disabled>Choose programme</option>' : ''}
+                                ${options.map(opt => `<option value="${opt.value}" ${selectedValue === opt.value ? 'selected' : ''}>${opt.label}</option>`).join('')}
+                            </select>
+                        </td>
+                    `;
+
+                    if (tbody) {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = rowHtml;
+                        tbody.appendChild(tr);
+                    }
+                    
+                    if (badgeContainer) {
+                        const badge = document.createElement('div');
+                        badge.className = "bg-white p-4 rounded-lg shadow-sm border border-slate-200 space-y-2";
+                        badge.innerHTML = `
+                            <div class="flex justify-between items-center">
+                                <span class="font-extrabold text-lg text-slate-900">${idx + 1}. ${item.name}</span>
+                                <span class="px-2 py-1 rounded text-[10px] font-extrabold bg-slate-200 text-slate-800">Cat ${item.category}</span>
+                            </div>
+                            <div class="text-xs text-slate-800 font-mono">Code: ${item.code || 'Unknown'}</div>
+                            <div class="text-xs text-slate-600">Region: ${item.region || 'Unknown'}</div>
+                            <div class="text-xs text-slate-600">District: ${item.district || 'Unknown'}</div>
+                            <div class="text-xs text-slate-600">Location: ${item.location || 'Unknown'}</div>
+                            <div class="pt-2">
+                                <select onchange="app.changeProgramme(${idx}, this.value)" class="w-full bg-emerald-50 text-emerald-900 border border-emerald-300 rounded p-2 text-xs font-semibold">
+                                    ${!selectedValue ? '<option value="" selected disabled>Choose programme</option>' : ''}
+                                    ${options.map(opt => `<option value="${opt.value}" ${selectedValue === opt.value ? 'selected' : ''}>${opt.label}</option>`).join('')}
+                                </select>
+                            </div>
+                        `;
+                        badgeContainer.appendChild(badge);
+                    }
+                });
+                
+                document.getElementById('selections-modal').classList.remove('hidden');
             }
         }
 

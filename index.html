@@ -75,13 +75,13 @@
                 </div>
             </div>
             <div class="flex items-center space-x-2 mt-2 sm:mt-0 text-xs flex-wrap">
-                <button type="button" id="view-all-schools-btn" onclick="app && app.openDatabaseViewerModal()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold px-3.5 py-1.5 rounded-full border border-amber-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                <button type="button" id="view-all-schools-btn" onclick="app && app.openDatabaseViewerModal()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold px-2 sm:px-3.5 py-1 sm:py-1.5 text-[10px] sm:text-xs rounded-full border border-amber-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
                     <i class="fa-solid fa-database text-indigo-900"></i> View All Schools
                 </button>
-                <span class="bg-emerald-700/60 text-emerald-100 px-3 py-1.5 rounded-full border border-emerald-500/30 flex items-center gap-1.5">
+                <span class="bg-emerald-700/60 text-emerald-100 px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs rounded-full border border-emerald-500/30 hidden sm:flex items-center gap-1.5 whitespace-nowrap">
                     <i class="fa-solid fa-shield-halved text-amber-300"></i> Strict GES Rules Engine
                 </span>
-                <span id="dataset-status-badge" class="bg-indigo-700/60 text-indigo-100 px-3 py-1.5 rounded-full border border-indigo-500/30 flex items-center gap-2">
+                <span id="dataset-status-badge" class="bg-indigo-700/60 text-indigo-100 px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs rounded-full border border-indigo-500/30 hidden sm:flex items-center gap-2 whitespace-nowrap">
                     <i class="fa-solid fa-database text-teal-300"></i> <span id="badge-count-text">Preloaded Register</span>
                 </span>
                 <label class="text-xs text-slate-200 ml-2 hidden">Data Source</label>
@@ -103,10 +103,10 @@
             <div class="flex items-center gap-2">
                 <nav class="inline-flex rounded-full bg-slate-100 p-1" role="tablist" aria-label="Main tabs">
                     <button id="tab-candidate" role="tab" aria-selected="true" class="text-xs px-4 py-2 rounded-full font-semibold bg-white text-slate-900">Candidate Details & Data</button>
-                    <button id="tab-pairings" role="tab" aria-selected="false" aria-disabled="true" class="text-xs px-4 py-2 rounded-full font-semibold text-slate-700 opacity-50 cursor-not-allowed">School Pairings</button>
+                    <button id="tab-pairings" role="tab" aria-selected="false" aria-disabled="true" class="text-xs px-4 py-2 rounded-full font-semibold text-slate-700 opacity-50 pointer-events-auto">School Pairings</button>
                     <button id="tab-uploads" role="tab" aria-selected="false" class="text-xs px-4 py-2 rounded-full font-semibold text-slate-700 hover:bg-slate-50">Custom Uploads</button>
                 </nav>
-                <div id="tab-warning" class="hidden mt-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-900"></div>
+                <!-- Tab warning placeholder removed -->
             </div>
         </div>
 
@@ -410,6 +410,21 @@
         </div>
     </div>
 
+    <!-- Modal: Selections Preview -->
+    <div id="selections-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-5">
+        <div class="bg-white rounded-2xl shadow-xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col">
+            <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+                <h2 class="font-bold text-slate-900">Official Candidate Form</h2>
+                <button type="button" onclick="app.closeSelectionsModal()" class="text-slate-400 hover:text-slate-900 p-1">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div class="p-4 overflow-y-auto">
+                 <div id="selections-content-area" class="space-y-4"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal: Database Viewer (All Schools) -->
     <div id="db-viewer-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-5">
         <div class="bg-white rounded-2xl shadow-2xl max-w-6xl w-full max-h-[92vh] flex flex-col overflow-hidden relative">
@@ -428,8 +443,8 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-2">
-                    <button type="button" onclick="app.exportDatabaseAsCSV()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-emerald-300 rounded-lg text-xs font-semibold border border-slate-700 transition flex items-center gap-1.5 cursor-pointer">
-                        <i class="fa-solid fa-file-csv"></i> Export CSV
+                    <button id="show-selections-btn" type="button" onclick="app.showSelections()" class="hidden px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-semibold shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-solid fa-list-check"></i> Show Selections
                     </button>
                     <button type="button" onclick="app.closeDatabaseViewerModal()" class="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-slate-800 transition cursor-pointer">
                         <i class="fa-solid fa-xmark text-xl"></i>
@@ -806,13 +821,18 @@
         }
 
         function showTabWarning(message) {
-            const warning = document.getElementById('tab-warning');
-            if (!warning) return;
-            warning.textContent = message;
-            warning.classList.remove('hidden');
-            clearTimeout(window._tabWarningTimeout);
-            window._tabWarningTimeout = setTimeout(() => {
-                warning.classList.add('hidden');
+            console.log('showTabWarning called with:', message);
+            if (window._currentToast) window._currentToast.remove();
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-5 right-5 z-[9999] bg-amber-50 border border-amber-200 text-amber-900 px-4 py-3 rounded-xl shadow-lg text-xs';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            window._currentToast = toast;
+            setTimeout(() => {
+                if (window._currentToast === toast) {
+                    toast.remove();
+                    window._currentToast = null;
+                }
             }, 5000);
         }
 
@@ -855,35 +875,38 @@
             setPage('upload');
         }
 
+        function setActiveTab(key) {
+            const tabs = ['candidate','pairings','uploads'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if (!btn) return;
+                if (t === key) {
+                    btn.classList.remove('text-slate-700');
+                    btn.classList.add('bg-white','text-slate-900');
+                    btn.setAttribute('aria-selected','true');
+                } else {
+                    btn.classList.remove('bg-white','text-slate-900');
+                    btn.classList.add('text-slate-700');
+                    btn.setAttribute('aria-selected','false');
+                }
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
                 // Tab handling: switch pages when tabs are clicked
-                function setActiveTab(key) {
-                    const tabs = ['candidate','pairings','uploads'];
-                    tabs.forEach(t => {
-                        const btn = document.getElementById(`tab-${t}`);
-                        if (!btn) return;
-                        if (t === key) {
-                            btn.classList.remove('text-slate-700');
-                            btn.classList.add('bg-white','text-slate-900');
-                            btn.setAttribute('aria-selected','true');
-                        } else {
-                            btn.classList.remove('bg-white','text-slate-900');
-                            btn.classList.add('text-slate-700');
-                            btn.setAttribute('aria-selected','false');
-                        }
-                    });
-                }
 
                 if (typeof setPairingsTabEnabled === 'function') {
                     setPairingsTabEnabled(false);
                 }
 
                 document.getElementById('tab-candidate')?.addEventListener('click', () => { setActiveTab('candidate'); setPage('profile'); });
-                document.getElementById('tab-pairings')?.addEventListener('click', (event) => {
+                document.getElementById('tab-pairings')?.addEventListener('mousedown', (event) => {
+                    console.log('Tab pairings mousedown', event.currentTarget);
                     const pairingsButton = event.currentTarget;
                     const disabled = pairingsButton.getAttribute('aria-disabled') === 'true';
                     if (disabled) {
                         const missing = getCandidateFormMissingItems();
+                        console.log('Missing items:', missing);
                         if (missing.length) {
                             showTabWarning(`Complete ${missing.join(' and ')} before viewing School Pairings.`);
                         } else {

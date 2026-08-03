@@ -8,6 +8,7 @@ that server directly and keeps the behavior specific to this workspace.
 import os
 import argparse
 import shutil
+import socket
 import subprocess
 import sys
 import time
@@ -31,15 +32,31 @@ def ensure_app_files():
         )
 
 
+def get_available_port(start_port):
+    port = start_port
+    while True:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            try:
+                sock.bind(("0.0.0.0", port))
+                return port
+            except OSError:
+                port += 1
+
+
 def run_node_server(port):
     ensure_app_files()
 
     if not shutil.which("node"):
         raise RuntimeError("Node.js is required to run this app. Install Node.js and try again.")
 
-    print(f"Starting the BECE 2026 School Selection app at http://localhost:{port}")
+    actual_port = get_available_port(port)
+    if actual_port != port:
+        print(f"Port {port} is busy; using {actual_port} instead.")
+
+    print(f"Starting the BECE 2026 School Selection app at http://localhost:{actual_port}")
     env = os.environ.copy()
-    env["PORT"] = str(port)
+    env["PORT"] = str(actual_port)
 
     process = subprocess.Popen(
         ["node", "server.js"],
@@ -51,7 +68,7 @@ def run_node_server(port):
     )
 
     time.sleep(1.0)
-    url = f"http://localhost:{port}/"
+    url = f"http://localhost:{actual_port}/"
     try:
         webbrowser.open(url, new=2)
     except Exception:
