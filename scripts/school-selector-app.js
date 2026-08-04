@@ -481,10 +481,12 @@
 
             updateModalFilterButtonBadges() {
                 const buttonIds = ['modal-cat-filter', 'modal-res-filter', 'modal-region-filter', 'modal-district-filter', 'modal-programme-filter', 'modal-gender-filter', 'modal-type-filter'];
+                let totalSelected = 0;
                 buttonIds.forEach(id => {
                     const badge = document.getElementById(`${id}-badge`);
                     if (!badge) return;
                     const selected = this.getSelectedFilterValues(id);
+                    totalSelected += selected.length;
                     if (selected.length === 0) {
                         badge.textContent = 'All';
                     } else if (selected.length === 1) {
@@ -493,6 +495,63 @@
                         badge.textContent = `${selected.length} selected`;
                     }
                 });
+
+                const activeBadge = document.getElementById('picker-modal-active-badge');
+                const clearBtn = document.getElementById('picker-modal-clear-filters-btn');
+                const hasActive = totalSelected > 0;
+                if (activeBadge) {
+                    if (hasActive) activeBadge.classList.remove('hidden');
+                    else activeBadge.classList.add('hidden');
+                }
+                if (clearBtn) {
+                    if (hasActive) clearBtn.classList.remove('hidden');
+                    else clearBtn.classList.add('hidden');
+                }
+            }
+
+            clearAllModalFilters() {
+                this.modalFilterSelections = {};
+                const buttonIds = ['modal-cat-filter', 'modal-res-filter', 'modal-region-filter', 'modal-district-filter', 'modal-programme-filter', 'modal-gender-filter', 'modal-type-filter'];
+                buttonIds.forEach(id => {
+                    const container = document.getElementById(id);
+                    if (container) {
+                        const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+                        checkboxes.forEach(cb => { cb.checked = false; });
+                    }
+                });
+                const selectAllIds = ['modal-cat-select-all', 'modal-res-select-all', 'modal-region-select-all', 'modal-district-select-all', 'modal-programme-select-all', 'modal-gender-select-all', 'modal-type-select-all'];
+                selectAllIds.forEach(id => {
+                    const cb = document.getElementById(id);
+                    if (cb) cb.checked = false;
+                });
+
+                this.saveModalFilterSelections();
+                this.filterModalList();
+            }
+
+            handleModalSearchInput() {
+                const input = document.getElementById('modal-search');
+                const clearBtn = document.getElementById('modal-search-clear');
+                if (input && clearBtn) {
+                    if (input.value.trim().length > 0) {
+                        clearBtn.classList.remove('hidden');
+                    } else {
+                        clearBtn.classList.add('hidden');
+                    }
+                }
+                this.filterModalListDebounced();
+            }
+
+            clearModalSearch() {
+                const input = document.getElementById('modal-search');
+                const clearBtn = document.getElementById('modal-search-clear');
+                if (input) {
+                    input.value = '';
+                }
+                if (clearBtn) {
+                    clearBtn.classList.add('hidden');
+                }
+                this.filterModalList();
             }
 
             normalizeText(value) {
@@ -768,11 +827,22 @@
 
             setupFilterOutsideClickListeners() {
                 document.addEventListener('click', (event) => {
+                    const path = event.composedPath ? event.composedPath() : [];
+
                     // 1. Db Viewer Filter container outside click
                     const dbContainer = document.getElementById('db-viewer-filter-container');
                     const dbBody = document.getElementById('db-viewer-filter-body');
+                    const dbPopover = document.getElementById('db-viewer-filter-popover');
+                    const isDbPopoverVisible = dbPopover && !dbPopover.classList.contains('hidden');
+                    const isInsideDbContainer = dbContainer && dbContainer.contains(event.target);
+                    const isInsideDbPopover = dbPopover && (
+                        dbPopover.contains(event.target) ||
+                        (event.target && event.target.closest && event.target.closest('#db-viewer-filter-popover')) ||
+                        path.some(el => el && el.id === 'db-viewer-filter-popover')
+                    );
+
                     if (dbContainer && dbBody && !dbBody.classList.contains('hidden')) {
-                        if (!dbContainer.contains(event.target)) {
+                        if (!isInsideDbContainer && !isDbPopoverVisible && !isInsideDbPopover) {
                             this.collapseDbViewerFilterSection();
                         }
                     }
@@ -782,8 +852,15 @@
                     const pickerBody = document.getElementById('picker-modal-filter-body');
                     const popover = document.getElementById('modal-filter-popover');
                     const isPopoverVisible = popover && !popover.classList.contains('hidden');
+                    const isInsidePickerContainer = pickerContainer && pickerContainer.contains(event.target);
+                    const isInsidePopover = popover && (
+                        popover.contains(event.target) ||
+                        (event.target && event.target.closest && event.target.closest('#modal-filter-popover')) ||
+                        path.some(el => el && el.id === 'modal-filter-popover')
+                    );
+
                     if (pickerContainer && pickerBody && !pickerBody.classList.contains('hidden')) {
-                        if (!pickerContainer.contains(event.target) && (!isPopoverVisible || !popover.contains(event.target))) {
+                        if (!isInsidePickerContainer && !isPopoverVisible && !isInsidePopover) {
                             this.collapsePickerModalFilterSection();
                         }
                     }
@@ -1017,6 +1094,9 @@
             }
 
             getSchoolProgramNames(school) {
+                if (!school) return [];
+                if (school._cachedProgramNames) return school._cachedProgramNames;
+
                 const details = Array.isArray(school && school.programNames) ? school.programNames : [];
                 const broad = Array.isArray(school && school.progs) ? school.progs : [];
                 const names = [];
@@ -1024,13 +1104,19 @@
                     const text = String(value || '').trim();
                     if (text && !names.includes(text)) names.push(text);
                 }
-                if (names.length) return names;
+                if (names.length) {
+                    school._cachedProgramNames = names;
+                    return names;
+                }
 
                 const definitions = this.programmeDefinitions && this.programmeDefinitions.programmes ? this.programmeDefinitions.programmes : [];
-                return [...new Set((school && school.progs || []).map(value => {
+                const result = [...new Set((school && school.progs || []).map(value => {
                     const definition = definitions.find(item => item.canonical === value);
                     return definition ? definition.display : value;
                 }).filter(Boolean))];
+
+                school._cachedProgramNames = result;
+                return result;
             }
 
             canonicalizeProgrammeValue(value) {
@@ -1266,17 +1352,36 @@
 
             schoolMatchesSelectedProgram(school, selectedPrograms) {
                 if (!selectedPrograms || selectedPrograms.length === 0) return true;
+                if (!school._cachedNamesSet) {
+                    school._cachedNamesSet = new Set(this.getSchoolProgramNames(school).map(value => value.toUpperCase()));
+                }
+                const names = school._cachedNamesSet;
                 const hasRetrievedNames = Array.isArray(school.programNames) && school.programNames.length > 0;
-                const names = new Set(this.getSchoolProgramNames(school).map(value => value.toUpperCase()));
-                const canonicalPrograms = new Set((school.progs || []).map(value => String(value).toUpperCase()));
+                
+                if (!school._cachedCanonicalSet) {
+                    school._cachedCanonicalSet = new Set((school.progs || []).map(value => String(value).toUpperCase()));
+                }
+                const canonicalPrograms = school._cachedCanonicalSet;
+
+                if (!this._definitionCanonicalMap && this.programmeDefinitions) {
+                    const defs = [
+                        ...(this.programmeDefinitions.programmes || []),
+                        ...(this.programmeDefinitions.expandedPrograms || [])
+                    ];
+                    const map = new Map();
+                    defs.forEach(item => {
+                        if (item && item.canonical) {
+                            map.set(String(item.canonical).toUpperCase(), String(item.display || '').toUpperCase());
+                        }
+                    });
+                    this._definitionCanonicalMap = map;
+                }
+
                 return selectedPrograms.some(program => {
                     const selected = String(program).trim().toUpperCase();
                     if (names.has(selected)) return true;
-                    const definition = this.programmeDefinitions && [
-                        ...(this.programmeDefinitions.programmes || []),
-                        ...(this.programmeDefinitions.expandedPrograms || [])
-                    ].find(item => String(item.canonical).toUpperCase() === selected);
-                    if (definition && names.has(String(definition.display).toUpperCase())) return true;
+                    const defDisplay = this._definitionCanonicalMap ? this._definitionCanonicalMap.get(selected) : null;
+                    if (defDisplay && names.has(defDisplay)) return true;
                     return !hasRetrievedNames && canonicalPrograms.has(String(this.canonicalizeProgrammeValue(program)).toUpperCase());
                 });
             }
@@ -2464,7 +2569,7 @@
                 }).join('');
             }
 
-            populateModalFilterOptions() {
+            populateModalFilterOptions(forceRebuild = false) {
                 const catSelect = document.getElementById('modal-cat-filter');
                 const resSelect = document.getElementById('modal-res-filter');
                 const regionSelect = document.getElementById('modal-region-filter');
@@ -2474,6 +2579,9 @@
                 const typeSelect = document.getElementById('modal-type-filter');
 
                 if (!catSelect || !resSelect || !regionSelect || !districtSelect || !programmeSelect || !genderSelect || !typeSelect) return;
+
+                // Avoid re-populating if already rendered and not forced
+                if (!forceRebuild && catSelect.children.length > 0) return;
 
                 const useSavedSelections = Boolean(this.modalFilterSelections && Object.keys(this.modalFilterSelections).length);
                 const previousCategories = useSavedSelections ? (this.modalFilterSelections['modal-cat-filter'] || []) : this.getSelectedFilterValues('modal-cat-filter');
@@ -2520,9 +2628,10 @@
 
             filterModalList() {
                 this.saveModalFilterSelections();
-                this.populateModalFilterOptions();
+                this.populateModalFilterOptions(false);
 
-                const search = document.getElementById('modal-search').value.toLowerCase();
+                const searchInput = document.getElementById('modal-search');
+                const search = (searchInput ? searchInput.value : '').toLowerCase().trim();
                 ['modal-cat-filter', 'modal-res-filter', 'modal-region-filter', 'modal-district-filter', 'modal-programme-filter', 'modal-gender-filter', 'modal-type-filter']
                     .forEach(id => this.updateModalSelectAllCheckbox(id, `modal-${id.split('-')[1]}-select-all`));
 
@@ -2536,13 +2645,17 @@
                 const genderFilters = this.getSelectedFilterValues('modal-gender-filter');
                 const typeFilters = this.getSelectedFilterValues('modal-type-filter');
 
-                const filtered = this.schools.filter(s => {
+                this.modalFilteredSchools = (this.schools || []).filter(s => {
                     if (!s || !s.code || !/^\d+$/.test(String(s.code)) || !s.region || !String(s.region).trim()) return false;
                     const lowerCode = String(s.code).trim().toLowerCase();
                     const lowerRegion = String(s.region).trim().toLowerCase();
                     if (lowerCode === 'unknown' || lowerRegion === 'unknown') return false;
-                    const searchText = `${s.name || ''} ${s.code || ''} ${s.location || ''} ${s.district || ''} ${s.region || ''} ${s.type || ''}`.toLowerCase();
-                    const matchSearch = searchText.includes(search);
+
+                    if (!s._searchText) {
+                        s._searchText = `${s.name || ''} ${s.code || ''} ${s.location || ''} ${s.district || ''} ${s.region || ''} ${s.type || ''}`.toLowerCase();
+                    }
+
+                    const matchSearch = !search || s._searchText.includes(search);
                     const matchCat = catFilters.length === 0 || catFilters.includes(s.category);
                     const matchRes = resFilters.length === 0 || resFilters.some(filter => (s.status || '').toLowerCase().includes(filter.toLowerCase()));
                     const matchRegion = regionFilters.length === 0 || regionFilters.includes(s.region);
@@ -2553,17 +2666,35 @@
                     return matchSearch && matchCat && matchRes && matchRegion && matchDistrict && matchProgramme && matchType && matchGender;
                 });
 
+                this.modalRenderLimit = 40;
+                this.renderModalSchoolList(false);
+            }
+
+            renderModalSchoolList(append = false) {
                 const listContainer = document.getElementById('modal-school-list');
-                listContainer.innerHTML = '';
+                if (!listContainer) return;
+
+                const filtered = this.modalFilteredSchools || [];
+                if (!append) {
+                    listContainer.innerHTML = '';
+                    listContainer.scrollTop = 0;
+                } else {
+                    const oldShowMore = document.getElementById('modal-show-more-btn');
+                    if (oldShowMore) oldShowMore.remove();
+                }
 
                 if (filtered.length === 0) {
                     listContainer.innerHTML = `<div class="p-4 text-center text-slate-400">No matching schools found. Try adjusting search filters.</div>`;
                     return;
                 }
 
-                filtered.forEach(sch => {
+                const currentCount = listContainer.querySelectorAll('.school-picker-item').length;
+                const itemsToRender = filtered.slice(currentCount, currentCount + (this.modalRenderLimit || 40));
+
+                const fragment = document.createDocumentFragment();
+                itemsToRender.forEach(sch => {
                     const div = document.createElement('div');
-                    div.className = "p-3 bg-slate-50 hover:bg-emerald-50 border border-slate-200 hover:border-emerald-400 rounded-xl flex items-center justify-between cursor-pointer transition";
+                    div.className = "school-picker-item p-3 bg-slate-50 hover:bg-emerald-50 border border-slate-200 hover:border-emerald-400 rounded-xl flex items-center justify-between cursor-pointer transition mb-2";
                     div.onclick = () => {
                         const programContainer = document.getElementById('cand-program');
                         const currentProg = programContainer ? this.canonicalizeProgrammeValue(Array.from(programContainer.querySelectorAll('input[type="checkbox"][data-filter-item]')).filter(input => input.checked).map(input => input.value)[0] || 'GEN. SCI') : 'GEN. SCI';
@@ -2604,8 +2735,24 @@
                             <span class="px-2 py-1 bg-slate-200 text-slate-800 rounded font-bold text-xs">Cat ${sch.category}</span>
                         </div>
                     `;
-                    listContainer.appendChild(div);
+                    fragment.appendChild(div);
                 });
+
+                listContainer.appendChild(fragment);
+
+                const newTotalRendered = listContainer.querySelectorAll('.school-picker-item').length;
+                if (newTotalRendered < filtered.length) {
+                    const remaining = filtered.length - newTotalRendered;
+                    const btnDiv = document.createElement('div');
+                    btnDiv.id = 'modal-show-more-btn';
+                    btnDiv.className = 'py-3 text-center';
+                    btnDiv.innerHTML = `
+                        <button type="button" onclick="app.renderModalSchoolList(true)" class="px-5 py-2 bg-slate-100 hover:bg-emerald-50 text-emerald-800 font-bold text-xs rounded-xl border border-emerald-300 shadow-sm transition cursor-pointer">
+                            Load More Schools (${remaining} remaining)
+                        </button>
+                    `;
+                    listContainer.appendChild(btnDiv);
+                }
             }
 
             toggleGradesModal() {
@@ -4403,22 +4550,8 @@
             }
 
             resetDatabaseViewerFilters() {
-                const searchInput = document.getElementById('db-viewer-search');
-                const regionSelect = document.getElementById('db-viewer-region');
-                const catSelect = document.getElementById('db-viewer-category');
-                const typeSelect = document.getElementById('db-viewer-type');
-                const resSelect = document.getElementById('db-viewer-residence');
-                const genderSelect = document.getElementById('db-viewer-gender');
-                const progSelect = document.getElementById('db-viewer-prog');
-
-                if (searchInput) searchInput.value = '';
-                if (regionSelect) regionSelect.value = '';
-                if (catSelect) catSelect.value = '';
-                if (typeSelect) typeSelect.value = '';
-                if (resSelect) resSelect.value = '';
-                if (genderSelect) genderSelect.value = '';
-                if (progSelect) progSelect.value = '';
-
+                this.clearDbViewerSearch();
+                this.clearAllDbViewerFilters();
                 this.dbViewerPage = 1;
                 this.filterDatabaseViewer();
             }
@@ -4506,6 +4639,64 @@
                 this.filterDatabaseViewer();
             }
 
+            clearAllDbViewerFilters() {
+                const filterContainerIds = [
+                    'db-viewer-region-filter',
+                    'db-viewer-category-filter',
+                    'db-viewer-type-filter',
+                    'db-viewer-residence-filter',
+                    'db-viewer-gender-filter',
+                    'db-viewer-programme-filter'
+                ];
+                filterContainerIds.forEach(id => {
+                    const container = document.getElementById(id);
+                    if (container) {
+                        const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+                        checkboxes.forEach(cb => { cb.checked = false; });
+                    }
+                });
+                const selectAllIds = [
+                    'db-viewer-region-select-all',
+                    'db-viewer-category-select-all',
+                    'db-viewer-type-select-all',
+                    'db-viewer-residence-select-all',
+                    'db-viewer-gender-select-all',
+                    'db-viewer-programme-select-all'
+                ];
+                selectAllIds.forEach(id => {
+                    const cb = document.getElementById(id);
+                    if (cb) cb.checked = false;
+                });
+
+                this.updateDbViewerFilterButtonBadges();
+                this.filterDatabaseViewer();
+            }
+
+            handleDbViewerSearchInput() {
+                const input = document.getElementById('db-viewer-search');
+                const clearBtn = document.getElementById('db-viewer-search-clear');
+                if (input && clearBtn) {
+                    if (input.value.trim().length > 0) {
+                        clearBtn.classList.remove('hidden');
+                    } else {
+                        clearBtn.classList.add('hidden');
+                    }
+                }
+                this.filterDatabaseViewer();
+            }
+
+            clearDbViewerSearch() {
+                const input = document.getElementById('db-viewer-search');
+                const clearBtn = document.getElementById('db-viewer-search-clear');
+                if (input) {
+                    input.value = '';
+                }
+                if (clearBtn) {
+                    clearBtn.classList.add('hidden');
+                }
+                this.filterDatabaseViewer();
+            }
+
             filterDatabaseViewer() {
                 const search = (document.getElementById('db-viewer-search')?.value || '').toLowerCase().trim();
                 const regions = this.getSelectedFilterValues('db-viewer-region-filter');
@@ -4516,10 +4707,15 @@
                 const progs = this.getSelectedFilterValues('db-viewer-programme-filter');
 
                 const activeBadge = document.getElementById('db-viewer-active-badge');
+                const clearBtn = document.getElementById('db-viewer-clear-filters-btn');
+                const hasActive = Boolean(regions.length > 0 || categories.length > 0 || types.length > 0 || residences.length > 0 || genders.length > 0 || progs.length > 0);
                 if (activeBadge) {
-                    const hasActive = Boolean(regions.length > 0 || categories.length > 0 || types.length > 0 || residences.length > 0 || genders.length > 0 || progs.length > 0);
                     if (hasActive) activeBadge.classList.remove('hidden');
                     else activeBadge.classList.add('hidden');
+                }
+                if (clearBtn) {
+                    if (hasActive) clearBtn.classList.remove('hidden');
+                    else clearBtn.classList.add('hidden');
                 }
 
                 this.updateDbViewerFilterButtonBadges();

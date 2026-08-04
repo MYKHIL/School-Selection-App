@@ -1,6 +1,8 @@
 {
-  "name": "Ghana Senior High School Register & Choice Selector",
-  "description": "Comprehensive 2026 Ghana Education Service school register and placement choice selector",
+  "name": "School-Selection-App3",
+  "description": "Imported from GitHub: MYKHIL/School-Selection-App",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

@@ -155,12 +155,19 @@
                     <div class="flex items-center gap-2">
                         <div class="flex-1 relative">
                             <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400"></i>
-                            <input type="text" id="modal-search" placeholder="Search school name/code/district/location..." oninput="app.filterModalListDebounced()" class="w-full bg-white border border-slate-300 rounded-lg pl-9 pr-3 py-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            <input type="text" id="modal-search" placeholder="Search school name/code/district/location..." oninput="app.handleModalSearchInput()" class="w-full bg-white border border-slate-300 rounded-lg pl-9 pr-8 py-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            <button type="button" id="modal-search-clear" onclick="app.clearModalSearch()" title="Clear search" class="hidden absolute right-2.5 top-2 text-slate-400 hover:text-slate-600 p-0.5 cursor-pointer">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
                         </div>
                         <button type="button" id="picker-modal-filter-toggle-btn" onclick="app.togglePickerModalFilterSection(event)" class="px-3.5 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 font-semibold rounded-lg flex items-center gap-2 shadow-sm transition cursor-pointer shrink-0">
                             <i class="fa-solid fa-sliders text-emerald-600"></i>
                             <span class="hidden xs:inline">Filters</span>
+                            <span id="picker-modal-active-badge" class="hidden px-1.5 py-0.5 rounded-full text-[10px] bg-emerald-100 text-emerald-800 font-bold">Active</span>
                             <i id="picker-modal-filter-chevron" class="fa-solid fa-chevron-down text-[10px] text-slate-400 transition-transform duration-200"></i>
+                        </button>
+                        <button type="button" id="picker-modal-clear-filters-btn" onclick="app.clearAllModalFilters()" title="Clear all filters" class="hidden px-2.5 py-2 bg-rose-50 border border-rose-200 hover:bg-rose-100 text-rose-600 font-semibold rounded-lg flex items-center justify-center gap-1.5 shadow-sm transition cursor-pointer shrink-0">
+                            <i class="fa-solid fa-filter-circle-xmark text-sm"></i>
                         </button>
                     </div>
 
@@ -496,7 +503,10 @@
                     <!-- Search Input -->
                     <div class="flex-1 relative">
                         <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400"></i>
-                        <input type="text" id="db-viewer-search" placeholder="Search name, code, district, location..." oninput="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg pl-9 pr-3 py-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        <input type="text" id="db-viewer-search" placeholder="Search name, code, district, location..." oninput="app.handleDbViewerSearchInput()" class="w-full bg-white border border-slate-300 rounded-lg pl-9 pr-8 py-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        <button type="button" id="db-viewer-search-clear" onclick="app.clearDbViewerSearch()" title="Clear search" class="hidden absolute right-2.5 top-2 text-slate-400 hover:text-slate-600 p-0.5 cursor-pointer">
+                            <i class="fa-solid fa-xmark text-sm"></i>
+                        </button>
                     </div>
 
                     <!-- Filter Toggle Button -->
@@ -505,6 +515,9 @@
                         <span class="hidden xs:inline">Filters</span>
                         <span id="db-viewer-active-badge" class="hidden px-1.5 py-0.5 rounded-full text-[10px] bg-emerald-100 text-emerald-800 font-bold">Active</span>
                         <i id="db-viewer-filter-chevron" class="fa-solid fa-chevron-down text-[10px] text-slate-400 transition-transform duration-200"></i>
+                    </button>
+                    <button type="button" id="db-viewer-clear-filters-btn" onclick="app.clearAllDbViewerFilters()" title="Clear all filters" class="hidden px-2.5 py-2 bg-rose-50 border border-rose-200 hover:bg-rose-100 text-rose-600 font-semibold rounded-lg flex items-center justify-center gap-1.5 shadow-sm transition cursor-pointer shrink-0">
+                        <i class="fa-solid fa-filter-circle-xmark text-sm"></i>
                     </button>
                 </div>
 
