@@ -24,5 +24,24 @@
     "SHTS": 208,
     "TVET": 273,
     "STEM": 23
+  },
+  "total": 1091,
+  "byRegion": {
+    "Greater Accra": 89,
+    "Eastern": 130,
+    "Central": 109,
+    "Western": 68,
+    "Western North": 16,
+    "Ashanti": 202,
+    "Bono": 56,
+    "Ahafo": 30,
+    "Bono East": 42,
+    "Volta": 102,
+    "Oti": 33,
+    "Northern": 51,
+    "Savannah": 17,
+    "North East": 23,
+    "Upper East": 59,
+    "Upper West": 64
   }
 }

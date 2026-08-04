@@ -155,7 +155,7 @@
                     <div class="flex items-center gap-2">
                         <div class="flex-1 relative">
                             <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400"></i>
-                            <input type="text" id="modal-search" placeholder="Search school name/code/district/location..." oninput="app.filterModalList()" class="w-full bg-white border border-slate-300 rounded-lg pl-9 pr-3 py-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            <input type="text" id="modal-search" placeholder="Search school name/code/district/location..." oninput="app.filterModalListDebounced()" class="w-full bg-white border border-slate-300 rounded-lg pl-9 pr-3 py-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                         </div>
                         <button type="button" id="picker-modal-filter-toggle-btn" onclick="app.togglePickerModalFilterSection(event)" class="px-3.5 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 font-semibold rounded-lg flex items-center gap-2 shadow-sm transition cursor-pointer shrink-0">
                             <i class="fa-solid fa-sliders text-emerald-600"></i>
@@ -414,7 +414,7 @@
 
     <!-- Modal: Selections Preview -->
     <div id="selections-modal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-5">
-        <div class="bg-white rounded-2xl shadow-xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col">
+        <div class="bg-white rounded-2xl shadow-xl w-[95vw] sm:w-[80vw] max-w-[95vw] sm:min-w-[600px] max-h-[90vh] overflow-auto flex flex-col resize">
             <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
                 <h2 class="font-bold text-slate-900">Official Candidate Form</h2>
                 <button type="button" onclick="app.closeSelectionsModal()" class="text-slate-400 hover:text-slate-900 p-1">
@@ -508,75 +508,85 @@
                     </button>
                 </div>
 
-                <!-- Collapsible Filter Body -->
-                <div id="db-viewer-filter-body" class="hidden mt-3 pt-3 border-t border-slate-200 space-y-2.5">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
-                        <!-- Region Filter -->
-                        <div>
-                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Region</label>
-                            <select id="db-viewer-region" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                                <option value="">All Regions</option>
-                            </select>
-                        </div>
-
-                        <!-- Category Filter -->
-                        <div>
-                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Category</label>
-                            <select id="db-viewer-category" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                                <option value="">All Categories</option>
-                                <option value="A">Category A</option>
-                                <option value="B">Category B</option>
-                                <option value="C">Category C</option>
-                            </select>
-                        </div>
-
-                        <!-- Type Filter -->
-                        <div>
-                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Type</label>
-                            <select id="db-viewer-type" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                                <option value="">All Types</option>
-                                <option value="SHS">SHS</option>
-                                <option value="SHTS">SHTS</option>
-                                <option value="TVET">TVET</option>
-                                <option value="STEM">STEM</option>
-                            </select>
-                        </div>
-
-                        <!-- Residence Filter -->
-                        <div>
-                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Residence</label>
-                            <select id="db-viewer-residence" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                                <option value="">All Residence</option>
-                                <option value="Day">Day Only</option>
-                                <option value="Boarding">Boarding Only</option>
-                                <option value="Day/Boarding">Day / Boarding</option>
-                            </select>
-                        </div>
+                <!-- Collapsible Filter Options Pills -->
+                <div id="db-viewer-filter-body" class="hidden mt-3 pt-3 border-t border-slate-200">
+                    <div class="flex flex-wrap gap-2 text-[11px] items-center">
+                        <button type="button" onclick="app.openDbViewerFilterPanel('db-viewer-region-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                            Regions <span id="db-viewer-region-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                        </button>
+                        <button type="button" onclick="app.openDbViewerFilterPanel('db-viewer-category-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                            Category <span id="db-viewer-category-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                        </button>
+                        <button type="button" onclick="app.openDbViewerFilterPanel('db-viewer-type-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                            Type <span id="db-viewer-type-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                        </button>
+                        <button type="button" onclick="app.openDbViewerFilterPanel('db-viewer-residence-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                            Residence <span id="db-viewer-residence-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                        </button>
+                        <button type="button" onclick="app.openDbViewerFilterPanel('db-viewer-gender-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                            Gender <span id="db-viewer-gender-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                        </button>
+                        <button type="button" onclick="app.openDbViewerFilterPanel('db-viewer-programme-filter')" class="whitespace-nowrap rounded-full border border-slate-300 bg-white px-3.5 py-1.5 text-slate-700 font-semibold shadow-sm hover:bg-slate-50 transition cursor-pointer">
+                            Programmes <span id="db-viewer-programme-filter-badge" class="ml-1.5 inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">All</span>
+                        </button>
                     </div>
+                </div>
+            </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 pt-1 border-t border-slate-200/80">
-                        <!-- Gender Filter -->
+            <!-- Popover for Database Filter -->
+            <div id="db-viewer-filter-popover" class="hidden absolute inset-0 z-40 bg-slate-900/60 backdrop-blur-sm flex items-start justify-center px-4 py-6" onclick="app.handleDbViewerFilterPopoverOutsideClick(event)">
+                <div class="relative w-full max-w-xl rounded-3xl bg-white shadow-2xl border border-slate-200 overflow-hidden">
+                    <div class="flex items-center justify-between p-4 border-b border-slate-200">
                         <div>
-                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Gender</label>
-                            <select id="db-viewer-gender" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                                <option value="">All Genders</option>
-                                <option value="Mixed">Mixed</option>
-                                <option value="Boys">Boys</option>
-                                <option value="Girls">Girls</option>
-                            </select>
+                            <h3 id="db-viewer-filter-popover-title" class="font-semibold text-slate-900 text-sm">Filter</h3>
+                            <p id="db-viewer-filter-popover-subtitle" class="text-xs text-slate-500">Select values to refine the school list.</p>
                         </div>
-
-                        <!-- Programme Filter -->
-                        <div class="md:col-span-2">
-                            <label class="block text-[10px] uppercase font-bold text-slate-500 mb-0.5">Programme Offered</label>
-                            <select id="db-viewer-prog" onchange="app.filterDatabaseViewer()" class="w-full bg-white border border-slate-300 rounded-lg p-2 font-medium focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                                <option value="">All Programmes</option>
-                            </select>
+                        <button type="button" onclick="app.closeDbViewerFilterPopover()" class="text-slate-500 hover:text-slate-900 p-2">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="p-4 overflow-y-auto max-h-[60vh] text-xs space-y-4">
+                        <div id="db-viewer-region-filter-pane" class="db-viewer-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="db-viewer-region-select-all" type="checkbox" onchange="app.toggleDbViewerFilterSelectAll('db-viewer-region-filter','db-viewer-region-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="db-viewer-region-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
                         </div>
-
-                        <div class="flex items-end justify-between sm:justify-end gap-3 pt-1 text-xs text-slate-500">
-                            <span id="db-viewer-summary-stats" class="hidden sm:inline text-[11px] self-center">Showing 0 of 0 schools</span>
-                            <button type="button" onclick="app.resetDatabaseViewerFilters()" class="text-emerald-700 hover:text-emerald-900 font-semibold underline cursor-pointer self-center">Reset Filters</button>
+                        <div id="db-viewer-category-filter-pane" class="db-viewer-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="db-viewer-category-select-all" type="checkbox" onchange="app.toggleDbViewerFilterSelectAll('db-viewer-category-filter','db-viewer-category-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="db-viewer-category-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                        <div id="db-viewer-type-filter-pane" class="db-viewer-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="db-viewer-type-select-all" type="checkbox" onchange="app.toggleDbViewerFilterSelectAll('db-viewer-type-filter','db-viewer-type-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="db-viewer-type-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                        <div id="db-viewer-residence-filter-pane" class="db-viewer-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="db-viewer-residence-select-all" type="checkbox" onchange="app.toggleDbViewerFilterSelectAll('db-viewer-residence-filter','db-viewer-residence-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="db-viewer-residence-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                        <div id="db-viewer-gender-filter-pane" class="db-viewer-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="db-viewer-gender-select-all" type="checkbox" onchange="app.toggleDbViewerFilterSelectAll('db-viewer-gender-filter','db-viewer-gender-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="db-viewer-gender-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
+                        </div>
+                        <div id="db-viewer-programme-filter-pane" class="db-viewer-filter-pane hidden">
+                            <label class="flex items-center gap-2 text-slate-700">
+                                <input id="db-viewer-programme-select-all" type="checkbox" onchange="app.toggleDbViewerFilterSelectAll('db-viewer-programme-filter','db-viewer-programme-select-all')" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                                <span class="font-medium">Select all</span>
+                            </label>
+                            <div id="db-viewer-programme-filter" class="bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium overflow-y-auto space-y-1"></div>
                         </div>
                     </div>
                 </div>

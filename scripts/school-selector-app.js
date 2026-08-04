@@ -188,6 +188,15 @@
                 this.dbViewerSortKey = 'name';
                 this.dbViewerSortDir = 'asc';
                 this.dbViewerFilteredList = [];
+                this.filterModalListDebounced = this.debounce(this.filterModalList.bind(this), 300);
+            }
+
+            debounce(func, wait) {
+                let timeout;
+                return (...args) => {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(this, args), wait);
+                };
             }
 
             // Persistence: save/load user state (selected choices and form inputs)
@@ -385,6 +394,91 @@
                 }
             }
 
+            openDbViewerFilterPanel(filterId) {
+                const titleMap = {
+                    'db-viewer-region-filter': 'Regions',
+                    'db-viewer-category-filter': 'Categories',
+                    'db-viewer-type-filter': 'School Types',
+                    'db-viewer-residence-filter': 'Residence',
+                    'db-viewer-gender-filter': 'Gender',
+                    'db-viewer-programme-filter': 'Programmes',
+                };
+                const overlay = document.getElementById('db-viewer-filter-popover');
+                const title = document.getElementById('db-viewer-filter-popover-title');
+                const subtitle = document.getElementById('db-viewer-filter-popover-subtitle');
+                if (!overlay || !title || !subtitle) return;
+
+                const panes = Array.from(document.querySelectorAll('.db-viewer-filter-pane'));
+                panes.forEach(p => p.classList.add('hidden'));
+
+                const activePane = document.getElementById(`${filterId}-pane`);
+                if (activePane) {
+                    activePane.classList.remove('hidden');
+                }
+
+                title.textContent = titleMap[filterId] || 'Filter';
+                subtitle.textContent = `Choose ${titleMap[filterId] || 'options'} to refine the school list.`;
+                overlay.classList.remove('hidden');
+            }
+
+            closeDbViewerFilterPopover() {
+                const overlay = document.getElementById('db-viewer-filter-popover');
+                if (!overlay) return;
+                overlay.classList.add('hidden');
+                this.filterDatabaseViewer();
+            }
+
+            handleDbViewerFilterPopoverOutsideClick(event) {
+                if (event.target.id === 'db-viewer-filter-popover') {
+                    this.closeDbViewerFilterPopover();
+                }
+            }
+
+            toggleDbViewerFilterSelectAll(filterId, selectAllId) {
+                const selectAll = document.getElementById(selectAllId);
+                const container = document.getElementById(filterId);
+                const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(cb => cb.checked = selectAll.checked);
+                this.updateDbViewerFilterButtonBadges();
+            }
+
+            populateDbViewerFilterOptions() {
+                const regionSelect = document.getElementById('db-viewer-region-filter');
+                const catSelect = document.getElementById('db-viewer-category-filter');
+                const typeSelect = document.getElementById('db-viewer-type-filter');
+                const resSelect = document.getElementById('db-viewer-residence-filter');
+                const genderSelect = document.getElementById('db-viewer-gender-filter');
+                const progSelect = document.getElementById('db-viewer-programme-filter');
+
+                if (!regionSelect || !catSelect || !typeSelect || !resSelect || !genderSelect || !progSelect) return;
+
+                const regions = Array.from(new Set(this.schools.map(s => s.region).filter(Boolean))).sort();
+                const categories = ['A', 'B', 'C'];
+                const types = ['SHS', 'SHTS', 'TVET', 'STEM'];
+                const residences = ['Day', 'Boarding', 'Day/Boarding'];
+                const genders = ['Mixed', 'Boys', 'Girls'];
+                const programmes = Array.from(new Set(this.schools.flatMap(s => this.getSchoolProgramNames(s)))).sort();
+
+                this.createFilterOptions(regionSelect, regions, this.getSelectedFilterValues('db-viewer-region-filter'), false, 'app.filterDatabaseViewer()');
+                this.createFilterOptions(catSelect, categories, this.getSelectedFilterValues('db-viewer-category-filter'), false, 'app.filterDatabaseViewer()');
+                this.createFilterOptions(typeSelect, types, this.getSelectedFilterValues('db-viewer-type-filter'), false, 'app.filterDatabaseViewer()');
+                this.createFilterOptions(resSelect, residences, this.getSelectedFilterValues('db-viewer-residence-filter'), false, 'app.filterDatabaseViewer()');
+                this.createFilterOptions(genderSelect, genders, this.getSelectedFilterValues('db-viewer-gender-filter'), false, 'app.filterDatabaseViewer()');
+                this.createFilterOptions(progSelect, programmes, this.getSelectedFilterValues('db-viewer-programme-filter'), false, 'app.filterDatabaseViewer()');
+            }
+
+            updateDbViewerFilterButtonBadges() {
+                const buttonIds = ['db-viewer-region-filter', 'db-viewer-category-filter', 'db-viewer-type-filter', 'db-viewer-residence-filter', 'db-viewer-gender-filter', 'db-viewer-programme-filter'];
+                buttonIds.forEach(id => {
+                    const badge = document.getElementById(`${id}-badge`);
+                    const container = document.getElementById(id);
+                    if (!badge || !container) return;
+                    const checked = container.querySelectorAll('input[type="checkbox"]:checked');
+                    if (checked.length === 0) badge.textContent = 'All';
+                    else badge.textContent = checked.length.toString();
+                });
+            }
+
             updateModalFilterButtonBadges() {
                 const buttonIds = ['modal-cat-filter', 'modal-res-filter', 'modal-region-filter', 'modal-district-filter', 'modal-programme-filter', 'modal-gender-filter', 'modal-type-filter'];
                 buttonIds.forEach(id => {
@@ -562,7 +656,10 @@
             }
 
             normalizeRegion(region) {
-                return region === 'Greater Accra' ? 'Gt. Accra' : region;
+                if (!region) return '';
+                const r = String(region).trim();
+                if (r === 'Gt. Accra' || r === 'G. Accra') return 'Greater Accra';
+                return r;
             }
 
             buildLocationLabel(region, district) {
@@ -610,6 +707,8 @@
                 const restored = this.loadStateFromStorage();
                 await this.loadDefaultRegister();
                 await this.ensurePreferredDatasetLoaded();
+                this.populateDbViewerFilterOptions();
+                this.filterDatabaseViewer();
                 // when restoring state, don't trigger automatic regeneration from region change
                 if (document.getElementById('cand-region') && document.getElementById('cand-district')) {
                     this.onRegionChange(restored === true);
@@ -2325,18 +2424,18 @@
                 document.getElementById('modal-title').textContent = `Replace Choice #${rankIdx + 1} (${this.selectedChoices[rankIdx].name})`;
                 this.collapsePickerModalFilterSection();
                 modal.classList.remove('hidden');
+                document.getElementById('selections-modal').classList.add('hidden');
                 this.filterModalList();
             }
 
             closeSchoolModal() {
                 setTimeout(() => {
+                    document.getElementById('school-picker-modal').classList.add('hidden');
+                    document.getElementById('selections-modal').classList.remove('hidden');
                     if (confirm("Would you like to preview the selected school list?")) {
-                        document.getElementById('school-picker-modal').classList.add('hidden');
                         if (window.setPairingsTabEnabled) window.setPairingsTabEnabled(true);
                         if (window.setActiveTab) window.setActiveTab('pairings');
                         if (window.setPage) window.setPage('results');
-                    } else {
-                        document.getElementById('school-picker-modal').classList.add('hidden');
                     }
                 }, 100);
             }
@@ -2353,14 +2452,12 @@
                     .filter(Boolean);
             }
 
-            createFilterOptions(container, options, previousValues, useSavedSelections) {
+            createFilterOptions(container, options, previousValues, useSavedSelections, onChangeHandler = 'app.filterModalList()') {
                 container.innerHTML = options.map(value => {
-                    const isChecked = useSavedSelections
-                        ? previousValues.includes(value)
-                        : previousValues.length === 0 || previousValues.includes(value);
+                    const isChecked = Boolean(previousValues && previousValues.includes(value));
                     return `
                         <label class="flex items-center gap-2 text-slate-700 rounded-lg p-1 hover:bg-slate-50 cursor-pointer">
-                            <input data-filter-item type="checkbox" value="${value}" ${isChecked ? 'checked' : ''} onchange="app.filterModalList()" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
+                            <input data-filter-item type="checkbox" value="${value}" ${isChecked ? 'checked' : ''} onchange="${onChangeHandler}" class="h-4 w-4 text-emerald-600 border-slate-300 rounded">
                             <span class="text-[13px] truncate">${value}</span>
                         </label>
                     `;
@@ -2480,6 +2577,7 @@
                         };
                         this.closeSchoolModal();
                         this.renderSelectedTable();
+                        this.showSelections();
                     };
 
                     const residenceLabel = (sch.status || '').toLowerCase();
@@ -4072,6 +4170,27 @@
                 }
             }
 
+            normalizeSchoolRegion(s) {
+                if (!s) return s;
+                const code = String(s.code || '').trim();
+                const prefix = code.substring(0, 3);
+                const dist = String(s.district || '').toLowerCase().trim();
+                const simpleDist = dist.replace(/municipal|metropolitan|metro|assembly|district/g, '').trim();
+                const oldReg = String(s.region || '').trim();
+
+                const gaDistricts = ['accra metro', 'accra metropolitan', 'gt. accra', 'shai osudoku', 'la nkwantanang madina', 'ablekuma', 'ayawaso', 'korle', 'ledzokuku', 'krowor', 'okaikwei', 'adentan', 'tema', 'ashaiman', 'ningo', 'weija', 'katamanso', 'la dade'];
+
+                const isGaDistrict = gaDistricts.some(d => dist.includes(d) || simpleDist.includes(d));
+
+                if (isGaDistrict || prefix === '001' || prefix === '901' || oldReg === 'G. Accra' || oldReg === 'Gt. Accra') {
+                    s.region = 'Greater Accra';
+                    if (s.location) {
+                        s.location = s.location.replace(/, Eastern$/i, ', Greater Accra').replace(/, Central$/i, ', Greater Accra');
+                    }
+                }
+                return s;
+            }
+
             filterValidSchoolEntries(schools = []) {
                 return (schools || []).filter(s => {
                     if (!s || !s.code || !String(s.code).trim()) return false;
@@ -4081,7 +4200,7 @@
                     const regionText = String(s.region).trim().toLowerCase();
                     if (regionText === 'unknown') return false;
                     return true;
-                }).map(s => ({ ...s }));
+                }).map(s => this.normalizeSchoolRegion({ ...s }));
             }
 
             isPdfSchoolNameJunk(schName, contextSnippet = '') {
@@ -4389,35 +4508,42 @@
 
             filterDatabaseViewer() {
                 const search = (document.getElementById('db-viewer-search')?.value || '').toLowerCase().trim();
-                const region = document.getElementById('db-viewer-region')?.value || '';
-                const category = document.getElementById('db-viewer-category')?.value || '';
-                const type = document.getElementById('db-viewer-type')?.value || '';
-                const residence = document.getElementById('db-viewer-residence')?.value || '';
-                const gender = document.getElementById('db-viewer-gender')?.value || '';
-                const prog = document.getElementById('db-viewer-prog')?.value || '';
+                const regions = this.getSelectedFilterValues('db-viewer-region-filter');
+                const categories = this.getSelectedFilterValues('db-viewer-category-filter');
+                const types = this.getSelectedFilterValues('db-viewer-type-filter');
+                const residences = this.getSelectedFilterValues('db-viewer-residence-filter');
+                const genders = this.getSelectedFilterValues('db-viewer-gender-filter');
+                const progs = this.getSelectedFilterValues('db-viewer-programme-filter');
 
                 const activeBadge = document.getElementById('db-viewer-active-badge');
                 if (activeBadge) {
-                    const hasActive = Boolean(region || category || type || residence || gender || prog);
+                    const hasActive = Boolean(regions.length > 0 || categories.length > 0 || types.length > 0 || residences.length > 0 || genders.length > 0 || progs.length > 0);
                     if (hasActive) activeBadge.classList.remove('hidden');
                     else activeBadge.classList.add('hidden');
                 }
 
+                this.updateDbViewerFilterButtonBadges();
+
                 let list = (this.schools || []).filter(s => {
-                    if (s.code && !/^\d+$/.test(String(s.code))) return false;
-                    if (category && (s.category || '').toUpperCase() !== category) return false;
-                    if (region && (s.region || '').toLowerCase() !== region.toLowerCase()) return false;
-                    if (type && (s.type || 'SHS').toUpperCase() !== type.toUpperCase()) return false;
-                    if (gender && (s.gender || '').toLowerCase() !== gender.toLowerCase()) return false;
-                    if (residence) {
+                    if (!s) return false;
+                    if (s.code && !/^\d+$/.test(String(s.code).trim())) return false;
+                    if (categories.length > 0 && !categories.some(c => c.toUpperCase() === (s.category || '').toUpperCase())) return false;
+                    if (regions.length > 0 && !regions.some(r => r.toLowerCase() === (s.region || '').toLowerCase())) return false;
+                    if (types.length > 0 && !types.some(t => t.toUpperCase() === (s.type || 'SHS').toUpperCase())) return false;
+                    if (genders.length > 0 && !genders.some(g => g.toLowerCase() === (s.gender || '').toLowerCase())) return false;
+                    if (residences.length > 0) {
                         const status = (s.status || s.res || '').toLowerCase();
-                        if (residence === 'Day' && !status.includes('day')) return false;
-                        if (residence === 'Boarding' && !status.includes('boarding')) return false;
-                        if (residence === 'Day/Boarding' && (!status.includes('day') || !status.includes('boarding'))) return false;
+                        if (!residences.some(res => {
+                            const r = res.toLowerCase();
+                            if (r === 'day' && status.includes('day')) return true;
+                            if (r === 'boarding' && status.includes('boarding')) return true;
+                            if (r.includes('day') && r.includes('boarding') && status.includes('day') && status.includes('boarding')) return true;
+                            return false;
+                        })) return false;
                     }
-                    if (prog) {
+                    if (progs.length > 0) {
                         const schoolProgs = this.getSchoolProgramNames(s).map(p => p.toLowerCase());
-                        if (!schoolProgs.some(p => p.includes(prog.toLowerCase()))) return false;
+                        if (!progs.some(p => schoolProgs.some(sp => sp.includes(p.toLowerCase())))) return false;
                     }
                     if (search) {
                         const text = `${s.code || ''} ${s.name || ''} ${s.district || ''} ${s.region || ''} ${s.location || ''} ${(s.progs || []).join(' ')}`.toLowerCase();
@@ -4719,7 +4845,6 @@
                                         <th class="p-3">Region</th>
                                         <th class="p-3">District</th>
                                         <th class="p-3">Location</th>
-                                        <th class="p-3">Cat</th>
                                         <th class="p-3">Programme</th>
                                     </tr>
                                 </thead>
@@ -4769,13 +4894,19 @@
                         <td class="p-3 text-slate-600 align-top">${item.district || 'Unknown'}</td>
                         <td class="p-3 text-slate-600 align-top">${item.location || 'Unknown'}</td>
                         <td class="p-3 align-top">
-                            ${catBadge}
-                        </td>
-                        <td class="p-3 align-top">
                             <select onchange="app.changeProgramme(${idx}, this.value)" class="bg-emerald-50 text-emerald-900 border border-emerald-300 rounded p-1 text-xs font-semibold focus:ring-2 focus:ring-emerald-500">
                                 ${!selectedValue ? '<option value="" selected disabled>Choose programme</option>' : ''}
                                 ${options.map(opt => `<option value="${opt.value}" ${selectedValue === opt.value ? 'selected' : ''}>${opt.label}</option>`).join('')}
                             </select>
+                            <div class="mt-2 flex items-center gap-2">
+                                <select onchange="app.swapChoicePositions(${idx}, parseInt(this.value)); this.selectedIndex=0;" class="text-[10px] bg-slate-50 border border-slate-300 rounded px-1 py-0.5 cursor-pointer">
+                                    <option value="" disabled selected>Swap...</option>
+                                    ${this.selectedChoices.map((otherItem, targetIdx) => targetIdx !== idx && otherItem ? `<option value="${targetIdx}">#${targetIdx + 1} ${otherItem.name.slice(0, 10)}...</option>` : '').join('')}
+                                </select>
+                                <button onclick="app.openSchoolModal(${idx})" class="px-1.5 py-0.5 text-[10px] font-semibold text-slate-600 hover:text-emerald-600 border border-slate-300 rounded">
+                                    Change
+                                </button>
+                            </div>
                         </td>
                     `;
 
@@ -4814,9 +4945,19 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="pt-2 border-t border-slate-100 flex gap-2">
+                                <select onchange="app.swapChoicePositions(${idx}, parseInt(this.value)); this.selectedIndex=0;" class="flex-1 text-[11px] bg-slate-50 border border-slate-300 rounded px-2 py-1.5 cursor-pointer">
+                                    <option value="" disabled selected>Swap with...</option>
+                                    ${this.selectedChoices.map((otherItem, targetIdx) => targetIdx !== idx && otherItem ? `<option value="${targetIdx}">#${targetIdx + 1} ${otherItem.name.slice(0, 10)}...</option>` : '').join('')}
+                                </select>
+                                <button onclick="app.openSchoolModal(${idx})" class="px-3 py-1.5 text-[11px] font-semibold text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 border border-slate-300 rounded transition">
+                                    Change
+                                </button>
+                            </div>
                         `;
                         badgeContainer.appendChild(badge);
                     }
+
                 });
                 
                 document.getElementById('selections-modal').classList.remove('hidden');
